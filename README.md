@@ -11,7 +11,7 @@ npm install react-native-idnow-videoident
 ## Usage
 
 ```js
-import IdnowVideoident from "react-native-idnow-videoident";
+import IdnowVideoident from 'react-native-idnow-videoident';
 
 // ...
 
