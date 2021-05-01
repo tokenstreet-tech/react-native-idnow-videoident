@@ -59,12 +59,12 @@ To edit the Kotlin files, open `example/android` in Android studio and find the 
 
 We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:
 
-- `fix`: bug fixes, e.g. fix crash due to deprecated method.
-- `feat`: new features, e.g. add new method to the module.
-- `refactor`: code refactor, e.g. migrate from class components to hooks.
-- `docs`: changes into documentation, e.g. add usage example for the module..
-- `test`: adding or updating tests, e.g. add integration tests using detox.
-- `chore`: tooling changes, e.g. change CI config.
+-   `fix`: bug fixes, e.g. fix crash due to deprecated method.
+-   `feat`: new features, e.g. add new method to the module.
+-   `refactor`: code refactor, e.g. migrate from class components to hooks.
+-   `docs`: changes into documentation, e.g. add usage example for the module..
+-   `test`: adding or updating tests, e.g. add integration tests using detox.
+-   `chore`: tooling changes, e.g. change CI config.
 
 Our pre-commit hooks verify that your commit message matches this format when committing.
 
@@ -90,13 +90,13 @@ yarn release
 
 The `package.json` file contains various scripts for common tasks:
 
-- `yarn bootstrap`: setup project by installing all dependencies and pods.
-- `yarn typescript`: type-check files with TypeScript.
-- `yarn lint`: lint files with ESLint.
-- `yarn test`: run unit tests with Jest.
-- `yarn example start`: start the Metro server for the example app.
-- `yarn example android`: run the example app on Android.
-- `yarn example ios`: run the example app on iOS.
+-   `yarn bootstrap`: setup project by installing all dependencies and pods.
+-   `yarn typescript`: type-check files with TypeScript.
+-   `yarn lint`: lint files with ESLint.
+-   `yarn test`: run unit tests with Jest.
+-   `yarn example start`: start the Metro server for the example app.
+-   `yarn example android`: run the example app on Android.
+-   `yarn example ios`: run the example app on iOS.
 
 ### Sending a pull request
 
@@ -104,11 +104,11 @@ The `package.json` file contains various scripts for common tasks:
 
 When you're sending a pull request:
 
-- Prefer small pull requests focused on one change.
-- Verify that linters and tests are passing.
-- Review the documentation to make sure it looks good.
-- Follow the pull request template when opening a pull request.
-- For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
+-   Prefer small pull requests focused on one change.
+-   Verify that linters and tests are passing.
+-   Review the documentation to make sure it looks good.
+-   Follow the pull request template when opening a pull request.
+-   For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
 
 ## Code of Conduct
 
@@ -122,22 +122,22 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 
 Examples of behavior that contributes to a positive environment for our community include:
 
-- Demonstrating empathy and kindness toward other people
-- Being respectful of differing opinions, viewpoints, and experiences
-- Giving and gracefully accepting constructive feedback
-- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-- Focusing on what is best not just for us as individuals, but for the overall community
+-   Demonstrating empathy and kindness toward other people
+-   Being respectful of differing opinions, viewpoints, and experiences
+-   Giving and gracefully accepting constructive feedback
+-   Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
+-   Focusing on what is best not just for us as individuals, but for the overall community
 
 Examples of unacceptable behavior include:
 
-- The use of sexualized language or imagery, and sexual attention or
-  advances of any kind
-- Trolling, insulting or derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-- Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+-   The use of sexualized language or imagery, and sexual attention or
+    advances of any kind
+-   Trolling, insulting or derogatory comments, and personal or political attacks
+-   Public or private harassment
+-   Publishing others' private information, such as a physical or email
+    address, without their explicit permission
+-   Other conduct which could reasonably be considered inappropriate in a
+    professional setting
 
 ### Enforcement Responsibilities
 
