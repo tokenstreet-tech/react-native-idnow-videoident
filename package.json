@@ -109,27 +109,6 @@
             }
         }
     },
-    "eslintConfig": {
-        "root": true,
-        "extends": [
-            "@react-native-community",
-            "prettier"
-        ],
-        "rules": {
-            "prettier/prettier": [
-                "error",
-                {
-                    "printWidth": 120,
-                    "tabWidth": 4,
-                    "singleQuote": true
-                }
-            ]
-        }
-    },
-    "eslintIgnore": [
-        "node_modules/",
-        "lib/"
-    ],
     "react-native-builder-bob": {
         "source": "src",
         "output": "lib",
