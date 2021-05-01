@@ -8,10 +8,10 @@ export interface IBranding {
     /**
      * Colors
      */
-    colors: IColors;
+    colors?: IColors;
 
     /**
      * Fonts
      */
-    fonts: IFonts;
+    fonts?: IFonts;
 }

@@ -5,5 +5,5 @@ export interface IStatusBarColor {
     /**
      *
      */
-    enableStatusBarStyleLightContent: boolean;
+    enableStatusBarStyleLightContent?: boolean;
 }
