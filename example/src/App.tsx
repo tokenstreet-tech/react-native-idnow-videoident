@@ -1,18 +1,15 @@
-import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import IdnowVideoident from 'react-native-idnow-videoident';
 
 export default function App() {
-    const [result, setResult] = React.useState<number | undefined>();
-
-    React.useEffect(() => {
-        IdnowVideoident.multiply(3, 7).then(setResult);
-    }, []);
+    const [result, setResult] = useState<number | undefined>();
+    const onPress = () => IdnowVideoident.start(3, 7).then(setResult);
 
     return (
         <View style={styles.container}>
-            <Text>Result: {result}</Text>
+            <Text>Result: {JSON.stringify(result)}</Text>
+            <Button title="Start" onPress={onPress} />
         </View>
     );
 }
