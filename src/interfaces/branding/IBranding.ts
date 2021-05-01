@@ -11,7 +11,7 @@ export interface IBranding {
     colors: IColors;
 
     /**
-     *
+     * Fonts
      */
     fonts: IFonts;
 }
