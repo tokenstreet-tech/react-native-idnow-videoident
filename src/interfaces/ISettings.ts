@@ -1,3 +1,5 @@
+import type { IBranding } from './branding/IBranding';
+
 /**
  * The settings that should be used for the identification process provided by IDnow.
  */
@@ -60,4 +62,9 @@ export interface ISettings {
      * The connection type to use to talk the backend. (Websocket (default) or long polling)
      */
     connectionType: any;
+
+    /**
+     * Branding
+     */
+    branding: IBranding;
 }

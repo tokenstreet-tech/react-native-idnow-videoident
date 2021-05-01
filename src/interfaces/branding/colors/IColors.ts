@@ -2,9 +2,9 @@ import type { ICallQualityCheckScreenColors } from './ICallQualityCheckScreenCol
 import type { IStatusBarColor } from './IStatusBarColor';
 
 /**
- * The settings that should be used for the identification process provided by IDnow.
+ * Colors
  */
-export interface Colors {
+export interface IColors {
     /**
      * Optional color, that replaces the default text color. Default: A nearly black color Recommendation: Should be some kind of a dark color that does not collide with white color.
      */

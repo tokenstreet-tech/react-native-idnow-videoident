@@ -1,5 +1,5 @@
 /**
- * The settings that should be used for the identification process provided by IDnow.
+ * Call quality check screen colors
  */
 export interface ICallQualityCheckScreenColors {
     /**
