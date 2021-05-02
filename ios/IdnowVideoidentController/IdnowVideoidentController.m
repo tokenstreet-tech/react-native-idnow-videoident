@@ -39,8 +39,9 @@
     // To adjust navigation bar / bar button items etc. you should follow Apples UIAppearance protocol.
 
     // Setup IDnowSettings
-    IDnowSettings *settings = [IDnowSettings settingsWithCompanyID:@"yourCompanyIdentifier"];
-    settings.transactionToken = @"DEV-TXTXT";
+    IDnowSettings *settings = [IDnowSettings new];
+    settings.transactionToken = options[@"transactionToken"];
+    settings.companyID = options[@"companyID"];
 
     // Initialise and start identification
     self.idnowController = [[IDnowController alloc] initWithSettings: settings];

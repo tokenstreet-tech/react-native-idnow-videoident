@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import { init } from 'react-native-idnow-videoident';
+import { start } from 'react-native-idnow-videoident';
 
 export default function App() {
     const [result, setResult] = useState<boolean | undefined>(undefined);
@@ -8,7 +8,7 @@ export default function App() {
         { canceledByUser: boolean; message: string; success: boolean } | undefined
     >(undefined);
     const onPress = () =>
-        init({ transactionToken: 'DEV-TXTXT', companyID: 'yourCompanyIdentifier' }, setCallback).then(setResult);
+        start({ transactionToken: 'DEV-TXTXT', companyID: 'yourCompanyIdentifier' }, setCallback).then(setResult);
 
     return (
         <View style={styles.container}>

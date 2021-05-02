@@ -15,7 +15,7 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(init:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(start:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback) {
     idnowVideoidentController = [[IdnowVideoidentController alloc] init:options];
     [idnowVideoidentController start:callback];
 }
