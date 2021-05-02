@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import IdnowVideoident from 'react-native-idnow-videoident';
+import { init } from 'react-native-idnow-videoident';
 
 export default function App() {
-    const [result, setResult] = useState<number | undefined>();
-    const onPress = () => IdnowVideoident.start(3, 7).then(setResult);
+    const [result, setResult] = useState<boolean | undefined>(undefined);
+    const [callback, setCallback] = useState<
+        { canceledByUser: boolean; message: string; success: boolean } | undefined
+    >(undefined);
+    const onPress = () =>
+        init({ transactionToken: 'DEV-TXTXT', companyID: 'yourCompanyIdentifier' }, setCallback).then(setResult);
 
     return (
         <View style={styles.container}>
-            <Text>Result: {JSON.stringify(result)}</Text>
-            <Button title="Start" onPress={onPress} />
+            <Button title="init" onPress={onPress} />
+            <Text>result: {JSON.stringify(result)}</Text>
+            <Text>canceledByUser: {callback?.canceledByUser}</Text>
+            <Text>message: {callback?.message}</Text>
+            <Text>success: {callback?.success}</Text>
         </View>
     );
 }

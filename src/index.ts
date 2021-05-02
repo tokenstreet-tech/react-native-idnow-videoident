@@ -1,9 +1,10 @@
 import { NativeModules } from 'react-native';
+import type { ISettings } from './interfaces/ISettings';
 
-type IdnowVideoidentType = {
-    start(a: number, b: number): Promise<number>;
+export const init = async (
+    settings: ISettings,
+    callback: (params: { canceledByUser: boolean; message: string; success: boolean }) => void
+): Promise<boolean> => {
+    return NativeModules.IdnowVideoident.init(settings, callback);
 };
-
-const { IdnowVideoident } = NativeModules;
-
-export default IdnowVideoident as IdnowVideoidentType;
+export default init;
