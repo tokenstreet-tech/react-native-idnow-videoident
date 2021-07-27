@@ -8,7 +8,7 @@ export default function App() {
         { canceledByUser: boolean; message: string; success: boolean } | undefined
     >(undefined);
     const onPress = () =>
-        start({ transactionToken: 'DEV-TXTXT', companyID: 'yourCompanyIdentifier' }, setCallback).then(setResult);
+        start({ transactionToken: 'TST-VYCCB', companyID: 'tokenstreet' }, setCallback).then(setResult);
 
     return (
         <View style={styles.container}>

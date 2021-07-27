@@ -7,6 +7,7 @@
 //
 
 #import "IdnowVideoidentController.h"
+#import "IdnowVideoidentController+Appearance.h"
 #import <IDnowSDK/IDnowSDK.h>
 #import <React/RCTBridgeModule.h>
 
@@ -18,25 +19,7 @@
 - (id)init:(NSDictionary *)options {
     self = [super init];
 
-    // Setup IDnowAppearance
-    IDnowAppearance *appearance = [IDnowAppearance sharedAppearance];
-
-    // Adjust colors
-    appearance.defaultTextColor = [UIColor blackColor];
-    appearance.primaryBrandColor = [UIColor blueColor];
-    appearance.proceedButtonBackgroundColor = [UIColor orangeColor];
-    appearance.failureColor = [UIColor redColor];
-    appearance.successColor = [UIColor greenColor];
-
-    // Adjust statusbar
-    appearance.enableStatusBarStyleLightContent = YES;
-
-    // Adjust fonts
-    appearance.fontNameRegular = @"AmericanTypewriter";
-    appearance.fontNameLight = @"AmericanTypewriter-Light";
-    appearance.fontNameMedium = @"AmericanTypewriter-CondensedBold";
-
-    // To adjust navigation bar / bar button items etc. you should follow Apples UIAppearance protocol.
+    [self setAppearance:options];
 
     // Setup IDnowSettings
     IDnowSettings *settings = [IDnowSettings new];
@@ -44,7 +27,7 @@
     settings.companyID = options[@"companyID"];
 
     // Initialise and start identification
-    self.idnowController = [[IDnowController alloc] initWithSettings: settings];
+    self.idnowController = [[IDnowController alloc] initWithSettings:settings];
 
     return self;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35022859263F3C700050D436 /* IdnowVideoidentController+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35022858263F3C700050D436 /* IdnowVideoidentController+Appearance.m */; };
 		35FCCE95263EBCE2006BC4D3 /* IdnowVideoidentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FCCE91263EBC5B006BC4D3 /* IdnowVideoidentController.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libIdnowVideoident.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIdnowVideoident.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		35022857263F3C700050D436 /* IdnowVideoidentController+Appearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdnowVideoidentController+Appearance.h"; sourceTree = "<group>"; };
+		35022858263F3C700050D436 /* IdnowVideoidentController+Appearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IdnowVideoidentController+Appearance.m"; sourceTree = "<group>"; };
 		35FCCE91263EBC5B006BC4D3 /* IdnowVideoidentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdnowVideoidentController.m; sourceTree = "<group>"; };
 		35FCCE94263EBC67006BC4D3 /* IdnowVideoidentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdnowVideoidentController.h; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* IdnowVideoident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdnowVideoident.h; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 			children = (
 				35FCCE91263EBC5B006BC4D3 /* IdnowVideoidentController.m */,
 				35FCCE94263EBC67006BC4D3 /* IdnowVideoidentController.h */,
+				35022857263F3C700050D436 /* IdnowVideoidentController+Appearance.h */,
+				35022858263F3C700050D436 /* IdnowVideoidentController+Appearance.m */,
 			);
 			path = IdnowVideoidentController;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35022859263F3C700050D436 /* IdnowVideoidentController+Appearance.m in Sources */,
 				35FCCE95263EBCE2006BC4D3 /* IdnowVideoidentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
