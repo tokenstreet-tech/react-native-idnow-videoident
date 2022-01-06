@@ -1,4 +1,4 @@
-package com.reactnativeidnowvideoident;
+package com.tokenstreetreactnativeidnowvideoident;
 
 import androidx.annotation.NonNull;
 
@@ -8,11 +8,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
 
-@ReactModule(name = IdnowVideoidentModule.NAME)
-public class IdnowVideoidentModule extends ReactContextBaseJavaModule {
-    public static final String NAME = "IdnowVideoident";
+@ReactModule(name = ReactNativeIdnowVideoidentModule.NAME)
+public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule {
+    public static final String NAME = "ReactNativeIdnowVideoident";
 
-    public IdnowVideoidentModule(ReactApplicationContext reactContext) {
+    public ReactNativeIdnowVideoidentModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 

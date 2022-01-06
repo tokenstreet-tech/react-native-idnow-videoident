@@ -1,4 +1,4 @@
-package com.reactnativeidnowvideoident;
+package com.tokenstreetreactnativeidnowvideoident;
 
 import androidx.annotation.NonNull;
 
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class IdnowVideoidentPackage implements ReactPackage {
+public class ReactNativeIdnowVideoidentPackage implements ReactPackage {
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new IdnowVideoidentModule(reactContext));
+        modules.add(new ReactNativeIdnowVideoidentModule(reactContext));
         return modules;
     }
 
