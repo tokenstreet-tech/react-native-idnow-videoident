@@ -3,3 +3,10 @@
 # Dependencies
 /node_modules
 example/ios/Pods
+
+# Build
+/lib
+
+# Misc
+/coverage
+/tsconfig.json

@@ -1,7 +1,6 @@
-import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
 import { multiply } from '@tokenstreet/react-native-idnow-videoident';
+import * as React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
     const [result, setResult] = React.useState<number | undefined>();

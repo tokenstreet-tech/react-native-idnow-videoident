@@ -1,0 +1,34 @@
+name: Publish
+
+on:
+    workflow_dispatch:
+        inputs:
+            version:
+                description: "Version ['patch', 'minor', 'major']"
+                required: true
+
+jobs:
+    publish:
+        runs-on: [self-hosted, linux]
+        permissions:
+            packages: write
+            contents: read
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  token: ${{ secrets.PERSONAL_ACCESS_TOKEN_TOOLS_TOKENSTREET }}
+            - name: Set git credentials
+              run: |
+                  git config --global user.name "tokenstreet Tools"
+                  git config --global user.email "tools@tokenstreet.com"
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: 16
+                  registry-url: 'https://registry.npmjs.org'
+            - run: yarn install --frozen-lockfile
+            - run: yarn build
+            - run: yarn version --${{ github.event.inputs.version }}
+            - run: git push --follow-tags
+            - run: yarn publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
