@@ -2,7 +2,7 @@
     "compilerOptions": {
         "baseUrl": "./",
         "paths": {
-            "react-native-idnow-videoident": ["./src/index"]
+            "@tokenstreet/react-native-idnow-videoident": ["./src/index"]
         },
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,

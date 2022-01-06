@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  IdnowVideoidentExample
+//  ReactNativeIdnowVideoidentExample
 //
 
 import Foundation

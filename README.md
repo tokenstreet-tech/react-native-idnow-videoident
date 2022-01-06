@@ -1,21 +1,21 @@
-# react-native-idnow-videoident
+# @tokenstreet/react-native-idnow-videoident
 
 React Native IDnow VideoIdent bindings for iOS and Android platforms
 
 ## Installation
 
 ```sh
-npm install react-native-idnow-videoident
+npm install @tokenstreet/react-native-idnow-videoident
 ```
 
 ## Usage
 
 ```js
-import IdnowVideoident from 'react-native-idnow-videoident';
+import { multiply } from '@tokenstreet/react-native-idnow-videoident';
 
 // ...
 
-const result = await IdnowVideoident.multiply(3, 7);
+const result = await multiply(3, 7);
 ```
 
 ## Contributing

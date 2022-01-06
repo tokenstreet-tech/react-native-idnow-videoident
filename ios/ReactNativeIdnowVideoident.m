@@ -1,6 +1,6 @@
-#import "IdnowVideoident.h"
+#import "ReactNativeIdnowVideoident.h"
 
-@implementation IdnowVideoident
+@implementation ReactNativeIdnowVideoident
 
 RCT_EXPORT_MODULE()
 

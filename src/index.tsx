@@ -1,9 +1,22 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
-type IdnowVideoidentType = {
-    multiply(a: number, b: number): Promise<number>;
-};
+const LINKING_ERROR =
+    `The package '@tokenstreet/react-native-idnow-videoident' doesn't seem to be linked. Make sure: \n\n` +
+    Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
+    '- You rebuilt the app after installing the package\n' +
+    '- You are not using Expo managed workflow\n';
 
-const { IdnowVideoident } = NativeModules;
+const ReactNativeIdnowVideoident = NativeModules.ReactNativeIdnowVideoident
+    ? NativeModules.ReactNativeIdnowVideoident
+    : new Proxy(
+          {},
+          {
+              get() {
+                  throw new Error(LINKING_ERROR);
+              },
+          }
+      );
 
-export default IdnowVideoident as IdnowVideoidentType;
+export function multiply(a: number, b: number): Promise<number> {
+    return ReactNativeIdnowVideoident.multiply(a, b);
+}

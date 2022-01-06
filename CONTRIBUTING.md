@@ -51,9 +51,9 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
-To edit the Objective-C files, open `example/ios/IdnowVideoidentExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-idnow-videoident`.
+To edit the Objective-C files, open `example/ios/ReactNativeIdnowVideoidentExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @tokenstreet/react-native-idnow-videoident`.
 
-To edit the Kotlin files, open `example/android` in Android studio and find the source files at `reactnativeidnowvideoident` under `Android`.
+To edit the Kotlin files, open `example/android` in Android studio and find the source files at `tokenstreetreactnativeidnowvideoident` under `Android`.
 
 ### Commit message convention
 
@@ -100,7 +100,7 @@ The `package.json` file contains various scripts for common tasks:
 
 ### Sending a pull request
 
-> **Working on your first pull request?** You can learn how from this _free_ series: [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
+> **Working on your first pull request?** You can learn how from this _free_ series: [How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github).
 
 When you're sending a pull request:
 
