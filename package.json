@@ -24,7 +24,7 @@
     "scripts": {
         "test": "jest",
         "typescript": "tsc --noEmit",
-        "lint": "eslint \"**/*.{js,ts,tsx}\"",
+        "lint": "eslint .",
         "lint:fix": "npm run lint -- --fix",
         "prettier": "prettier --write . --ignore-path ./.prettierignore",
         "prettier:staged": "pretty-quick --staged",
@@ -37,7 +37,7 @@
     },
     "lint-staged": {
         "*": "prettier --ignore-unknown --write",
-        "*.(ts|tsx)": "eslint --fix"
+        "*.(js|jsx|ts|tsx)": "eslint --fix"
     },
     "keywords": [
         "react-native",
