@@ -1,0 +1,35 @@
+name: Pull request
+
+on:
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    yarn_script_validation:
+        name: yarn script validation
+        runs-on: [self-hosted, linux]
+        strategy:
+            matrix:
+                VALIDATION: ['Typecheck files', 'Lint files', 'Run unit tests']
+                include:
+                    - VALIDATION: 'Typecheck files'
+                      COMMAND: typescript
+                    - VALIDATION: 'Lint files'
+                      COMMAND: lint
+                    - VALIDATION: 'Run unit tests'
+                      COMMAND: test
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: 16
+            - run: |
+                  yarn install --frozen-lockfile
+                  yarn build
+                  yarn install --cwd example --frozen-lockfile
+            - run: yarn ${{ matrix.COMMAND }}
