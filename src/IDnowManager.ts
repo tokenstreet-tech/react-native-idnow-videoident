@@ -67,7 +67,7 @@ const prepareOptions = (options: IOptions) => {
 };
 
 export const IDnowManager = {
-    startVideoIdent(options: IOptions) {
+    startVideoIdent: async (options: IOptions): Promise<any> => {
         if (Platform.OS === 'ios') {
             return new Promise((resolve, reject) => {
                 NativeModules.IDnowViewManager.startVideoIdent(prepareOptions(options), (...args: Array<any>) => {
