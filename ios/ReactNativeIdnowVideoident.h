@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
 #import <React/RCTViewManager.h>
-
-@import IDnowSDK;
+#import <IDnowSDK/IDnowSDK.h>
 
 @interface IDnowViewController : UIViewController
 @end
