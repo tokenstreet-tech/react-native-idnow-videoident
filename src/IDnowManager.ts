@@ -2,7 +2,7 @@ import { NativeModules, Platform, processColor } from 'react-native';
 
 import type { IOptions } from './types/common';
 
-export const defaultOptions = {
+export const defaultOptions: IOptions = {
     companyId: '',
     showVideoOverviewCheck: true,
     showErrorSuccessScreen: false,
