@@ -1,5 +1,10 @@
-#import <React/RCTBridgeModule.h>
+#import <UIKit/UIKit.h>
+#import <React/RCTViewManager.h>
 
-@interface ReactNativeIdnowVideoident : NSObject <RCTBridgeModule>
+@import IDnowSDK;
 
+@interface IDnowViewController : UIViewController
+@end
+
+@interface IDnowViewManager : RCTViewManager
 @end

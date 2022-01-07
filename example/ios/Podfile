@@ -12,13 +12,14 @@ target 'ReactNativeIdnowVideoidentExample' do
         hermes_enabled: false
     )
 
+    use_frameworks! linkage: :static
     pod 'tokenstreet-react-native-idnow-videoident', path: '../..'
 
     # Enables Flipper.
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    use_flipper!
+    # use_flipper!
 
     post_install do |installer|
         react_native_post_install(installer)

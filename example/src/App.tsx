@@ -1,17 +1,15 @@
-import { multiply } from '@tokenstreet/react-native-idnow-videoident';
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+import React, { useCallback, useState } from 'react';
+import { Button, StyleSheet, TextInput, View } from 'react-native';
 
 export default function App() {
-    const [result, setResult] = React.useState<number | undefined>();
-
-    React.useEffect(() => {
-        multiply(3, 7).then(setResult);
-    }, []);
+    const [transactionToken, setTransactionToken] = useState<string>('');
+    const startVideoIdent = useCallback(() => IDnowManager.startVideoIdent({ transactionToken }), [transactionToken]);
 
     return (
         <View style={styles.container}>
-            <Text>Result: {result}</Text>
+            <TextInput placeholder={'Transaction token'} value={transactionToken} onChangeText={setTransactionToken} />
+            <Button title={'Start video ident'} onPress={startVideoIdent} />
         </View>
     );
 }

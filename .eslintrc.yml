@@ -72,3 +72,7 @@ rules:
     no-warning-comments: 0
     sort-keys: 0
     sort-vars: 0
+    capitalized-comments: 0
+    multiline-comment-style: 0
+    '@typescript-eslint/prefer-readonly-parameter-types': 0
+    '@typescript-eslint/prefer-optional-chain': 0

@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+export { IDnowManager } from './IDnowManager';
 
 const LINKING_ERROR =
     `The package '@tokenstreet/react-native-idnow-videoident' doesn't seem to be linked. Make sure: \n\n${Platform.select(
