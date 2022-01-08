@@ -66,11 +66,43 @@ const prepareOptions = (options: IOptions) => {
     };
 };
 
+const LINKING_ERROR =
+    `The package '@tokenstreet/react-native-idnow-videoident' doesn't seem to be linked. Make sure: \n\n${Platform.select(
+        { ios: "- You have run 'pod install'\n", default: '' }
+    )}- You rebuilt the app after installing the package\n` + `- You are not using Expo managed workflow\n`;
+
+const reactNativeIdnowVideoident = async (): Promise<any> => {
+    if (Platform.OS === 'ios') {
+        return NativeModules.IDnowViewManager
+            ? NativeModules.IDnowViewManager
+            : new Proxy(
+                  {},
+                  {
+                      get() {
+                          throw new Error(LINKING_ERROR);
+                      },
+                  }
+              );
+    } else if (Platform.OS === 'android') {
+        return NativeModules.ReactNativeIdnowVideoident
+            ? NativeModules.ReactNativeIdnowVideoident
+            : new Proxy(
+                  {},
+                  {
+                      get() {
+                          throw new Error(LINKING_ERROR);
+                      },
+                  }
+              );
+    }
+};
+
 export const IDnowManager = {
     startVideoIdent: async (options: IOptions): Promise<any> => {
+        const nativeClient = await reactNativeIdnowVideoident();
         if (Platform.OS === 'ios') {
             return new Promise((resolve, reject) => {
-                NativeModules.IDnowViewManager.startVideoIdent(prepareOptions(options), (...args: Array<any>) => {
+                nativeClient.startVideoIdent(prepareOptions(options), (...args: Array<any>) => {
                     const [err, resp] = args;
                     if (resp && resp.success) {
                         resolve(resp);
@@ -79,7 +111,7 @@ export const IDnowManager = {
                 });
             });
         } else if (Platform.OS === 'android') {
-            return NativeModules.ReactNativeIdnowVideoident.startVideoIdent(prepareOptions(options));
+            return nativeClient.startVideoIdent(prepareOptions(options));
         }
     },
 };
