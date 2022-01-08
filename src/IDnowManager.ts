@@ -79,7 +79,7 @@ export const IDnowManager = {
                 });
             });
         } else if (Platform.OS === 'android') {
-            return NativeModules.RNIdnow.startVideoIdent(prepareOptions(options));
+            return NativeModules.ReactNativeIdnowVideoident.startVideoIdent(prepareOptions(options));
         }
     },
 };
