@@ -32,7 +32,7 @@
         "build": "bob build",
         "release": "release-it",
         "example": "yarn --cwd example",
-        "pods": "cd example && pod-install --quiet",
+        "pods": "export LC_ALL=\"en_US.UTF-8\" && cd example && arch -x86_64 pod-install --quiet",
         "bootstrap": "yarn && yarn build && yarn example && yarn pods",
         "prepare": "husky install"
     },

@@ -1,17 +1,21 @@
-import { multiply } from '@tokenstreet/react-native-idnow-videoident';
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+import React, { useCallback, useState } from 'react';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
-    const [result, setResult] = React.useState<number | undefined>();
-
-    React.useEffect(() => {
-        multiply(3, 7).then(setResult);
-    }, []);
+    const [transactionToken, setTransactionToken] = useState<string>('TST-VYCCB');
+    const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
+    const startVideoIdent = useCallback(async () => {
+        IDnowManager.startVideoIdent({ transactionToken })
+            .then((fulfilled) => setVideoIdentResponse(JSON.stringify(fulfilled)))
+            .catch((rejected) => setVideoIdentResponse(JSON.stringify(rejected)));
+    }, [transactionToken]);
 
     return (
         <View style={styles.container}>
-            <Text>Result: {result}</Text>
+            <TextInput placeholder={'Transaction token'} value={transactionToken} onChangeText={setTransactionToken} />
+            <Button title={'Start video ident'} onPress={startVideoIdent} />
+            <Text>{videoIdentResponse}</Text>
         </View>
     );
 }
@@ -21,10 +25,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    box: {
-        width: 60,
-        height: 60,
-        marginVertical: 20,
     },
 });

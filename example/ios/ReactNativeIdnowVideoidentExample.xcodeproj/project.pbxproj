@@ -15,7 +15,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeIdnowVideoidentExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeIdnowVideoidentExampleTests.m */; };
-		4C39C56BAD484C67AA576FFA /* libPods-ReactNativeIdnowVideoidentExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3E69C5B9553B26FBA2DF04 /* libPods-ReactNativeIdnowVideoidentExample.a */; };
+		558F4CBC2076400870FD60E4 /* Pods_ReactNativeIdnowVideoidentExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5909BA519736AFCB5C61322 /* Pods_ReactNativeIdnowVideoidentExample.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		2D02E4901E0B4A5D006451C7 /* ReactNativeIdnowVideoidentExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactNativeIdnowVideoidentExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F7ED3B7971BE374F7B8635 /* Pods-ReactNativeIdnowVideoidentExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeIdnowVideoidentExample.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeIdnowVideoidentExample/Pods-ReactNativeIdnowVideoidentExample.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeIdnowVideoidentExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CA3E69C5B9553B26FBA2DF04 /* libPods-ReactNativeIdnowVideoidentExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeIdnowVideoidentExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5909BA519736AFCB5C61322 /* Pods_ReactNativeIdnowVideoidentExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeIdnowVideoidentExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00ACF0FDA8BF921659E2F9A /* Pods-ReactNativeIdnowVideoidentExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeIdnowVideoidentExample.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeIdnowVideoidentExample/Pods-ReactNativeIdnowVideoidentExample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C39C56BAD484C67AA576FFA /* libPods-ReactNativeIdnowVideoidentExample.a in Frameworks */,
+				558F4CBC2076400870FD60E4 /* Pods_ReactNativeIdnowVideoidentExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				CA3E69C5B9553B26FBA2DF04 /* libPods-ReactNativeIdnowVideoidentExample.a */,
+				A5909BA519736AFCB5C61322 /* Pods_ReactNativeIdnowVideoidentExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,7 +206,6 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C1D60D28B925C94BD88E79D7 /* [CP] Copy Pods Resources */,
-				D1E3C3378877CECF91A3DAA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,35 +392,73 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeIdnowVideoidentExample/Pods-ReactNativeIdnowVideoidentExample-resources.sh",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-DRIVERS_LICENSE-IDBACKSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-DRIVERS_LICENSE-IDBACKSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-DRIVERS_LICENSE-IDFRONTSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-DRIVERS_LICENSE-IDFRONTSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-DRIVERS_LICENSE-IDHOLOGRAMS@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-DRIVERS_LICENSE-IDHOLOGRAMS@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-FACESCREENSHOT@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-FACESCREENSHOT@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-IDCARD-IDBACKSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-IDCARD-IDBACKSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-IDCARD-IDFRONTSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-IDCARD-IDFRONTSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-IDCARD-IDHOLOGRAMS@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-IDCARD-IDHOLOGRAMS@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-PASSPORT-IDBACKSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-PASSPORT-IDBACKSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-PASSPORT-IDFRONTSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-PASSPORT-IDFRONTSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-PASSPORT-IDHOLOGRAMS@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-PASSPORT-IDHOLOGRAMS@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-RESIDENCE_PERMIT-IDBACKSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-RESIDENCE_PERMIT-IDBACKSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-RESIDENCE_PERMIT-IDFRONTSIDE@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-RESIDENCE_PERMIT-IDFRONTSIDE@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-RESIDENCE_PERMIT-IDHOLOGRAMS@2x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/idn-helper-RESIDENCE_PERMIT-IDHOLOGRAMS@3x.jpg",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/IDnowImages.bundle",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/IDnowSDKLocalization.bundle",
+				"${PODS_ROOT}/IDnowSDK/idnow-sdk/resources/IDnowVideoIdentPlusImages.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-DRIVERS_LICENSE-IDBACKSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-DRIVERS_LICENSE-IDBACKSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-DRIVERS_LICENSE-IDFRONTSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-DRIVERS_LICENSE-IDFRONTSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-DRIVERS_LICENSE-IDHOLOGRAMS@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-DRIVERS_LICENSE-IDHOLOGRAMS@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-FACESCREENSHOT@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-FACESCREENSHOT@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-IDCARD-IDBACKSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-IDCARD-IDBACKSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-IDCARD-IDFRONTSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-IDCARD-IDFRONTSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-IDCARD-IDHOLOGRAMS@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-IDCARD-IDHOLOGRAMS@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-PASSPORT-IDBACKSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-PASSPORT-IDBACKSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-PASSPORT-IDFRONTSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-PASSPORT-IDFRONTSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-PASSPORT-IDHOLOGRAMS@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-PASSPORT-IDHOLOGRAMS@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-RESIDENCE_PERMIT-IDBACKSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-RESIDENCE_PERMIT-IDBACKSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-RESIDENCE_PERMIT-IDFRONTSIDE@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-RESIDENCE_PERMIT-IDFRONTSIDE@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-RESIDENCE_PERMIT-IDHOLOGRAMS@2x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idn-helper-RESIDENCE_PERMIT-IDHOLOGRAMS@3x.jpg",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDnowImages.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDnowSDKLocalization.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDnowVideoIdentPlusImages.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeIdnowVideoidentExample/Pods-ReactNativeIdnowVideoidentExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D1E3C3378877CECF91A3DAA5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeIdnowVideoidentExample/Pods-ReactNativeIdnowVideoidentExample-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion/double-conversion.framework/double-conversion",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/double-conversion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeIdnowVideoidentExample/Pods-ReactNativeIdnowVideoidentExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
