@@ -98,20 +98,33 @@ const reactNativeIdnowVideoident = async (): Promise<any> => {
 };
 
 export const IDnowManager = {
-    startVideoIdent: async (options: IOptions, onError?: (error: any) => void): Promise<boolean | undefined> => {
+    /**
+     * Note: Promise will not resolve if the result is ABORTED
+     * @param options
+     * @param onSuccess
+     * @param onError
+     */
+    startVideoIdent: async (
+        options: IOptions,
+        onSuccess?: () => Promise<void> | void,
+        onError?: (error: any) => Promise<void> | void
+    ): Promise<boolean | undefined> => {
         const nativeClient = await reactNativeIdnowVideoident();
         if (Platform.OS === 'ios') {
             return new Promise((resolve, reject) => {
                 nativeClient.startVideoIdent(
                     prepareOptions(options),
-                    (err?: { success: boolean; message?: any; canceledByUser: boolean }, resp?: any) => {
+                    async (err?: { success: boolean; message?: any; canceledByUser: boolean }, resp?: any) => {
                         if (resp?.success) {
+                            if (onSuccess) {
+                                await onSuccess();
+                            }
                             resolve(resp);
                         }
                         const errorMessage =
                             typeof err?.message === 'string' ? err.message : JSON.stringify(err?.message);
                         if (onError) {
-                            onError(errorMessage);
+                            await onError(errorMessage);
                         }
                         reject(err ?? new Error('Internal error'));
                     }
