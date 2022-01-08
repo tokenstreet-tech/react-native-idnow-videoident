@@ -98,20 +98,28 @@ const reactNativeIdnowVideoident = async (): Promise<any> => {
 };
 
 export const IDnowManager = {
-    startVideoIdent: async (options: IOptions): Promise<any> => {
+    startVideoIdent: async (options: IOptions, onError?: (error: any) => void): Promise<boolean | undefined> => {
         const nativeClient = await reactNativeIdnowVideoident();
         if (Platform.OS === 'ios') {
             return new Promise((resolve, reject) => {
-                nativeClient.startVideoIdent(prepareOptions(options), (...args: Array<any>) => {
-                    const [err, resp] = args;
-                    if (resp && resp.success) {
-                        resolve(resp);
+                nativeClient.startVideoIdent(
+                    prepareOptions(options),
+                    (err?: { success: boolean; message?: any; canceledByUser: boolean }, resp?: any) => {
+                        if (resp?.success) {
+                            resolve(resp);
+                        }
+                        const errorMessage =
+                            typeof err?.message === 'string' ? err.message : JSON.stringify(err?.message);
+                        if (onError) {
+                            onError(errorMessage);
+                        }
+                        reject(err ?? new Error('Internal error'));
                     }
-                    reject(err || new Error('Internal error'));
-                });
+                );
             });
         } else if (Platform.OS === 'android') {
             return nativeClient.startVideoIdent(prepareOptions(options));
         }
+        return undefined;
     },
 };
