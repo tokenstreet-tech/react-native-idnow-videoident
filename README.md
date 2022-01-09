@@ -1,13 +1,13 @@
-# react-native-idnow-videoident
+# @tokenstreet/react-native-idnow-videoident
 
 React Native IDnow VideoIdent bindings for iOS and Android platforms
 
 ## Installation
 
-1. Install `react-native-idnow-videoident`:
+1. Install `@tokenstreet/react-native-idnow-videoident`:
 
     ```sh
-    npm install react-native-idnow-videoident
+    npm install @tokenstreet/react-native-idnow-videoident
     ```
 
 2. Add the following line to your iOS Podfile:

@@ -1,22 +1,22 @@
 {
-    "name": "react-native-idnow-videoident-example",
-    "description": "Example app for react-native-idnow-videoident",
+    "name": "@tokenstreet/react-native-idnow-videoident-example",
+    "description": "Example app for @tokenstreet/react-native-idnow-videoident",
     "version": "0.0.1",
     "private": true,
     "scripts": {
         "start": "react-native start",
-        "ios": "react-native run-ios",
+        "ios": "arch -x86_64 react-native run-ios",
         "android": "react-native run-android",
-        "xcode": "open ios/IdnowVideoidentExample.xcworkspace"
+        "xcode": "open ios/ReactNativeIdnowVideoidentExample.xcworkspace"
     },
     "dependencies": {
-        "react": "16.13.1",
-        "react-native": "0.63.4"
+        "react": "17.0.2",
+        "react-native": "0.66.4"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/runtime": "^7.12.5",
-        "babel-plugin-module-resolver": "^4.0.0",
-        "metro-react-native-babel-preset": "^0.64.0"
+        "@babel/core": "^7.16.7",
+        "@babel/runtime": "^7.16.7",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "metro-react-native-babel-preset": "^0.66.2"
     }
 }

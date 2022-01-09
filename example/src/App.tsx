@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
-import { start } from 'react-native-idnow-videoident';
+import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+import React, { useCallback, useState } from 'react';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
-    const [result, setResult] = useState<boolean | undefined>(undefined);
-    const [callback, setCallback] = useState<
-        { canceledByUser: boolean; message: string; success: boolean } | undefined
-    >(undefined);
-    const onPress = () =>
-        start({ transactionToken: 'TST-VYCCB', companyID: 'tokenstreet' }, setCallback).then(setResult);
+    const [transactionToken, setTransactionToken] = useState<string>('TST-VYCCB');
+    const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
+    const startVideoIdent = useCallback(async () => {
+        IDnowManager.startVideoIdent({ transactionToken })
+            .then((fulfilled) => setVideoIdentResponse(JSON.stringify(fulfilled)))
+            .catch((rejected) => setVideoIdentResponse(JSON.stringify(rejected)));
+    }, [transactionToken]);
 
     return (
         <View style={styles.container}>
-            <Button title="init" onPress={onPress} />
-            <Text>result: {JSON.stringify(result)}</Text>
-            <Text>canceledByUser: {callback?.canceledByUser}</Text>
-            <Text>message: {callback?.message}</Text>
-            <Text>success: {callback?.success}</Text>
+            <TextInput placeholder={'Transaction token'} value={transactionToken} onChangeText={setTransactionToken} />
+            <Button title={'Start video ident'} onPress={startVideoIdent} />
+            <Text>{videoIdentResponse}</Text>
         </View>
     );
 }
@@ -26,10 +25,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    box: {
-        width: 60,
-        height: 60,
-        marginVertical: 20,
     },
 });
