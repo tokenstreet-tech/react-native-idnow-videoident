@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export const App: React.FC = () => {
-    const [transactionToken, setTransactionToken] = useState<string>('TST-DJEBR');
+    const [transactionToken, setTransactionToken] = useState<string>('TST-RKGGY');
     const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
     const startVideoIdent = useCallback(async () => {
         setVideoIdentResponse('');
