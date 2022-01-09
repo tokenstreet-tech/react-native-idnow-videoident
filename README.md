@@ -25,10 +25,10 @@ React Native IDnow VideoIdent bindings for iOS and Android platforms
 4. Add the following properties to your `Info.plist`:
 
     ```xml
-      <key>NSMicrophoneUsageDescription</key>
-      <string>Need microphone access for video identification</string>
-      <key>NSCameraUsageDescription</key>
-      <string>Need camera access for for video identification</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow microphone access for video identification</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow camera access for video identification</string>
     ```
 
 ## Usage

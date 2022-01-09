@@ -2,7 +2,7 @@
 //  File.swift
 //  ReactNativeIdnowVideoidentExample
 //
-//  Created by Daniel Reichhart on 01.05.21.
+//  Created by Daniel Reichhart on 09.01.22.
 //
 
 import Foundation
