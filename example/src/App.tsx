@@ -3,9 +3,10 @@ import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
-    const [transactionToken, setTransactionToken] = useState<string>('TST-VYCCB');
+    const [transactionToken, setTransactionToken] = useState<string>('TST-DJEBR');
     const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
     const startVideoIdent = useCallback(async () => {
+        setVideoIdentResponse('');
         IDnowManager.startVideoIdent({ transactionToken })
             .then((fulfilled) => setVideoIdentResponse(JSON.stringify(fulfilled)))
             .catch((rejected) => setVideoIdentResponse(JSON.stringify(rejected)));

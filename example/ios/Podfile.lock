@@ -299,7 +299,7 @@ PODS:
     - React-logger (= 0.66.4)
     - React-perflogger (= 0.66.4)
   - SocketRocket (0.5.1)
-  - tokenstreet-react-native-idnow-videoident (0.1.0):
+  - tokenstreet-react-native-idnow-videoident (0.1.2):
     - IDnowSDK (= 5.1.5)
     - React-Core
   - Yoga (1.14.0)
@@ -450,7 +450,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: dec32ee6f2e2a26e13e58152271535fadff5455a
   ReactCommon: 57b69f6383eafcbd7da625bfa6003810332313c4
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  tokenstreet-react-native-idnow-videoident: f860d05a77ee4461633d69dc20e4f765b7110b0d
+  tokenstreet-react-native-idnow-videoident: 30c56b03804a4b382bea2dc54fb04bc705bb8727
   Yoga: e7dc4e71caba6472ff48ad7d234389b91dadc280
 
 PODFILE CHECKSUM: f552a1b1c50e3bebb79ddc997edae28867c46634

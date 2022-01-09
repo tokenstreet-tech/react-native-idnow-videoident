@@ -71,32 +71,6 @@ const LINKING_ERROR =
         { ios: "- You have run 'pod install'\n", default: '' }
     )}- You rebuilt the app after installing the package\n` + `- You are not using Expo managed workflow\n`;
 
-const reactNativeIdnowVideoident = async (): Promise<any> => {
-    if (Platform.OS === 'ios') {
-        return NativeModules.IDnowViewManager
-            ? NativeModules.IDnowViewManager
-            : new Proxy(
-                  {},
-                  {
-                      get() {
-                          throw new Error(LINKING_ERROR);
-                      },
-                  }
-              );
-    } else if (Platform.OS === 'android') {
-        return NativeModules.ReactNativeIdnowVideoident
-            ? NativeModules.ReactNativeIdnowVideoident
-            : new Proxy(
-                  {},
-                  {
-                      get() {
-                          throw new Error(LINKING_ERROR);
-                      },
-                  }
-              );
-    }
-};
-
 export const IDnowManager = {
     /**
      * Note: Promise will not resolve if the result is ABORTED
@@ -109,7 +83,16 @@ export const IDnowManager = {
         onSuccess?: () => Promise<void> | void,
         onError?: (error: any) => Promise<void> | void
     ): Promise<boolean | undefined> => {
-        const nativeClient = await reactNativeIdnowVideoident();
+        const nativeClient = NativeModules.ReactNativeIdnowVideoident
+            ? NativeModules.ReactNativeIdnowVideoident
+            : new Proxy(
+                  {},
+                  {
+                      get() {
+                          throw new Error(LINKING_ERROR);
+                      },
+                  }
+              );
         if (Platform.OS === 'ios') {
             return new Promise((resolve, reject) => {
                 nativeClient.startVideoIdent(
