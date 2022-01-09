@@ -8,7 +8,8 @@ export const defaultOptions: ISettings = {
     showErrorSuccessScreen: false,
     transactionToken: 'TST-XXXXX',
     ignoreCompanyID: true,
-    showIdentTokenOnCheckScreen: false,
+    // showIdentTokenOnCheckScreen: false,
+
     forceModalPresentation: false,
     // environment: 'LIVE', no need to force to use a specific env; Default is to determine this by the token used
     // apiHost: null,
@@ -38,7 +39,7 @@ export const defaultOptions: ISettings = {
         fontNameLight: 'HelveticaNeue-Ligth',
         fontNameMedium: 'HelveticaNeue-Bold',
     },
-} as any;
+};
 
 const prepareOptions = (options: ISettings) => {
     // TODO refactor

@@ -15,6 +15,12 @@ export interface ISettings {
     companyID?: string;
 
     /**
+     * Not documented property.
+     * The default value of this property is true.
+     */
+    ignoreCompanyID?: boolean;
+
+    /**
      * Optional: The environment that should be used for the identification (DEV, TEST, LIVE)
      * The default value is IDnowEnvironmentNotDefined.
      *
