@@ -1,14 +1,14 @@
 import { NativeModules, Platform, processColor } from 'react-native';
 
-import type { IOptions } from './types/common';
+import type { ISettings } from './interfaces/ISettings';
 
-export const defaultOptions: IOptions = {
-    companyId: '',
+export const defaultOptions: ISettings = {
+    companyID: '',
     showVideoOverviewCheck: true,
     showErrorSuccessScreen: false,
     transactionToken: 'TST-XXXXX',
-    ignoreCompanyID: true,
-    showIdentTokenOnCheckScreen: false,
+    // ignoreCompanyID: true,
+    // showIdentTokenOnCheckScreen: false,
     forceModalPresentation: false,
     // environment: 'LIVE', no need to force to use a specific env; Default is to determine this by the token used
     // apiHost: null,
@@ -18,7 +18,7 @@ export const defaultOptions: IOptions = {
     // stunHost: null,
     // stunPort: null,
 
-    appearance: {
+    branding: {
         // Adjust colors
         primaryBrandColor: '#1D4477', // primaryBlue
         successColor: '#1ABC9C', // successGreen
@@ -40,11 +40,11 @@ export const defaultOptions: IOptions = {
     },
 };
 
-const prepareOptions = (options: IOptions) => {
+const prepareOptions = (options: ISettings) => {
     // TODO refactor
     const appearanceOptions = {
-        ...defaultOptions.appearance,
-        ...options.appearance,
+        ...defaultOptions.branding,
+        ...options.branding,
     };
     return {
         ...defaultOptions,
@@ -105,7 +105,7 @@ export const IDnowManager = {
      * @param onError
      */
     startVideoIdent: async (
-        options: IOptions,
+        options: ISettings,
         onSuccess?: () => Promise<void> | void,
         onError?: (error: any) => Promise<void> | void
     ): Promise<boolean | undefined> => {

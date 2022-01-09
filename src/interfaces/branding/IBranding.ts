@@ -1,17 +1,7 @@
-import type { IFonts } from './fonts/IFonts';
-import type { IColors } from './colors/IColors';
+import type { IColors } from './IColors';
+import type { IFonts } from './IFonts';
 
 /**
  * Branding
  */
-export interface IBranding {
-    /**
-     * Colors
-     */
-    colors?: IColors;
-
-    /**
-     * Fonts
-     */
-    fonts?: IFonts;
-}
+export interface IBranding extends IColors, IFonts {}

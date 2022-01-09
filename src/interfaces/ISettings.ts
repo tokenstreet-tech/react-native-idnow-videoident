@@ -12,7 +12,7 @@ export interface ISettings {
     /**
      * Your company id provided by IDnow.
      */
-    companyID: string;
+    companyID?: string;
 
     /**
      * Optional: The environment that should be used for the identification (DEV, TEST, LIVE)
@@ -33,18 +33,20 @@ export interface ISettings {
     showErrorSuccessScreen?: boolean;
 
     /**
-     * Optional: If set to false, the video overview check screen will not be shown befsore starting a video identification.
+     * Optional: If set to false, the video overview check screen will not be shown before starting a video identification.
      * The default value of this property is true.
      */
     showVideoOverviewCheck?: boolean;
 
     /**
-     * Optional: If set to true, the UI for the identification will always be displayed modal. By default the value of this property is false and the identification UI will be pushed on an existing navigation controller if possible.
+     * Optional: If set to true, the UI for the identification will always be displayed modal.
+     * By default, the value of this property is false and the identification UI will be pushed on an existing navigation controller if possible.
      */
     forceModalPresentation?: boolean;
 
     /**
-     * Optional: Specifies the presentation style for the modal ident viewcontroller. E.g. Can be set to UIModalPresentationCurrentContext to allow presenting ident view controller within a popover on an iPad.
+     * Optional: Specifies the presentation style for the modal ident view controller.
+     * E.g. Can be set to UIModalPresentationCurrentContext to allow presenting ident view controller within a popover on an iPad.
      */
     modalPresentationStyle?: any;
 
