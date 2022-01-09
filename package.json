@@ -29,6 +29,7 @@
         "lint:fix": "npm run lint -- --fix",
         "prettier": "prettier --write . --ignore-path ./.prettierignore",
         "prettier:staged": "pretty-quick --staged",
+        "uncrustify": "cd ios && find . \\( -name \"*.h\" -o -name \"*.m\" \\) -exec uncrustify -c ../uncrustifyrc.cfg --no-backup {} +",
         "build": "bob build",
         "release": "release-it",
         "example": "yarn --cwd example",

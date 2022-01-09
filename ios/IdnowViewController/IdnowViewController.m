@@ -68,35 +68,26 @@
 	__weak typeof(self) weakSelf   = self;
 
 	// Initialize identification using blocks (alternatively you can set the delegate and implement the IDnowControllerDelegate protocol)
-	[self.idnowController initializeWithCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser)
-	 {
+	[self.idnowController initializeWithCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser) {
 	         NSMutableDictionary *identificationResult = [[NSMutableDictionary alloc] init];
 	         [identificationResult setValue:@(success) forKey:@"success"];
 	         [identificationResult setValue:@(canceledByUser) forKey:@"canceledByUser"];
-	         if ( success )
-		 {
-
-			 [weakSelf.idnowController startIdentificationFromViewController:rootViewController withCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser)
-			  {
+	         if ( success ) {
+			 [weakSelf.idnowController startIdentificationFromViewController:rootViewController withCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser)  {
 			          [identificationResult setValue:@"Identification was successful" forKey:@"message"];
 			          [identificationResult setValue:@(success) forKey:@"success"];
 			          [identificationResult setValue:@(canceledByUser) forKey:@"canceledByUser"];
 
-			          if ( success )
-				  {
+			          if ( success ) {
 					  callback(@[[NSNull null], identificationResult]);
 					  return;
-				  }
-			          else
-				  {
+				  } else {
 					  [identificationResult setValue:error.localizedDescription forKey:@"message"];
 					  callback(@[identificationResult]);
 					  return;
 				  }
 			  }];
-		 }
-	         else if ( error )
-		 {
+		 } else if ( error ) {
 			 [identificationResult setValue:error.localizedDescription forKey:@"message"];
 			 callback(@[identificationResult]);
 			 return;

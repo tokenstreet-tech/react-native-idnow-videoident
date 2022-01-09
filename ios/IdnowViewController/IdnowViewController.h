@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IDnowController *idnowController;
 @property (strong, nonatomic) IDnowSettings   *settings;
 
--(instancetype)initWithOptions:(NSDictionary *)options;
--(void) startVideoIdent:(RCTResponseSenderBlock)callback;
+- (instancetype) initWithOptions: (NSDictionary *) options;
+- (void) startVideoIdent: (RCTResponseSenderBlock) callback;
 
 @end
 
