@@ -3,14 +3,10 @@
 //  ReactNativeIdnowVideoident
 //
 //  Created by Daniel Reichhart on 09.01.22.
-//  Copyright © 2022 Facebook. All rights reserved.
+//  Copyright © 2022 tokenstreet. All rights reserved.
 //
 
 #import "IdnowViewController.h"
-
-@interface IdnowViewController ()
-
-@end
 
 @implementation IdnowViewController
 
