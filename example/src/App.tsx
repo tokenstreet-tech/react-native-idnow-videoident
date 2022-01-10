@@ -2,10 +2,11 @@ import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-export default function App() {
-    const [transactionToken, setTransactionToken] = useState<string>('TST-VYCCB');
+export const App: React.FC = () => {
+    const [transactionToken, setTransactionToken] = useState<string>('TST-KJCXN');
     const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
     const startVideoIdent = useCallback(async () => {
+        setVideoIdentResponse('');
         IDnowManager.startVideoIdent({ transactionToken })
             .then((fulfilled) => setVideoIdentResponse(JSON.stringify(fulfilled)))
             .catch((rejected) => setVideoIdentResponse(JSON.stringify(rejected)));
@@ -18,7 +19,7 @@ export default function App() {
             <Text>{videoIdentResponse}</Text>
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {

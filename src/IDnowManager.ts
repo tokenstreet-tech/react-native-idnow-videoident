@@ -1,14 +1,15 @@
 import { NativeModules, Platform, processColor } from 'react-native';
 
-import type { IOptions } from './types/common';
+import type { ISettings } from './interfaces/ISettings';
 
-export const defaultOptions: IOptions = {
-    companyId: '',
+export const defaultOptions: ISettings = {
+    companyID: '',
     showVideoOverviewCheck: true,
     showErrorSuccessScreen: false,
     transactionToken: 'TST-XXXXX',
     ignoreCompanyID: true,
-    showIdentTokenOnCheckScreen: false,
+    // showIdentTokenOnCheckScreen: false,
+
     forceModalPresentation: false,
     // environment: 'LIVE', no need to force to use a specific env; Default is to determine this by the token used
     // apiHost: null,
@@ -18,7 +19,7 @@ export const defaultOptions: IOptions = {
     // stunHost: null,
     // stunPort: null,
 
-    appearance: {
+    branding: {
         // Adjust colors
         primaryBrandColor: '#1D4477', // primaryBlue
         successColor: '#1ABC9C', // successGreen
@@ -40,11 +41,11 @@ export const defaultOptions: IOptions = {
     },
 };
 
-const prepareOptions = (options: IOptions) => {
+const prepareOptions = (options: ISettings) => {
     // TODO refactor
     const appearanceOptions = {
-        ...defaultOptions.appearance,
-        ...options.appearance,
+        ...defaultOptions.branding,
+        ...options.branding,
     };
     return {
         ...defaultOptions,
@@ -71,20 +72,19 @@ const LINKING_ERROR =
         { ios: "- You have run 'pod install'\n", default: '' }
     )}- You rebuilt the app after installing the package\n` + `- You are not using Expo managed workflow\n`;
 
-const reactNativeIdnowVideoident = async (): Promise<any> => {
-    if (Platform.OS === 'ios') {
-        return NativeModules.IDnowViewManager
-            ? NativeModules.IDnowViewManager
-            : new Proxy(
-                  {},
-                  {
-                      get() {
-                          throw new Error(LINKING_ERROR);
-                      },
-                  }
-              );
-    } else if (Platform.OS === 'android') {
-        return NativeModules.ReactNativeIdnowVideoident
+export const IDnowManager = {
+    /**
+     * Note: Promise will not resolve if the result is ABORTED
+     * @param options
+     * @param onSuccess
+     * @param onError
+     */
+    startVideoIdent: async (
+        options: ISettings,
+        onSuccess?: () => Promise<void> | void,
+        onError?: (error: any) => Promise<void> | void
+    ): Promise<boolean | undefined> => {
+        const nativeClient = NativeModules.ReactNativeIdnowVideoident
             ? NativeModules.ReactNativeIdnowVideoident
             : new Proxy(
                   {},
@@ -94,22 +94,6 @@ const reactNativeIdnowVideoident = async (): Promise<any> => {
                       },
                   }
               );
-    }
-};
-
-export const IDnowManager = {
-    /**
-     * Note: Promise will not resolve if the result is ABORTED
-     * @param options
-     * @param onSuccess
-     * @param onError
-     */
-    startVideoIdent: async (
-        options: IOptions,
-        onSuccess?: () => Promise<void> | void,
-        onError?: (error: any) => Promise<void> | void
-    ): Promise<boolean | undefined> => {
-        const nativeClient = await reactNativeIdnowVideoident();
         if (Platform.OS === 'ios') {
             return new Promise((resolve, reject) => {
                 nativeClient.startVideoIdent(

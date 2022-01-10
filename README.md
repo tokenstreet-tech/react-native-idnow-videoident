@@ -4,18 +4,41 @@ React Native IDnow VideoIdent bindings for iOS and Android platforms
 
 ## Installation
 
-```sh
-npm install @tokenstreet/react-native-idnow-videoident
-```
+1. Install `@tokenstreet/react-native-idnow-videoident`:
+
+    ```sh
+    npm install @tokenstreet/react-native-idnow-videoident
+    ```
+
+2. Add the following line to your iOS Podfile:
+
+    ```ruby
+    use_frameworks! linkage: :static
+    ```
+
+3. Install the iOS dependencies:
+
+    ```sh
+    pod install
+    ```
+
+4. Add the following properties to your `Info.plist`:
+
+    ```xml
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow microphone access for video identification</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow camera access for video identification</string>
+    ```
 
 ## Usage
 
 ```js
-import { multiply } from '@tokenstreet/react-native-idnow-videoident';
+import IdnowVideoident from 'react-native-idnow-videoident';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await IdnowVideoident.multiply(3, 7);
 ```
 
 ## Contributing
