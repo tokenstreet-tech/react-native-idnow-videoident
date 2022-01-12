@@ -4,4 +4,4 @@ import type { IFonts } from './IFonts';
 /**
  * Branding
  */
-export interface IBranding extends IColors, IFonts {}
+export interface IAppearance extends IColors, IFonts {}

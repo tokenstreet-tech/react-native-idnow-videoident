@@ -299,7 +299,7 @@ PODS:
     - React-logger (= 0.66.4)
     - React-perflogger (= 0.66.4)
   - SocketRocket (0.5.1)
-  - tokenstreet-react-native-idnow-videoident (0.1.2):
+  - tokenstreet-react-native-idnow-videoident (0.1.3):
     - IDnowSDK (= 5.1.5)
     - React-Core
   - Yoga (1.14.0)
@@ -416,12 +416,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   boost: a7c83b31436843459a1961bfd74b96033dc77234
-  DoubleConversion: cde416483dac037923206447da6e1454df403714
+  DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   FBLazyVector: e5569e42a1c79ca00521846c223173a57aca1fe1
   FBReactNativeSpec: fe08c1cd7e2e205718d77ad14b34957cce949b58
   FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
+  glog: 5337263514dd6f09803962437687240c5dc39aa4
   IDnowSDK: fd80a871d565aca5c63cf4367c5d37a320fb3039
   libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -450,7 +450,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: dec32ee6f2e2a26e13e58152271535fadff5455a
   ReactCommon: 57b69f6383eafcbd7da625bfa6003810332313c4
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  tokenstreet-react-native-idnow-videoident: 30c56b03804a4b382bea2dc54fb04bc705bb8727
+  tokenstreet-react-native-idnow-videoident: 9e52f4a7b7f3d7fa11a721726896fa766c64ce32
   Yoga: e7dc4e71caba6472ff48ad7d234389b91dadc280
 
 PODFILE CHECKSUM: f552a1b1c50e3bebb79ddc997edae28867c46634
