@@ -15,7 +15,7 @@ const LINKING_ERROR =
 
 export const IDnowManager = {
     /**
-     * Note: Promise will not resolve if the result is ABORTED
+     * Start the video ident process
      * @param settings
      */
     startVideoIdent: async (settings: ISettings): Promise<IIdentificationResult> => {
