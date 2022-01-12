@@ -10,8 +10,7 @@
 
 @implementation IdnowViewController
 
--(instancetype)initWithOptions:(NSDictionary *)options
-{
+-(instancetype)initWithOptions:(NSDictionary *)options {
 	self = [super init];
 
 	// Setup IDnowAppearance
@@ -56,8 +55,7 @@
 	return self;
 }
 
-- (void) startVideoIdent:(RCTResponseSenderBlock)callback
-{
+- (void) startVideoIdent:(RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback {
 	UIViewController *rootViewController = [[[UIApplication sharedApplication] delegate] window].rootViewController;
 
 	self.idnowController.delegate  = nil;
@@ -66,29 +64,37 @@
 	// Initialize identification using blocks (alternatively you can set the delegate and implement the IDnowControllerDelegate protocol)
 	[self.idnowController initializeWithCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser) {
 	         NSMutableDictionary *identificationResult = [[NSMutableDictionary alloc] init];
-	         [identificationResult setValue:@(success) forKey:@"success"];
-	         [identificationResult setValue:@(canceledByUser) forKey:@"canceledByUser"];
+	         NSString* resultCode = [self getResultCode:success canceledByUser:canceledByUser];
+	         [identificationResult setValue:resultCode forKey:@"resultCode"];
 	         if ( success ) {
 			 [weakSelf.idnowController startIdentificationFromViewController:rootViewController withCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser)  {
-			          [identificationResult setValue:@"Identification was successful" forKey:@"message"];
-			          [identificationResult setValue:@(success) forKey:@"success"];
-			          [identificationResult setValue:@(canceledByUser) forKey:@"canceledByUser"];
-
+			          NSString* resultCode = [self getResultCode:success canceledByUser:canceledByUser];
+			          [identificationResult setValue:resultCode forKey:@"resultCode"];
 			          if ( success ) {
-					  callback(@[[NSNull null], identificationResult]);
+					  successCallback(@[identificationResult]);
 					  return;
 				  } else {
-					  [identificationResult setValue:error.localizedDescription forKey:@"message"];
-					  callback(@[identificationResult]);
+					  [identificationResult setValue:error.localizedDescription forKey:@"errorMessage"];
+					  errorCallback(@[identificationResult]);
 					  return;
 				  }
 			  }];
 		 } else if ( error ) {
-			 [identificationResult setValue:error.localizedDescription forKey:@"message"];
-			 callback(@[identificationResult]);
+			 [identificationResult setValue:error.localizedDescription forKey:@"errorMessage"];
+			 errorCallback(@[identificationResult]);
 			 return;
 		 }
 	 }];
+}
+
+- (NSString *) getResultCode:(BOOL)success canceledByUser:(BOOL)canceledByUser {
+	if ( success ) {
+		return @"SUCCESS";
+	}
+	if ( canceledByUser) {
+		return @"CANCEL";
+	}
+	return @"FAILED";
 }
 
 @end

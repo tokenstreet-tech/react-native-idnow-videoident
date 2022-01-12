@@ -8,8 +8,8 @@ export const App: React.FC = () => {
     const startVideoIdent = useCallback(async () => {
         setVideoIdentResponse('');
         IDnowManager.startVideoIdent({ transactionToken })
-            .then((fulfilled) => setVideoIdentResponse(JSON.stringify(fulfilled)))
-            .catch((rejected) => setVideoIdentResponse(JSON.stringify(rejected)));
+            .then((fulfilled) => setVideoIdentResponse(`Resolved:\n${JSON.stringify(fulfilled)}`))
+            .catch((rejected) => setVideoIdentResponse(`Rejected:\n${JSON.stringify(rejected)}`));
     }, [transactionToken]);
 
     return (

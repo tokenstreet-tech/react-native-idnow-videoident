@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IDnowSettings   *settings;
 
 - (instancetype) initWithOptions: (NSDictionary *) options;
-- (void) startVideoIdent: (RCTResponseSenderBlock) callback;
+- (void) startVideoIdent:(RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback;
+- (NSString *) getResultCode:(BOOL)success canceledByUser:(BOOL)canceledByUser;
 
 @end
 

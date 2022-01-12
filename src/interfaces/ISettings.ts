@@ -1,4 +1,4 @@
-import type { IBranding } from './branding/IBranding';
+import type { IAppearance } from './appearance/IAppearance';
 
 /**
  * The settings that should be used for the identification process provided by IDnow.
@@ -72,7 +72,7 @@ export interface ISettings {
     connectionType?: any;
 
     /**
-     * Branding
+     * Appearance
      */
-    branding?: IBranding;
+    appearance?: IAppearance;
 }
