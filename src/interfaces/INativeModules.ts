@@ -8,7 +8,7 @@ export interface IIdentificationResult {
     resultCode: ResultCodeEnum;
 }
 interface IIdentificationErrorResult extends IIdentificationResult {
-    errorMessage: string;
+    errorMessage?: string;
 }
 
 export interface IReactNativeIdnowVideoidentNativeModule {

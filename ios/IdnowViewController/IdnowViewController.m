@@ -66,7 +66,6 @@
 	         NSMutableDictionary *identificationResult = [[NSMutableDictionary alloc] init];
 	         NSString* resultCode = [self getResultCode:success canceledByUser:canceledByUser];
 	         [identificationResult setValue:resultCode forKey:@"resultCode"];
-	         [identificationResult setValue:@(canceledByUser) forKey:@"canceledByUser"];
 	         if ( success ) {
 			 [weakSelf.idnowController startIdentificationFromViewController:rootViewController withCompletionBlock:^(BOOL success, NSError * _Nullable error, BOOL canceledByUser)  {
 			          NSString* resultCode = [self getResultCode:success canceledByUser:canceledByUser];
