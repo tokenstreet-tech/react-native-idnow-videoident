@@ -21,6 +21,8 @@ updates:
       directory: '/example/android'
       schedule:
           interval: 'daily'
+      ignore:
+          - dependency-name: 'idnow-android-sdk'
     - package-ecosystem: 'github-actions'
       directory: '/'
       schedule:
