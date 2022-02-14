@@ -57,7 +57,7 @@
         "registry": "https://registry.npmjs.org/"
     },
     "devDependencies": {
-        "@commitlint/config-conventional": "^16.0.0",
+        "@commitlint/config-conventional": "^16.2.1",
         "@prettier/plugin-ruby": "^2.0.0",
         "@react-native-community/eslint-config": "^3.0.1",
         "@release-it/conventional-changelog": "^4.1.0",
