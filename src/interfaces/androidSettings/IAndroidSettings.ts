@@ -1,4 +1,5 @@
 import type { IAndroidCustomServer } from './IAndroidCustomServer';
+import type { IAndroidDesignConfiguration } from './IAndroidDesignConfiguration';
 
 enum EnvironmentEnum {
     DEV = 'DEV',
@@ -11,7 +12,7 @@ enum ConnectionTypeEnum {
     WEBSOCKET = 'WEBSOCKET',
 }
 
-export interface IAndroidSettings extends IAndroidCustomServer {
+export interface IAndroidSettings extends IAndroidCustomServer, IAndroidDesignConfiguration {
     /**
      * Initialize with your activity which will handle the SDK callback and pass the id of your company.
      * IDnowSDK is a singleton class, so just call it with IDnowSDK.getInstance()
