@@ -1,9 +1,9 @@
-import type { IAppearance } from './appearance/IAppearance';
+import type { IIosAppearance } from './iosAppearance/IIosAppearance';
 
 /**
  * The settings that should be used for the identification process provided by IDnow.
  */
-export interface ISettings {
+export interface IIosSettings {
     /**
      * A token that will be used for instantiating a photo or video identification.
      */
@@ -74,5 +74,5 @@ export interface ISettings {
     /**
      * Appearance
      */
-    appearance?: IAppearance;
+    appearance?: IIosAppearance;
 }

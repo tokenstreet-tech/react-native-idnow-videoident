@@ -7,7 +7,7 @@ import type {
     INativeModules,
     IReactNativeIdnowVideoidentNativeModule,
 } from './interfaces/INativeModules';
-import type { ISettings } from './interfaces/ISettings';
+import type { IIosSettings } from './interfaces/iosSettings/IIosSettings';
 import { prepareSettings } from './prepareSettings';
 
 export const IDnowManager = {
@@ -15,7 +15,7 @@ export const IDnowManager = {
      * Start the video ident process
      * @param settings
      */
-    startVideoIdent: async (settings: ISettings): Promise<IIdentificationResult> => {
+    startVideoIdent: async (settings: IIosSettings): Promise<IIdentificationResult> => {
         const nativeClient: IReactNativeIdnowVideoidentNativeModule = (NativeModules as INativeModules)
             .ReactNativeIdnowVideoident
             ? NativeModules.ReactNativeIdnowVideoident

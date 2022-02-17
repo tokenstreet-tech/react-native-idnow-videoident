@@ -1,7 +1,7 @@
 /**
  * Status Bar colors
  */
-export interface IStatusBarColor {
+export interface IIosStatusBarColor {
     /**
      *
      */

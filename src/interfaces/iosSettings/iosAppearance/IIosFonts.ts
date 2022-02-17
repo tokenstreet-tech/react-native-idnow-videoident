@@ -1,7 +1,7 @@
 /**
  * Fonts
  */
-export interface IFonts {
+export interface IIosFonts {
     /**
      * An optional font name that can be used to replace the regular font used by the SDK. Default: System Font: Helvetica Neue Regular (< iOS 9), San Francisco Regular (>= iOS 9)
      */

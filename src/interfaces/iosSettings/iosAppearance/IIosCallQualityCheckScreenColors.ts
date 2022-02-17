@@ -1,7 +1,7 @@
 /**
  * Call quality check screen colors
  */
-export interface ICallQualityCheckScreenColors {
+export interface IIosCallQualityCheckScreenColors {
     /**
      * Optional color that replaces default dark gray for the outer ring indicator on the quality check screen.
      * Default: dark gray

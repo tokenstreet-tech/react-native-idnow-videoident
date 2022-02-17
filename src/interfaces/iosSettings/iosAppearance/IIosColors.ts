@@ -1,10 +1,10 @@
-import type { ICallQualityCheckScreenColors } from './ICallQualityCheckScreenColors';
-import type { IStatusBarColor } from './IStatusBarColor';
+import type { IIosCallQualityCheckScreenColors } from './IIosCallQualityCheckScreenColors';
+import type { IIosStatusBarColor } from './IIosStatusBarColor';
 
 /**
  * Colors
  */
-export interface IColors extends IStatusBarColor, ICallQualityCheckScreenColors {
+export interface IIosColors extends IIosStatusBarColor, IIosCallQualityCheckScreenColors {
     /**
      * Optional color, that replaces the default text color.
      * Default: A nearly black color Recommendation:
