@@ -20,7 +20,8 @@ export interface IAndroidColors extends IAndroidColorsVideoIdentPlusDisabled {
     primaryColor: ColorValue;
 
     /**
-     * Useed as a desactivated color for the buttons, it should use same value as primaryColor with a transparent code.
+     * Useed as a desactivated color for the buttons,
+     * it should use same value as primaryColor with a transparent code.
      */
     primaryVariantColor: ColorValue;
 
