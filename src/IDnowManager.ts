@@ -1,6 +1,7 @@
 import { NativeModules, Platform } from 'react-native';
 
 import { LinkingError } from './errors/LinkingError';
+import { UnsupportedPlatformError } from './errors/UnsupportedPlatformError';
 import type {
     IIdentificationResult,
     INativeModules,
@@ -34,7 +35,7 @@ export const IDnowManager = {
                     nativeClient.startVideoIdent(prepareSettings(settings), reject, resolve);
                 });
             default:
-                throw new Error(`Platform ${Platform.OS} is not supported`);
+                throw new UnsupportedPlatformError();
         }
     },
 };
