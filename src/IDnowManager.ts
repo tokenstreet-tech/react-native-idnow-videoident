@@ -1,5 +1,6 @@
 import { NativeModules, Platform } from 'react-native';
 
+import { LinkingError } from './errors/LinkingError';
 import type {
     IIdentificationResult,
     INativeModules,
@@ -7,11 +8,6 @@ import type {
 } from './interfaces/INativeModules';
 import type { ISettings } from './interfaces/ISettings';
 import { prepareSettings } from './prepareSettings';
-
-const LINKING_ERROR =
-    `The package '@tokenstreet/react-native-idnow-videoident' doesn't seem to be linked. Make sure: \n\n${Platform.select(
-        { ios: "- You have run 'pod install'\n", default: '' }
-    )}- You rebuilt the app after installing the package\n` + `- You are not using Expo managed workflow\n`;
 
 export const IDnowManager = {
     /**
@@ -26,7 +22,7 @@ export const IDnowManager = {
                   {},
                   {
                       get() {
-                          throw new Error(LINKING_ERROR);
+                          throw new LinkingError();
                       },
                   }
               );
