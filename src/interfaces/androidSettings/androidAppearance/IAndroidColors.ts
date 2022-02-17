@@ -20,13 +20,13 @@ export interface IAndroidColors extends IAndroidColorsVideoIdentPlusDisabled {
     primaryColor: ColorValue;
 
     /**
-     * Useed as a desactivated color for the buttons,
+     * Used as a deactivated color for the buttons,
      * it should use same value as primaryColor with a transparent code.
      */
     primaryVariantColor: ColorValue;
 
     /**
-     * Useed as a text color for the whole App
+     * Used as a text color for the whole App
      */
     primarytextColor: ColorValue;
 
@@ -36,12 +36,12 @@ export interface IAndroidColors extends IAndroidColorsVideoIdentPlusDisabled {
     bgPrimaryColor: ColorValue;
 
     /**
-     * Used as background color for the textfields
+     * Used as background color for the text fields
      */
     bgSecondaryColor: ColorValue;
 
     /**
-     * Used as text color color for the textfields
+     * Used as text color for the text fields
      */
     basicInputField: ColorValue;
 }
