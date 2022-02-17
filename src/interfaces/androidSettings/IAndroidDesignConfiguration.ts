@@ -25,7 +25,7 @@ enum LanguageEnum {
     IT = 'it',
 
     /**
-     * Portugese
+     * Portuguese
      */
     PT = 'pt',
 
