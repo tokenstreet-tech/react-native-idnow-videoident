@@ -3,7 +3,7 @@ import type { ColorValue } from 'react-native';
 import type { IAndroidColorsVideoIdentPlusDisabled } from './IAndroidColorsVideoIdentPlusDisabled';
 
 /**
- * The IDnow SDK is designed with colors following the IDnow corperate design.
+ * The IDnow SDK is designed with colors following the IDnow corporate design.
  * You can use the SDK without making any adaptions to the colors at all.
  * If, however you want the SDK screens to appear in different colors.
  *
@@ -11,7 +11,7 @@ import type { IAndroidColorsVideoIdentPlusDisabled } from './IAndroidColorsVideo
  * Currently, if dark mode is enabled on the user's mobile device,
  * the SDK will automatically appear in Dark Mode.
  *
- * You can make the following adaptions for Light Mode and Dark Mode :
+ * You can make the following adaptions for Light Mode and Dark Mode:
  */
 export interface IAndroidColors extends IAndroidColorsVideoIdentPlusDisabled {
     /**
