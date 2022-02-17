@@ -4,6 +4,10 @@ import type { ColorValue } from 'react-native';
  * Video Ident Plus disbled
  */
 export interface IAndroidColorsVideoIdentPlusDisabled {
+    /**
+     * Used as default color for display and editable texts Default: a nearly black color
+     * Recommendation: Should be some kind of dark color that does not collide with white color.
+     */
     text_default: ColorValue;
 
     /**
