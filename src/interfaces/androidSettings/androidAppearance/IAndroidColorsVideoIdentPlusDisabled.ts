@@ -1,7 +1,7 @@
 import type { ColorValue } from 'react-native';
 
 /**
- * Video Ident Plus disbled
+ * Video Ident Plus disabled
  */
 export interface IAndroidColorsVideoIdentPlusDisabled {
     /**
