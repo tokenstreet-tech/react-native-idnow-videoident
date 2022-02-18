@@ -10,6 +10,8 @@ React Native IDnow VideoIdent bindings for iOS and Android platforms
     npm install @tokenstreet/react-native-idnow-videoident
     ```
 
+### iOS
+
 2. Add the following line to your iOS Podfile:
 
     ```ruby
@@ -30,6 +32,8 @@ React Native IDnow VideoIdent bindings for iOS and Android platforms
     <key>NSCameraUsageDescription</key>
     <string>Allow camera access for video identification</string>
     ```
+
+### Android
 
 ## Usage
 
