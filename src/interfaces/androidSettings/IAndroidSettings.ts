@@ -1,7 +1,7 @@
 import type { IAndroidCustomServer } from './IAndroidCustomServer';
 import type { IAndroidDesignConfiguration } from './IAndroidDesignConfiguration';
 
-enum EnvironmentEnum {
+enum AndroidEnvironmentEnum {
     DEV = 'DEV',
     TEST = 'TEST',
     LIVE = 'LIVE',
@@ -36,7 +36,7 @@ export interface IAndroidSettings extends IAndroidCustomServer, IAndroidDesignCo
      *
      * You can force one of the environments to use. Default is to determine this by the token used.
      */
-    environment?: EnvironmentEnum;
+    environment?: AndroidEnvironmentEnum;
 
     /**
      * Set the custom certificate provider
