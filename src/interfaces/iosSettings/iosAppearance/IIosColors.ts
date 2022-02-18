@@ -7,8 +7,8 @@ import type { IIosStatusBarColor } from './IIosStatusBarColor';
 export interface IIosColors extends IIosStatusBarColor, IIosCallQualityCheckScreenColors {
     /**
      * Optional color, that replaces the default text color.
-     * Default: A nearly black color Recommendation:
-     * Should be some kind of dark color that does not collide with white color.
+     * Default: A nearly black color
+     * Recommendation: Should be some kind of dark color that does not collide with white color.
      */
     defaultTextColor?: string;
 
