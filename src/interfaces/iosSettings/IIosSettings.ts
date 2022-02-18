@@ -5,11 +5,6 @@ import type { IIosAppearance } from './iosAppearance/IIosAppearance';
  */
 export interface IIosSettings {
     /**
-     * A token that will be used for instantiating a photo or video identification.
-     */
-    transactionToken: string;
-
-    /**
      * Your company id provided by IDnow.
      */
     companyID?: string;

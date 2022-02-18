@@ -91,5 +91,5 @@ enum LanguageEnum {
 }
 
 export interface IAndroidDesignConfiguration {
-    language: LanguageEnum;
+    language?: LanguageEnum;
 }

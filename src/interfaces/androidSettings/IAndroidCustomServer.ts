@@ -8,30 +8,30 @@ export interface IAndroidCustomServer {
     /**
      * @example https://api.yourserver.com
      */
-    apiHost: string;
+    apiHost?: string;
 
     /**
      * @example https://www.yourserver.com
      */
-    webHost: string;
+    webHost?: string;
 
     /**
      * @example https://websocket.yourserver.com
      */
-    websocketHost: string;
+    websocketHost?: string;
 
     /**
      * @example https://video.yourserver.com
      */
-    videoHost: string;
+    videoHost?: string;
 
     /**
      * @example video.yourserver.com
      */
-    stunHost: string;
+    stunHost?: string;
 
     /**
      * @example 3478
      */
-    stunPort: number;
+    stunPort?: number;
 }

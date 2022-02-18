@@ -1,8 +1,8 @@
 import { processColor } from 'react-native';
 
-import type { IIosSettings } from './interfaces/iosSettings/IIosSettings';
+import type { ISettings } from './interfaces/ISettings';
 
-const defaultSettings: IIosSettings = {
+const defaultSettings: ISettings = {
     companyID: '',
     showVideoOverviewCheck: true,
     showErrorSuccessScreen: false,
@@ -41,7 +41,7 @@ const defaultSettings: IIosSettings = {
     },
 };
 
-export const prepareSettings = (options: IIosSettings) => {
+export const prepareSettings = (options: ISettings) => {
     // TODO refactor
     const appearanceOptions = {
         ...defaultSettings.appearance,

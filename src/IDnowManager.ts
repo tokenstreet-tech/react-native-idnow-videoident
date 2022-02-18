@@ -2,13 +2,12 @@ import { NativeModules, Platform } from 'react-native';
 
 import { LinkingError } from './errors/LinkingError';
 import { UnsupportedPlatformError } from './errors/UnsupportedPlatformError';
-import type { IAndroidSettings } from './interfaces/androidSettings/IAndroidSettings';
 import type {
     IIdentificationResult,
     INativeModules,
     IReactNativeIdnowVideoidentNativeModule,
 } from './interfaces/INativeModules';
-import type { IIosSettings } from './interfaces/iosSettings/IIosSettings';
+import type { ISettings } from './interfaces/ISettings';
 import { prepareSettings } from './prepareSettings';
 
 export const IDnowManager = {
@@ -16,7 +15,7 @@ export const IDnowManager = {
      * Start the video ident process
      * @param settings
      */
-    startVideoIdent: async (settings: IAndroidSettings | IIosSettings): Promise<IIdentificationResult> => {
+    startVideoIdent: async (settings: ISettings): Promise<IIdentificationResult> => {
         const nativeClient: IReactNativeIdnowVideoidentNativeModule = (NativeModules as INativeModules)
             .ReactNativeIdnowVideoident
             ? NativeModules.ReactNativeIdnowVideoident
