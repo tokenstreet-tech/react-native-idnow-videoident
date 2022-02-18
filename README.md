@@ -34,11 +34,10 @@ React Native IDnow VideoIdent bindings for iOS and Android platforms
 ## Usage
 
 ```js
-import IdnowVideoident from 'react-native-idnow-videoident';
+import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
-// ...
-
-const result = await IdnowVideoident.multiply(3, 7);
+const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'TST-KJCXN' });
+console.log(resultCode);
 ```
 
 ## Contributing
