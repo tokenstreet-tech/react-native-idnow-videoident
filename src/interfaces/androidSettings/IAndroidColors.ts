@@ -9,7 +9,7 @@ export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue>
      * Used as default color for display and editable texts Default: a nearly black color
      * Recommendation: Should be some kind of dark color that does not collide with white color.
      */
-    text_default: TColor;
+    textDefault: TColor;
 
     /**
      * README:
@@ -24,7 +24,7 @@ export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue>
      * Background color for confirmation/continue button,
      * which is usually placed at the bottom of a screen Default: the primary color (see above)
      */
-    proceed_button_background: TColor;
+    proceedButtonBackground: TColor;
 
     /**
      * README:
