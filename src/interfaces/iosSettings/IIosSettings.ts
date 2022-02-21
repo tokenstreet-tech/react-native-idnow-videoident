@@ -1,55 +1,15 @@
-import type { IIosAppearance } from './iosAppearance/IIosAppearance';
+import type { ColorValue, ProcessedColorValue } from 'react-native';
 
-enum IosEnvironmentEnum {
-    IDnowEnvironmentNotDefined = 'IDnowEnvironmentNotDefined',
-    IDnowEnvironmentDev = 'IDnowEnvironmentDev',
-    IDnowEnvironmentDev0 = 'IDnowEnvironmentDev0',
-    IDnowEnvironmentDev1 = 'IDnowEnvironmentDev1',
-    IDnowEnvironmentDev2 = 'IDnowEnvironmentDev2',
-    IDnowEnvironmentDev3 = 'IDnowEnvironmentDev3',
-    IDnowEnvironmentDev4 = 'IDnowEnvironmentDev4',
-    IDnowEnvironmentDev5 = 'IDnowEnvironmentDev5',
-    IDnowEnvironmentTest = 'IDnowEnvironmentTest',
-    IDnowEnvironmentTest1 = 'IDnowEnvironmentTest1',
-    IDnowEnvironmentTest2 = 'IDnowEnvironmentTest2',
-    IDnowEnvironmentTest3 = 'IDnowEnvironmentTest3',
-    IDnowEnvironmentLive = 'IDnowEnvironmentLive',
-    IDnowEnvironmentIntrum = 'IDnowEnvironmentIntrum',
-    IDnowEnvironmentIntrumTest = 'IDnowEnvironmentIntrumTest',
-    IDnowEnvironmentCustom = 'IDnowEnvironmentCustom',
-}
-
-enum UIModalPresentationStyleEnum {
-    UIModalPresentationPageSheet = 'UIModalPresentationPageSheet',
-    UIModalPresentationFormSheet = 'UIModalPresentationFormSheet',
-    UIModalPresentationCurrentContext = 'UIModalPresentationCurrentContext',
-    UIModalPresentationCustom = 'UIModalPresentationCustom',
-    UIModalPresentationOverFullScreen = 'UIModalPresentationOverFullScreen',
-    UIModalPresentationOverCurrentContext = 'UIModalPresentationOverCurrentContext',
-    UIModalPresentationPopover = 'UIModalPresentationPopover',
-    UIModalPresentationBlurOverFullScreen = 'UIModalPresentationBlurOverFullScreen',
-    UIModalPresentationNone = 'UIModalPresentationNone',
-    UIModalPresentationAutomatic = 'UIModalPresentationAutomatic',
-}
-
-/**
- *  The type of connection used to get events from the backend
- */
-enum IDnowConnectionTypeEnum {
-    /**
-     * Use websockets using SocketRocket (default)
-     */
-    IDnowConnectionTypeWebsocket = 'IDnowConnectionTypeWebsocket',
-    /**
-     * IDnowConnectionTypeLongPolling
-     */
-    IDnowConnectionTypeLongPolling = 'IDnowConnectionTypeLongPolling',
-}
+import type { IDnowConnectionTypeEnum } from './enums/IDnowConnectionTypeEnum';
+import type { IosEnvironmentEnum } from './enums/IosEnvironmentEnum';
+import type { UIModalPresentationStyleEnum } from './enums/UIModalPresentationStyleEnum';
+import type { IIosColors } from './IIosColors';
+import type { IIosFonts } from './IIosFonts';
 
 /**
  * The settings that should be used for the identification process provided by IDnow.
  */
-export interface IIosSettings {
+export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     /**
      * Your company id provided by IDnow.
      */
@@ -113,7 +73,20 @@ export interface IIosSettings {
     connectionType?: IDnowConnectionTypeEnum;
 
     /**
-     * Appearance
+     * Colors
      */
-    appearance?: IIosAppearance;
+    colors?: IIosColors<TColor>;
+
+    /**
+     * Optional: Forces the light status bar style to match dark navigation bars.
+     * If you tint your navigation bar with a dark color by adjusting navigation bar appearance (e.g. a blue color)
+     * you can set this value to true.
+     * The statusbar style will then be adjusted to light in screens where the navigation bar is visible.
+     */
+    enableStatusBarStyleLightContent?: boolean;
+
+    /**
+     * Fonts
+     */
+    fonts?: IIosFonts;
 }

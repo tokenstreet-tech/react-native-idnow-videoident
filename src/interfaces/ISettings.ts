@@ -1,3 +1,5 @@
+import type { ColorValue, ProcessedColorValue } from 'react-native';
+
 import type { IAndroidSettings } from './androidSettings/IAndroidSettings';
 import type { IIosSettings } from './iosSettings/IIosSettings';
 
@@ -6,7 +8,9 @@ import type { IIosSettings } from './iosSettings/IIosSettings';
  * https://github.com/idnow/de.idnow.ios
  * https://github.com/idnow/de.idnow.android
  */
-export interface ISettings extends IIosSettings, Omit<IAndroidSettings, 'connectionType' | 'environment'> {
+export interface ISettings<TColor extends ColorValue | ProcessedColorValue = ColorValue>
+    extends IIosSettings<TColor>,
+        Omit<IAndroidSettings, 'connectionType' | 'environment'> {
     /**
      * iOS Docs:
      * A token that will be used for instantiating a photo or video identification.

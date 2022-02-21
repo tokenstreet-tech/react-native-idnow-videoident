@@ -8,7 +8,7 @@ import type {
     IReactNativeIdnowVideoidentNativeModule,
 } from './interfaces/INativeModules';
 import type { ISettings } from './interfaces/ISettings';
-import { prepareSettings } from './prepareSettings';
+import { processSettings } from './processSettings';
 
 export const IDnowManager = {
     /**
@@ -32,7 +32,7 @@ export const IDnowManager = {
             case 'android':
             case 'ios':
                 return new Promise<IIdentificationResult>((resolve, reject) => {
-                    nativeClient.startVideoIdent(prepareSettings(settings), reject, resolve);
+                    nativeClient.startVideoIdent(processSettings(settings), reject, resolve);
                 });
             default:
                 throw new UnsupportedPlatformError();
