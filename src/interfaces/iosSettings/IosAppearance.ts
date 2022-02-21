@@ -506,19 +506,19 @@ export interface IIosAppearance<TColor extends ColorValue | ProcessedColorValue>
 
     /**
      * Header file:
-     * three dots indicate network condition
+     * Three dots indicate network condition
      */
     shouldShowNetworkIndicatorForCQCResult?: boolean;
 
     /**
      * Header file:
-     * default is underline
+     * Default is underline
      */
     recheckButtonsBordered?: boolean;
 
     /**
      * Header file:
-     * on CQC result screen, show footer separator
+     * On CQC result screen, show footer separator
      */
     shouldSeparateFooter?: boolean;
 
