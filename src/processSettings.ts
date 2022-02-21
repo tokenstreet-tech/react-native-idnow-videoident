@@ -4,6 +4,10 @@ import { processColor } from 'react-native';
 import type { IIosColors } from './interfaces/iosSettings/IIosColors';
 import type { ISettings } from './interfaces/ISettings';
 
+const defaultSettings: Omit<ISettings, 'transactionToken'> = {
+    ignoreCompanyID: true,
+};
+
 export const processSettings = (settings: ISettings): ISettings<ProcessedColorValue> => {
     const { colors = {} } = settings;
 
@@ -15,6 +19,7 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
     });
 
     return {
+        ...defaultSettings,
         ...settings,
         colors: processedColors,
     };
