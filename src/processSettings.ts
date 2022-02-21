@@ -8,6 +8,10 @@ const defaultSettings: Omit<ISettings, 'transactionToken'> = {
     ignoreCompanyID: true,
 };
 
+/**
+ * Enriches the settings with the default values and processes all color values
+ * @param settings
+ */
 export const processSettings = (settings: ISettings): ISettings<ProcessedColorValue> => {
     const { colors = {} } = settings;
 

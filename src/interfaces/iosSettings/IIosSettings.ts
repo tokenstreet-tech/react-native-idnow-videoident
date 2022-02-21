@@ -10,18 +10,151 @@ import type { IIosFonts } from './IIosFonts';
  * The settings that should be used for the identification process provided by IDnow.
  */
 export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
+    // -----------------------------------------------------------------------------------
+    //									Basic Properties
+    // -----------------------------------------------------------------------------------
+
     /**
+     * Header file:
+     * The company id provided by IDnow.
+     *
+     * README:
      * Your company id provided by IDnow.
      */
     companyID?: string;
 
+    // -----------------------------------------------------------------------------------
+    //									Extended Properties (optional)
+    // -----------------------------------------------------------------------------------
+
     /**
-     * Not documented property.
+     * Header file:
+     * If this is set to YES the ident token will be visible on the check screen page
+     * as well. The default value of this property is `NO`.
+     */
+    showIdentTokenOnCheckScreen?: boolean;
+
+    /**
+     * Header file:
+     * If set to `false`, the Error-Success-Screen provided by the SDK will not be shown.
+     * The default value of this property is `true`.
+     *
+     * README:
+     * Optional: If set to false, the Error-Success-Screen provided by the SDK will not be displayed.
      * The default value of this property is true.
+     */
+    showErrorSuccessScreen?: boolean;
+
+    /**
+     * Header file:
+     * If set to `false`, the video overview check screen will not be shown before starting a video identification.
+     * The default value of this property is `true`.
+     *
+     * README:
+     * Optional: If set to false, the video overview check screen will not be shown before starting a video identification.
+     * The default value of this property is true.
+     */
+    showVideoOverviewCheck?: boolean;
+
+    /**
+     * Header file:
+     * If set to `true`, the UI for the identification will always be displayed modal.
+     * By default the value of this property is `false` and the identification UI
+     * will be pushed on an existing navigation controller if possible.
+     *
+     * README:
+     * Optional: If set to true, the UI for the identification will always be displayed modal.
+     * By default, the value of this property is false and the identification UI will be pushed on an existing navigation controller if possible.
+     */
+    forceModalPresentation?: boolean;
+
+    /**
+     * Header file:
+     * If set to `YES`, a failed / canceled / finished identification will be forced to display the result screen.
+     */
+    forceErrorSuccessScreen?: boolean;
+
+    /**
+     * Header file:
+     * Specifies the presentation style for the modal ident viewcontroller.
+     * E.g. Can be set to `UIModalPresentationCurrentContext` to allow presenting ident view controller within a popover on an iPad.
+     *
+     * README:
+     * Optional: Specifies the presentation style for the modal ident view controller.
+     * E.g. Can be set to UIModalPresentationCurrentContext to allow presenting ident view controller within a popover on an iPad.
+     */
+    modalPresentationStyle?: IosUIModalPresentationStyleEnum;
+
+    /**
+     * Header file:
+     * Sets a certificate provider for custom DTLS certificates used by the WebRTC connection.
+     * The certificate provider can be used to provide a custom DTLS certificate (featureCertificate == YES) and/or to check the
+     * SHA fingerprint of the server certificate (featureFingerprint == YES)
+     */
+    certificateProvider?: any;
+
+    /**
+     * Header file:
+     * The device token is needed to uniquely identify the device. Its used to send push notifications.
+     */
+    pushDeviceToken?: string;
+
+    /**
+     * Header file:
+     * If you use Sentry with your app, set sentryDSN to https://login:secret@<sentry-fqdn>/<project>
+     */
+    sentryDSN?: string;
+
+    /**
+     * Header file:
+     * The name the resulting app should use in the UINavigation bar
+     */
+    productName?: string;
+
+    /**
+     * Header file:
+     * If true the first api request will take the token instead of the companyid into account.
      */
     ignoreCompanyID?: boolean;
 
     /**
+     * Header file:
+     * The current logger instance that implement IDNLogClient interface.
+     * Responsible for log events to a External logger
+     */
+    externalLogger?: any;
+
+    /**
+     * Header file:
+     * Waiting screen
+     * Paging time interval
+     * 10s by default, equal with animated video duration
+     */
+    automaticPagingTimeInterval?: number;
+
+    // -----------------------------------------------------------------------------------
+    //                                    Localization
+    // -----------------------------------------------------------------------------------
+
+    /**
+     * This sets the user interface language. Allowed values are: en (English), de (German), fr (French),
+     * es (Spanish), it (Italian), pt (Portugese), et (Estonian), hr (Croatian), hu (Hungarian), ka (Georgian), ko(Korean), lt(Lithuanian), lv (Latvian), nl (Dutch), pl (Polish),  ru (Russian), zh (Chinese).
+     */
+    userInterfaceLanguage?: string;
+
+    // -----------------------------------------------------------------------------------
+    //									Server Properties (optional)
+    // -----------------------------------------------------------------------------------
+
+    /**
+     * Header file:
+     * Optional: The environment that should be used for the identification (DEV, TEST, LIVE, Custom)
+     * The default value is `IDnowEnvironmentNotDefined`.
+     * Then the used environment is based on the prefix of the transaction token (DEV -> DEV, TST -> Test, TS1 -> Test1, TS2 -> Test2, TS3 -> Test3, else -> Live).
+     * You can use the special IDnowEnvironmentCustom to define a custom IDnow installation. If this is done, you need to set the apiHost and websocketHost.
+     *
+     *
+     * README:
      * Optional: The environment that should be used for the identification (DEV, TEST, LIVE)
      * The default value is IDnowEnvironmentNotDefined.
      *
@@ -34,40 +167,55 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     environment?: IosEnvironmentEnum;
 
     /**
-     * Optional: If set to false, the Error-Success-Screen provided by the SDK will not be displayed.
-     * The default value of this property is true.
+     * Header file:
+     * If set to `true`, the SDK will accept invalid (e.g. self signed certificates).
+     * Please note that iOS might still reject the certs if you dont also set
+     * NSAllowsArbitraryLoads in NSAppTransportSecurity and also NSTemporaryExceptionAllowsInsecureHTTPLoads
+     * in NSExceptionDomains for your domains
      */
-    showErrorSuccessScreen?: boolean;
+    allowInvalidCertificates?: boolean;
 
     /**
-     * Optional: If set to false, the video overview check screen will not be shown before starting a video identification.
-     * The default value of this property is true.
-     */
-    showVideoOverviewCheck?: boolean;
-
-    /**
-     * Optional: If set to true, the UI for the identification will always be displayed modal.
-     * By default, the value of this property is false and the identification UI will be pushed on an existing navigation controller if possible.
-     */
-    forceModalPresentation?: boolean;
-
-    /**
-     * Optional: Specifies the presentation style for the modal ident view controller.
-     * E.g. Can be set to UIModalPresentationCurrentContext to allow presenting ident view controller within a popover on an iPad.
-     */
-    modalPresentationStyle?: IosUIModalPresentationStyleEnum;
-
-    /**
+     * Header file:
+     * The target server url for REST calls if custom server is used
+     *
+     * README:
      * The target server url for REST calls if custom server is used.
      */
     apiHost?: string;
 
     /**
+     * Header file:
+     * The target server url for websocket calls if custom server is used
+     *
+     * README:
      * The target server url for websocket calls if custom server is used.
      */
     websocketHost?: string;
 
     /**
+     * Header file:
+     * The target server url for video rest calls if custom server is used
+     */
+    videoHost?: string;
+
+    /**
+     * Header file:
+     * The target server for stun calls if custom server is used
+     */
+    stunHost?: string;
+
+    /**
+     * Header file:
+     * The target port for stun calls if custom server is used
+     */
+    stunPort?: number;
+
+    /**
+     * Header file:
+     * The connection type to use to talk the backend
+     *
+     * README:
      * The connection type to use to talk the backend. (Websocket (default) or long polling)
      */
     connectionType?: IosIDnowConnectionTypeEnum;
@@ -78,6 +226,12 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     colors?: IIosColors<TColor>;
 
     /**
+     * Header file:
+     * Optional: Forces the light status bar style to match dark navigation bars.
+     * If you tint your navigation bar with a dark color by adjusting navigation bar appearance (e.g. a blue color)
+     * you can set this value to true. The statusbar style will then be adjusted to light in screens where the navigation bar is visible.
+     *
+     * README:
      * Optional: Forces the light status bar style to match dark navigation bars.
      * If you tint your navigation bar with a dark color by adjusting navigation bar appearance (e.g. a blue color)
      * you can set this value to true.
