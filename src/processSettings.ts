@@ -1,6 +1,7 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 import { processColor } from 'react-native';
 
+import type { IAndroidDesignConfiguration } from './interfaces/androidSettings/IAndroidDesignConfiguration';
 import type { IIosColors } from './interfaces/iosSettings/IIosColors';
 import type { ISettings } from './interfaces/ISettings';
 
@@ -13,13 +14,20 @@ const defaultSettings: Omit<ISettings, 'transactionToken'> = {
  * @param settings
  */
 export const processSettings = (settings: ISettings): ISettings<ProcessedColorValue> => {
-    const colors = settings.appearance?.colors ?? {};
-
-    const processedColors: IIosColors<ProcessedColorValue> = {};
-    Object.keys(colors).forEach((key) => {
+    const iosColors = settings.appearance?.colors ?? {};
+    const processedIosColors: IIosColors<ProcessedColorValue> = {};
+    Object.keys(iosColors).forEach((key) => {
         const colorKey = key as keyof IIosColors<ColorValue>;
-        const processedColor = processColor(colors[colorKey]);
-        processedColors[colorKey] = processedColor === null ? undefined : processedColor;
+        const processedColor = processColor(iosColors[colorKey]);
+        processedIosColors[colorKey] = processedColor === null ? undefined : processedColor;
+    });
+
+    const androidColors = settings.designConfiguration?.colors ?? {};
+    const processedAndroidColors: IAndroidDesignConfiguration<ProcessedColorValue>['colors'] = {};
+    Object.keys(androidColors).forEach((key) => {
+        const colorKey = key;
+        const processedColor = processColor((androidColors as any)[colorKey]);
+        (processedAndroidColors as any)[colorKey] = processedColor === null ? undefined : processedColor;
     });
 
     return {
@@ -27,7 +35,11 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
         ...settings,
         appearance: {
             ...settings.appearance,
-            colors: processedColors,
+            colors: processedIosColors,
+        },
+        designConfiguration: {
+            ...settings.designConfiguration,
+            colors: processedAndroidColors,
         },
     };
 };

@@ -9,7 +9,7 @@ export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue>
      * Used as default color for display and editable texts Default: a nearly black color
      * Recommendation: Should be some kind of dark color that does not collide with white color.
      */
-    textDefault: TColor;
+    textDefault?: TColor;
 
     /**
      * README:
@@ -17,26 +17,26 @@ export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue>
      * Default: an orange color Used in headlines, checkboxes, links, alerts etc.
      * Recommendation: Should be a color that does not collide with white color.
      */
-    primary: TColor;
+    primary?: TColor;
 
     /**
      * README:
      * Background color for confirmation/continue button,
      * which is usually placed at the bottom of a screen Default: the primary color (see above)
      */
-    proceedButtonBackground: TColor;
+    proceedButtonBackground?: TColor;
 
     /**
      * README:
      * Replaces the text color in the result screen, when an identification failed.
      * Default: A red color
      */
-    failure: TColor;
+    failure?: TColor;
 
     /**
      * README:
      * Replaces the text color in the result screen, when an identification was successful.
      * Default: A green color
      */
-    success: TColor;
+    success?: TColor;
 }

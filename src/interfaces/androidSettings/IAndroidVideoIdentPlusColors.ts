@@ -16,36 +16,36 @@ export interface IAndroidVideoIdentPlusColors<TColor extends ColorValue | Proces
      * README:
      * Used as default color of the App and the component such as the buttons
      */
-    primaryColor: TColor;
+    primaryColor?: TColor;
 
     /**
      * README:
      * Used as a deactivated color for the buttons,
      * it should use same value as primaryColor with a transparent code.
      */
-    primaryVariantColor: TColor;
+    primaryVariantColor?: TColor;
 
     /**
      * README:
      * Used as a text color for the whole App
      */
-    primarytextColor: TColor;
+    primaryTextColor?: TColor;
 
     /**
      * README:
      * Used as background color for the screens.
      */
-    bgPrimaryColor: TColor;
+    bgPrimaryColor?: TColor;
 
     /**
      * README:
      * Used as background color for the text fields
      */
-    bgSecondaryColor: TColor;
+    bgSecondaryColor?: TColor;
 
     /**
      * README:
      * Used as text color for the text fields
      */
-    basicInputField: TColor;
+    basicInputField?: TColor;
 }
