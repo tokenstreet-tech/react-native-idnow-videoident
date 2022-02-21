@@ -30,6 +30,9 @@ describe('processSettings', () => {
                     proceedButtonBackgroundColor: 4294902015,
                 },
             },
+            designConfiguration: {
+                colors: {},
+            },
             ignoreCompanyID: true,
             transactionToken: transactionTokenMock,
         };
@@ -54,6 +57,9 @@ describe('processSettings', () => {
 
         // Assert
         const expectedResult: ISettings<ProcessedColorValue> = {
+            appearance: {
+                colors: {},
+            },
             designConfiguration: {
                 colors: {
                     primaryColor: 4294967295,
