@@ -6,31 +6,37 @@
  */
 export interface IAndroidCustomServer {
     /**
+     * README:
      * @example https://api.yourserver.com
      */
     apiHost?: string;
 
     /**
+     * README:
      * @example https://www.yourserver.com
      */
     webHost?: string;
 
     /**
+     * README:
      * @example https://websocket.yourserver.com
      */
     websocketHost?: string;
 
     /**
+     * README:
      * @example https://video.yourserver.com
      */
     videoHost?: string;
 
     /**
+     * README:
      * @example video.yourserver.com
      */
     stunHost?: string;
 
     /**
+     * README:
      * @example 3478
      */
     stunPort?: number;

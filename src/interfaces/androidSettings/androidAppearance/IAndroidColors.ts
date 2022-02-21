@@ -15,32 +15,38 @@ import type { IAndroidColorsVideoIdentPlusDisabled } from './IAndroidColorsVideo
  */
 export interface IAndroidColors extends IAndroidColorsVideoIdentPlusDisabled {
     /**
+     * README:
      * Used as default color of the App and the component such as the buttons
      */
     primaryColor: ColorValue;
 
     /**
+     * README:
      * Used as a deactivated color for the buttons,
      * it should use same value as primaryColor with a transparent code.
      */
     primaryVariantColor: ColorValue;
 
     /**
+     * README:
      * Used as a text color for the whole App
      */
     primarytextColor: ColorValue;
 
     /**
+     * README:
      * Used as background color for the screens.
      */
     bgPrimaryColor: ColorValue;
 
     /**
+     * README:
      * Used as background color for the text fields
      */
     bgSecondaryColor: ColorValue;
 
     /**
+     * README:
      * Used as text color for the text fields
      */
     basicInputField: ColorValue;
