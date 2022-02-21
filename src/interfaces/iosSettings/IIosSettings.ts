@@ -1,8 +1,8 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
-import type { IDnowConnectionTypeEnum } from './enums/IDnowConnectionTypeEnum';
 import type { IosEnvironmentEnum } from './enums/IosEnvironmentEnum';
-import type { UIModalPresentationStyleEnum } from './enums/UIModalPresentationStyleEnum';
+import type { IosIDnowConnectionTypeEnum } from './enums/IosIDnowConnectionTypeEnum';
+import type { IosUIModalPresentationStyleEnum } from './enums/IosUIModalPresentationStyleEnum';
 import type { IIosColors } from './IIosColors';
 import type { IIosFonts } from './IIosFonts';
 
@@ -55,7 +55,7 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
      * Optional: Specifies the presentation style for the modal ident view controller.
      * E.g. Can be set to UIModalPresentationCurrentContext to allow presenting ident view controller within a popover on an iPad.
      */
-    modalPresentationStyle?: UIModalPresentationStyleEnum;
+    modalPresentationStyle?: IosUIModalPresentationStyleEnum;
 
     /**
      * The target server url for REST calls if custom server is used.
@@ -70,7 +70,7 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     /**
      * The connection type to use to talk the backend. (Websocket (default) or long polling)
      */
-    connectionType?: IDnowConnectionTypeEnum;
+    connectionType?: IosIDnowConnectionTypeEnum;
 
     /**
      * Colors

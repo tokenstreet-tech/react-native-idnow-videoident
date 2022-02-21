@@ -1,7 +1,7 @@
 /**
  *  The type of connection used to get events from the backend
  */
-export enum IDnowConnectionTypeEnum {
+export enum IosIDnowConnectionTypeEnum {
     /**
      * Use websockets using SocketRocket (default)
      */

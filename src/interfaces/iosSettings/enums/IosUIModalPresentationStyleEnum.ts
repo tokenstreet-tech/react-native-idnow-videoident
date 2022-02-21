@@ -1,4 +1,4 @@
-export enum UIModalPresentationStyleEnum {
+export enum IosUIModalPresentationStyleEnum {
     UIModalPresentationPageSheet = 'UIModalPresentationPageSheet',
     UIModalPresentationFormSheet = 'UIModalPresentationFormSheet',
     UIModalPresentationCurrentContext = 'UIModalPresentationCurrentContext',
