@@ -23,7 +23,6 @@ describe('processSettings', () => {
 
         // Assert
         const expectedResult: ISettings<ProcessedColorValue> = {
-            transactionToken: transactionTokenMock,
             appearance: {
                 colors: {
                     defaultTextColor: 4294967295,
@@ -31,6 +30,8 @@ describe('processSettings', () => {
                     proceedButtonBackgroundColor: 4294902015,
                 },
             },
+            ignoreCompanyID: true,
+            transactionToken: transactionTokenMock,
         };
         expect(result).toEqual(expectedResult);
     });
