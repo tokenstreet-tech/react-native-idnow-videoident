@@ -1,3 +1,6 @@
+import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
+import type { ProcessedColorValue } from 'react-native';
+
 enum ResultCodeEnum {
     SUCCESS = 'SUCCESS',
     CANCEL = 'CANCEL',
@@ -14,10 +17,10 @@ interface IIdentificationErrorResult extends IIdentificationResult {
 
 export interface IReactNativeIdnowVideoidentNativeModule {
     startVideoIdent: (
-        settings: any,
+        settings: ISettings<ProcessedColorValue>,
         errorCallback: (identificationErrorResult: IIdentificationErrorResult) => void,
         successCallback: (identificationResult: IIdentificationResult) => void
-    ) => any;
+    ) => void;
 }
 
 export interface INativeModules {
