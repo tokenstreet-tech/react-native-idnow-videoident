@@ -10,9 +10,11 @@ describe('processSettings', () => {
         const settings: ISettings = {
             transactionToken: transactionTokenMock,
             appearance: {
-                defaultTextColor: '#ffffff',
-                primaryBrandColor: 'blue',
-                proceedButtonBackgroundColor: 'rgb(255, 0, 255)',
+                colors: {
+                    defaultTextColor: '#ffffff',
+                    primaryBrandColor: 'blue',
+                    proceedButtonBackgroundColor: 'rgb(255, 0, 255)',
+                },
             },
         };
 
@@ -23,9 +25,11 @@ describe('processSettings', () => {
         const expectedResult: ISettings<ProcessedColorValue> = {
             transactionToken: transactionTokenMock,
             appearance: {
-                defaultTextColor: 4294967295,
-                primaryBrandColor: 4278190335,
-                proceedButtonBackgroundColor: 4294902015,
+                colors: {
+                    defaultTextColor: 4294967295,
+                    primaryBrandColor: 4278190335,
+                    proceedButtonBackgroundColor: 4294902015,
+                },
             },
         };
         expect(result).toEqual(expectedResult);
