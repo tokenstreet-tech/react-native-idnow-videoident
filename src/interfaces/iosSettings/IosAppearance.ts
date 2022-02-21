@@ -51,9 +51,6 @@ export interface IIosAppearance<TColor extends ColorValue | ProcessedColorValue>
      */
     resultButtonsAsUIButtonsBelow?: boolean;
 
-    /**
-     * Undocumented field
-     */
     useResultIcon?: boolean;
 
     // -----------------------------------------------------------------------------------
@@ -66,9 +63,6 @@ export interface IIosAppearance<TColor extends ColorValue | ProcessedColorValue>
      */
     checkBoxPosition?: IosCheckboxPositionEnum;
 
-    /**
-     * Undocumented field
-     */
     shouldShowGTCInline?: boolean;
 
     /**
@@ -297,8 +291,5 @@ export interface IIosAppearance<TColor extends ColorValue | ProcessedColorValue>
      */
     shouldSeparateFooter?: boolean;
 
-    /**
-     * Undocumented field
-     */
     suggestionListBulleted?: boolean;
 }

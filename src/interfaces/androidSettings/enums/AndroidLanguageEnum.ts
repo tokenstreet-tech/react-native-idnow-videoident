@@ -1,4 +1,4 @@
-enum LanguageEnum {
+export enum AndroidLanguageEnum {
     /**
      * English
      */
@@ -88,8 +88,4 @@ enum LanguageEnum {
      * Ukrainian
      */
     UK = 'uk',
-}
-
-export interface IAndroidDesignConfiguration {
-    language?: LanguageEnum;
 }
