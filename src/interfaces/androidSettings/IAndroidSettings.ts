@@ -1,8 +1,11 @@
+import type { ColorValue, ProcessedColorValue } from 'react-native';
+
 import type { AndroidConnectionTypeEnum } from './enums/AndroidConnectionTypeEnum';
 import type { AndroidEnvironmentEnum } from './enums/AndroidEnvironmentEnum';
 import type { AndroidLanguageEnum } from './enums/AndroidLanguageEnum';
+import type { IAndroidDesignConfiguration } from './IAndroidDesignConfiguration';
 
-export interface IAndroidSettings {
+export interface IAndroidSettings<TColor extends ColorValue | ProcessedColorValue> {
     language?: AndroidLanguageEnum;
 
     locale?: AndroidLanguageEnum;
@@ -122,6 +125,11 @@ export interface IAndroidSettings {
      * You can set the new branding
      */
     newBrand?: boolean;
+
+    // -----------------------------------------------------------------------------------
+    //									Design configuration
+    // -----------------------------------------------------------------------------------
+    designConfiguration?: IAndroidDesignConfiguration<TColor>;
 
     // -----------------------------------------------------------------------------------
     //									Custom server

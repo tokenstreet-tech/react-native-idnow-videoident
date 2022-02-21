@@ -11,7 +11,7 @@ import type { IIosSettings } from './iosSettings/IIosSettings';
  */
 export interface ISettings<TColor extends ColorValue | ProcessedColorValue = ColorValue>
     extends IIosSettings<TColor>,
-        Omit<IAndroidSettings, 'connectionType' | 'environment'> {
+        Omit<IAndroidSettings<TColor>, 'connectionType' | 'environment'> {
     // -----------------------------------------------------------------------------------
     //									Basic Properties
     // -----------------------------------------------------------------------------------

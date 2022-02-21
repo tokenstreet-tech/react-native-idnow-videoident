@@ -1,15 +1,15 @@
-import type { ColorValue } from 'react-native';
+import type { ColorValue, ProcessedColorValue } from 'react-native';
 
 /**
- * Video Ident Plus disabled
+ * Colors
  */
-export interface IAndroidColorsVideoIdentPlusDisabled {
+export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue> {
     /**
      * README:
      * Used as default color for display and editable texts Default: a nearly black color
      * Recommendation: Should be some kind of dark color that does not collide with white color.
      */
-    text_default: ColorValue;
+    text_default: TColor;
 
     /**
      * README:
@@ -17,26 +17,26 @@ export interface IAndroidColorsVideoIdentPlusDisabled {
      * Default: an orange color Used in headlines, checkboxes, links, alerts etc.
      * Recommendation: Should be a color that does not collide with white color.
      */
-    primary: ColorValue;
+    primary: TColor;
 
     /**
      * README:
      * Background color for confirmation/continue button,
      * which is usually placed at the bottom of a screen Default: the primary color (see above)
      */
-    proceed_button_background: ColorValue;
+    proceed_button_background: TColor;
 
     /**
      * README:
      * Replaces the text color in the result screen, when an identification failed.
      * Default: A red color
      */
-    failure: ColorValue;
+    failure: TColor;
 
     /**
      * README:
      * Replaces the text color in the result screen, when an identification was successful.
      * Default: A green color
      */
-    success: ColorValue;
+    success: TColor;
 }
