@@ -3,8 +3,7 @@ import type { ColorValue, ProcessedColorValue } from 'react-native';
 import type { IosEnvironmentEnum } from './enums/IosEnvironmentEnum';
 import type { IosIDnowConnectionTypeEnum } from './enums/IosIDnowConnectionTypeEnum';
 import type { IosUIModalPresentationStyleEnum } from './enums/IosUIModalPresentationStyleEnum';
-import type { IIosColors } from './IIosColors';
-import type { IIosFonts } from './IIosFonts';
+import type { IIosAppearance } from './IosAppearance';
 
 /**
  * The settings that should be used for the identification process provided by IDnow.
@@ -13,7 +12,6 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     // -----------------------------------------------------------------------------------
     //									Basic Properties
     // -----------------------------------------------------------------------------------
-
     /**
      * Header file:
      * The company id provided by IDnow.
@@ -26,7 +24,6 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     // -----------------------------------------------------------------------------------
     //									Extended Properties (optional)
     // -----------------------------------------------------------------------------------
-
     /**
      * Header file:
      * If this is set to YES the ident token will be visible on the check screen page
@@ -135,7 +132,6 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     // -----------------------------------------------------------------------------------
     //                                    Localization
     // -----------------------------------------------------------------------------------
-
     /**
      * This sets the user interface language. Allowed values are: en (English), de (German), fr (French),
      * es (Spanish), it (Italian), pt (Portugese), et (Estonian), hr (Croatian), hu (Hungarian), ka (Georgian), ko(Korean), lt(Lithuanian), lv (Latvian), nl (Dutch), pl (Polish),  ru (Russian), zh (Chinese).
@@ -145,7 +141,6 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     // -----------------------------------------------------------------------------------
     //									Server Properties (optional)
     // -----------------------------------------------------------------------------------
-
     /**
      * Header file:
      * Optional: The environment that should be used for the identification (DEV, TEST, LIVE, Custom)
@@ -220,27 +215,11 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
      */
     connectionType?: IosIDnowConnectionTypeEnum;
 
+    // -----------------------------------------------------------------------------------
+    //									Appearance
+    // -----------------------------------------------------------------------------------
     /**
-     * Colors
+     * Appearance
      */
-    colors?: IIosColors<TColor>;
-
-    /**
-     * Header file:
-     * Optional: Forces the light status bar style to match dark navigation bars.
-     * If you tint your navigation bar with a dark color by adjusting navigation bar appearance (e.g. a blue color)
-     * you can set this value to true. The statusbar style will then be adjusted to light in screens where the navigation bar is visible.
-     *
-     * README:
-     * Optional: Forces the light status bar style to match dark navigation bars.
-     * If you tint your navigation bar with a dark color by adjusting navigation bar appearance (e.g. a blue color)
-     * you can set this value to true.
-     * The statusbar style will then be adjusted to light in screens where the navigation bar is visible.
-     */
-    enableStatusBarStyleLightContent?: boolean;
-
-    /**
-     * Fonts
-     */
-    fonts?: IIosFonts;
+    appearance?: IIosAppearance<TColor>;
 }

@@ -9,7 +9,7 @@ describe('processSettings', () => {
         const transactionTokenMock = 'TST-XXXXX';
         const settings: ISettings = {
             transactionToken: transactionTokenMock,
-            colors: {
+            appearance: {
                 defaultTextColor: '#ffffff',
                 primaryBrandColor: 'blue',
                 proceedButtonBackgroundColor: 'rgb(255, 0, 255)',
@@ -22,7 +22,7 @@ describe('processSettings', () => {
         // Assert
         const expectedResult: ISettings<ProcessedColorValue> = {
             transactionToken: transactionTokenMock,
-            colors: {
+            appearance: {
                 defaultTextColor: 4294967295,
                 primaryBrandColor: 4278190335,
                 proceedButtonBackgroundColor: 4294902015,

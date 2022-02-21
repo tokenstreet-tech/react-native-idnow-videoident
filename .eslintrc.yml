@@ -76,3 +76,4 @@ rules:
     no-warning-comments: 0
     sort-keys: 0
     sort-vars: 0
+    max-lines: 0

@@ -1,7 +1,7 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 import { processColor } from 'react-native';
 
-import type { IIosColors } from './interfaces/iosSettings/IIosColors';
+import type { IIosAppearance } from './interfaces/iosSettings/IosAppearance';
 import type { ISettings } from './interfaces/ISettings';
 
 const defaultSettings: Omit<ISettings, 'transactionToken'> = {
@@ -13,18 +13,18 @@ const defaultSettings: Omit<ISettings, 'transactionToken'> = {
  * @param settings
  */
 export const processSettings = (settings: ISettings): ISettings<ProcessedColorValue> => {
-    const { colors = {} } = settings;
+    const { appearance = {} } = settings;
 
-    const processedColors: IIosColors<ProcessedColorValue> = {};
-    Object.keys(colors).forEach((key) => {
-        const colorKey = key as keyof IIosColors<ColorValue>;
-        const processedColor = processColor(colors[colorKey]);
+    const processedColors: IIosAppearance<ProcessedColorValue> = {};
+    Object.keys(appearance).forEach((key) => {
+        const colorKey = key as keyof IIosAppearance<ColorValue>;
+        const processedColor = processColor(appearance[colorKey]);
         processedColors[colorKey] = processedColor === null ? undefined : processedColor;
     });
 
     return {
         ...defaultSettings,
         ...settings,
-        colors: processedColors,
+        appearance: processedColors,
     };
 };
