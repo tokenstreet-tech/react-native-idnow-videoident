@@ -35,7 +35,7 @@ export interface IIosAppearance {
      * Optional value that separates titleBackgroundImage from its superview's edges.
      * Default: nil
      */
-    titleBackgroundImageOffset?: any;
+    titleBackgroundImageOffset?: number;
 
     /**
      * Optional value that determines if buttons on the result page should appear in the navigation bar or below as normal UIButtons.

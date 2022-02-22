@@ -28,7 +28,7 @@
 	// -----------------------------------------------------------------------------------
 	appearance.useTitleSeparator = appearanceSettings[@"useTitleSeparator"];
 	// appearance.titleBackgroundImage = [RCTConvert any:appearanceSettings[@"titleBackgroundImage"]];
-	// appearance.titleBackgroundImageOffset = [RCTConvert any:appearanceSettings[@"titleBackgroundImageOffset"]];
+	appearance.titleBackgroundImageOffset = [RCTConvert CGFloat:appearanceSettings[@"titleBackgroundImageOffset"]];
 	appearance.resultButtonsAsUIButtonsBelow = appearanceSettings[@"resultButtonsAsUIButtonsBelow"];
 	appearance.useResultIcon = appearanceSettings[@"useResultIcon"];
 
