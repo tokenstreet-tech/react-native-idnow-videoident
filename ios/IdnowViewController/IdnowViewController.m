@@ -13,7 +13,7 @@
 -(instancetype)initWithOptions:(NSDictionary *)settings {
 	self = [super init];
 
-    // -----------------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------------
 	//									Settings
 	// -----------------------------------------------------------------------------------
 	self.settings = [IDnowSettings new];
@@ -62,8 +62,8 @@
 
 
 	// -----------------------------------------------------------------------------------
-    //									Setup IDnowAppearance
-    // -----------------------------------------------------------------------------------
+	//									Setup IDnowAppearance
+	// -----------------------------------------------------------------------------------
 	IDnowAppearance *appearance = [IDnowAppearance sharedAppearance];
 	NSDictionary *appearanceSettings = settings[@"appearance"];
 	NSDictionary *colorsSettings = appearanceSettings[@"colors"];
