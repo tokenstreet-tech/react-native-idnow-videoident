@@ -1,9 +1,9 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 import { processColor } from 'react-native';
 
-import type { IAndroidDesignConfiguration } from './interfaces/androidSettings/IAndroidDesignConfiguration';
-import type { IIosColors } from './interfaces/iosSettings/IIosColors';
-import type { ISettings } from './interfaces/ISettings';
+import type { IAndroidDesignConfiguration } from './model/androidSettings/IAndroidDesignConfiguration';
+import type { IIosColors } from './model/iosSettings/IIosColors';
+import type { ISettings } from './model/ISettings';
 
 const defaultSettings: Omit<ISettings, 'transactionToken'> = {
     ignoreCompanyID: true,

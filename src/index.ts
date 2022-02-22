@@ -1,2 +1,2 @@
 export { IDnowManager } from './IDnowManager';
-export type { ISettings } from './interfaces/ISettings';
+export type { ISettings } from './model/ISettings';

@@ -1,7 +1,6 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
 import type { IosEnvironmentEnum } from './enums/IosEnvironmentEnum';
-import type { IosIDnowConnectionTypeEnum } from './enums/IosIDnowConnectionTypeEnum';
 import type { IosUIModalPresentationStyleEnum } from './enums/IosUIModalPresentationStyleEnum';
 import type { IIosAppearance } from './IosAppearance';
 
@@ -205,15 +204,6 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
      * The target port for stun calls if custom server is used
      */
     stunPort?: number;
-
-    /**
-     * Header file:
-     * The connection type to use to talk the backend
-     *
-     * README:
-     * The connection type to use to talk the backend. (Websocket (default) or long polling)
-     */
-    connectionType?: IosIDnowConnectionTypeEnum;
 
     // -----------------------------------------------------------------------------------
     //									Appearance

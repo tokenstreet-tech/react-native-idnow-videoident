@@ -1,6 +1,5 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
-import type { AndroidConnectionTypeEnum } from './enums/AndroidConnectionTypeEnum';
 import type { AndroidEnvironmentEnum } from './enums/AndroidEnvironmentEnum';
 import type { AndroidLanguageEnum } from './enums/AndroidLanguageEnum';
 import type { IAndroidDesignConfiguration } from './IAndroidDesignConfiguration';
@@ -47,12 +46,6 @@ export interface IAndroidSettings<TColor extends ColorValue | ProcessedColorValu
      * Set the custom certificate provider
      */
     certificateProvider?: any;
-
-    /**
-     * README:
-     * You can set the connection type to use: websockets.
-     */
-    connectionType?: AndroidConnectionTypeEnum;
 
     calledFromIDnowApp?: boolean;
 

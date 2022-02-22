@@ -1,6 +1,7 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
 import type { IAndroidSettings } from './androidSettings/IAndroidSettings';
+import type { ConnectionTypeEnum } from './enums/ConnectionTypeEnum';
 import type { IIosSettings } from './iosSettings/IIosSettings';
 
 /**
@@ -11,7 +12,7 @@ import type { IIosSettings } from './iosSettings/IIosSettings';
  */
 export interface ISettings<TColor extends ColorValue | ProcessedColorValue = ColorValue>
     extends IIosSettings<TColor>,
-        Omit<IAndroidSettings<TColor>, 'connectionType' | 'environment'> {
+        Omit<IAndroidSettings<TColor>, 'environment'> {
     // -----------------------------------------------------------------------------------
     //									Basic Properties
     // -----------------------------------------------------------------------------------
@@ -24,4 +25,19 @@ export interface ISettings<TColor extends ColorValue | ProcessedColorValue = Col
      * Set the transactionToken, for example from a TextField
      */
     transactionToken: string;
+
+    // -----------------------------------------------------------------------------------
+    //									Server Properties (optional)
+    // -----------------------------------------------------------------------------------
+    /**
+     * iOS Header file:
+     * The connection type to use to talk the backend
+     *
+     * iOS README:
+     * The connection type to use to talk the backend. (Websocket (default) or long polling)
+     *
+     * Android README:
+     * You can set the connection type to use: websockets.
+     */
+    connectionType?: ConnectionTypeEnum;
 }

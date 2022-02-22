@@ -6,8 +6,8 @@ import type {
     IIdentificationResult,
     INativeModules,
     IReactNativeIdnowVideoidentNativeModule,
-} from './interfaces/INativeModules';
-import type { ISettings } from './interfaces/ISettings';
+} from './model/INativeModules';
+import type { ISettings } from './model/ISettings';
 import { processSettings } from './processSettings';
 
 export const IDnowManager = {
