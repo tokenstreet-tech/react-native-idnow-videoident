@@ -21,7 +21,7 @@
 	// -----------------------------------------------------------------------------------
     //									Colors
     // -----------------------------------------------------------------------------------
-	appearance.textFieldCornerRadius = [RCTConvert NSNumber:appearanceSettings[@"textFieldCornerRadius"];
+	appearance.textFieldCornerRadius = appearanceSettings[@"textFieldCornerRadius"];
 
 	// -----------------------------------------------------------------------------------
     //                                    Call Quality Check
@@ -70,7 +70,7 @@
     //                                    Video Ident
     // -----------------------------------------------------------------------------------
 	appearance.shouldShowBlurOverlayLayer = appearanceSettings[@"shouldShowBlurOverlayLayer"];
-	appearance.alphaBlurViewValue = [RCTConvert NSNumber:appearanceSettings[@"alphaBlurViewValue"]];
+	appearance.alphaBlurViewValue = appearanceSettings[@"alphaBlurViewValue"];
 	appearance.lightBlurForIdentCodeContainer = appearanceSettings[@"lightBlurForIdentCodeContainer"];
 
 	// -----------------------------------------------------------------------------------
