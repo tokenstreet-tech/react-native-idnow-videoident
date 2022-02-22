@@ -38,10 +38,12 @@ export interface IAndroidSettings {
     nameForActionBar?: string;
 
     /**
+     * Deprecated: Supported by the SDK version 3.22.1 or before
+     *
      * README:
      * Set the custom certificate provider
      */
-    certificateProvider?: any;
+    // certificateProvider?: any;
 
     calledFromIDnowApp?: boolean;
 
@@ -83,7 +85,10 @@ export interface IAndroidSettings {
 
     phoneNo?: string;
 
-    checkScreenActivity?: any;
+    /**
+     * Not implemented
+     */
+    // checkScreenActivity?: any;
 
     showDialogsWithIcon?: boolean;
 
@@ -95,7 +100,10 @@ export interface IAndroidSettings {
 
     startCallIssued?: boolean;
 
-    callingActivity?: any;
+    /**
+     * Not implemented
+     */
+    // callingActivity?: any;
 
     overrideEntryActivity?: boolean;
 
