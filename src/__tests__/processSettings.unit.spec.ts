@@ -30,9 +30,6 @@ describe('processSettings', () => {
                     proceedButtonBackgroundColor: 4294902015,
                 },
             },
-            designConfiguration: {
-                colors: {},
-            },
             ignoreCompanyID: true,
             transactionToken: transactionTokenMock,
         };
@@ -43,7 +40,7 @@ describe('processSettings', () => {
         const transactionTokenMock = 'TST-XXXXX';
         const settings: ISettings = {
             transactionToken: transactionTokenMock,
-            designConfiguration: {
+            appearance: {
                 colors: {
                     primaryColor: '#ffffff',
                     primaryVariantColor: 'blue',
@@ -58,9 +55,6 @@ describe('processSettings', () => {
         // Assert
         const expectedResult: ISettings<ProcessedColorValue> = {
             appearance: {
-                colors: {},
-            },
-            designConfiguration: {
                 colors: {
                     primaryColor: 4294967295,
                     primaryVariantColor: 4278190335,

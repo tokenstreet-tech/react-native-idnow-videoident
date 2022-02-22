@@ -1,12 +1,9 @@
-import type { ColorValue, ProcessedColorValue } from 'react-native';
-
 import type { IosUIModalPresentationStyleEnum } from './enums/IosUIModalPresentationStyleEnum';
-import type { IIosAppearance } from './IosAppearance';
 
 /**
  * The settings that should be used for the identification process provided by IDnow.
  */
-export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
+export interface IIosSettings {
     // -----------------------------------------------------------------------------------
     //									Basic Properties
     // -----------------------------------------------------------------------------------
@@ -184,12 +181,4 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
      * The target port for stun calls if custom server is used
      */
     stunPort?: number;
-
-    // -----------------------------------------------------------------------------------
-    //									Appearance
-    // -----------------------------------------------------------------------------------
-    /**
-     * Appearance
-     */
-    appearance?: IIosAppearance<TColor>;
 }

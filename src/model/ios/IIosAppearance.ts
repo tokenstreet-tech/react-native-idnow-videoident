@@ -1,11 +1,8 @@
-import type { ColorValue, ProcessedColorValue } from 'react-native';
-
 import type { IosAppearanceModeEnum } from './enums/IosAppearanceModeEnum';
 import type { IosCheckboxPositionEnum } from './enums/IosCheckboxPositionEnum';
 import type { IosNumberLabelPositionEnum } from './enums/IosNumberLabelPositionEnum';
-import type { IIosColors } from './IIosColors';
 
-export interface IIosAppearance<TColor extends ColorValue | ProcessedColorValue> {
+export interface IIosAppearance {
     /**
      * Mode
      */
@@ -14,8 +11,6 @@ export interface IIosAppearance<TColor extends ColorValue | ProcessedColorValue>
     // -----------------------------------------------------------------------------------
     //									Colors
     // -----------------------------------------------------------------------------------
-    colors?: IIosColors<TColor>;
-
     /**
      * Header file:
      * Optional corner radius for text fields

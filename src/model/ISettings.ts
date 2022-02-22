@@ -3,6 +3,7 @@ import type { ColorValue, ProcessedColorValue } from 'react-native';
 import type { IAndroidSettings } from './android/IAndroidSettings';
 import type { ConnectionTypeEnum } from './enums/ConnectionTypeEnum';
 import type { EnvironmentEnum } from './enums/EnvironmentEnum';
+import type { IAppearance } from './IAppearance';
 import type { IIosSettings } from './ios/IIosSettings';
 
 /**
@@ -12,8 +13,8 @@ import type { IIosSettings } from './ios/IIosSettings';
  * https://github.com/idnow/de.idnow.android
  */
 export interface ISettings<TColor extends ColorValue | ProcessedColorValue = ColorValue>
-    extends IIosSettings<TColor>,
-        IAndroidSettings<TColor> {
+    extends IIosSettings,
+        IAndroidSettings {
     // -----------------------------------------------------------------------------------
     //									Basic Properties
     // -----------------------------------------------------------------------------------
@@ -69,4 +70,12 @@ export interface ISettings<TColor extends ColorValue | ProcessedColorValue = Col
      * You can set the connection type to use: websockets.
      */
     connectionType?: ConnectionTypeEnum;
+
+    // -----------------------------------------------------------------------------------
+    //									Appearance
+    // -----------------------------------------------------------------------------------
+    /**
+     * Appearance
+     */
+    appearance?: IAppearance<TColor>;
 }

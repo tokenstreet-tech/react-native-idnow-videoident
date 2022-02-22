@@ -1,9 +1,9 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
 /**
- * Colors
+ * Video ident colors
  */
-export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue> {
+export interface IAndroidVideoIdentColors<TColor extends ColorValue | ProcessedColorValue> {
     /**
      * README:
      * Used as default color for display and editable texts Default: a nearly black color
