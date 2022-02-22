@@ -3,7 +3,7 @@
 //  ReactNativeIdnowVideoident
 //
 //  Created by Daniel Reichhart on 09.01.22.
-//  Copyright © 2022 tokenstreet. All rights reserved.
+//  Copyright © 2022 tokenstreet GmbH. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
