@@ -134,7 +134,6 @@
 	self.settings.forceModalPresentation = settings[@"forceModalPresentation"];
 	self.settings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
 	// self.settings.modalPresentationStyle = settings[@"modalPresentationStyle"];
-	// self.settings.certificateProvider = settings[@"certificateProvider"];
 	self.settings.pushDeviceToken = settings[@"pushDeviceToken"];
 	self.settings.sentryDSN = settings[@"sentryDSN"];
 	self.settings.productName = settings[@"productName"];
