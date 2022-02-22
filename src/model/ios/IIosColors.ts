@@ -8,7 +8,7 @@ export interface IIosColors<TColor extends ColorValue | ProcessedColorValue> {
      * Header file:
      * Optional color, that replaces the default text color.
      * Default: A nearly black color
-     *  Recommendation: Should be some kind of a dark color that does not collide with white color.
+     * Recommendation: Should be some kind of a dark color that does not collide with white color.
      *
      * README:
      * Optional color, that replaces the default text color.
