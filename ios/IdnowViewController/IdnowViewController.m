@@ -19,22 +19,22 @@
 	NSDictionary *colorsSettings = options[@"colors"];
 
 	// -----------------------------------------------------------------------------------
-    //									Colors
-    // -----------------------------------------------------------------------------------
+	//									Colors
+	// -----------------------------------------------------------------------------------
 	appearance.textFieldCornerRadius = appearanceSettings[@"textFieldCornerRadius"];
 
 	// -----------------------------------------------------------------------------------
-    //                                    Call Quality Check
-    // -----------------------------------------------------------------------------------
+	//                                    Call Quality Check
+	// -----------------------------------------------------------------------------------
 	appearance.useTitleSeparator = appearanceSettings[@"useTitleSeparator"];
- 	// appearance.titleBackgroundImage = [RCTConvert any:appearanceSettings[@"titleBackgroundImage"]];
+	// appearance.titleBackgroundImage = [RCTConvert any:appearanceSettings[@"titleBackgroundImage"]];
 	// appearance.titleBackgroundImageOffset = [RCTConvert any:appearanceSettings[@"titleBackgroundImageOffset"]];
 	appearance.resultButtonsAsUIButtonsBelow = appearanceSettings[@"resultButtonsAsUIButtonsBelow"];
 	appearance.useResultIcon = appearanceSettings[@"useResultIcon"];
 
 	// -----------------------------------------------------------------------------------
-    //									Table View
-    // -----------------------------------------------------------------------------------
+	//									Table View
+	// -----------------------------------------------------------------------------------
 	// appearance.checkBoxPosition = [RCTConvert any:appearanceSettings[@"checkBoxPosition"]];
 	appearance.shouldShowGTCInline = appearanceSettings[@"shouldShowGTCInline"];
 	// appearance.numberLabelPosition = [RCTConvert any:appearanceSettings[@"numberLabelPosition"]];
@@ -54,28 +54,28 @@
 	// appearance.customActivityIndicatorURL = [RCTConvert any:customBackButtonItem[@"customActivityIndicatorURL"]];
 
 	// -----------------------------------------------------------------------------------
-    //									Status Bar
-    // -----------------------------------------------------------------------------------
-	appearance.enableStatusBarStyleLightContent = appearanceSettings[@"enableStatusBarStyleLightContent"]];
+	//									Status Bar
+	// -----------------------------------------------------------------------------------
+	appearance.enableStatusBarStyleLightContent = appearanceSettings[@"enableStatusBarStyleLightContent"];
 
 	// -----------------------------------------------------------------------------------
-    //									Font Names
-    // -----------------------------------------------------------------------------------
+	//									Font Names
+	// -----------------------------------------------------------------------------------
 	appearance.fontNameBold = appearanceSettings[@"fontNameBold"];
 	appearance.fontNameRegular = appearanceSettings[@"fontNameRegular"];
 	appearance.fontNameMedium = appearanceSettings[@"fontNameMedium"];
 	appearance.fontNameLight = appearanceSettings[@"fontNameLight"];
 
 	// -----------------------------------------------------------------------------------
-    //                                    Video Ident
-    // -----------------------------------------------------------------------------------
+	//                                    Video Ident
+	// -----------------------------------------------------------------------------------
 	appearance.shouldShowBlurOverlayLayer = appearanceSettings[@"shouldShowBlurOverlayLayer"];
 	appearance.alphaBlurViewValue = appearanceSettings[@"alphaBlurViewValue"];
 	appearance.lightBlurForIdentCodeContainer = appearanceSettings[@"lightBlurForIdentCodeContainer"];
 
 	// -----------------------------------------------------------------------------------
-    //                                    Call Quality Check
-    // -----------------------------------------------------------------------------------
+	//                                    Call Quality Check
+	// -----------------------------------------------------------------------------------
 	appearance.shouldShowNavigationBarOnCQCScreen = appearanceSettings[@"shouldShowNavigationBarOnCQCScreen"];
 	appearance.shouldUseHeadlineColorForPreCheckTitle = appearanceSettings[@"shouldUseHeadlineColorForPreCheckTitle"];
 	appearance.progressBarsSquared = appearanceSettings[@"progressBarsSquared"];
@@ -86,8 +86,8 @@
 	appearance.suggestionListBulleted = appearanceSettings[@"suggestionListBulleted"];
 
 	// -----------------------------------------------------------------------------------
-    //									Colors
-    // -----------------------------------------------------------------------------------
+	//									Colors
+	// -----------------------------------------------------------------------------------
 	appearance.defaultTextColor = [RCTConvert UIColor:colorsSettings[@"defaultTextColor"]];
 	appearance.primaryBrandColor = [RCTConvert UIColor:colorsSettings[@"primaryBrandColor"]];
 	appearance.headlineColor = [RCTConvert UIColor:colorsSettings[@"headlineColor"]];
