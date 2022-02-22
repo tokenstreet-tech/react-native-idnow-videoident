@@ -70,7 +70,7 @@
 	//                                    Video Ident
 	// -----------------------------------------------------------------------------------
 	appearance.shouldShowBlurOverlayLayer = appearanceSettings[@"shouldShowBlurOverlayLayer"];
-	appearance.alphaBlurViewValue = appearanceSettings[@"alphaBlurViewValue"];
+    appearance.alphaBlurViewValue = [RCTConvert CGFloat:appearanceSettings[@"alphaBlurViewValue"]];
 	appearance.lightBlurForIdentCodeContainer = appearanceSettings[@"lightBlurForIdentCodeContainer"];
 
 	// -----------------------------------------------------------------------------------
