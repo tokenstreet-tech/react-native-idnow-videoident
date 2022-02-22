@@ -3,24 +3,22 @@ package com.tokenstreetreactnativeidnowvideoident;
 import android.app.Activity;
 import android.content.Intent;
 import androidx.annotation.NonNull;
-
 import com.facebook.react.bridge.ActivityEventListener;
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.BaseActivityEventListener;
 import com.facebook.react.bridge.Callback;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.bridge.ReadableMap;
-
-// IDnow
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.module.annotations.ReactModule;
 import de.idnow.sdk.IDnowSDK;
 
 @ReactModule(name = ReactNativeIdnowVideoidentModule.NAME)
 public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule {
+
     public static final String NAME = "ReactNativeIdnowVideoident";
     private final ReactApplicationContext reactContext;
     private Callback globalFailureCallback;
@@ -44,22 +42,18 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
             if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
                 WritableMap params = Arguments.createMap();
                 switch (resultCode) {
-
                     case IDnowSDK.RESULT_CODE_SUCCESS:
                         params.putString("resultCode", "SUCCESS");
                         globalSuccessCallback.invoke(params);
                         break;
-
                     case IDnowSDK.RESULT_CODE_CANCEL:
                         params.putString("resultCode", "CANCEL");
                         globalFailureCallback.invoke(params);
                         break;
-
                     case IDnowSDK.RESULT_CODE_FAILED:
                         params.putString("resultCode", "FAILED");
                         globalFailureCallback.invoke(params);
                         break;
-
                     default:
                         params.putString("resultCode", "INTERNAL_ERROR");
                         globalFailureCallback.invoke(params);
@@ -108,9 +102,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
         try {
             IDnowSDK.getInstance().initialize(currentActivity, options.getString("companyID"));
-        } catch (Exception e) {
-
-        }
+        } catch (Exception e) {}
 
         IDnowSDK.setShowVideoOverviewCheck(options.getBoolean("showVideoOverviewCheck"), reactContext);
         IDnowSDK.setShowErrorSuccessScreen(options.getBoolean("showErrorSuccessScreen"), reactContext);
@@ -138,6 +130,6 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
         IDnowSDK.setTransactionToken(options.getString("transactionToken"), reactContext);
 
-        return IDnowSDK.getInstance()
+        return IDnowSDK.getInstance();
     }
 }
