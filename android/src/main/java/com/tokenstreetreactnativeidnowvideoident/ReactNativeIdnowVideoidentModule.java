@@ -88,44 +88,56 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
     @ReactMethod
     public void startVideoIdent(final ReadableMap options, Callback failureCallback, Callback successCallback) {
-        Activity currentActivity = getCurrentActivity();
         globalFailureCallback = failureCallback;
         globalSuccessCallback = successCallback;
 
+        IDnowSDK instance = this.applySettings(options);
+
         try {
-            IDnowSDK.getInstance().initialize(currentActivity, options.getString("companyID"));
-            IDnowSDK.setShowVideoOverviewCheck(options.getBoolean("showVideoOverviewCheck"), reactContext);
-            IDnowSDK.setShowErrorSuccessScreen(options.getBoolean("showErrorSuccessScreen"), reactContext);
-
-            // String environment = options.getString("environment");
-
-            // IDnowSDK.setEnvironment(this.getServer(environment)); // no need to force to use a specific env; Default is to determine this by the token used
-
-            // if (environment.equals("CUSTOM")) {
-            //     IDnowSDK.setEnvironment(IDnowSDK.Server.CUSTOM);
-            //     IDnowSDK.setApiHost(options.getString("apiHost"), reactContext); // require if env is "CUSTOM"
-            //     IDnowSDK.setWebHost(options.getString("webHost"), reactContext); // require if env is "CUSTOM"
-            //     IDnowSDK.setWebsocketHost(options.getString("websocketHost"), reactContext); // require if env is "CUSTOM"
-
-            //     if (options.hasKey("videoHost")) {
-            //         IDnowSDK.setVideoHost(options.getString("videoHost"), reactContext);
-            //     }
-            //     if (options.hasKey("stunHost")) {
-            //         IDnowSDK.setStunHost(options.getString("stunHost"), reactContext);
-            //     }
-            //     if (options.hasKey("stunPort")) {
-            //         IDnowSDK.setStunPort(options.getInt("stunPort"), reactContext);
-            //     }
-            // }
-
-            IDnowSDK.setTransactionToken(options.getString("transactionToken"), reactContext);
-
-            IDnowSDK.getInstance().start(IDnowSDK.getTransactionToken(reactContext));
+            instance.start(IDnowSDK.getTransactionToken(reactContext));
         } catch (Exception e) {
             WritableMap params = Arguments.createMap();
             params.putString("resultCode", "INTERNAL_ERROR");
             params.putString("errorMessage", e.getMessage());
             globalFailureCallback.invoke(params);
         }
+    }
+
+    private IDnowSDK applySettings(final ReadableMap options) {
+        Activity currentActivity = getCurrentActivity();
+
+        try {
+            IDnowSDK.getInstance().initialize(currentActivity, options.getString("companyID"));
+        } catch (Exception e) {
+
+        }
+
+        IDnowSDK.setShowVideoOverviewCheck(options.getBoolean("showVideoOverviewCheck"), reactContext);
+        IDnowSDK.setShowErrorSuccessScreen(options.getBoolean("showErrorSuccessScreen"), reactContext);
+
+        // String environment = options.getString("environment");
+
+        // IDnowSDK.setEnvironment(this.getServer(environment)); // no need to force to use a specific env; Default is to determine this by the token used
+
+        // if (environment.equals("CUSTOM")) {
+        //     IDnowSDK.setEnvironment(IDnowSDK.Server.CUSTOM);
+        //     IDnowSDK.setApiHost(options.getString("apiHost"), reactContext); // require if env is "CUSTOM"
+        //     IDnowSDK.setWebHost(options.getString("webHost"), reactContext); // require if env is "CUSTOM"
+        //     IDnowSDK.setWebsocketHost(options.getString("websocketHost"), reactContext); // require if env is "CUSTOM"
+
+        //     if (options.hasKey("videoHost")) {
+        //         IDnowSDK.setVideoHost(options.getString("videoHost"), reactContext);
+        //     }
+        //     if (options.hasKey("stunHost")) {
+        //         IDnowSDK.setStunHost(options.getString("stunHost"), reactContext);
+        //     }
+        //     if (options.hasKey("stunPort")) {
+        //         IDnowSDK.setStunPort(options.getInt("stunPort"), reactContext);
+        //     }
+        // }
+
+        IDnowSDK.setTransactionToken(options.getString("transactionToken"), reactContext);
+
+        return IDnowSDK.getInstance()
     }
 }
