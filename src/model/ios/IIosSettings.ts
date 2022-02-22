@@ -1,6 +1,5 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
-import type { IosEnvironmentEnum } from './enums/IosEnvironmentEnum';
 import type { IosUIModalPresentationStyleEnum } from './enums/IosUIModalPresentationStyleEnum';
 import type { IIosAppearance } from './IosAppearance';
 
@@ -140,25 +139,6 @@ export interface IIosSettings<TColor extends ColorValue | ProcessedColorValue> {
     // -----------------------------------------------------------------------------------
     //									Server Properties (optional)
     // -----------------------------------------------------------------------------------
-    /**
-     * Header file:
-     * Optional: The environment that should be used for the identification (DEV, TEST, LIVE, Custom)
-     * The default value is `IDnowEnvironmentNotDefined`.
-     * Then the used environment is based on the prefix of the transaction token (DEV -> DEV, TST -> Test, TS1 -> Test1, TS2 -> Test2, TS3 -> Test3, else -> Live).
-     * You can use the special IDnowEnvironmentCustom to define a custom IDnow installation. If this is done, you need to set the apiHost and websocketHost.
-     *
-     *
-     * README:
-     * Optional: The environment that should be used for the identification (DEV, TEST, LIVE)
-     * The default value is IDnowEnvironmentNotDefined.
-     *
-     * The used environment will then base on the prefix of the transaction token
-     * (DEV -> DEV, TST -> Test, else -> Live)
-     *
-     * You can use the special IDnowEnvironmentCustom to define a custom IDnow installation.
-     * If this is done, you need to set the apiHost and websocketHost.
-     */
-    environment?: IosEnvironmentEnum;
 
     /**
      * Header file:

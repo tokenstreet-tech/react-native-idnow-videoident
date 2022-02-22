@@ -1,5 +1,5 @@
 /**
- * iOS Header file:
+ * iOS header file:
  * The type of connection used to get events from the backend
  *
  * iOS README:
@@ -7,12 +7,12 @@
  */
 export enum ConnectionTypeEnum {
     /**
-     * iOS Header file:
+     * iOS header file:
      * Use websockets using SocketRocket (default)
      */
     WEBSOCKET = 'WEBSOCKET',
     /**
-     * iOS Header file:
+     * iOS header file:
      * Use long polling
      */
     LONG_POLLING = 'LONG_POLLING',

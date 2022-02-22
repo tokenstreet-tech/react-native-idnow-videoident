@@ -1,6 +1,5 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
-import type { AndroidEnvironmentEnum } from './enums/AndroidEnvironmentEnum';
 import type { AndroidLanguageEnum } from './enums/AndroidLanguageEnum';
 import type { IAndroidDesignConfiguration } from './IAndroidDesignConfiguration';
 
@@ -48,15 +47,6 @@ export interface IAndroidSettings<TColor extends ColorValue | ProcessedColorValu
     certificateProvider?: any;
 
     calledFromIDnowApp?: boolean;
-
-    /**
-     * README:
-     * Optionally set against which environment the app has to test.
-     * Possibilities are DEV, TEST, LIVE, with LIVE being the default.
-     *
-     * You can force one of the environments to use. Default is to determine this by the token used.
-     */
-    environment?: AndroidEnvironmentEnum;
 
     allowInvalidCertificates?: boolean;
 
