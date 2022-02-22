@@ -1,3 +1,5 @@
+import type { ImageSourcePropType } from 'react-native';
+
 import type { IosAppearanceModeEnum } from '../../enums/ios/IosAppearanceModeEnum';
 import type { IosCheckboxPositionEnum } from '../../enums/ios/IosCheckboxPositionEnum';
 import type { IosNumberLabelPositionEnum } from '../../enums/ios/IosNumberLabelPositionEnum';
@@ -30,7 +32,7 @@ export interface IIosAppearance {
      * Optional UIImageView that replaces the title on the result screen.
      * Default: nil
      */
-    titleBackgroundImage?: any;
+    titleBackgroundImage?: ImageSourcePropType;
 
     /**
      * Optional value that separates titleBackgroundImage from its superview's edges.
@@ -142,22 +144,26 @@ export interface IIosAppearance {
     // customBackButtonItem?: any;
 
     /**
+     * Not implemented
+     *
      * Header file:
      * Default nil - Set this to a UIButton of your choice in order to customize the appearance of the cancel button during idents
      */
-    customCancelButton?: any;
+    // customCancelButton?: any;
 
     /**
+     * Not implemented
+     *
      * Header file:
      * Default nil - Set this to a UIView in order to customize the appearance of the agent's window prior to connecting
      */
-    customAgentView?: any;
+    // customAgentView?: any;
 
     /**
      * Header file:
      * Default nil - Set this to a valid NSURL to a 60x60 gif relative to your main bundle in order to use this as activity indicator throughout your app
      */
-    customActivityIndicatorURL?: any;
+    customActivityIndicatorURL?: string;
 
     // -----------------------------------------------------------------------------------
     //									Status Bar

@@ -112,11 +112,13 @@ export interface IIosSettings {
     ignoreCompanyID?: boolean;
 
     /**
+     * Not implemented
+     *
      * Header file:
      * The current logger instance that implement IDNLogClient interface.
      * Responsible for log events to a External logger
      */
-    externalLogger?: any;
+    // externalLogger?: any;
 
     /**
      * Header file:

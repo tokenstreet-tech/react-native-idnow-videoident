@@ -27,7 +27,7 @@
 	//                                    Call Quality Check
 	// -----------------------------------------------------------------------------------
 	appearance.useTitleSeparator = appearanceSettings[@"useTitleSeparator"];
-	// appearance.titleBackgroundImage = [RCTConvert any:appearanceSettings[@"titleBackgroundImage"]];
+	appearance.titleBackgroundImage = [RCTConvert UIImage:appearanceSettings[@"titleBackgroundImage"]];
 	appearance.titleBackgroundImageOffset = [RCTConvert CGFloat:appearanceSettings[@"titleBackgroundImageOffset"]];
 	appearance.resultButtonsAsUIButtonsBelow = appearanceSettings[@"resultButtonsAsUIButtonsBelow"];
 	appearance.useResultIcon = appearanceSettings[@"useResultIcon"];
@@ -49,10 +49,12 @@
 	appearance.identCodeLayoutHalf = appearanceSettings[@"identCodeLayoutHalf"];
 	appearance.usedNewBrand = appearanceSettings[@"usedNewBrand"];
 	// Not implemented
-	// appearance.customBackButtonItem = [RCTConvert any:customBackButtonItem[@"usedNewBrand"]];
-	// appearance.customCancelButton = [RCTConvert any:customBackButtonItem[@"customCancelButton"]];
-	// appearance.customAgentView = [RCTConvert any:customBackButtonItem[@"customAgentView"]];
-	// appearance.customActivityIndicatorURL = [RCTConvert any:customBackButtonItem[@"customActivityIndicatorURL"]];
+	// appearance.customBackButtonItem = appearanceSettings[@"customBackButtonItem"];
+	// Not implemented
+	// appearance.customCancelButton = appearanceSettings[@"customCancelButton"];
+	// Not implemented
+	// appearance.customAgentView = appearanceSettings[@"customAgentView"];
+	appearance.customActivityIndicatorURL = [RCTConvert NSURL:appearanceSettings[@"customActivityIndicatorURL"]];
 
 	// -----------------------------------------------------------------------------------
 	//									Status Bar
@@ -141,6 +143,7 @@
 	self.settings.sentryDSN = settings[@"sentryDSN"];
 	self.settings.productName = settings[@"productName"];
 	self.settings.ignoreCompanyID = settings[@"ignoreCompanyID"];
+	// Not implemented
 	// self.settings.externalLogger = settings[@"externalLogger"];
 
 	// -----------------------------------------------------------------------------------
