@@ -5,18 +5,6 @@ import type { IosUIModalPresentationStyleEnum } from '../../enums/ios/IosUIModal
  */
 export interface IIosSettings {
     // -----------------------------------------------------------------------------------
-    //									Basic Properties
-    // -----------------------------------------------------------------------------------
-    /**
-     * Header file:
-     * The company id provided by IDnow.
-     *
-     * README:
-     * Your company id provided by IDnow.
-     */
-    companyID?: string;
-
-    // -----------------------------------------------------------------------------------
     //									Extended Properties (optional)
     // -----------------------------------------------------------------------------------
     /**

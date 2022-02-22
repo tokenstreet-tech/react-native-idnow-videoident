@@ -28,6 +28,19 @@ export interface ISettings<TColor extends ColorValue | ProcessedColorValue = Col
      */
     transactionToken: string;
 
+    /**
+     * iOS header file:
+     * The company id provided by IDnow.
+     *
+     * iOS README:
+     * Your company id provided by IDnow.
+     *
+     * Android README:
+     * Initialize with your activity which will handle the SDK callback and pass the id of your company.
+     * IDnowSDK is a singleton class, so just call it with IDnowSDK.getInstance()
+     */
+    companyId?: string;
+
     // -----------------------------------------------------------------------------------
     //									Server Properties (optional)
     // -----------------------------------------------------------------------------------

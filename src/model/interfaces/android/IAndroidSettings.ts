@@ -28,13 +28,6 @@ export interface IAndroidSettings {
      */
     showErrorSuccessScreen?: boolean;
 
-    /**
-     * README:
-     * Initialize with your activity which will handle the SDK callback and pass the id of your company.
-     * IDnowSDK is a singleton class, so just call it with IDnowSDK.getInstance()
-     */
-    companyId?: string;
-
     nameForActionBar?: string;
 
     /**

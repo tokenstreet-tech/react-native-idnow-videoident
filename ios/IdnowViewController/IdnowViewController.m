@@ -13,7 +13,57 @@
 -(instancetype)initWithOptions:(NSDictionary *)settings {
 	self = [super init];
 
-	// Setup IDnowAppearance
+    // -----------------------------------------------------------------------------------
+	//									Settings
+	// -----------------------------------------------------------------------------------
+	self.settings = [IDnowSettings new];
+
+	// -----------------------------------------------------------------------------------
+	//									Basic Properties
+	// -----------------------------------------------------------------------------------
+	self.settings.transactionToken = settings[@"transactionToken"];
+	self.settings.companyID = settings[@"companyId"];
+
+	// -----------------------------------------------------------------------------------
+	//									Extended Properties (optional)
+	// -----------------------------------------------------------------------------------
+	self.settings.showIdentTokenOnCheckScreen = settings[@"showIdentTokenOnCheckScreen"];
+	self.settings.showErrorSuccessScreen = settings[@"showErrorSuccessScreen"];
+	self.settings.showVideoOverviewCheck = settings[@"showVideoOverviewCheck"];
+	self.settings.forceModalPresentation = settings[@"forceModalPresentation"];
+	self.settings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
+	// self.settings.modalPresentationStyle = settings[@"modalPresentationStyle"];
+	// Deprecated: Supported by the SDK version 3.22.1 or before
+	// self.settings.certificateProvider = settings[@"certificateProvider"];
+	self.settings.pushDeviceToken = settings[@"pushDeviceToken"];
+	self.settings.sentryDSN = settings[@"sentryDSN"];
+	self.settings.productName = settings[@"productName"];
+	self.settings.ignoreCompanyID = settings[@"ignoreCompanyID"];
+	// Not implemented
+	// self.settings.externalLogger = settings[@"externalLogger"];
+
+	// -----------------------------------------------------------------------------------
+	//                                    Localization
+	// -----------------------------------------------------------------------------------
+	self.settings.userInterfaceLanguage = settings[@"userInterfaceLanguage"];
+
+	// -----------------------------------------------------------------------------------
+	//									Server Properties (optional)
+	// -----------------------------------------------------------------------------------
+	// self.settings.environment = settings[@"environment"];
+	// self.settings.connectionType = settings[@"connectionType"];
+
+	self.settings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
+	self.settings.apiHost = settings[@"apiHost"];
+	self.settings.websocketHost = settings[@"websocketHost"];
+	self.settings.videoHost = settings[@"videoHost"];
+	self.settings.stunHost = settings[@"stunHost"];
+	self.settings.stunPort = settings[@"stunPort"];
+
+
+	// -----------------------------------------------------------------------------------
+    //									Setup IDnowAppearance
+    // -----------------------------------------------------------------------------------
 	IDnowAppearance *appearance = [IDnowAppearance sharedAppearance];
 	NSDictionary *appearanceSettings = settings[@"appearance"];
 	NSDictionary *colorsSettings = appearanceSettings[@"colors"];
@@ -115,54 +165,6 @@
 	appearance.cqcModerateQualityInnerColor = [RCTConvert UIColor:colorsSettings[@"cqcModerateQualityInnerColor"]];
 	appearance.cqcExcellentQualityInnerColor = [RCTConvert UIColor:colorsSettings[@"cqcExcellentQualityInnerColor"]];
 
-
-	// -----------------------------------------------------------------------------------
-	//									Settings
-	// -----------------------------------------------------------------------------------
-	self.settings = [IDnowSettings new];
-
-	// -----------------------------------------------------------------------------------
-	//									Basic Properties
-	// -----------------------------------------------------------------------------------
-	self.settings.transactionToken = settings[@"transactionToken"];
-	self.settings.companyID = settings[@"companyID"];
-
-
-	// -----------------------------------------------------------------------------------
-	//									Extended Properties (optional)
-	// -----------------------------------------------------------------------------------
-	self.settings.showIdentTokenOnCheckScreen = settings[@"showIdentTokenOnCheckScreen"];
-	self.settings.showErrorSuccessScreen = settings[@"showErrorSuccessScreen"];
-	self.settings.showVideoOverviewCheck = settings[@"showVideoOverviewCheck"];
-	self.settings.forceModalPresentation = settings[@"forceModalPresentation"];
-	self.settings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
-	// self.settings.modalPresentationStyle = settings[@"modalPresentationStyle"];
-	// Deprecated: Supported by the SDK version 3.22.1 or before
-	// self.settings.certificateProvider = settings[@"certificateProvider"];
-	self.settings.pushDeviceToken = settings[@"pushDeviceToken"];
-	self.settings.sentryDSN = settings[@"sentryDSN"];
-	self.settings.productName = settings[@"productName"];
-	self.settings.ignoreCompanyID = settings[@"ignoreCompanyID"];
-	// Not implemented
-	// self.settings.externalLogger = settings[@"externalLogger"];
-
-	// -----------------------------------------------------------------------------------
-	//                                    Localization
-	// -----------------------------------------------------------------------------------
-	self.settings.userInterfaceLanguage = settings[@"userInterfaceLanguage"];
-
-	// -----------------------------------------------------------------------------------
-	//									Server Properties (optional)
-	// -----------------------------------------------------------------------------------
-	// self.settings.environment = settings[@"environment"];
-	// self.settings.connectionType = settings[@"connectionType"];
-
-	self.settings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
-	self.settings.apiHost = settings[@"apiHost"];
-	self.settings.websocketHost = settings[@"websocketHost"];
-	self.settings.videoHost = settings[@"videoHost"];
-	self.settings.stunHost = settings[@"stunHost"];
-	self.settings.stunPort = settings[@"stunPort"];
 
 	self.idnowController = [[IDnowController alloc] initWithSettings: self.settings];
 
