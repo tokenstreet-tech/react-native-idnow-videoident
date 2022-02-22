@@ -114,6 +114,8 @@ export enum EnvironmentEnum {
     //                                    Staging
     // -----------------------------------------------------------------------------------
     /**
+     * Only available on Android
+     *
      * Android SDK:
      * https://api.staging1.idnow.de
      */
@@ -135,12 +137,16 @@ export enum EnvironmentEnum {
     //                                    Intrum
     // -----------------------------------------------------------------------------------
     /**
+     * Only available on iOS
+     *
      * iOS header file:
      * Intrum server environment
      */
     INTRUM = 'INTRUM',
 
     /**
+     * Only available on iOS
+     *
      * iOS header file:
      * Intrum test server environment
      */
@@ -160,12 +166,18 @@ export enum EnvironmentEnum {
     CUSTOM = 'CUSTOM',
 
     /**
+     * Only available on Android
+     *
+     * Maybe the same as INTRUM
+     *
      * Android SDK:
      * https://api.online-ident.ch
      */
     INT = 'INT',
 
     /**
+     * Only available on iOS
+     *
      * iOS header file:
      * Server environment not defined
      */
