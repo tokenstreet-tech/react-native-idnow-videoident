@@ -15,26 +15,102 @@
 
 	// Setup IDnowAppearance
 	IDnowAppearance *appearance = [IDnowAppearance sharedAppearance];
-	NSDictionary *appearanceOptions = options[@"appearance"];
+	NSDictionary *appearanceSettings = options[@"appearance"];
+	NSDictionary *colorsSettings = options[@"colors"];
 
-	// Adjust colors
-	appearance.defaultTextColor = [RCTConvert UIColor:appearanceOptions[@"defaultTextColor"]];
-	appearance.primaryBrandColor = [RCTConvert UIColor:appearanceOptions[@"primaryBrandColor"]];
-	appearance.proceedButtonBackgroundColor = [RCTConvert UIColor:appearanceOptions[@"proceedButtonBackgroundColor"]];
-	appearance.proceedButtonTextColor = [RCTConvert UIColor:appearanceOptions[@"proceedButtonTextColor"]];
-	appearance.photoIdentRetakeButtonBackgroundColor = [RCTConvert UIColor:appearanceOptions[@"photoIdentRetakeButtonBackgroundColor"]];
-	appearance.photoIdentRetakeButtonTextColor = [RCTConvert UIColor:appearanceOptions[@"photoIdentRetakeButtonTextColor"]];
-	appearance.textFieldColor = [RCTConvert UIColor:appearanceOptions[@"textFieldColor"]];
-	appearance.failureColor = [RCTConvert UIColor:appearanceOptions[@"failureColor"]];
-	appearance.successColor = [RCTConvert UIColor:appearanceOptions[@"successColor"]];
+	// -----------------------------------------------------------------------------------
+    //									Colors
+    // -----------------------------------------------------------------------------------
+	appearance.textFieldCornerRadius = [RCTConvert NSNumber:appearanceSettings[@"textFieldCornerRadius"];
 
-	// Adjust statusbar
-	appearance.enableStatusBarStyleLightContent = [RCTConvert BOOL:appearanceOptions[@"enableStatusBarStyleLightContent"]];
+	// -----------------------------------------------------------------------------------
+    //                                    Call Quality Check
+    // -----------------------------------------------------------------------------------
+	appearance.useTitleSeparator = appearanceSettings[@"useTitleSeparator"];
+ 	// appearance.titleBackgroundImage = [RCTConvert any:appearanceSettings[@"titleBackgroundImage"]];
+	// appearance.titleBackgroundImageOffset = [RCTConvert any:appearanceSettings[@"titleBackgroundImageOffset"]];
+	appearance.resultButtonsAsUIButtonsBelow = appearanceSettings[@"resultButtonsAsUIButtonsBelow"];
+	appearance.useResultIcon = appearanceSettings[@"useResultIcon"];
 
-	// Adjust fonts
-	appearance.fontNameRegular = appearanceOptions[@"fontNameRegular"];
-	appearance.fontNameLight = appearanceOptions[@"fontNameLight"];
-	appearance.fontNameMedium = appearanceOptions[@"fontNameMedium"];
+	// -----------------------------------------------------------------------------------
+    //									Table View
+    // -----------------------------------------------------------------------------------
+	// appearance.checkBoxPosition = [RCTConvert any:appearanceSettings[@"checkBoxPosition"]];
+	appearance.shouldShowGTCInline = appearanceSettings[@"shouldShowGTCInline"];
+	// appearance.numberLabelPosition = [RCTConvert any:appearanceSettings[@"numberLabelPosition"]];
+	appearance.seperatorLineComplete = appearanceSettings[@"seperatorLineComplete"];
+	appearance.markMandatoryCells = appearanceSettings[@"markMandatoryCells"];
+	appearance.underlineButtonTitles = appearanceSettings[@"underlineButtonTitles"];
+	appearance.boldButtonTitles = appearanceSettings[@"boldButtonTitles"];
+	appearance.boldTitles = appearanceSettings[@"boldTitles"];
+	// appearance.requestCodeAgainLayoutType = [RCTConvert any:appearanceSettings[@"requestCodeAgainLayoutType"]];
+	appearance.checkBoxesSquared = appearanceSettings[@"checkBoxesSquared"];
+	appearance.inputFieldsSquared = appearanceSettings[@"inputFieldsSquared"];
+	appearance.identCodeLayoutHalf = appearanceSettings[@"identCodeLayoutHalf"];
+	appearance.usedNewBrand = appearanceSettings[@"usedNewBrand"];
+	// appearance.customBackButtonItem = [RCTConvert any:customBackButtonItem[@"usedNewBrand"]];
+	// appearance.customCancelButton = [RCTConvert any:customBackButtonItem[@"customCancelButton"]];
+	// appearance.customAgentView = [RCTConvert any:customBackButtonItem[@"customAgentView"]];
+	// appearance.customActivityIndicatorURL = [RCTConvert any:customBackButtonItem[@"customActivityIndicatorURL"]];
+
+	// -----------------------------------------------------------------------------------
+    //									Status Bar
+    // -----------------------------------------------------------------------------------
+	appearance.enableStatusBarStyleLightContent = appearanceSettings[@"enableStatusBarStyleLightContent"]];
+
+	// -----------------------------------------------------------------------------------
+    //									Font Names
+    // -----------------------------------------------------------------------------------
+	appearance.fontNameBold = appearanceSettings[@"fontNameBold"];
+	appearance.fontNameRegular = appearanceSettings[@"fontNameRegular"];
+	appearance.fontNameMedium = appearanceSettings[@"fontNameMedium"];
+	appearance.fontNameLight = appearanceSettings[@"fontNameLight"];
+
+	// -----------------------------------------------------------------------------------
+    //                                    Video Ident
+    // -----------------------------------------------------------------------------------
+	appearance.shouldShowBlurOverlayLayer = appearanceSettings[@"shouldShowBlurOverlayLayer"];
+	appearance.alphaBlurViewValue = [RCTConvert NSNumber:appearanceSettings[@"alphaBlurViewValue"]];
+	appearance.lightBlurForIdentCodeContainer = appearanceSettings[@"lightBlurForIdentCodeContainer"];
+
+	// -----------------------------------------------------------------------------------
+    //                                    Call Quality Check
+    // -----------------------------------------------------------------------------------
+	appearance.shouldShowNavigationBarOnCQCScreen = appearanceSettings[@"shouldShowNavigationBarOnCQCScreen"];
+	appearance.shouldUseHeadlineColorForPreCheckTitle = appearanceSettings[@"shouldUseHeadlineColorForPreCheckTitle"];
+	appearance.progressBarsSquared = appearanceSettings[@"progressBarsSquared"];
+	appearance.shouldShowResultTitleForCQCResult = appearanceSettings[@"shouldShowResultTitleForCQCResult"];
+	appearance.shouldShowNetworkIndicatorForCQCResult = appearanceSettings[@"shouldShowNetworkIndicatorForCQCResult"];
+	appearance.recheckButtonsBordered = appearanceSettings[@"recheckButtonsBordered"];
+	appearance.shouldSeparateFooter = appearanceSettings[@"shouldSeparateFooter"];
+	appearance.suggestionListBulleted = appearanceSettings[@"suggestionListBulleted"];
+
+	// -----------------------------------------------------------------------------------
+    //									Colors
+    // -----------------------------------------------------------------------------------
+	appearance.defaultTextColor = [RCTConvert UIColor:colorsSettings[@"defaultTextColor"]];
+	appearance.primaryBrandColor = [RCTConvert UIColor:colorsSettings[@"primaryBrandColor"]];
+	appearance.headlineColor = [RCTConvert UIColor:colorsSettings[@"headlineColor"]];
+	appearance.linkColor = [RCTConvert UIColor:colorsSettings[@"linkColor"]];
+	appearance.checkIconColor = [RCTConvert UIColor:colorsSettings[@"checkIconColor"]];
+	appearance.proceedButtonBackgroundColor = [RCTConvert UIColor:colorsSettings[@"proceedButtonBackgroundColor"]];
+	appearance.proceedButtonTextColor = [RCTConvert UIColor:colorsSettings[@"proceedButtonTextColor"]];
+	appearance.photoIdentRetakeButtonBackgroundColor = [RCTConvert UIColor:colorsSettings[@"photoIdentRetakeButtonBackgroundColor"]];
+	appearance.photoIdentRetakeButtonTextColor = [RCTConvert UIColor:colorsSettings[@"photoIdentRetakeButtonTextColor"]];
+	appearance.checkContractFooterButtonBackgroundColor = [RCTConvert UIColor:colorsSettings[@"checkContractFooterButtonBackgroundColor"]];
+	appearance.checkContractFooterButtonTextColor = [RCTConvert UIColor:colorsSettings[@"checkContractFooterButtonTextColor"]];
+	appearance.textFieldColor = [RCTConvert UIColor:colorsSettings[@"textFieldColor"]];
+	appearance.textFieldBorderColor = [RCTConvert UIColor:colorsSettings[@"textFieldBorderColor"]];
+	appearance.failureColor = [RCTConvert UIColor:colorsSettings[@"failureColor"]];
+	appearance.successColor = [RCTConvert UIColor:colorsSettings[@"successColor"]];
+	appearance.titleBackgroundColor = [RCTConvert UIColor:colorsSettings[@"titleBackgroundColor"]];
+	appearance.resultScreenHeaderLabelColor = [RCTConvert UIColor:colorsSettings[@"resultScreenHeaderLabelColor"]];
+	appearance.backgroundColor = [RCTConvert UIColor:colorsSettings[@"backgroundColor"]];
+	appearance.cqcOuterRingColor = [RCTConvert UIColor:colorsSettings[@"cqcOuterRingColor"]];
+	appearance.cqcDefaultInnerRingColor = [RCTConvert UIColor:colorsSettings[@"cqcDefaultInnerRingColor"]];
+	appearance.cqcPoorQualityInnerColor = [RCTConvert UIColor:colorsSettings[@"cqcPoorQualityInnerColor"]];
+	appearance.cqcModerateQualityInnerColor = [RCTConvert UIColor:colorsSettings[@"cqcModerateQualityInnerColor"]];
+	appearance.cqcExcellentQualityInnerColor = [RCTConvert UIColor:colorsSettings[@"cqcExcellentQualityInnerColor"]];
 
 	// Back button
 	UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
