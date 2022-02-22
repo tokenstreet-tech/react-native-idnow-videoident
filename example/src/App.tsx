@@ -3,7 +3,9 @@ import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-const color = '#112c9a';
+import { getRandomColor } from './util';
+
+const color = getRandomColor();
 const createSettings = (transactionToken: string): ISettings => ({
     transactionToken,
     appearance: {

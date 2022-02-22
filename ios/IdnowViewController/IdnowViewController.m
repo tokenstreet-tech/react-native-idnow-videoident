@@ -10,13 +10,13 @@
 
 @implementation IdnowViewController
 
--(instancetype)initWithOptions:(NSDictionary *)options {
+-(instancetype)initWithOptions:(NSDictionary *)settings {
 	self = [super init];
 
 	// Setup IDnowAppearance
 	IDnowAppearance *appearance = [IDnowAppearance sharedAppearance];
-	NSDictionary *appearanceSettings = options[@"appearance"];
-	NSDictionary *colorsSettings = options[@"colors"];
+	NSDictionary *appearanceSettings = settings[@"appearance"];
+	NSDictionary *colorsSettings = appearanceSettings[@"colors"];
 
 	// -----------------------------------------------------------------------------------
 	//									Appearance
@@ -121,43 +121,43 @@
 	// -----------------------------------------------------------------------------------
 	//									Basic Properties
 	// -----------------------------------------------------------------------------------
-	self.settings.transactionToken = options[@"transactionToken"];
-	self.settings.companyID = options[@"companyID"];
+	self.settings.transactionToken = settings[@"transactionToken"];
+	self.settings.companyID = settings[@"companyID"];
 
 
 	// -----------------------------------------------------------------------------------
 	//									Extended Properties (optional)
 	// -----------------------------------------------------------------------------------
-	self.settings.showIdentTokenOnCheckScreen = options[@"showIdentTokenOnCheckScreen"];
-	self.settings.showErrorSuccessScreen = options[@"showErrorSuccessScreen"];
-	self.settings.showVideoOverviewCheck = options[@"showVideoOverviewCheck"];
-	self.settings.forceModalPresentation = options[@"forceModalPresentation"];
-	self.settings.forceErrorSuccessScreen = options[@"forceErrorSuccessScreen"];
-	// self.settings.modalPresentationStyle = options[@"modalPresentationStyle"];
-	// self.settings.certificateProvider = options[@"certificateProvider"];
-	self.settings.pushDeviceToken = options[@"pushDeviceToken"];
-	self.settings.sentryDSN = options[@"sentryDSN"];
-	self.settings.productName = options[@"productName"];
-	self.settings.ignoreCompanyID = options[@"ignoreCompanyID"];
-	// self.settings.externalLogger = options[@"externalLogger"];
+	self.settings.showIdentTokenOnCheckScreen = settings[@"showIdentTokenOnCheckScreen"];
+	self.settings.showErrorSuccessScreen = settings[@"showErrorSuccessScreen"];
+	self.settings.showVideoOverviewCheck = settings[@"showVideoOverviewCheck"];
+	self.settings.forceModalPresentation = settings[@"forceModalPresentation"];
+	self.settings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
+	// self.settings.modalPresentationStyle = settings[@"modalPresentationStyle"];
+	// self.settings.certificateProvider = settings[@"certificateProvider"];
+	self.settings.pushDeviceToken = settings[@"pushDeviceToken"];
+	self.settings.sentryDSN = settings[@"sentryDSN"];
+	self.settings.productName = settings[@"productName"];
+	self.settings.ignoreCompanyID = settings[@"ignoreCompanyID"];
+	// self.settings.externalLogger = settings[@"externalLogger"];
 
 	// -----------------------------------------------------------------------------------
 	//                                    Localization
 	// -----------------------------------------------------------------------------------
-	self.settings.userInterfaceLanguage = options[@"userInterfaceLanguage"];
+	self.settings.userInterfaceLanguage = settings[@"userInterfaceLanguage"];
 
 	// -----------------------------------------------------------------------------------
 	//									Server Properties (optional)
 	// -----------------------------------------------------------------------------------
-	// self.settings.environment = options[@"environment"];
-	// self.settings.connectionType = options[@"connectionType"];
+	// self.settings.environment = settings[@"environment"];
+	// self.settings.connectionType = settings[@"connectionType"];
 
-	self.settings.allowInvalidCertificates = options[@"allowInvalidCertificates"];
-	self.settings.apiHost = options[@"apiHost"];
-	self.settings.websocketHost = options[@"websocketHost"];
-	self.settings.videoHost = options[@"videoHost"];
-	self.settings.stunHost = options[@"stunHost"];
-	self.settings.stunPort = options[@"stunPort"];
+	self.settings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
+	self.settings.apiHost = settings[@"apiHost"];
+	self.settings.websocketHost = settings[@"websocketHost"];
+	self.settings.videoHost = settings[@"videoHost"];
+	self.settings.stunHost = settings[@"stunHost"];
+	self.settings.stunPort = settings[@"stunPort"];
 
 
 	// Back button
