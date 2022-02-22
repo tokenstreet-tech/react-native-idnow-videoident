@@ -1,8 +1,8 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
-import type { IAndroidSettings } from './androidSettings/IAndroidSettings';
+import type { IAndroidSettings } from './android/IAndroidSettings';
 import type { ConnectionTypeEnum } from './enums/ConnectionTypeEnum';
-import type { IIosSettings } from './iosSettings/IIosSettings';
+import type { IIosSettings } from './ios/IIosSettings';
 
 /**
  * The complete documentation of the interfaces is copied directly from the READMEs or the header files
