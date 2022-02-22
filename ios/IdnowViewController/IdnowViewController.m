@@ -114,50 +114,50 @@
 
 
 	// -----------------------------------------------------------------------------------
-    //									Settings
-    // -----------------------------------------------------------------------------------
-    self.settings = [IDnowSettings new];
+	//									Settings
+	// -----------------------------------------------------------------------------------
+	self.settings = [IDnowSettings new];
 
-    // -----------------------------------------------------------------------------------
-    //									Basic Properties
-    // -----------------------------------------------------------------------------------
-    self.settings.transactionToken = options[@"transactionToken"];
-    self.settings.companyID = options[@"companyID"];
+	// -----------------------------------------------------------------------------------
+	//									Basic Properties
+	// -----------------------------------------------------------------------------------
+	self.settings.transactionToken = options[@"transactionToken"];
+	self.settings.companyID = options[@"companyID"];
 
 
-    // -----------------------------------------------------------------------------------
-    //									Extended Properties (optional)
-    // -----------------------------------------------------------------------------------
-    self.settings.showIdentTokenOnCheckScreen = options[@"showIdentTokenOnCheckScreen"];
-    self.settings.showErrorSuccessScreen = options[@"showErrorSuccessScreen"];
-    self.settings.showVideoOverviewCheck = options[@"showVideoOverviewCheck"];
-    self.settings.forceModalPresentation = options[@"forceModalPresentation"];
-    self.settings.forceErrorSuccessScreen = options[@"forceErrorSuccessScreen"];
-    // self.settings.modalPresentationStyle = options[@"modalPresentationStyle"];
-    // self.settings.certificateProvider = options[@"certificateProvider"];
-    self.settings.pushDeviceToken = options[@"pushDeviceToken"];
-    self.settings.sentryDSN = options[@"sentryDSN"];
-    self.settings.productName = options[@"productName"];
-    self.settings.ignoreCompanyID = options[@"ignoreCompanyID"];
-    // self.settings.externalLogger = options[@"externalLogger"];
+	// -----------------------------------------------------------------------------------
+	//									Extended Properties (optional)
+	// -----------------------------------------------------------------------------------
+	self.settings.showIdentTokenOnCheckScreen = options[@"showIdentTokenOnCheckScreen"];
+	self.settings.showErrorSuccessScreen = options[@"showErrorSuccessScreen"];
+	self.settings.showVideoOverviewCheck = options[@"showVideoOverviewCheck"];
+	self.settings.forceModalPresentation = options[@"forceModalPresentation"];
+	self.settings.forceErrorSuccessScreen = options[@"forceErrorSuccessScreen"];
+	// self.settings.modalPresentationStyle = options[@"modalPresentationStyle"];
+	// self.settings.certificateProvider = options[@"certificateProvider"];
+	self.settings.pushDeviceToken = options[@"pushDeviceToken"];
+	self.settings.sentryDSN = options[@"sentryDSN"];
+	self.settings.productName = options[@"productName"];
+	self.settings.ignoreCompanyID = options[@"ignoreCompanyID"];
+	// self.settings.externalLogger = options[@"externalLogger"];
 
-    // -----------------------------------------------------------------------------------
-    //                                    Localization
-    // -----------------------------------------------------------------------------------
-    self.settings.userInterfaceLanguage = options[@"userInterfaceLanguage"];
+	// -----------------------------------------------------------------------------------
+	//                                    Localization
+	// -----------------------------------------------------------------------------------
+	self.settings.userInterfaceLanguage = options[@"userInterfaceLanguage"];
 
-    // -----------------------------------------------------------------------------------
-    //									Server Properties (optional)
-    // -----------------------------------------------------------------------------------
-    // self.settings.environment = options[@"environment"];
-    // self.settings.connectionType = options[@"connectionType"];
+	// -----------------------------------------------------------------------------------
+	//									Server Properties (optional)
+	// -----------------------------------------------------------------------------------
+	// self.settings.environment = options[@"environment"];
+	// self.settings.connectionType = options[@"connectionType"];
 
-    self.settings.allowInvalidCertificates = options[@"allowInvalidCertificates"];
-    self.settings.apiHost = options[@"apiHost"];
-    self.settings.websocketHost = options[@"websocketHost"];
-    self.settings.videoHost = options[@"videoHost"];
-    self.settings.stunHost = options[@"stunHost"];
-    self.settings.stunPort = options[@"stunPort"];
+	self.settings.allowInvalidCertificates = options[@"allowInvalidCertificates"];
+	self.settings.apiHost = options[@"apiHost"];
+	self.settings.websocketHost = options[@"websocketHost"];
+	self.settings.videoHost = options[@"videoHost"];
+	self.settings.stunHost = options[@"stunHost"];
+	self.settings.stunPort = options[@"stunPort"];
 
 
 	// Back button
