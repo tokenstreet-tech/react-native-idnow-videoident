@@ -8,9 +8,6 @@ export interface IIosAppearance {
      */
     mode?: IosAppearanceModeEnum;
 
-    // -----------------------------------------------------------------------------------
-    //									Colors
-    // -----------------------------------------------------------------------------------
     /**
      * Header file:
      * Optional corner radius for text fields
