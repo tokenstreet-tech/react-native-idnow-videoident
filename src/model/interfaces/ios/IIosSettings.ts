@@ -1,4 +1,4 @@
-import type { IosUIModalPresentationStyleEnum } from './enums/IosUIModalPresentationStyleEnum';
+import type { IosUIModalPresentationStyleEnum } from '../../enums/ios/IosUIModalPresentationStyleEnum';
 
 /**
  * The settings that should be used for the identification process provided by IDnow.

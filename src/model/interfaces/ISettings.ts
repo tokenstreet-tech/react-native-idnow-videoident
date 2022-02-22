@@ -1,8 +1,8 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 
+import type { ConnectionTypeEnum } from '../enums/ConnectionTypeEnum';
+import type { EnvironmentEnum } from '../enums/EnvironmentEnum';
 import type { IAndroidSettings } from './android/IAndroidSettings';
-import type { ConnectionTypeEnum } from './enums/ConnectionTypeEnum';
-import type { EnvironmentEnum } from './enums/EnvironmentEnum';
 import type { IAppearance } from './IAppearance';
 import type { IIosSettings } from './ios/IIosSettings';
 

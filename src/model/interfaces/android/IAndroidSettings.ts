@@ -1,4 +1,4 @@
-import type { AndroidLanguageEnum } from './enums/AndroidLanguageEnum';
+import type { AndroidLanguageEnum } from '../../enums/android/AndroidLanguageEnum';
 
 export interface IAndroidSettings {
     language?: AndroidLanguageEnum;

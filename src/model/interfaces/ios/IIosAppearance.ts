@@ -1,6 +1,6 @@
-import type { IosAppearanceModeEnum } from './enums/IosAppearanceModeEnum';
-import type { IosCheckboxPositionEnum } from './enums/IosCheckboxPositionEnum';
-import type { IosNumberLabelPositionEnum } from './enums/IosNumberLabelPositionEnum';
+import type { IosAppearanceModeEnum } from '../../enums/ios/IosAppearanceModeEnum';
+import type { IosCheckboxPositionEnum } from '../../enums/ios/IosCheckboxPositionEnum';
+import type { IosNumberLabelPositionEnum } from '../../enums/ios/IosNumberLabelPositionEnum';
 
 export interface IIosAppearance {
     /**
