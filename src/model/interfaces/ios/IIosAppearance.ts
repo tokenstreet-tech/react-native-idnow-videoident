@@ -1,6 +1,7 @@
 import type { IosAppearanceModeEnum } from '../../enums/ios/IosAppearanceModeEnum';
 import type { IosCheckboxPositionEnum } from '../../enums/ios/IosCheckboxPositionEnum';
 import type { IosNumberLabelPositionEnum } from '../../enums/ios/IosNumberLabelPositionEnum';
+import type { IosRequestCodeAgainLayoutTypeEnum } from '../../enums/ios/IosRequestCodeAgainLayoutTypeEnum';
 
 export interface IIosAppearance {
     /**
@@ -105,7 +106,7 @@ export interface IIosAppearance {
      * Default: BOTTOM
      * Set this to TOP - the ident code box above request again button, refer Whitelabeling Fiducia
      */
-    requestCodeAgainLayoutType?: any;
+    requestCodeAgainLayoutType?: IosRequestCodeAgainLayoutTypeEnum;
 
     /**
      * Header file:
@@ -133,10 +134,12 @@ export interface IIosAppearance {
     usedNewBrand?: boolean;
 
     /**
+     * Not implemented
+     *
      * Header file:
      * Default nil - Set this to a UIBarButtonItem of your preference in order to customize its appearance throughout the SDK
      */
-    customBackButtonItem?: any;
+    // customBackButtonItem?: any;
 
     /**
      * Header file:

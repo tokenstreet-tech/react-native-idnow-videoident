@@ -48,6 +48,7 @@
 	appearance.inputFieldsSquared = appearanceSettings[@"inputFieldsSquared"];
 	appearance.identCodeLayoutHalf = appearanceSettings[@"identCodeLayoutHalf"];
 	appearance.usedNewBrand = appearanceSettings[@"usedNewBrand"];
+	// Not implemented
 	// appearance.customBackButtonItem = [RCTConvert any:customBackButtonItem[@"usedNewBrand"]];
 	// appearance.customCancelButton = [RCTConvert any:customBackButtonItem[@"customCancelButton"]];
 	// appearance.customAgentView = [RCTConvert any:customBackButtonItem[@"customAgentView"]];
@@ -134,6 +135,8 @@
 	self.settings.forceModalPresentation = settings[@"forceModalPresentation"];
 	self.settings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
 	// self.settings.modalPresentationStyle = settings[@"modalPresentationStyle"];
+	// Deprecated: Supported by the SDK version 3.22.1 or before
+	// self.settings.certificateProvider = settings[@"certificateProvider"];
 	self.settings.pushDeviceToken = settings[@"pushDeviceToken"];
 	self.settings.sentryDSN = settings[@"sentryDSN"];
 	self.settings.productName = settings[@"productName"];
@@ -157,11 +160,6 @@
 	self.settings.videoHost = settings[@"videoHost"];
 	self.settings.stunHost = settings[@"stunHost"];
 	self.settings.stunPort = settings[@"stunPort"];
-
-
-	// Back button
-	UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
-	appearance.customBackButtonItem = backButton;
 
 	self.idnowController = [[IDnowController alloc] initWithSettings: self.settings];
 

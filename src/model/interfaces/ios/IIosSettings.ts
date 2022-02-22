@@ -78,6 +78,16 @@ export interface IIosSettings {
     modalPresentationStyle?: IosUIModalPresentationStyleEnum;
 
     /**
+     * Deprecated: Supported by the SDK version 3.22.1 or before
+     *
+     * Header file:
+     * Sets a certificate provider for custom DTLS certificates used by the WebRTC connection.
+     * The certificate provider can be used to provide a custom DTLS certificate (featureCertificate == YES) and/or to check the
+     * SHA fingerprint of the server certificate (featureFingerprint == YES)
+     */
+    // certificateProvider?: any;
+
+    /**
      * Header file:
      * The device token is needed to uniquely identify the device. Its used to send push notifications.
      */
