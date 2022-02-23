@@ -38,28 +38,14 @@ rules:
     '@typescript-eslint/no-var-requires': 0
     '@typescript-eslint/prefer-readonly-parameter-types': 0
     '@typescript-eslint/restrict-template-expressions': 0
-    '@typescript-eslint/strict-boolean-expressions': 0
-    '@typescript-eslint/unbound-method': 0
     'require-unicode-regexp': 0
     borderWidth: 0
     camelcase: 0
     capitalized-comments: 0
-    class-methods-use-this: 0
-    consistent-return: 0
-    func-style: 0
     id-length: 0
     max-lines-per-function: 0
-    max-lines: 0
-    max-params: 0
-    max-statements: 0
     multiline-comment-style: 0
-    no-continue: 0
     no-magic-numbers: 0
-    no-nested-ternary: 0
     no-ternary: 0
     no-undefined: 0
-    no-underscore-dangle: 0
-    no-useless-concat: 0
-    no-warning-comments: 0
     sort-keys: 0
-    sort-vars: 0
