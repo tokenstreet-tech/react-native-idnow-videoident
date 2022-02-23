@@ -9,7 +9,7 @@
 #import "IdnowViewController.h"
 
 @implementation IdnowViewController
--(void)startVideoIdent:(RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback {
+- (void)startVideoIdent: (RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback {
 
 	UIViewController *rootViewController = [[[UIApplication sharedApplication] delegate] window].rootViewController;
 
@@ -42,7 +42,7 @@
 	 }];
 }
 
--(NSString *)getResultCode:(BOOL)success canceledByUser:(BOOL)canceledByUser {
+- (NSString *)getResultCode: (BOOL)success canceledByUser:(BOOL)canceledByUser {
 	if ( success ) {
 		return @"SUCCESS";
 	}

@@ -9,8 +9,7 @@
 #import "IdnowViewController+Settings.h"
 
 @implementation IdnowViewController (Settings)
-
--(instancetype)initializeWithSettings:(NSDictionary *)settings {
+- (instancetype)initializeWithSettings: (NSDictionary *)settings {
 	IDnowSettings *idnowSettings = [IDnowSettings new];
 
 	// -----------------------------------------------------------------------------------
@@ -62,7 +61,7 @@
 	return self;
 }
 
--(void)applyAppearance:(NSDictionary *)appearance {
+- (void)applyAppearance: (NSDictionary *)appearance {
 	IDnowAppearance *idnowAppearance = [IDnowAppearance sharedAppearance];
 	NSDictionary *colors = appearance[@"colors"];
 
@@ -165,18 +164,18 @@
 	idnowAppearance.cqcExcellentQualityInnerColor = [RCTConvert UIColor:colors[@"cqcExcellentQualityInnerColor"]];
 }
 
--(UIModalPresentationStyle)getModalPresentationStyle:(NSString *)modalPresentationStyle {
+- (UIModalPresentationStyle)getModalPresentationStyle: (NSString *)modalPresentationStyle {
 	NSDictionary *mapping = @{
-		@"UIModalPresentationFullScreen" : @(UIModalPresentationFullScreen),
-		@"UIModalPresentationPageSheet" : @(UIModalPresentationPageSheet),
-		@"UIModalPresentationFormSheet" : @(UIModalPresentationFormSheet),
-		@"UIModalPresentationCurrentContext" : @(UIModalPresentationCurrentContext),
-		@"UIModalPresentationCustom" : @(UIModalPresentationCustom),
-		@"UIModalPresentationOverFullScreen" : @(UIModalPresentationOverFullScreen),
-		@"UIModalPresentationOverCurrentContext" : @(UIModalPresentationOverCurrentContext),
-		@"UIModalPresentationPopover" : @(UIModalPresentationPopover),
-		@"UIModalPresentationNone" : @(UIModalPresentationNone),
-		@"UIModalPresentationAutomatic" : @(UIModalPresentationAutomatic),
+		@"UIModalPresentationFullScreen": @(UIModalPresentationFullScreen),
+		@"UIModalPresentationPageSheet": @(UIModalPresentationPageSheet),
+		@"UIModalPresentationFormSheet": @(UIModalPresentationFormSheet),
+		@"UIModalPresentationCurrentContext": @(UIModalPresentationCurrentContext),
+		@"UIModalPresentationCustom": @(UIModalPresentationCustom),
+		@"UIModalPresentationOverFullScreen": @(UIModalPresentationOverFullScreen),
+		@"UIModalPresentationOverCurrentContext": @(UIModalPresentationOverCurrentContext),
+		@"UIModalPresentationPopover": @(UIModalPresentationPopover),
+		@"UIModalPresentationNone": @(UIModalPresentationNone),
+		@"UIModalPresentationAutomatic": @(UIModalPresentationAutomatic),
 	};
 
 	UIModalPresentationStyle result = [RCTConvertEnumValue("UIModalPresentationStyle",mapping,nil,modalPresentationStyle) integerValue];
@@ -184,51 +183,51 @@
 	return result;
 }
 
--(IDnowEnvironment)getEnvironment:(NSString *)environment {
+- (IDnowEnvironment)getEnvironment: (NSString *)environment {
 	NSDictionary *mapping = @{
 		// -----------------------------------------------------------------------------------
 		//                                    Dev
 		// -----------------------------------------------------------------------------------
-		@"DEV" : @(IDnowEnvironmentDev),
-		@"DEV_0" : @(IDnowEnvironmentDev0),
-		@"DEV_1" : @(IDnowEnvironmentDev1),
-		@"DEV_2" : @(IDnowEnvironmentDev2),
-		@"DEV_3" : @(IDnowEnvironmentDev3),
-		@"DEV_4" : @(IDnowEnvironmentDev4),
-		@"DEV_5" : @(IDnowEnvironmentDev5),
+		@"DEV": @(IDnowEnvironmentDev),
+		@"DEV_0": @(IDnowEnvironmentDev0),
+		@"DEV_1": @(IDnowEnvironmentDev1),
+		@"DEV_2": @(IDnowEnvironmentDev2),
+		@"DEV_3": @(IDnowEnvironmentDev3),
+		@"DEV_4": @(IDnowEnvironmentDev4),
+		@"DEV_5": @(IDnowEnvironmentDev5),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Test
 		// -----------------------------------------------------------------------------------
-		@"TEST" : @(IDnowEnvironmentTest),
-		@"TEST_1" : @(IDnowEnvironmentTest1),
-		@"TEST_2" : @(IDnowEnvironmentTest2),
-		@"TEST_3" : @(IDnowEnvironmentTest3),
+		@"TEST": @(IDnowEnvironmentTest),
+		@"TEST_1": @(IDnowEnvironmentTest1),
+		@"TEST_2": @(IDnowEnvironmentTest2),
+		@"TEST_3": @(IDnowEnvironmentTest3),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Staging
 		// -----------------------------------------------------------------------------------
 		// Not available on iOS
-		@"STAGING_1" :@(IDnowEnvironmentNotDefined),
+		@"STAGING_1": @(IDnowEnvironmentNotDefined),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Live
 		// -----------------------------------------------------------------------------------
-		@"LIVE" : @(IDnowEnvironmentLive),
+		@"LIVE": @(IDnowEnvironmentLive),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Intrum
 		// -----------------------------------------------------------------------------------
-		@"INTRUM" : @(IDnowEnvironmentIntrum),
-		@"INTRUM_TEST" : @(IDnowEnvironmentIntrumTest),
+		@"INTRUM": @(IDnowEnvironmentIntrum),
+		@"INTRUM_TEST": @(IDnowEnvironmentIntrumTest),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Other
 		// -----------------------------------------------------------------------------------
-		@"CUSTOM" : @(IDnowEnvironmentCustom),
+		@"CUSTOM": @(IDnowEnvironmentCustom),
 		// Not available on iOS
-		@"INT" : @(IDnowEnvironmentNotDefined),
-		@"NOT_DEFINED" : @(IDnowEnvironmentNotDefined),
+		@"INT": @(IDnowEnvironmentNotDefined),
+		@"NOT_DEFINED": @(IDnowEnvironmentNotDefined),
 	};
 
 	IDnowEnvironment result = [RCTConvertEnumValue("IDnowEnvironmentCustom",mapping,nil,environment) integerValue];
@@ -236,10 +235,10 @@
 	return result;
 }
 
--(IDnowConnectionType)getConnectionType:(NSString *)connectionType {
+- (IDnowConnectionType)getConnectionType: (NSString *)connectionType {
 	NSDictionary *mapping = @{
-		@"WEBSOCKET" : @(IDnowConnectionTypeWebsocket),
-		@"LONG_POLLING" : @(IDnowConnectionTypeLongPolling),
+		@"WEBSOCKET": @(IDnowConnectionTypeWebsocket),
+		@"LONG_POLLING": @(IDnowConnectionTypeLongPolling),
 	};
 
 	IDnowConnectionType result = [RCTConvertEnumValue("IDnowConnectionType",mapping,nil,connectionType) integerValue];
@@ -248,11 +247,11 @@
 }
 
 
--(enum APPEARANCE_MODE)getMode:(NSString *)mode {
+- (enum APPEARANCE_MODE)getMode: (NSString *)mode {
 	NSDictionary *mapping = @{
-		@"IDNOW_MODE_LIGHT" : @(IDNOW_MODE_LIGHT),
-		@"IDNOW_MODE_DARK" : @(IDNOW_MODE_DARK),
-		@"IDNOW_MODE_SYSTEM" : @(IDNOW_MODE_SYSTEM),
+		@"IDNOW_MODE_LIGHT": @(IDNOW_MODE_LIGHT),
+		@"IDNOW_MODE_DARK": @(IDNOW_MODE_DARK),
+		@"IDNOW_MODE_SYSTEM": @(IDNOW_MODE_SYSTEM),
 	};
 
 	NSInteger result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
@@ -260,11 +259,11 @@
 	return (int) result;
 }
 
--(enum CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition {
+- (enum CHECKBOX_POSITION)getCheckBoxPosition: (NSString *)checkBoxPosition {
 	NSDictionary *mapping = @{
-		@"LEFT" : @(LEFT),
-		@"RIGHT" : @(RIGHT),
-		@"TOP_LEFT" : @(TOP_LEFT),
+		@"LEFT": @(LEFT),
+		@"RIGHT": @(RIGHT),
+		@"TOP_LEFT": @(TOP_LEFT),
 	};
 
 	NSInteger result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
@@ -272,11 +271,11 @@
 	return (int) result;
 }
 
--(enum NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition {
+- (enum NUMBER_LABEL_POSITION)getNumberLabelPosition: (NSString *)numberLabelPosition {
 	NSDictionary *mapping = @{
-		@"LABELTOP" : @(LABELTOP),
-		@"LABELLEFT" : @(LABELLEFT),
-		@"LABELRIGHT" : @(LABELRIGHT),
+		@"LABELTOP": @(LABELTOP),
+		@"LABELLEFT": @(LABELLEFT),
+		@"LABELRIGHT": @(LABELRIGHT),
 	};
 
 	NSInteger result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
@@ -284,16 +283,15 @@
 	return (int) result;
 }
 
--(enum REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType {
+- (enum REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType: (NSString *)requestCodeAgainLayoutType {
 	NSDictionary *mapping = @{
-		@"BOTTOM" : @(BOTTOM),
-		@"TOP" : @(TOP),
+		@"BOTTOM": @(BOTTOM),
+		@"TOP": @(TOP),
 	};
 
 	NSInteger result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
 
 	return (int) result;
 }
-
 
 @end
