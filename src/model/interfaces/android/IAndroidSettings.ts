@@ -111,7 +111,8 @@ export interface IAndroidSettings {
     //									Custom server
     // -----------------------------------------------------------------------------------
     /**
-     * You can set to use your own servers. When this setting is enabled, apiHost, webHost and websocketHost must also be set.
+     * You can set to use your own servers.
+     * When this setting is enabled, apiHost, webHost and websocketHost must also be set.
      *
      * Environment must be set to EnvironmentEnum.CUSTOM
      * IDnowSDK.setEnvironment(IDnowSDK.Server.CUSTOM);
