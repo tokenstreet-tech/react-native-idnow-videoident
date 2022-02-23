@@ -178,7 +178,7 @@
 		@"UIModalPresentationAutomatic": @(UIModalPresentationAutomatic),
 	};
 
-	UIModalPresentationStyle result = [RCTConvertEnumValue("UIModalPresentationStyle",mapping,nil,modalPresentationStyle) integerValue];
+	UIModalPresentationStyle result = [RCTConvertEnumValue("UIModalPresentationStyle", mapping, nil, modalPresentationStyle) integerValue];
 
 	return result;
 }
@@ -230,7 +230,7 @@
 		@"NOT_DEFINED": @(IDnowEnvironmentNotDefined),
 	};
 
-	IDnowEnvironment result = [RCTConvertEnumValue("IDnowEnvironmentCustom",mapping,nil,environment) integerValue];
+	IDnowEnvironment result = [RCTConvertEnumValue("IDnowEnvironmentCustom", mapping, nil, environment) integerValue];
 
 	return result;
 }
@@ -241,7 +241,7 @@
 		@"LONG_POLLING": @(IDnowConnectionTypeLongPolling),
 	};
 
-	IDnowConnectionType result = [RCTConvertEnumValue("IDnowConnectionType",mapping,nil,connectionType) integerValue];
+	IDnowConnectionType result = [RCTConvertEnumValue("IDnowConnectionType", mapping, nil, connectionType) integerValue];
 
 	return result;
 }
@@ -254,7 +254,7 @@
 		@"IDNOW_MODE_SYSTEM": @(IDNOW_MODE_SYSTEM),
 	};
 
-	NSInteger result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
+	NSInteger result = [RCTConvertEnumValue("APPEARANCE_MODE", mapping, nil, mode) integerValue];
 
 	return (int) result;
 }
@@ -266,7 +266,7 @@
 		@"TOP_LEFT": @(TOP_LEFT),
 	};
 
-	NSInteger result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
+	NSInteger result = [RCTConvertEnumValue("CHECKBOX_POSITION", mapping, nil, checkBoxPosition) integerValue];
 
 	return (int) result;
 }
@@ -278,7 +278,7 @@
 		@"LABELRIGHT": @(LABELRIGHT),
 	};
 
-	NSInteger result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
+	NSInteger result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION", mapping, nil, numberLabelPosition) integerValue];
 
 	return (int) result;
 }
@@ -289,7 +289,7 @@
 		@"TOP": @(TOP),
 	};
 
-	NSInteger result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
+	NSInteger result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE", mapping, nil, requestCodeAgainLayoutType) integerValue];
 
 	return (int) result;
 }
