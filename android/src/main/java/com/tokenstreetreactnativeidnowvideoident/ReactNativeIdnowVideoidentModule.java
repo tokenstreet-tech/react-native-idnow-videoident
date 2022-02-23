@@ -49,6 +49,11 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         String resultCodeKey = "resultCode";
         String errorMessageKey = "errorMessage";
         switch (resultCode) {
+            case IDnowSDK.RESULT_CODE_FAILED:
+                params.putString(resultCodeKey, "FAILED");
+                params.putString(errorMessageKey, e.getMessage());
+                globalFailureCallback.invoke(params);
+                break;
             case IDnowSDK.RESULT_CODE_SUCCESS:
                 params.putString(resultCodeKey, "SUCCESS");
                 globalSuccessCallback.invoke(params);
@@ -58,11 +63,10 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
                 params.putString(errorMessageKey, e.getMessage());
                 globalFailureCallback.invoke(params);
                 break;
-            case IDnowSDK.RESULT_CODE_FAILED:
-                params.putString(resultCodeKey, "FAILED");
-                params.putString(errorMessageKey, e.getMessage());
-                globalFailureCallback.invoke(params);
-                break;
+            case IDnowSDK.RESULT_CODE_WRONG_IDENT:
+            case IDnowSDK.RESULT_CODE_FALLBACK_VID:
+            case 11: // 11 -> IDnowSDK.RESULT_CODE_FAILED_DEVICE_ROOTED
+            case IDnowSDK.RESULT_CODE_INTERNAL:
             default:
                 params.putString(resultCodeKey, "INTERNAL_ERROR");
                 params.putString(errorMessageKey, e.getMessage());
