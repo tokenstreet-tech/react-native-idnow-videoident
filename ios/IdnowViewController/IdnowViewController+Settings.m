@@ -209,7 +209,7 @@
 		//                                    Staging
 		// -----------------------------------------------------------------------------------
 		// Not available on iOS
-		// @"STAGING_1" : nil,
+		@"STAGING_1" :@(IDnowEnvironmentNotDefined),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Live
@@ -227,7 +227,7 @@
 		// -----------------------------------------------------------------------------------
 		@"CUSTOM" : @(IDnowEnvironmentCustom),
 		// Not available on iOS
-		// @"INT" : nil,
+		@"INT" : @(IDnowEnvironmentNotDefined),
 		@"NOT_DEFINED" : @(IDnowEnvironmentNotDefined),
 	};
 

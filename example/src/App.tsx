@@ -3,11 +3,13 @@ import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { EnvironmentEnum } from '../../src/model/enums/EnvironmentEnum';
 import { getRandomColor } from './util';
 
 const color = getRandomColor();
 const createSettings = (transactionToken: string): ISettings => ({
     transactionToken,
+    environment: EnvironmentEnum.STAGING_1,
     appearance: {
         colors: {
             defaultTextColor: color,
