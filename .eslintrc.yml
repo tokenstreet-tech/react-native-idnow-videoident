@@ -62,6 +62,7 @@ rules:
     func-style: 0
     id-length: 0
     max-lines-per-function: 0
+    max-lines: 0
     max-params: 0
     max-statements: 0
     multiline-comment-style: 0
@@ -75,4 +76,3 @@ rules:
     no-warning-comments: 0
     sort-keys: 0
     sort-vars: 0
-    max-lines: 0
