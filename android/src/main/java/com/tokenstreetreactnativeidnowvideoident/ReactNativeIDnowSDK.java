@@ -8,17 +8,13 @@ import java.util.HashMap;
 
 public class ReactNativeIDnowSDK {
 
-    public static IDnowSDK getInstanceWithSettings(
+    public static IDnowSDK initializeWithSettings(
         final ReadableMap settings,
         Activity currentActivity,
         final ReactApplicationContext reactApplicationContext
-    ) {
+    ) throws Exception {
         IDnowSDK instance = IDnowSDK.getInstance();
-        try {
-            instance.initialize(currentActivity, settings.getString("companyId"), settings.getString("language"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        instance.initialize(currentActivity, settings.getString("companyId"), settings.getString("language"));
 
         // -----------------------------------------------------------------------------------
         //                                    General settings

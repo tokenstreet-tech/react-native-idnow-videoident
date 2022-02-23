@@ -76,9 +76,9 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         globalSuccessCallback = successCallback;
 
         Activity currentActivity = getCurrentActivity();
-        IDnowSDK instance = ReactNativeIDnowSDK.getInstanceWithSettings(settings, currentActivity, reactContext);
 
         try {
+            IDnowSDK instance = ReactNativeIDnowSDK.initializeWithSettings(settings, currentActivity, reactContext);
             instance.start(IDnowSDK.getTransactionToken(reactContext));
         } catch (Exception e) {
             resultCallback(null, e);
