@@ -45,7 +45,7 @@
 	// -----------------------------------------------------------------------------------
 	//									Server Properties (optional)
 	// -----------------------------------------------------------------------------------
-	// idnowSettings.environment = settings[@"environment"];
+    idnowSettings.environment = settings[@"environment"];
 	// idnowSettings.connectionType = settings[@"connectionType"];
 
 	idnowSettings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
@@ -179,7 +179,62 @@
 		@"UIModalPresentationAutomatic" : @(UIModalPresentationAutomatic),
 	};
 
-	UIModalPresentationStyle result = [RCTConvertEnumValue("UIModalPresentationStyle",mapping,@(UIModalPresentationFullScreen),modalPresentationStyle) integerValue];
+	UIModalPresentationStyle result = [RCTConvertEnumValue("UIModalPresentationStyle",mapping,nil,modalPresentationStyle) integerValue];
+
+	return result;
+}
+
+-(IDnowEnvironment)getEnvironment:(NSString *)environment {
+	NSDictionary *mapping = @{
+	    // -----------------------------------------------------------------------------------
+        //                                    Dev
+        // -----------------------------------------------------------------------------------
+        		@"DEV" : @(IDnowEnvironmentDev),
+        		@"DEV_0" : @(IDnowEnvironmentDev0),
+        		@"DEV_1" : @(IDnowEnvironmentDev1),
+        		@"DEV_2" : @(IDnowEnvironmentDev2),
+        		@"DEV_3" : @(IDnowEnvironmentDev3),
+        		@"DEV_4" : @(IDnowEnvironmentDev4),
+        		@"DEV_5" : @(IDnowEnvironmentDev5),
+
+        		    // -----------------------------------------------------------------------------------
+                    //                                    Test
+                    // -----------------------------------------------------------------------------------
+        				@"TEST" : @(IDnowEnvironmentTest),
+                		@"TEST_1" : @(IDnowEnvironmentTest1),
+                		@"TEST_2" : @(IDnowEnvironmentTest2),
+                		@"TEST_3" : @(IDnowEnvironmentTest3),
+
+                		    // -----------------------------------------------------------------------------------
+                            //                                    Staging
+                            // -----------------------------------------------------------------------------------
+        		  		@"STAGING_1" : nil,
+
+        	    // -----------------------------------------------------------------------------------
+                //                                    Live
+                // -----------------------------------------------------------------------------------
+			@"LIVE" : @(IDnowEnvironmentLive),
+
+	    // -----------------------------------------------------------------------------------
+        //                                    Intrum
+        // -----------------------------------------------------------------------------------
+			@"INTRUM" : @(IDnowEnvironmentIntrum),
+    		@"INTRUM_TEST" : @(IDnowEnvironmentIntrumTest),
+
+    		    // -----------------------------------------------------------------------------------
+                //                                    Other
+                // -----------------------------------------------------------------------------------
+			@"CUSTOM" : @(IDnowEnvironmentCustom),
+			@"INT" : nil,
+			@"NOT_DEFINED" : @(IDnowEnvironmentNotDefined),
+
+
+
+
+
+	};
+
+	IDnowEnvironment result = [RCTConvertEnumValue("IDnowEnvironmentCustom",mapping,nil,environment) integerValue];
 
 	return result;
 }

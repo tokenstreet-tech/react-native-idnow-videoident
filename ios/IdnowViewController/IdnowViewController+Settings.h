@@ -16,6 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)applyAppearance:(NSDictionary *)settings;
 
 -(UIModalPresentationStyle)getModalPresentationStyle:(NSString *)modalPresentationStyle;
+-(IDnowEnvironment)getEnvironment:(NSString *)environment;
+// -(UIModalPresentationStyle)getConnectionType:(NSString *)connectionType;
+
+// -(UIModalPresentationStyle)getConnectionType:(NSString *)checkBoxPosition;
+// -(UIModalPresentationStyle)getConnectionType:(NSString *)numberLabelPosition;
+// -(UIModalPresentationStyle)getConnectionType:(NSString *)requestCodeAgainLayoutType;
 
 @end
 
