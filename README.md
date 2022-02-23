@@ -43,14 +43,14 @@ React Native IDnow VideoIdent bindings for iOS and Android platforms
 
 2. Add the IDnow maven url to your top-level `build.gradle`:
 
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
+        }
     }
-}
-```
+    ```
 
 ## Usage
 
