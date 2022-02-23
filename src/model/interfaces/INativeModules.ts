@@ -1,12 +1,7 @@
 import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
 import type { ProcessedColorValue } from 'react-native';
 
-enum ResultCodeEnum {
-    SUCCESS = 'SUCCESS',
-    CANCEL = 'CANCEL',
-    FAILED = 'FAILED',
-    INTERNAL_ERROR = 'INTERNAL_ERROR',
-}
+import type { ResultCodeEnum } from '../enums/ResultCodeEnum';
 
 export interface IIdentificationResult {
     resultCode: ResultCodeEnum;

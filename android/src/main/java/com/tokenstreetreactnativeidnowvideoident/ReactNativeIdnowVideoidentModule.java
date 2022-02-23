@@ -39,27 +39,36 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         @Override
         public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
             if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
-                WritableMap params = Arguments.createMap();
-                switch (resultCode) {
-                    case IDnowSDK.RESULT_CODE_SUCCESS:
-                        params.putString("resultCode", "SUCCESS");
-                        globalSuccessCallback.invoke(params);
-                        break;
-                    case IDnowSDK.RESULT_CODE_CANCEL:
-                        params.putString("resultCode", "CANCEL");
-                        globalFailureCallback.invoke(params);
-                        break;
-                    case IDnowSDK.RESULT_CODE_FAILED:
-                        params.putString("resultCode", "FAILED");
-                        globalFailureCallback.invoke(params);
-                        break;
-                    default:
-                        params.putString("resultCode", "INTERNAL_ERROR");
-                        globalFailureCallback.invoke(params);
-                }
+                resultCallback(resultCode, null);
             }
         }
     };
+
+    private void resultCallback(Integer resultCode, Exception e) {
+        WritableMap params = Arguments.createMap();
+        String resultCodeKey = "resultCode";
+        String errorMessageKey = "errorMessage";
+        switch (resultCode) {
+            case IDnowSDK.RESULT_CODE_SUCCESS:
+                params.putString(resultCodeKey, "SUCCESS");
+                globalSuccessCallback.invoke(params);
+                break;
+            case IDnowSDK.RESULT_CODE_CANCEL:
+                params.putString(resultCodeKey, "CANCEL");
+                params.putString(errorMessageKey, e.getMessage());
+                globalFailureCallback.invoke(params);
+                break;
+            case IDnowSDK.RESULT_CODE_FAILED:
+                params.putString(resultCodeKey, "FAILED");
+                params.putString(errorMessageKey, e.getMessage());
+                globalFailureCallback.invoke(params);
+                break;
+            default:
+                params.putString(resultCodeKey, "INTERNAL_ERROR");
+                params.putString(errorMessageKey, e.getMessage());
+                globalFailureCallback.invoke(params);
+        }
+    }
 
     @ReactMethod
     public void startVideoIdent(final ReadableMap settings, Callback failureCallback, Callback successCallback) {
@@ -72,10 +81,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         try {
             instance.start(IDnowSDK.getTransactionToken(reactContext));
         } catch (Exception e) {
-            WritableMap params = Arguments.createMap();
-            params.putString("resultCode", "INTERNAL_ERROR");
-            params.putString("errorMessage", e.getMessage());
-            globalFailureCallback.invoke(params);
+            resultCallback(null, e);
         }
     }
 }
