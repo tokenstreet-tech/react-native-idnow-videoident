@@ -39,6 +39,14 @@ const createSettings = (transactionToken: string): ISettings => ({
     },
 });
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
+
 export const App: React.FC = () => {
     const [transactionToken, setTransactionToken] = useState<string>('TST-KJCXN');
     const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
@@ -57,11 +65,3 @@ export const App: React.FC = () => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
