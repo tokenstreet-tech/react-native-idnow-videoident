@@ -247,49 +247,49 @@
 }
 
 
--(APPEARANCE_MODE)getMode:(NSString *)mode {
+-(enum APPEARANCE_MODE)getMode:(NSString *)mode {
 	NSDictionary *mapping = @{
 		@"IDNOW_MODE_LIGHT" : @(IDNOW_MODE_LIGHT),
 		@"IDNOW_MODE_DARK" : @(IDNOW_MODE_DARK),
 		@"IDNOW_MODE_SYSTEM" : @(IDNOW_MODE_SYSTEM),
 	};
 
-	APPEARANCE_MODE result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
+    enum APPEARANCE_MODE result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
 
 	return result;
 }
 
--(CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition {
+-(enum CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition {
 	NSDictionary *mapping = @{
 		@"LEFT" : @(LEFT),
 		@"RIGHT" : @(RIGHT),
 		@"TOP_LEFT" : @(TOP_LEFT),
 	};
 
-	CHECKBOX_POSITION result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
+    enum CHECKBOX_POSITION result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
 
 	return result;
 }
 
--(NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition {
+-(enum NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition {
 	NSDictionary *mapping = @{
 		@"LABELTOP" : @(LABELTOP),
 		@"LABELLEFT" : @(LABELLEFT),
 		@"LABELRIGHT" : @(LABELRIGHT),
 	};
 
-	NUMBER_LABEL_POSITION result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
+    enum NUMBER_LABEL_POSITION result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
 
 	return result;
 }
 
--(REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType {
+-(enum REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType {
 	NSDictionary *mapping = @{
 		@"BOTTOM" : @(BOTTOM),
 		@"TOP" : @(TOP),
 	};
 
-	REQUEST_CODE_AGAIN_LAYOUT_TYPE result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
+    enum REQUEST_CODE_AGAIN_LAYOUT_TYPE result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
 
 	return result;
 }

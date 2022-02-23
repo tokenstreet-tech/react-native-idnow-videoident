@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(IDnowEnvironment)getEnvironment:(NSString *)environment;
 -(IDnowConnectionType)getConnectionType:(NSString *)connectionType;
 
--(APPEARANCE_MODE)getMode:(NSString *)mode;
--(CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition;
--(NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition;
--(REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType;
+-(enum APPEARANCE_MODE)getMode:(NSString *)mode;
+-(enum CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition;
+-(enum NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition;
+-(enum REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType;
 
 @end
 
