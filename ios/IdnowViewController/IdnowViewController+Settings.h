@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IdnowViewController (Settings)
 
 -(instancetype)initializeWithSettings:(NSDictionary *)settings;
--(void)applyAppearance:(NSDictionary *)settings;
+-(void)applyAppearance:(NSDictionary *)appearance;
 
 -(UIModalPresentationStyle)getModalPresentationStyle:(NSString *)modalPresentationStyle;
 -(IDnowEnvironment)getEnvironment:(NSString *)environment;

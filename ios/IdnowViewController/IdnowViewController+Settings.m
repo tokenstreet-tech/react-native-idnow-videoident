@@ -55,22 +55,21 @@
 	idnowSettings.stunHost = settings[@"stunHost"];
 	idnowSettings.stunPort = [RCTConvert NSInteger:settings[@"stunPort"]];
 
-	[self applyAppearance:settings];
+	[self applyAppearance:settings[@"appearance"]];
 
 	self.idnowController = [[IDnowController alloc] initWithSettings: idnowSettings];
 
 	return self;
 }
 
--(void)applyAppearance:(NSDictionary *)settings {
+-(void)applyAppearance:(NSDictionary *)appearance {
 	IDnowAppearance *idnowAppearance = [IDnowAppearance sharedAppearance];
-	NSDictionary *appearance = settings[@"appearance"];
 	NSDictionary *colors = appearance[@"colors"];
 
 	// -----------------------------------------------------------------------------------
 	//									Appearance
 	// -----------------------------------------------------------------------------------
-	idnowAppearance.mode = [self getMode:settings[@"mode"]];
+	idnowAppearance.mode = [self getMode:appearance[@"mode"]];
 	idnowAppearance.textFieldCornerRadius = appearance[@"textFieldCornerRadius"];
 
 	// -----------------------------------------------------------------------------------
@@ -85,15 +84,15 @@
 	// -----------------------------------------------------------------------------------
 	//									Table View
 	// -----------------------------------------------------------------------------------
-	idnowAppearance.checkBoxPosition = [self getCheckBoxPosition:settings[@"checkBoxPosition"]];
+	idnowAppearance.checkBoxPosition = [self getCheckBoxPosition:appearance[@"checkBoxPosition"]];
 	idnowAppearance.shouldShowGTCInline = appearance[@"shouldShowGTCInline"];
-	idnowAppearance.numberLabelPosition = [self getNumberLabelPosition:settings[@"numberLabelPosition"]];
+	idnowAppearance.numberLabelPosition = [self getNumberLabelPosition:appearance[@"numberLabelPosition"]];
 	idnowAppearance.seperatorLineComplete = appearance[@"seperatorLineComplete"];
 	idnowAppearance.markMandatoryCells = appearance[@"markMandatoryCells"];
 	idnowAppearance.underlineButtonTitles = appearance[@"underlineButtonTitles"];
 	idnowAppearance.boldButtonTitles = appearance[@"boldButtonTitles"];
 	idnowAppearance.boldTitles = appearance[@"boldTitles"];
-	idnowAppearance.requestCodeAgainLayoutType = [self getRequestCodeAgainLayoutType:settings[@"requestCodeAgainLayoutType"]];
+	idnowAppearance.requestCodeAgainLayoutType = [self getRequestCodeAgainLayoutType:appearance[@"requestCodeAgainLayoutType"]];
 	idnowAppearance.checkBoxesSquared = appearance[@"checkBoxesSquared"];
 	idnowAppearance.inputFieldsSquared = appearance[@"inputFieldsSquared"];
 	idnowAppearance.identCodeLayoutHalf = appearance[@"identCodeLayoutHalf"];
@@ -256,9 +255,9 @@
 		@"IDNOW_MODE_SYSTEM" : @(IDNOW_MODE_SYSTEM),
 	};
 
-	enum APPEARANCE_MODE result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
+    NSInteger result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
 
-	return result;
+    return (int) result;
 }
 
 -(enum CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition {
@@ -268,9 +267,9 @@
 		@"TOP_LEFT" : @(TOP_LEFT),
 	};
 
-	enum CHECKBOX_POSITION result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
+    NSInteger result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
 
-	return result;
+    return (int) result;
 }
 
 -(enum NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition {
@@ -280,9 +279,9 @@
 		@"LABELRIGHT" : @(LABELRIGHT),
 	};
 
-	enum NUMBER_LABEL_POSITION result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
+    NSInteger result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
 
-	return result;
+    return (int) result;
 }
 
 -(enum REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType {
@@ -291,9 +290,9 @@
 		@"TOP" : @(TOP),
 	};
 
-	enum REQUEST_CODE_AGAIN_LAYOUT_TYPE result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
+    NSInteger result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
 
-	return result;
+    return (int) result;
 }
 
 
