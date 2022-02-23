@@ -82,7 +82,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         Activity currentActivity = getCurrentActivity();
 
         try {
-            IDnowSDK instance = ReactNativeIDnowSDK.initializeWithSettings(settings, currentActivity, reactContext);
+            IDnowSDK instance = ReactNativeIDnowSDK.initializeWithSettings(currentActivity, settings, reactContext);
             instance.start(IDnowSDK.getTransactionToken(reactContext));
         } catch (Exception e) {
             resultCallback(null, e);

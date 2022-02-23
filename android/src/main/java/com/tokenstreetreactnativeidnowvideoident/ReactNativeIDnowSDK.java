@@ -9,8 +9,8 @@ import java.util.HashMap;
 public class ReactNativeIDnowSDK {
 
     public static IDnowSDK initializeWithSettings(
-        final ReadableMap settings,
         Activity currentActivity,
+        final ReadableMap settings,
         final ReactApplicationContext reactApplicationContext
     ) throws Exception {
         IDnowSDK instance = IDnowSDK.getInstance();
