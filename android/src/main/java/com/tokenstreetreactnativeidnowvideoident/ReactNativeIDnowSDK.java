@@ -11,7 +11,7 @@ public class ReactNativeIDnowSDK {
     public static IDnowSDK getInstanceWithSettings(
         final ReadableMap settings,
         Activity currentActivity,
-        ReactApplicationContext reactApplicationContext
+        final ReactApplicationContext reactApplicationContext
     ) {
         IDnowSDK instance = IDnowSDK.getInstance();
         try {
