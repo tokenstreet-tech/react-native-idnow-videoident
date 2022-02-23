@@ -17,11 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(UIModalPresentationStyle)getModalPresentationStyle:(NSString *)modalPresentationStyle;
 -(IDnowEnvironment)getEnvironment:(NSString *)environment;
-// -(UIModalPresentationStyle)getConnectionType:(NSString *)connectionType;
+-(IDnowConnectionType)getConnectionType:(NSString *)connectionType;
 
-// -(UIModalPresentationStyle)getConnectionType:(NSString *)checkBoxPosition;
-// -(UIModalPresentationStyle)getConnectionType:(NSString *)numberLabelPosition;
-// -(UIModalPresentationStyle)getConnectionType:(NSString *)requestCodeAgainLayoutType;
+-(APPEARANCE_MODE)getMode:(NSString *)mode;
+-(CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition;
+-(NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition;
+-(REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType;
 
 @end
 

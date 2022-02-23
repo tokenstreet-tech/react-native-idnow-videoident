@@ -45,8 +45,8 @@
 	// -----------------------------------------------------------------------------------
 	//									Server Properties (optional)
 	// -----------------------------------------------------------------------------------
-	idnowSettings.environment = settings[@"environment"];
-	// idnowSettings.connectionType = settings[@"connectionType"];
+    idnowSettings.environment = [self getEnvironment:settings[@"environment"]];
+    idnowSettings.connectionType = [self getConnectionType:settings[@"connectionType"]];
 
 	idnowSettings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
 	idnowSettings.apiHost = settings[@"apiHost"];
@@ -70,6 +70,7 @@
 	// -----------------------------------------------------------------------------------
 	//									Appearance
 	// -----------------------------------------------------------------------------------
+	idnowAppearance.mode = [self getMode:settings[@"mode"]];
 	idnowAppearance.textFieldCornerRadius = appearance[@"textFieldCornerRadius"];
 
 	// -----------------------------------------------------------------------------------
@@ -84,15 +85,15 @@
 	// -----------------------------------------------------------------------------------
 	//									Table View
 	// -----------------------------------------------------------------------------------
-	// idnowAppearance.checkBoxPosition = [RCTConvert any:appearance[@"checkBoxPosition"]];
+    idnowAppearance.checkBoxPosition = [self getCheckBoxPosition:settings[@"checkBoxPosition"]];
 	idnowAppearance.shouldShowGTCInline = appearance[@"shouldShowGTCInline"];
-	// idnowAppearance.numberLabelPosition = [RCTConvert any:appearance[@"numberLabelPosition"]];
+    idnowAppearance.numberLabelPosition = [self getNumberLabelPosition:settings[@"numberLabelPosition"]];
 	idnowAppearance.seperatorLineComplete = appearance[@"seperatorLineComplete"];
 	idnowAppearance.markMandatoryCells = appearance[@"markMandatoryCells"];
 	idnowAppearance.underlineButtonTitles = appearance[@"underlineButtonTitles"];
 	idnowAppearance.boldButtonTitles = appearance[@"boldButtonTitles"];
 	idnowAppearance.boldTitles = appearance[@"boldTitles"];
-	// idnowAppearance.requestCodeAgainLayoutType = [RCTConvert any:appearance[@"requestCodeAgainLayoutType"]];
+    idnowAppearance.requestCodeAgainLayoutType = [self getRequestCodeAgainLayoutType:settings[@"requestCodeAgainLayoutType"]];
 	idnowAppearance.checkBoxesSquared = appearance[@"checkBoxesSquared"];
 	idnowAppearance.inputFieldsSquared = appearance[@"inputFieldsSquared"];
 	idnowAppearance.identCodeLayoutHalf = appearance[@"identCodeLayoutHalf"];
@@ -233,5 +234,65 @@
 
 	return result;
 }
+
+-(IDnowConnectionType)getConnectionType:(NSString *)connectionType {
+	NSDictionary *mapping = @{
+		@"WEBSOCKET" : @(IDnowConnectionTypeWebsocket),
+		@"LONG_POLLING" : @(IDnowConnectionTypeLongPolling),
+	};
+
+	IDnowConnectionType result = [RCTConvertEnumValue("IDnowConnectionType",mapping,nil,connectionType) integerValue];
+
+	return result;
+}
+
+
+-(APPEARANCE_MODE)getMode:(NSString *)mode {
+	NSDictionary *mapping = @{
+		@"IDNOW_MODE_LIGHT" : @(IDNOW_MODE_LIGHT),
+		@"IDNOW_MODE_DARK" : @(IDNOW_MODE_DARK),
+		@"IDNOW_MODE_SYSTEM" : @(IDNOW_MODE_SYSTEM),
+	};
+
+	APPEARANCE_MODE result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
+
+	return result;
+}
+
+-(CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition {
+	NSDictionary *mapping = @{
+		@"LEFT" : @(LEFT),
+		@"RIGHT" : @(RIGHT),
+		@"TOP_LEFT" : @(TOP_LEFT),
+	};
+
+	CHECKBOX_POSITION result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
+
+	return result;
+}
+
+-(NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition {
+	NSDictionary *mapping = @{
+		@"LABELTOP" : @(LABELTOP),
+		@"LABELLEFT" : @(LABELLEFT),
+		@"LABELRIGHT" : @(LABELRIGHT),
+	};
+
+	NUMBER_LABEL_POSITION result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
+
+	return result;
+}
+
+-(REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType {
+	NSDictionary *mapping = @{
+		@"BOTTOM" : @(BOTTOM),
+		@"TOP" : @(TOP),
+	};
+
+	REQUEST_CODE_AGAIN_LAYOUT_TYPE result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
+
+	return result;
+}
+
 
 @end
