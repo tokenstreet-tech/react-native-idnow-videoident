@@ -16,11 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IdnowViewController : UIViewController
 
 @property (strong, nonatomic) IDnowController *idnowController;
-@property (strong, nonatomic) IDnowSettings   *settings;
 
-- (instancetype) initWithOptions: (NSDictionary *) options;
-- (void) startVideoIdent:(RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback;
-- (NSString *) getResultCode:(BOOL)success canceledByUser:(BOOL)canceledByUser;
+-(void)startVideoIdent:(RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback;
+-(NSString *)getResultCode:(BOOL)success canceledByUser:(BOOL)canceledByUser;
 
 @end
 

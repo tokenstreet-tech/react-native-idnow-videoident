@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30C6B1AA278B1B8B00B1DBB1 /* IdnowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6B1A9278B1B8B00B1DBB1 /* IdnowViewController.m */; };
+		30CBAB6027C67A210007361B /* IdnowViewController+Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CBAB5F27C67A210007361B /* IdnowViewController+Settings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		134814201AA4EA6300B7C361 /* libReactNativeIdnowVideoident.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeIdnowVideoident.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C6B1A8278B1B8B00B1DBB1 /* IdnowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdnowViewController.h; sourceTree = "<group>"; };
 		30C6B1A9278B1B8B00B1DBB1 /* IdnowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdnowViewController.m; sourceTree = "<group>"; };
+		30CBAB5E27C67A200007361B /* IdnowViewController+Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdnowViewController+Settings.h"; sourceTree = "<group>"; };
+		30CBAB5F27C67A210007361B /* IdnowViewController+Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IdnowViewController+Settings.m"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* ReactNativeIdnowVideoident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeIdnowVideoident.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* ReactNativeIdnowVideoident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeIdnowVideoident.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +57,8 @@
 			children = (
 				30C6B1A8278B1B8B00B1DBB1 /* IdnowViewController.h */,
 				30C6B1A9278B1B8B00B1DBB1 /* IdnowViewController.m */,
+				30CBAB5E27C67A200007361B /* IdnowViewController+Settings.h */,
+				30CBAB5F27C67A210007361B /* IdnowViewController+Settings.m */,
 			);
 			path = IdnowViewController;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C6B1AA278B1B8B00B1DBB1 /* IdnowViewController.m in Sources */,
+				30CBAB6027C67A210007361B /* IdnowViewController+Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
