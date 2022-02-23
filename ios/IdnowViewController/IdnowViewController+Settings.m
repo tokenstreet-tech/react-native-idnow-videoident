@@ -53,9 +53,9 @@
 	idnowSettings.websocketHost = settings[@"websocketHost"];
 	idnowSettings.videoHost = settings[@"videoHost"];
 	idnowSettings.stunHost = settings[@"stunHost"];
-    idnowSettings.stunPort = [RCTConvert NSInteger:settings[@"stunPort"]];
+	idnowSettings.stunPort = [RCTConvert NSInteger:settings[@"stunPort"]];
 
-    [self applyAppearance:settings];
+	[self applyAppearance:settings];
 
 	self.idnowController = [[IDnowController alloc] initWithSettings: idnowSettings];
 
