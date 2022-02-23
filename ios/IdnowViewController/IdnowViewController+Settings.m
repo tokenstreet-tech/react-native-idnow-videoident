@@ -255,9 +255,9 @@
 		@"IDNOW_MODE_SYSTEM" : @(IDNOW_MODE_SYSTEM),
 	};
 
-    NSInteger result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
+	NSInteger result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
 
-    return (int) result;
+	return (int) result;
 }
 
 -(enum CHECKBOX_POSITION)getCheckBoxPosition:(NSString *)checkBoxPosition {
@@ -267,9 +267,9 @@
 		@"TOP_LEFT" : @(TOP_LEFT),
 	};
 
-    NSInteger result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
+	NSInteger result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
 
-    return (int) result;
+	return (int) result;
 }
 
 -(enum NUMBER_LABEL_POSITION)getNumberLabelPosition:(NSString *)numberLabelPosition {
@@ -279,9 +279,9 @@
 		@"LABELRIGHT" : @(LABELRIGHT),
 	};
 
-    NSInteger result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
+	NSInteger result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
 
-    return (int) result;
+	return (int) result;
 }
 
 -(enum REQUEST_CODE_AGAIN_LAYOUT_TYPE)getRequestCodeAgainLayoutType:(NSString *)requestCodeAgainLayoutType {
@@ -290,9 +290,9 @@
 		@"TOP" : @(TOP),
 	};
 
-    NSInteger result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
+	NSInteger result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
 
-    return (int) result;
+	return (int) result;
 }
 
 
