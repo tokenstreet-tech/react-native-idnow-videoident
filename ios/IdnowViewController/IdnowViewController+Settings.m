@@ -27,7 +27,7 @@
 	idnowSettings.showVideoOverviewCheck = settings[@"showVideoOverviewCheck"];
 	idnowSettings.forceModalPresentation = settings[@"forceModalPresentation"];
 	idnowSettings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
-	// idnowSettings.modalPresentationStyle = settings[@"modalPresentationStyle"];
+    idnowSettings.modalPresentationStyle = [self getModalPresentationStyle:settings[@"modalPresentationStyle"]];
 	// Deprecated: Supported by the SDK version 3.22.1 or before
 	// idnowSettings.certificateProvider = settings[@"certificateProvider"];
 	idnowSettings.pushDeviceToken = settings[@"pushDeviceToken"];
@@ -163,6 +163,24 @@
 	idnowAppearance.cqcPoorQualityInnerColor = [RCTConvert UIColor:colors[@"cqcPoorQualityInnerColor"]];
 	idnowAppearance.cqcModerateQualityInnerColor = [RCTConvert UIColor:colors[@"cqcModerateQualityInnerColor"]];
 	idnowAppearance.cqcExcellentQualityInnerColor = [RCTConvert UIColor:colors[@"cqcExcellentQualityInnerColor"]];
+}
+
+-(UIModalPresentationStyle)getModalPresentationStyle:(NSString *)modalPresentationStyle {
+        NSDictionary *mapping = @{
+            @"UIModalPresentationFullScreen" : @(UIModalPresentationFullScreen),
+            @"UIModalPresentationPageSheet" : @(UIModalPresentationPageSheet),
+            @"UIModalPresentationFormSheet" : @(UIModalPresentationFormSheet),
+            @"UIModalPresentationCurrentContext" : @(UIModalPresentationCurrentContext),
+            @"UIModalPresentationCustom" : @(UIModalPresentationCustom),
+            @"UIModalPresentationOverFullScreen" : @(UIModalPresentationOverFullScreen),
+            @"UIModalPresentationOverCurrentContext" : @(UIModalPresentationOverCurrentContext),
+            @"UIModalPresentationPopover" : @(UIModalPresentationPopover),
+            @"UIModalPresentationNone" : @(UIModalPresentationNone),
+            @"UIModalPresentationAutomatic" : @(UIModalPresentationAutomatic),
+        };
+
+    UIModalPresentationStyle result = [RCTConvertEnumValue("UIModalPresentationStyle",mapping,@(UIModalPresentationFullScreen),modalPresentationStyle) integerValue];
+    return result;
 }
 
 @end

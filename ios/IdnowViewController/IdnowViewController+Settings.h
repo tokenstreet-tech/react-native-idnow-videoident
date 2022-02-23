@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)initializeWithSettings:(NSDictionary *)settings;
 -(void)applyAppearance:(NSDictionary *)settings;
 
+-(UIModalPresentationStyle)getModalPresentationStyle:(NSString *)modalPresentationStyle;
+
 @end
 
 NS_ASSUME_NONNULL_END

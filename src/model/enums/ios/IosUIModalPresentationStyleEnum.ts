@@ -6,7 +6,6 @@ export enum IosUIModalPresentationStyleEnum {
     UIModalPresentationOverFullScreen = 'UIModalPresentationOverFullScreen',
     UIModalPresentationOverCurrentContext = 'UIModalPresentationOverCurrentContext',
     UIModalPresentationPopover = 'UIModalPresentationPopover',
-    UIModalPresentationBlurOverFullScreen = 'UIModalPresentationBlurOverFullScreen',
     UIModalPresentationNone = 'UIModalPresentationNone',
     UIModalPresentationAutomatic = 'UIModalPresentationAutomatic',
 }
