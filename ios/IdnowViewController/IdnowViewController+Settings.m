@@ -210,7 +210,7 @@
 		//                                    Staging
 		// -----------------------------------------------------------------------------------
 		// TODO: Handle this case
-        // @"STAGING_1" : nil,
+		// @"STAGING_1" : nil,
 
 		// -----------------------------------------------------------------------------------
 		//                                    Live
@@ -227,7 +227,7 @@
 		//                                    Other
 		// -----------------------------------------------------------------------------------
 		@"CUSTOM" : @(IDnowEnvironmentCustom),
-        // TODO: Handle this case
+		// TODO: Handle this case
 		// @"INT" : nil,
 		@"NOT_DEFINED" : @(IDnowEnvironmentNotDefined),
 	};
@@ -256,7 +256,7 @@
 		@"IDNOW_MODE_SYSTEM" : @(IDNOW_MODE_SYSTEM),
 	};
 
-    enum APPEARANCE_MODE result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
+	enum APPEARANCE_MODE result = [RCTConvertEnumValue("APPEARANCE_MODE",mapping,nil,mode) integerValue];
 
 	return result;
 }
@@ -268,7 +268,7 @@
 		@"TOP_LEFT" : @(TOP_LEFT),
 	};
 
-    enum CHECKBOX_POSITION result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
+	enum CHECKBOX_POSITION result = [RCTConvertEnumValue("CHECKBOX_POSITION",mapping,nil,checkBoxPosition) integerValue];
 
 	return result;
 }
@@ -280,7 +280,7 @@
 		@"LABELRIGHT" : @(LABELRIGHT),
 	};
 
-    enum NUMBER_LABEL_POSITION result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
+	enum NUMBER_LABEL_POSITION result = [RCTConvertEnumValue("NUMBER_LABEL_POSITION",mapping,nil,numberLabelPosition) integerValue];
 
 	return result;
 }
@@ -291,7 +291,7 @@
 		@"TOP" : @(TOP),
 	};
 
-    enum REQUEST_CODE_AGAIN_LAYOUT_TYPE result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
+	enum REQUEST_CODE_AGAIN_LAYOUT_TYPE result = [RCTConvertEnumValue("REQUEST_CODE_AGAIN_LAYOUT_TYPE",mapping,nil,requestCodeAgainLayoutType) integerValue];
 
 	return result;
 }
