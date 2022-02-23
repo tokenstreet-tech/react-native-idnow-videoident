@@ -45,8 +45,8 @@
 	// -----------------------------------------------------------------------------------
 	//									Server Properties (optional)
 	// -----------------------------------------------------------------------------------
-    idnowSettings.environment = [self getEnvironment:settings[@"environment"]];
-    idnowSettings.connectionType = [self getConnectionType:settings[@"connectionType"]];
+	idnowSettings.environment = [self getEnvironment:settings[@"environment"]];
+	idnowSettings.connectionType = [self getConnectionType:settings[@"connectionType"]];
 
 	idnowSettings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
 	idnowSettings.apiHost = settings[@"apiHost"];
@@ -85,15 +85,15 @@
 	// -----------------------------------------------------------------------------------
 	//									Table View
 	// -----------------------------------------------------------------------------------
-    idnowAppearance.checkBoxPosition = [self getCheckBoxPosition:settings[@"checkBoxPosition"]];
+	idnowAppearance.checkBoxPosition = [self getCheckBoxPosition:settings[@"checkBoxPosition"]];
 	idnowAppearance.shouldShowGTCInline = appearance[@"shouldShowGTCInline"];
-    idnowAppearance.numberLabelPosition = [self getNumberLabelPosition:settings[@"numberLabelPosition"]];
+	idnowAppearance.numberLabelPosition = [self getNumberLabelPosition:settings[@"numberLabelPosition"]];
 	idnowAppearance.seperatorLineComplete = appearance[@"seperatorLineComplete"];
 	idnowAppearance.markMandatoryCells = appearance[@"markMandatoryCells"];
 	idnowAppearance.underlineButtonTitles = appearance[@"underlineButtonTitles"];
 	idnowAppearance.boldButtonTitles = appearance[@"boldButtonTitles"];
 	idnowAppearance.boldTitles = appearance[@"boldTitles"];
-    idnowAppearance.requestCodeAgainLayoutType = [self getRequestCodeAgainLayoutType:settings[@"requestCodeAgainLayoutType"]];
+	idnowAppearance.requestCodeAgainLayoutType = [self getRequestCodeAgainLayoutType:settings[@"requestCodeAgainLayoutType"]];
 	idnowAppearance.checkBoxesSquared = appearance[@"checkBoxesSquared"];
 	idnowAppearance.inputFieldsSquared = appearance[@"inputFieldsSquared"];
 	idnowAppearance.identCodeLayoutHalf = appearance[@"identCodeLayoutHalf"];
