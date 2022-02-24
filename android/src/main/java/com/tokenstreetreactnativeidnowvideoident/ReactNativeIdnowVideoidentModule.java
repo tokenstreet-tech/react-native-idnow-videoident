@@ -33,15 +33,16 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
     public ReactNativeIdnowVideoidentModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        ActivityEventListener idnowActivityEventListener = new BaseActivityEventListener() {
-            @Override
-            public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
-                if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
-                    resultCallback(resultCode, null);
+        reactContext.addActivityEventListener(
+            new BaseActivityEventListener() {
+                @Override
+                public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
+                    if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
+                        resultCallback(resultCode, null);
+                    }
                 }
             }
-        };
-        reactContext.addActivityEventListener(idnowActivityEventListener);
+        );
         this.reactContext = reactContext;
     }
 
