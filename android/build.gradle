@@ -51,6 +51,7 @@ repositories {
     google()
     mavenCentral()
     jcenter()
+    maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
 }
 
 dependencies {
