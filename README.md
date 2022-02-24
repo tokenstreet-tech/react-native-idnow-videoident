@@ -72,8 +72,6 @@ const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'T
 console.log(resultCode);
 ```
 
-## Native SDKs
-
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
