@@ -7,11 +7,11 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 ## Features
 
--   All configuration options of the SDKs are possible from JavaScript (Except `customBackButtonItem`, `customCancelButton` & `customAgentView` for iOS)
--   Latest dependencies of the IDnow [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDKs (Secured by Dependabot)
+-   All configuration options of the SDKs are possible from the JavaScript side (except `customBackButtonItem`, `customCancelButton` & `customAgentView` for iOS)
+-   Latest dependencies of the IDnow [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDKs (secured by Dependabot)
 -   No need to manually include native files
 -   Published as CommonJS & ESmodules, with type definitions
--   Strong type system (Not a single `any`)
+-   Strong type system (not a single `any`)
 
 ## Installation
 
