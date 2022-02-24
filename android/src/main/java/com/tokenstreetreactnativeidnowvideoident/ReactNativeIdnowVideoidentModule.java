@@ -35,7 +35,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         reactContext.addActivityEventListener(
             new BaseActivityEventListener() {
                 @Override
-                public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
+                public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
                     if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
                         resultCallback(resultCode, null);
                     }
