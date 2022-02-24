@@ -1,6 +1,17 @@
 # @tokenstreet/react-native-idnow-videoident
 
-React Native IDnow VideoIdent bindings for iOS and Android platforms
+React Native IDnow VideoIdent bindings for the [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDK.
+
+Many thanks to [Nuri](https://nuri.com/de/) for their work on the package [react-native-idnow](https://github.com/bitwala/react-native-idnow). The first draft was heavily inspired by it.
+However, almost the entire code has been rewritten since then, so there are now many differences:
+
+## Features
+
+-   All configuration options of the SDK are possible from JavaScript (Except customBackButtonItem, customCancelButton & customAgentView for iOS)
+-   Latest dependencies of the IDnow iOS and Android SDKs (Secured by Dependabot)
+-   No need to manually include native files
+-   Published as CommonJS & ESmodules, with type definitions
+-   Strong type system (Not a single any)
 
 ## Installation
 
@@ -60,6 +71,8 @@ import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'TST-KJCXN' });
 console.log(resultCode);
 ```
+
+## Native SDKs
 
 ## Contributing
 
