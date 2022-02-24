@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReadableMap;
 import de.idnow.sdk.IDnowSDK;
 import java.util.HashMap;
 
-public class ReactNativeIDnowSDK {
+public class ReactNativeIdnowSDK {
 
     public static IDnowSDK initializeWithSettings(
         Activity currentActivity,
@@ -27,9 +27,9 @@ public class ReactNativeIDnowSDK {
         //                                    General settings
         // -----------------------------------------------------------------------------------
         IDnowSDK.setTransactionToken(settings.getString("transactionToken"), reactApplicationContext);
-        IDnowSDK.setEnvironment(ReactNativeIDnowSDK.getEnvironment(settings.getString("environment")));
+        IDnowSDK.setEnvironment(ReactNativeIdnowSDK.getEnvironment(settings.getString("environment")));
         IDnowSDK.setConnectionType(
-            ReactNativeIDnowSDK.getConnectionType(settings.getString("connectionType")),
+            ReactNativeIdnowSDK.getConnectionType(settings.getString("connectionType")),
             reactApplicationContext
         );
 
