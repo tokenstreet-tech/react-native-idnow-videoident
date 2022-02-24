@@ -2,7 +2,7 @@
 
 React Native IDnow VideoIdent bindings for the [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDK.
 
-Many thanks to [Nuri](https://nuri.com/de/) for their work on the package [react-native-idnow](https://github.com/bitwala/react-native-idnow). The first draft was heavily inspired by it.
+Many thanks to [Nuri](https://nuri.com/) for their work on the package [react-native-idnow](https://github.com/bitwala/react-native-idnow). The first draft was heavily inspired by it.
 However, almost the entire code has been rewritten since then, so there are now many differences:
 
 ## Features
