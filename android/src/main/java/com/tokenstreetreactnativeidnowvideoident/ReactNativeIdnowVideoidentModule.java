@@ -10,6 +10,7 @@ package com.tokenstreetreactnativeidnowvideoident;
 import android.app.Activity;
 import android.content.Intent;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.BaseActivityEventListener;
@@ -32,6 +33,14 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
     public ReactNativeIdnowVideoidentModule(ReactApplicationContext reactContext) {
         super(reactContext);
+        ActivityEventListener idnowActivityEventListener = new BaseActivityEventListener() {
+            @Override
+            public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
+                if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
+                    resultCallback(resultCode, null);
+                }
+            }
+        };
         reactContext.addActivityEventListener(idnowActivityEventListener);
         this.reactContext = reactContext;
     }
@@ -42,23 +51,14 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
         return NAME;
     }
 
-    private final ActivityEventListener idnowActivityEventListener = new BaseActivityEventListener() {
-        @Override
-        public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
-            if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
-                resultCallback(resultCode, null);
-            }
-        }
-    };
-
-    private void resultCallback(Integer resultCode, Exception e) {
+    private void resultCallback(int resultCode, @Nullable Exception e) {
         WritableMap params = Arguments.createMap();
         String resultCodeKey = "resultCode";
         String errorMessageKey = "errorMessage";
         switch (resultCode) {
             case IDnowSDK.RESULT_CODE_FAILED:
                 params.putString(resultCodeKey, "FAILED");
-                params.putString(errorMessageKey, e.getMessage());
+                if (e != null) params.putString(errorMessageKey, e.getMessage());
                 globalFailureCallback.invoke(params);
                 break;
             case IDnowSDK.RESULT_CODE_SUCCESS:
@@ -67,7 +67,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
                 break;
             case IDnowSDK.RESULT_CODE_CANCEL:
                 params.putString(resultCodeKey, "CANCEL");
-                params.putString(errorMessageKey, e.getMessage());
+                if (e != null) params.putString(errorMessageKey, e.getMessage());
                 globalFailureCallback.invoke(params);
                 break;
             case IDnowSDK.RESULT_CODE_WRONG_IDENT:
@@ -76,7 +76,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
             case IDnowSDK.RESULT_CODE_INTERNAL:
             default:
                 params.putString(resultCodeKey, "INTERNAL_ERROR");
-                params.putString(errorMessageKey, e.getMessage());
+                if (e != null) params.putString(errorMessageKey, e.getMessage());
                 globalFailureCallback.invoke(params);
         }
     }
@@ -90,9 +90,9 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
         try {
             IDnowSDK instance = ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext);
-            instance.start(instance.getTransactionToken(reactContext));
+            instance.start(IDnowSDK.getTransactionToken(reactContext));
         } catch (Exception e) {
-            resultCallback(null, e);
+            resultCallback(IDnowSDK.RESULT_CODE_INTERNAL, e);
         }
     }
 }
