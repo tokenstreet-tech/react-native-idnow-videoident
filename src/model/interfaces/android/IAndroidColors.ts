@@ -1,45 +1,48 @@
-import type { ColorValue, ProcessedColorValue } from 'react-native';
-
-export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue> {
+export interface IAndroidColors {
     // -----------------------------------------------------------------------------------
     //									Video ident colors
     // -----------------------------------------------------------------------------------
     /**
+     * Not implemented
+     *
      * README:
      * Used as default color for display and editable texts Default: a nearly black color
      * Recommendation: Should be some kind of dark color that does not collide with white color.
      */
-    textDefault?: TColor;
-
+    // textDefault?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Optional color, that replaces the default brand color.
      * Default: an orange color Used in headlines, checkboxes, links, alerts etc.
      * Recommendation: Should be a color that does not collide with white color.
      */
-    primary?: TColor;
-
+    // primary?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Background color for confirmation/continue button,
      * which is usually placed at the bottom of a screen Default: the primary color (see above)
      */
-    proceedButtonBackground?: TColor;
-
+    // proceedButtonBackground?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Replaces the text color in the result screen, when an identification failed.
      * Default: A red color
      */
-    failure?: TColor;
-
+    // failure?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Replaces the text color in the result screen, when an identification was successful.
      * Default: A green color
      */
-    success?: TColor;
-
+    // success?: TColor;
     // -----------------------------------------------------------------------------------
     //									Video ident plus colors
     // -----------------------------------------------------------------------------------
@@ -54,41 +57,47 @@ export interface IAndroidColors<TColor extends ColorValue | ProcessedColorValue>
      *
      * You can make the following adaptions for Light Mode and Dark Mode:
      */
-
     /**
+     * Not implemented
+     *
      * README:
      * Used as default color of the App and the component such as the buttons
      */
-    primaryColor?: TColor;
-
+    // primaryColor?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Used as a deactivated color for the buttons,
      * it should use same value as primaryColor with a transparent code.
      */
-    primaryVariantColor?: TColor;
-
+    // primaryVariantColor?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Used as a text color for the whole App
      */
-    primaryTextColor?: TColor;
-
+    // primaryTextColor?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Used as background color for the screens.
      */
-    bgPrimaryColor?: TColor;
-
+    // bgPrimaryColor?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Used as background color for the text fields
      */
-    bgSecondaryColor?: TColor;
-
+    // bgSecondaryColor?: TColor;
     /**
+     * Not implemented
+     *
      * README:
      * Used as text color for the text fields
      */
-    basicInputField?: TColor;
+    // basicInputField?: TColor;
 }

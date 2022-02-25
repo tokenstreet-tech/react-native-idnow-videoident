@@ -61,6 +61,8 @@ However, almost the entire code has been rewritten since then, so there are now 
     <string>Allow camera access for video identification</string>
     ```
 
+5. Unfortunately, it is not yet possible to customise the colours for Android via JavaScript. To edit them, please follow the [official guide](https://github.com/idnow/de.idnow.android#colors).
+
 ### Android
 
 2. Add the IDnow maven url to your top-level `build.gradle`:
