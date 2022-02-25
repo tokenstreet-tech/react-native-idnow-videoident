@@ -22,7 +22,7 @@ However, almost the entire code has been rewritten since then, so there are now 
 ### Android
 
 -   `minSdkVersion`: 21 (Android 5.0 Lollipop)
--   `targetSdkVersion`: 31 (Android 12.0 Snow Cone)
+-   `targetSdkVersion`: 30 (Android 11.0 Red Velvet Cake)
 
 ## Installation
 
