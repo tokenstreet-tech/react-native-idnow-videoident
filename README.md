@@ -13,6 +13,17 @@ However, almost the entire code has been rewritten since then, so there are now 
 -   Published as CommonJS & ESmodules, with type definitions
 -   Strong type system (not a single `any`)
 
+## Requirements
+
+### iOS
+
+-   `Deployment Target`: iOS 8.0 or later
+
+### Android
+
+-   `minSdkVersion`: 21 (Android 5.0 Lollipop)
+-   `targetSdkVersion`: 31 (Android 12.0 Snow Cone)
+
 ## Installation
 
 1. Install `@tokenstreet/react-native-idnow-videoident`:
@@ -61,6 +72,20 @@ However, almost the entire code has been rewritten since then, so there are now 
             maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
         }
     }
+    ```
+
+3. Add the following permissions to your `AndroidManifest.xml` (click [here](https://github.com/idnow/de.idnow.android#androidmanifest) for more details):
+
+    ```xml
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     ```
 
 ## Usage
