@@ -30,7 +30,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
     private Callback globalFailureCallback;
     private Callback globalSuccessCallback;
 
-    public ReactNativeIdnowVideoidentModule(ReactApplicationContext reactContext) {
+    public ReactNativeIdnowVideoidentModule(@NonNull ReactApplicationContext reactContext) {
         super(reactContext);
         reactContext.addActivityEventListener(
             new BaseActivityEventListener() {
@@ -82,7 +82,11 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
-    public void startVideoIdent(final ReadableMap settings, Callback failureCallback, Callback successCallback) {
+    public void startVideoIdent(
+        @NonNull final ReadableMap settings,
+        @NonNull Callback failureCallback,
+        @NonNull Callback successCallback
+    ) {
         globalFailureCallback = failureCallback;
         globalSuccessCallback = successCallback;
 
