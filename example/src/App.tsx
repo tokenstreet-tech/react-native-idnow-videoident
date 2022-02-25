@@ -1,40 +1,8 @@
-import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
 import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { getRandomColor } from './util';
-
-const createFullSettings = (transactionToken: string): ISettings => ({
-    transactionToken,
-    appearance: {
-        colors: {
-            defaultTextColor: getRandomColor(),
-            primaryBrandColor: getRandomColor(),
-            headlineColor: getRandomColor(),
-            linkColor: getRandomColor(),
-            checkIconColor: getRandomColor(),
-            proceedButtonBackgroundColor: getRandomColor(),
-            proceedButtonTextColor: getRandomColor(),
-            photoIdentRetakeButtonBackgroundColor: getRandomColor(),
-            photoIdentRetakeButtonTextColor: getRandomColor(),
-            checkContractFooterButtonBackgroundColor: getRandomColor(),
-            checkContractFooterButtonTextColor: getRandomColor(),
-            textFieldColor: getRandomColor(),
-            textFieldBorderColor: getRandomColor(),
-            failureColor: getRandomColor(),
-            successColor: getRandomColor(),
-            titleBackgroundColor: getRandomColor(),
-            resultScreenHeaderLabelColor: getRandomColor(),
-            backgroundColor: getRandomColor(),
-            cqcOuterRingColor: getRandomColor(),
-            cqcDefaultInnerRingColor: getRandomColor(),
-            cqcPoorQualityInnerColor: getRandomColor(),
-            cqcModerateQualityInnerColor: getRandomColor(),
-            cqcExcellentQualityInnerColor: getRandomColor(),
-        },
-    },
-});
+import { createFullSettings } from './createFullSettings';
 
 const styles = StyleSheet.create({
     container: {
