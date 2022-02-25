@@ -14,6 +14,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReadableMap;
 import de.idnow.sdk.IDnowSDK;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class ReactNativeIdnowSDK {
 
@@ -44,12 +45,15 @@ public class ReactNativeIdnowSDK {
         // -----------------------------------------------------------------------------------
         //                                    Android Settings
         // -----------------------------------------------------------------------------------
-        if (settings.hasKey("locale")) IDnowSDK.setLocale(reactApplicationContext, settings.getString("locale"));
+        if (settings.hasKey("locale")) IDnowSDK.setLocale(
+            reactApplicationContext,
+            Objects.requireNonNull(settings.getString("locale"))
+        );
         if (settings.hasKey("newLocale")) IDnowSDK.setNewLocale(
             reactApplicationContext,
-            settings.getString("newLocale")
+            Objects.requireNonNull(settings.getString("newLocale"))
         );
-        if (settings.hasKey("disableLogging") & settings.getBoolean("disableLogging")) {
+        if (settings.hasKey("disableLogging")) if (settings.getBoolean("disableLogging")) {
             IDnowSDK.disableLogging();
         } else {
             IDnowSDK.enableLogging();
@@ -67,8 +71,8 @@ public class ReactNativeIdnowSDK {
             reactApplicationContext
         );
         IDnowSDK.setNameForActionBar(settings.getString("nameForActionBar"), reactApplicationContext);
-        if (
-            settings.hasKey("calledFromIDnowApp") & settings.getBoolean("calledFromIDnowApp")
+        if (settings.hasKey("calledFromIDnowApp")) if (
+            settings.getBoolean("calledFromIDnowApp")
         ) IDnowSDK.calledFromIDnowApp(reactApplicationContext);
         if (settings.hasKey("allowInvalidCertificates")) IDnowSDK.setAllowInvalidCertificates(
             settings.getBoolean("allowInvalidCertificates")
@@ -100,15 +104,14 @@ public class ReactNativeIdnowSDK {
         if (settings.hasKey("showTokenDuringCheckScreen")) IDnowSDK.setShowTokenDuringCheckScreen(
             settings.getBoolean("showTokenDuringCheckScreen")
         );
-        if (
-            settings.hasKey("squareCheckboxForm") & settings.getBoolean("squareCheckboxForm")
+        if (settings.hasKey("squareCheckboxForm")) if (
+            settings.getBoolean("squareCheckboxForm")
         ) IDnowSDK.setSquareCheckboxForm();
         if (settings.hasKey("agbInOneLine")) IDnowSDK.setAGBInOneLine(settings.getBoolean("agbInOneLine"));
         if (settings.hasKey("checkboxesOrientationTop")) IDnowSDK.setCheckboxesOrientationTop(
             settings.getBoolean("checkboxesOrientationTop")
         );
-        if (
-            settings.hasKey("doNotShowCompanyImageInResultActivity") &
+        if (settings.hasKey("doNotShowCompanyImageInResultActivity")) if (
             settings.getBoolean("doNotShowCompanyImageInResultActivity")
         ) IDnowSDK.doNotShowCompanyImageInResultActivity();
         if (settings.hasKey("headerBolded")) IDnowSDK.setHeaderBolded(settings.getBoolean("headerBolded"));
