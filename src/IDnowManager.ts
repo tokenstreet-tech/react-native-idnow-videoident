@@ -1,17 +1,14 @@
 import { NativeModules, Platform } from 'react-native';
 
+import { LinkingError } from './model/errors/LinkingError';
+import { UnsupportedPlatformError } from './model/errors/UnsupportedPlatformError';
 import type {
     IIdentificationResult,
     INativeModules,
     IReactNativeIdnowVideoidentNativeModule,
-} from './interfaces/INativeModules';
-import type { ISettings } from './interfaces/ISettings';
-import { prepareSettings } from './prepareSettings';
-
-const LINKING_ERROR =
-    `The package '@tokenstreet/react-native-idnow-videoident' doesn't seem to be linked. Make sure: \n\n${Platform.select(
-        { ios: "- You have run 'pod install'\n", default: '' }
-    )}- You rebuilt the app after installing the package\n` + `- You are not using Expo managed workflow\n`;
+} from './model/interfaces/INativeModules';
+import type { ISettings } from './model/interfaces/ISettings';
+import { processSettings } from './processSettings';
 
 export const IDnowManager = {
     /**
@@ -26,7 +23,7 @@ export const IDnowManager = {
                   {},
                   {
                       get() {
-                          throw new Error(LINKING_ERROR);
+                          throw new LinkingError();
                       },
                   }
               );
@@ -35,10 +32,10 @@ export const IDnowManager = {
             case 'android':
             case 'ios':
                 return new Promise<IIdentificationResult>((resolve, reject) => {
-                    nativeClient.startVideoIdent(prepareSettings(settings), reject, resolve);
+                    nativeClient.startVideoIdent(processSettings(settings), reject, resolve);
                 });
             default:
-                throw new Error(`Platform ${Platform.OS} is not supported`);
+                throw new UnsupportedPlatformError();
         }
     },
 };

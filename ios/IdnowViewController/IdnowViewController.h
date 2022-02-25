@@ -3,7 +3,10 @@
 //  ReactNativeIdnowVideoident
 //
 //  Created by Daniel Reichhart on 09.01.22.
-//  Copyright © 2022 tokenstreet. All rights reserved.
+//  Copyright © 2022 tokenstreet GmbH.
+//
+//  This source code is licensed under the MIT license found in the
+//  LICENSE file in the root directory of this source tree.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,13 +17,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IdnowViewController : UIViewController
-
 @property (strong, nonatomic) IDnowController *idnowController;
-@property (strong, nonatomic) IDnowSettings   *settings;
 
-- (instancetype) initWithOptions: (NSDictionary *) options;
-- (void) startVideoIdent:(RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback;
-- (NSString *) getResultCode:(BOOL)success canceledByUser:(BOOL)canceledByUser;
+- (void)startVideoIdent: (RCTResponseSenderBlock)errorCallback successCallback:(RCTResponseSenderBlock)successCallback;
+- (NSString *)getResultCode: (BOOL)success canceledByUser:(BOOL)canceledByUser;
 
 @end
 

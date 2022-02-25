@@ -19,13 +19,12 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('ReactNativeIdnowVideoident_compileSdkVersion', 29)
+    compileSdkVersion safeExtGet('ReactNativeIdnowVideoident_compileSdkVersion', 30)
     defaultConfig {
-        minSdkVersion safeExtGet('ReactNativeIdnowVideoident_minSdkVersion', 16)
-        targetSdkVersion safeExtGet('ReactNativeIdnowVideoident_targetSdkVersion', 29)
+        minSdkVersion safeExtGet('ReactNativeIdnowVideoident_minSdkVersion', 21)
+        targetSdkVersion safeExtGet('ReactNativeIdnowVideoident_targetSdkVersion', 30)
         versionCode 1
         versionName "1.0"
-
     }
 
     buildTypes {
@@ -51,13 +50,11 @@ repositories {
     google()
     mavenCentral()
     jcenter()
-    maven {
-        url "https://raw.githubusercontent.com/idnow/de.idnow.android/master"
-    }
+    maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation "de.idnow.sdk:idnow-android-sdk:5.1.8"
+    implementation "de.idnow.sdk:idnow-android-sdk:5.1.7"
 }
