@@ -44,9 +44,12 @@ public class ReactNativeIdnowSDK {
         // -----------------------------------------------------------------------------------
         //                                    Android Settings
         // -----------------------------------------------------------------------------------
-        IDnowSDK.setLocale(reactApplicationContext, settings.getString("locale"));
-        IDnowSDK.setNewLocale(reactApplicationContext, settings.getString("newLocale"));
-        if (settings.getBoolean("disableLogging")) {
+        if (settings.hasKey("locale")) IDnowSDK.setLocale(reactApplicationContext, settings.getString("locale"));
+        if (settings.hasKey("newLocale")) IDnowSDK.setNewLocale(
+            reactApplicationContext,
+            settings.getString("newLocale")
+        );
+        if (settings.hasKey("disableLogging") & settings.getBoolean("disableLogging")) {
             IDnowSDK.disableLogging();
         } else {
             IDnowSDK.enableLogging();
