@@ -8,6 +8,8 @@
 package com.tokenstreetreactnativeidnowvideoident;
 
 import android.app.Activity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReadableMap;
 import de.idnow.sdk.IDnowSDK;
@@ -15,13 +17,15 @@ import java.util.HashMap;
 
 public class ReactNativeIdnowSDK {
 
+    @NonNull
     public static IDnowSDK initializeWithSettings(
-        Activity currentActivity,
-        final ReadableMap settings,
-        final ReactApplicationContext reactApplicationContext
+        @NonNull Activity currentActivity,
+        @NonNull final ReadableMap settings,
+        @NonNull final ReactApplicationContext reactApplicationContext
     ) throws Exception {
         IDnowSDK instance = IDnowSDK.getInstance();
-        instance.initialize(currentActivity, settings.getString("companyId"), settings.getString("language"));
+        String companyId = settings.getString("companyId");
+        instance.initialize(currentActivity, companyId != null ? companyId : "", settings.getString("language"));
 
         // -----------------------------------------------------------------------------------
         //                                    General settings
@@ -98,7 +102,8 @@ public class ReactNativeIdnowSDK {
         return instance;
     }
 
-    private static IDnowSDK.Server getEnvironment(String environment) {
+    @Nullable
+    private static IDnowSDK.Server getEnvironment(@Nullable String environment) {
         final HashMap<String, IDnowSDK.Server> environmentMap = new HashMap<String, IDnowSDK.Server>();
 
         // -----------------------------------------------------------------------------------
@@ -146,7 +151,8 @@ public class ReactNativeIdnowSDK {
         return environmentMap.get(environment);
     }
 
-    private static IDnowSDK.ConnectionType getConnectionType(String connectionType) {
+    @Nullable
+    private static IDnowSDK.ConnectionType getConnectionType(@Nullable String connectionType) {
         final HashMap<String, IDnowSDK.ConnectionType> connectionTypeMap = new HashMap<String, IDnowSDK.ConnectionType>();
 
         connectionTypeMap.put("WEBSOCKET", IDnowSDK.ConnectionType.WEBSOCKET);

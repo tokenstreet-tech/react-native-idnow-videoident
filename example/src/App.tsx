@@ -1,43 +1,40 @@
-import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
+// import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
 import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { EnvironmentEnum } from '../../src/model/enums/EnvironmentEnum';
-import { getRandomColor } from './util';
+// import { getRandomColor } from './util';
 
-const color = getRandomColor();
-const createSettings = (transactionToken: string): ISettings => ({
-    transactionToken,
-    environment: EnvironmentEnum.STAGING_1,
-    appearance: {
-        colors: {
-            defaultTextColor: color,
-            primaryBrandColor: color,
-            headlineColor: color,
-            linkColor: color,
-            checkIconColor: color,
-            proceedButtonBackgroundColor: color,
-            proceedButtonTextColor: color,
-            photoIdentRetakeButtonBackgroundColor: color,
-            photoIdentRetakeButtonTextColor: color,
-            checkContractFooterButtonBackgroundColor: color,
-            checkContractFooterButtonTextColor: color,
-            textFieldColor: color,
-            textFieldBorderColor: color,
-            failureColor: color,
-            successColor: color,
-            titleBackgroundColor: color,
-            resultScreenHeaderLabelColor: color,
-            backgroundColor: color,
-            cqcOuterRingColor: color,
-            cqcDefaultInnerRingColor: color,
-            cqcPoorQualityInnerColor: color,
-            cqcModerateQualityInnerColor: color,
-            cqcExcellentQualityInnerColor: color,
-        },
-    },
-});
+// const createFullSettings = (transactionToken: string): ISettings => ({
+//     transactionToken,
+//     appearance: {
+//         colors: {
+//             defaultTextColor: getRandomColor(),
+//             primaryBrandColor: getRandomColor(),
+//             headlineColor: getRandomColor(),
+//             linkColor: getRandomColor(),
+//             checkIconColor: getRandomColor(),
+//             proceedButtonBackgroundColor: getRandomColor(),
+//             proceedButtonTextColor: getRandomColor(),
+//             photoIdentRetakeButtonBackgroundColor: getRandomColor(),
+//             photoIdentRetakeButtonTextColor: getRandomColor(),
+//             checkContractFooterButtonBackgroundColor: getRandomColor(),
+//             checkContractFooterButtonTextColor: getRandomColor(),
+//             textFieldColor: getRandomColor(),
+//             textFieldBorderColor: getRandomColor(),
+//             failureColor: getRandomColor(),
+//             successColor: getRandomColor(),
+//             titleBackgroundColor: getRandomColor(),
+//             resultScreenHeaderLabelColor: getRandomColor(),
+//             backgroundColor: getRandomColor(),
+//             cqcOuterRingColor: getRandomColor(),
+//             cqcDefaultInnerRingColor: getRandomColor(),
+//             cqcPoorQualityInnerColor: getRandomColor(),
+//             cqcModerateQualityInnerColor: getRandomColor(),
+//             cqcExcellentQualityInnerColor: getRandomColor(),
+//         },
+//     },
+// });
 
 const styles = StyleSheet.create({
     container: {
@@ -52,7 +49,7 @@ export const App: React.FC = () => {
     const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
     const startVideoIdent = useCallback(() => {
         setVideoIdentResponse('');
-        IDnowManager.startVideoIdent(createSettings(transactionToken))
+        IDnowManager.startVideoIdent({ transactionToken })
             .then((fulfilled) => setVideoIdentResponse(`Resolved:\n${JSON.stringify(fulfilled)}`))
             .catch((rejected) => setVideoIdentResponse(`Rejected:\n${JSON.stringify(rejected)}`));
     }, [transactionToken]);
