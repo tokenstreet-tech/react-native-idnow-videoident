@@ -74,7 +74,7 @@
         "eslint-plugin-simple-import-sort": "^7.0.0",
         "husky": "^7.0.4",
         "jest": "^27.5.1",
-        "lint-staged": "^12.3.4",
+        "lint-staged": "^12.3.5",
         "pod-install": "^0.1.32",
         "prettier": "2.5.1",
         "prettier-plugin-java": "^1.6.1",
