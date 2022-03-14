@@ -27,12 +27,17 @@ rules:
     prefer-object-has-own: 0 # https://github.com/microsoft/TypeScript/issues/44253
     no-inline-comments: 0 # Worsens the structure
     line-comment-position: 0 # Worsens the structure
+    no-ternary: 0 # Worsens the structure
+    capitalized-comments: 0 # Worsens the structure
+    max-lines-per-function: 0 # Worsens the structure
+    no-undefined: 0 # Sometimes necessary
+    no-magic-numbers: 0 # Worsens the structure
+    '@typescript-eslint/no-magic-numbers': 0 # Worsens the structure
 
     '@typescript-eslint/explicit-function-return-type': 0
     '@typescript-eslint/init-declarations': 0
     '@typescript-eslint/naming-convention': 0
     '@typescript-eslint/no-empty-interface': 0
-    '@typescript-eslint/no-magic-numbers': 0
     '@typescript-eslint/no-require-imports': 0
     '@typescript-eslint/no-unsafe-assignment': 0
     '@typescript-eslint/no-unsafe-call': 0
@@ -40,13 +45,5 @@ rules:
     '@typescript-eslint/prefer-readonly-parameter-types': 0
     '@typescript-eslint/restrict-template-expressions': 0
     'require-unicode-regexp': 0
-    borderWidth: 0
-    camelcase: 0
-    capitalized-comments: 0
-    id-length: 0
-    max-lines-per-function: 0
     multiline-comment-style: 0
-    no-magic-numbers: 0
-    no-ternary: 0
-    no-undefined: 0
     sort-keys: 0
