@@ -129,13 +129,6 @@ export interface IIosAppearance {
     identCodeLayoutHalf?: boolean;
 
     /**
-     * Header file:
-     * If set to `true`, the new IDNow branding will be used
-     * By default the value of this property is `true`
-     */
-    usedNewBrand?: boolean;
-
-    /**
      * Not implemented
      *
      * Header file:

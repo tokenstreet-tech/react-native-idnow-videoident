@@ -16,28 +16,6 @@ export interface IIosSettings {
 
     /**
      * Header file:
-     * If set to `false`, the Error-Success-Screen provided by the SDK will not be shown.
-     * The default value of this property is `true`.
-     *
-     * README:
-     * Optional: If set to false, the Error-Success-Screen provided by the SDK will not be displayed.
-     * The default value of this property is true.
-     */
-    showErrorSuccessScreen?: boolean;
-
-    /**
-     * Header file:
-     * If set to `false`, the video overview check screen will not be shown before starting a video identification.
-     * The default value of this property is `true`.
-     *
-     * README:
-     * Optional: If set to false, the video overview check screen will not be shown before starting a video identification.
-     * The default value of this property is true.
-     */
-    showVideoOverviewCheck?: boolean;
-
-    /**
-     * Header file:
      * If set to `true`, the UI for the identification will always be displayed modal.
      * By default the value of this property is `false` and the identification UI
      * will be pushed on an existing navigation controller if possible.

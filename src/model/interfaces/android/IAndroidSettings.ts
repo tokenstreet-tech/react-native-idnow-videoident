@@ -13,22 +13,7 @@ export interface IAndroidSettings {
      */
     disableLogging?: boolean;
 
-    /**
-     * README:
-     * You can decide whether to let the user confirm the legal points.
-     */
-    showVideoOverviewCheck?: boolean;
-
     callFromHighCallVolumeActivity?: boolean;
-
-    /**
-     * README:
-     * Same goes to the success screen. If none is shown, the app sends the results right back.
-     * The defaults for the both parameters are "true";
-     */
-    showErrorSuccessScreen?: boolean;
-
-    nameForActionBar?: string;
 
     /**
      * Deprecated: Supported by the SDK version 3.22.1 or before
@@ -46,8 +31,6 @@ export interface IAndroidSettings {
 
     checkScreenLinesLong?: boolean;
 
-    checkBoxOrientationRight?: boolean;
-
     checkScreenBoxPhoneNumberRequired?: boolean;
 
     checkScreenBoxDocumentRequired?: boolean;
@@ -55,26 +38,6 @@ export interface IAndroidSettings {
     checkScreenBoxEMailRequired?: boolean;
 
     checkScreenBoxConsentRequired?: boolean;
-
-    customiseCallQualityCheckScreen?: boolean;
-
-    showTokenDuringCheckScreen?: boolean;
-
-    squareCheckboxForm?: boolean;
-
-    agbInOneLine?: boolean;
-
-    checkboxesOrientationTop?: boolean;
-
-    doNotShowCompanyImageInResultActivity?: boolean;
-
-    headerBolded?: boolean;
-
-    fullSizeModalSmsWindow?: boolean;
-
-    transparentBackgroundModalSmsWindow?: boolean;
-
-    whiteAgentThumbnailBackground?: boolean;
 
     phoneNo?: string;
 
@@ -101,11 +64,6 @@ export interface IAndroidSettings {
     overrideEntryActivity?: boolean;
 
     appGoogleRating?: boolean;
-
-    /**
-     * You can set the new branding
-     */
-    newBrand?: boolean;
 
     // -----------------------------------------------------------------------------------
     //									Custom server
