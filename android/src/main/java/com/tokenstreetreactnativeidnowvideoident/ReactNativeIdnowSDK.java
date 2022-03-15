@@ -61,19 +61,19 @@ public class ReactNativeIdnowSDK {
         } else {
             IDnowSDK.enableLogging();
         }
-        if (settings.hasKey("showVideoOverviewCheck")) IDnowSDK.setShowVideoOverviewCheck(
-            settings.getBoolean("showVideoOverviewCheck"),
+        if (appearance.hasKey("showVideoOverviewCheck")) IDnowSDK.setShowVideoOverviewCheck(
+            appearance.getBoolean("showVideoOverviewCheck"),
             reactApplicationContext
         );
         if (settings.hasKey("callFromHighCallVolumeActivity")) IDnowSDK.setCallFromHighCallVolumeActivity(
             settings.getBoolean("callFromHighCallVolumeActivity"),
             reactApplicationContext
         );
-        if (settings.hasKey("showErrorSuccessScreen")) IDnowSDK.setShowErrorSuccessScreen(
-            settings.getBoolean("showErrorSuccessScreen"),
+        if (appearance.hasKey("showErrorSuccessScreen")) IDnowSDK.setShowErrorSuccessScreen(
+            appearance.getBoolean("showErrorSuccessScreen"),
             reactApplicationContext
         );
-        IDnowSDK.setNameForActionBar(settings.getString("nameForActionBar"), reactApplicationContext);
+        IDnowSDK.setNameForActionBar(appearance.getString("nameForActionBar"), reactApplicationContext);
         if (settings.hasKey("calledFromIDnowApp")) if (
             settings.getBoolean("calledFromIDnowApp")
         ) IDnowSDK.calledFromIDnowApp(reactApplicationContext);
@@ -86,8 +86,8 @@ public class ReactNativeIdnowSDK {
         if (settings.hasKey("checkScreenLinesLong")) IDnowSDK.setCheckScreenLinesLong(
             settings.getBoolean("checkScreenLinesLong")
         );
-        if (settings.hasKey("checkBoxOrientationRight")) IDnowSDK.setCheckBoxOrientationRight(
-            settings.getBoolean("checkBoxOrientationRight")
+        if (appearance.hasKey("checkBoxOrientationRight")) IDnowSDK.setCheckBoxOrientationRight(
+            appearance.getBoolean("checkBoxOrientationRight")
         );
         if (settings.hasKey("checkScreenBoxPhoneNumberRequired")) IDnowSDK.setCheckScreenBoxPhoneNumberRequired(
             settings.getBoolean("checkScreenBoxPhoneNumberRequired")
@@ -101,31 +101,31 @@ public class ReactNativeIdnowSDK {
         if (settings.hasKey("checkScreenBoxConsentRequired")) IDnowSDK.setCheckScreenBoxConsentRequired(
             settings.getBoolean("checkScreenBoxConsentRequired")
         );
-        if (settings.hasKey("customiseCallQualityCheckScreen")) IDnowSDK.setCustomiseCallQualityCheckScreen(
-            settings.getBoolean("customiseCallQualityCheckScreen")
+        if (appearance.hasKey("customiseCallQualityCheckScreen")) IDnowSDK.setCustomiseCallQualityCheckScreen(
+            appearance.getBoolean("customiseCallQualityCheckScreen")
         );
-        if (settings.hasKey("showTokenDuringCheckScreen")) IDnowSDK.setShowTokenDuringCheckScreen(
-            settings.getBoolean("showTokenDuringCheckScreen")
+        if (appearance.hasKey("showTokenDuringCheckScreen")) IDnowSDK.setShowTokenDuringCheckScreen(
+            appearance.getBoolean("showTokenDuringCheckScreen")
         );
-        if (settings.hasKey("squareCheckboxForm")) if (
-            settings.getBoolean("squareCheckboxForm")
+        if (appearance.hasKey("squareCheckboxForm")) if (
+            appearance.getBoolean("squareCheckboxForm")
         ) IDnowSDK.setSquareCheckboxForm();
-        if (settings.hasKey("agbInOneLine")) IDnowSDK.setAGBInOneLine(settings.getBoolean("agbInOneLine"));
-        if (settings.hasKey("checkboxesOrientationTop")) IDnowSDK.setCheckboxesOrientationTop(
-            settings.getBoolean("checkboxesOrientationTop")
+        if (appearance.hasKey("agbInOneLine")) IDnowSDK.setAGBInOneLine(appearance.getBoolean("agbInOneLine"));
+        if (appearance.hasKey("checkboxesOrientationTop")) IDnowSDK.setCheckboxesOrientationTop(
+            appearance.getBoolean("checkboxesOrientationTop")
         );
-        if (settings.hasKey("doNotShowCompanyImageInResultActivity")) if (
-            settings.getBoolean("doNotShowCompanyImageInResultActivity")
+        if (appearance.hasKey("doNotShowCompanyImageInResultActivity")) if (
+            appearance.getBoolean("doNotShowCompanyImageInResultActivity")
         ) IDnowSDK.doNotShowCompanyImageInResultActivity();
-        if (settings.hasKey("headerBolded")) IDnowSDK.setHeaderBolded(settings.getBoolean("headerBolded"));
-        if (settings.hasKey("fullSizeModalSmsWindow")) IDnowSDK.setFullSizeModalSmsWindow(
-            settings.getBoolean("fullSizeModalSmsWindow")
+        if (appearance.hasKey("headerBolded")) IDnowSDK.setHeaderBolded(appearance.getBoolean("headerBolded"));
+        if (appearance.hasKey("fullSizeModalSmsWindow")) IDnowSDK.setFullSizeModalSmsWindow(
+            appearance.getBoolean("fullSizeModalSmsWindow")
         );
-        if (settings.hasKey("transparentBackgroundModalSmsWindow")) IDnowSDK.setTransparentBackgroundModalSmsWindow(
-            settings.getBoolean("transparentBackgroundModalSmsWindow")
+        if (appearance.hasKey("transparentBackgroundModalSmsWindow")) IDnowSDK.setTransparentBackgroundModalSmsWindow(
+            appearance.getBoolean("transparentBackgroundModalSmsWindow")
         );
-        if (settings.hasKey("whiteAgentThumbnailBackground")) IDnowSDK.setWhiteAgentThumbnailBackground(
-            settings.getBoolean("whiteAgentThumbnailBackground")
+        if (appearance.hasKey("whiteAgentThumbnailBackground")) IDnowSDK.setWhiteAgentThumbnailBackground(
+            appearance.getBoolean("whiteAgentThumbnailBackground")
         );
         IDnowSDK.setPhoneNo(settings.getString("phoneNo"));
         if (settings.hasKey("showDialogsWithIcon")) IDnowSDK.setShowDialogsWithIcon(

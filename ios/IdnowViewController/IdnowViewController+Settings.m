@@ -13,7 +13,8 @@
 
 @implementation IdnowViewController (Settings)
 - (instancetype)initializeWithSettings: (NSDictionary *)settings {
-	IDnowSettings *idnowSettings = [IDnowSettings new];
+	NSDictionary appearance = settings[@"appearance"]
+	                          IDnowSettings *idnowSettings = [IDnowSettings new];
 
 	// -----------------------------------------------------------------------------------
 	//									Basic Properties
@@ -25,8 +26,8 @@
 	//									Extended Properties (optional)
 	// -----------------------------------------------------------------------------------
 	idnowSettings.showIdentTokenOnCheckScreen = settings[@"showIdentTokenOnCheckScreen"];
-	idnowSettings.showErrorSuccessScreen = settings[@"showErrorSuccessScreen"];
-	idnowSettings.showVideoOverviewCheck = settings[@"showVideoOverviewCheck"];
+	idnowSettings.showErrorSuccessScreen = appearance[@"showErrorSuccessScreen"];
+	idnowSettings.showVideoOverviewCheck = appearance[@"showVideoOverviewCheck"];
 	idnowSettings.forceModalPresentation = settings[@"forceModalPresentation"];
 	idnowSettings.forceErrorSuccessScreen = settings[@"forceErrorSuccessScreen"];
 	idnowSettings.modalPresentationStyle = [self getModalPresentationStyle:settings[@"modalPresentationStyle"]];
@@ -57,7 +58,7 @@
 	idnowSettings.stunHost = settings[@"stunHost"];
 	idnowSettings.stunPort = [RCTConvert NSInteger:settings[@"stunPort"]];
 
-	[self applyAppearance:settings[@"appearance"]];
+	[self applyAppearance:appearance];
 
 	self.idnowController = [[IDnowController alloc] initWithSettings: idnowSettings];
 
