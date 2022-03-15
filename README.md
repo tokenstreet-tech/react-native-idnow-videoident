@@ -95,7 +95,7 @@ However, almost the entire code has been rewritten since then, so there are now 
 ```js
 import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
-const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'TST-KJCXN' });
+const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' });
 console.log(resultCode);
 ```
 

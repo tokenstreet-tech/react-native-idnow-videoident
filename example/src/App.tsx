@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 });
 
 export const App: React.FC = () => {
-    const [transactionToken, setTransactionToken] = useState<string>('TST-KJCXN');
+    const [transactionToken, setTransactionToken] = useState<string>('YOUR_TRANSACTION_TOKEN');
     const [videoIdentResponse, setVideoIdentResponse] = useState<string>('');
     const startVideoIdent = useCallback(() => {
         setVideoIdentResponse('');
