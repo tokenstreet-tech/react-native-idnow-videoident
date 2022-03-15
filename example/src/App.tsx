@@ -6,8 +6,8 @@ import { createFullSettings } from './createFullSettings';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         alignItems: 'center',
+        flex: 1,
         justifyContent: 'center',
     },
 });
@@ -24,8 +24,8 @@ export const App: React.FC = () => {
 
     return (
         <View style={styles.container}>
-            <TextInput placeholder={'Transaction token'} value={transactionToken} onChangeText={setTransactionToken} />
-            <Button title={'Start video ident'} onPress={startVideoIdent} />
+            <TextInput onChangeText={setTransactionToken} placeholder="Transaction token" value={transactionToken} />
+            <Button onPress={startVideoIdent} title="Start video ident" />
             <Text>{videoIdentResponse}</Text>
         </View>
     );

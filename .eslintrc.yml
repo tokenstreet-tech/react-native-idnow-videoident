@@ -5,12 +5,16 @@ parserOptions:
         - './tsconfig.json'
 plugins:
     - '@typescript-eslint'
+    - react
+    - react-native
     - prettier
     - simple-import-sort
 extends:
     - '@react-native-community'
     - eslint:all
     - plugin:@typescript-eslint/all
+    - plugin:react/all
+    - plugin:react-native/all
     - prettier
 rules:
     '@typescript-eslint/array-type':
@@ -31,6 +35,12 @@ rules:
     no-ternary: 0 # Worsens the structure
     no-undefined: 0 # Sometimes necessary
     one-var: 0 # Worsens the structure
+    react/forbid-component-props: 0 # Not valid for React Native, because we want to use the style prop
+    react/function-component-definition:
+        - 2
+        - namedComponents: arrow-function
+          unnamedComponents: arrow-function
+    react/jsx-filename-extension: 0 # We use tsx files
     simple-import-sort/exports: 2 # Enabling the plugin simple-import-sort
     simple-import-sort/imports: 2 # Enabling the plugin simple-import-sort
     sort-imports: 0 # We already use the simple-import-sort plugin
