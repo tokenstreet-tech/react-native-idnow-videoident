@@ -13,8 +13,8 @@
 
 @implementation IdnowViewController (Settings)
 - (instancetype)initializeWithSettings: (NSDictionary *)settings {
-	NSDictionary appearance = settings[@"appearance"]
-	                          IDnowSettings *idnowSettings = [IDnowSettings new];
+	NSDictionary appearance = settings[@"appearance"];
+	IDnowSettings *idnowSettings = [IDnowSettings new];
 
 	// -----------------------------------------------------------------------------------
 	//									Basic Properties
