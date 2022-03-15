@@ -99,6 +99,8 @@ const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'T
 console.log(resultCode);
 ```
 
+All configuration options are documented in the [TypeScript interfaces](src/model/interfaces/ISettings.ts) and [an example](example/src/createFullSettings.ts) is also available.
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
