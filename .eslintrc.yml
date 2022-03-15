@@ -16,28 +16,28 @@ rules:
     '@typescript-eslint/array-type':
         - 2
         - default: 'generic'
+    '@typescript-eslint/init-declarations': 0 # Worsens the structure
     '@typescript-eslint/lines-between-class-members': 0 # Worsens the structure
     '@typescript-eslint/no-confusing-void-expression':
         - 2
         - ignoreArrowShorthand: true
+    '@typescript-eslint/no-empty-interface': 0 # Worsens the structure
+    '@typescript-eslint/no-magic-numbers': 0 # Worsens the structure
+    capitalized-comments: 0 # Worsens the structure
+    line-comment-position: 0 # Worsens the structure
+    max-lines-per-function: 0 # Worsens the structure
+    no-inline-comments: 0 # Worsens the structure
+    no-magic-numbers: 0 # Worsens the structure
+    no-ternary: 0 # Worsens the structure
+    no-undefined: 0 # Sometimes necessary
     one-var: 0 # Worsens the structure
+    prefer-object-has-own: 0 # https://github.com/microsoft/TypeScript/issues/44253
     simple-import-sort/exports: 2 # Enabling the plugin simple-import-sort
     simple-import-sort/imports: 2 # Enabling the plugin simple-import-sort
     sort-imports: 0 # We already use the simple-import-sort plugin
-    prefer-object-has-own: 0 # https://github.com/microsoft/TypeScript/issues/44253
-    no-inline-comments: 0 # Worsens the structure
-    line-comment-position: 0 # Worsens the structure
-    no-ternary: 0 # Worsens the structure
-    capitalized-comments: 0 # Worsens the structure
-    max-lines-per-function: 0 # Worsens the structure
-    no-undefined: 0 # Sometimes necessary
-    no-magic-numbers: 0 # Worsens the structure
-    '@typescript-eslint/no-magic-numbers': 0 # Worsens the structure
 
     '@typescript-eslint/explicit-function-return-type': 0
-    '@typescript-eslint/init-declarations': 0
     '@typescript-eslint/naming-convention': 0
-    '@typescript-eslint/no-empty-interface': 0
     '@typescript-eslint/no-require-imports': 0
     '@typescript-eslint/no-unsafe-assignment': 0
     '@typescript-eslint/no-unsafe-call': 0
