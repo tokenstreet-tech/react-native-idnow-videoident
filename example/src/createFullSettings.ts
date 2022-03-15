@@ -1,7 +1,19 @@
 import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
+import { Appearance } from 'react-native';
+
+const isDarkMode = Appearance.getColorScheme() === 'dark';
+const tokenstreetColors = {
+    blue: '#2172f2',
+    successColor: '#2d6c6e',
+    failureColor: '#e94d41',
+    white: '#ffffff',
+    fontDarkGrey: '#282828',
+    fontSemiDarkGrey: '#454545',
+};
 
 export const createFullSettings = (transactionToken: string): ISettings => ({
     transactionToken,
+    ignoreCompanyID: true,
     companyId: undefined,
     environment: undefined,
     connectionType: undefined,
@@ -33,8 +45,8 @@ export const createFullSettings = (transactionToken: string): ISettings => ({
     stunHost: undefined,
     stunPort: undefined,
     appearance: {
-        showVideoOverviewCheck: undefined,
-        showErrorSuccessScreen: undefined,
+        showVideoOverviewCheck: true,
+        showErrorSuccessScreen: false,
         nameForActionBar: undefined,
         checkBoxOrientationRight: undefined,
         customiseCallQualityCheckScreen: undefined,
@@ -66,7 +78,7 @@ export const createFullSettings = (transactionToken: string): ISettings => ({
         inputFieldsSquared: undefined,
         identCodeLayoutHalf: undefined,
         newBranding: undefined,
-        enableStatusBarStyleLightContent: undefined,
+        enableStatusBarStyleLightContent: false,
         fontNameBold: undefined,
         fontNameRegular: undefined,
         fontNameMedium: undefined,
@@ -83,21 +95,21 @@ export const createFullSettings = (transactionToken: string): ISettings => ({
         shouldSeparateFooter: undefined,
         suggestionListBulleted: undefined,
         colors: {
-            defaultTextColor: undefined,
-            primaryBrandColor: undefined,
+            defaultTextColor: isDarkMode ? tokenstreetColors.white : tokenstreetColors.fontDarkGrey,
+            primaryBrandColor: tokenstreetColors.blue,
             headlineColor: undefined,
             linkColor: undefined,
             checkIconColor: undefined,
-            proceedButtonBackgroundColor: undefined,
-            proceedButtonTextColor: undefined,
-            photoIdentRetakeButtonBackgroundColor: undefined,
-            photoIdentRetakeButtonTextColor: undefined,
+            proceedButtonBackgroundColor: tokenstreetColors.blue,
+            proceedButtonTextColor: tokenstreetColors.white,
+            photoIdentRetakeButtonBackgroundColor: tokenstreetColors.blue,
+            photoIdentRetakeButtonTextColor: tokenstreetColors.white,
             checkContractFooterButtonBackgroundColor: undefined,
             checkContractFooterButtonTextColor: undefined,
-            textFieldColor: undefined,
+            textFieldColor: isDarkMode ? tokenstreetColors.white : tokenstreetColors.fontSemiDarkGrey,
             textFieldBorderColor: undefined,
-            failureColor: undefined,
-            successColor: undefined,
+            failureColor: tokenstreetColors.failureColor,
+            successColor: tokenstreetColors.successColor,
             titleBackgroundColor: undefined,
             resultScreenHeaderLabelColor: undefined,
             backgroundColor: undefined,
