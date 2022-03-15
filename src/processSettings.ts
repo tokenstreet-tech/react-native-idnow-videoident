@@ -24,6 +24,10 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
     return {
         ...defaultSettings,
         ...settings,
+        /**
+         * Android expects at this point that the appearance object is present.
+         * It can be an empty object, but it should be present.
+         */
         appearance: {
             ...settings.appearance,
             colors: processedColors,

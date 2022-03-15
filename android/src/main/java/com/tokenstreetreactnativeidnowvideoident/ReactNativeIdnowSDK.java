@@ -24,6 +24,9 @@ public class ReactNativeIdnowSDK {
         @NonNull final ReadableMap settings,
         @NonNull final ReactApplicationContext reactApplicationContext
     ) throws Exception {
+        ReadableMap appearance = settings.getMap("appearance");
+        assert appearance != null;
+
         IDnowSDK instance = IDnowSDK.getInstance();
 
         instance.initialize(
@@ -139,7 +142,7 @@ public class ReactNativeIdnowSDK {
             settings.getBoolean("overrideEntryActivity")
         );
         if (settings.hasKey("appGoogleRating")) IDnowSDK.setApp_GoogleRating(settings.getBoolean("appGoogleRating"));
-        if (settings.hasKey("newBrand")) IDnowSDK.setNewBrand(settings.getBoolean("newBrand"));
+        if (appearance.hasKey("newBranding")) IDnowSDK.setNewBrand(appearance.getBoolean("newBranding"));
 
         // -----------------------------------------------------------------------------------
         //									Custom server

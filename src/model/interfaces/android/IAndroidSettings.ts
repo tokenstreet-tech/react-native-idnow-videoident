@@ -102,11 +102,6 @@ export interface IAndroidSettings {
 
     appGoogleRating?: boolean;
 
-    /**
-     * You can set the new branding
-     */
-    newBrand?: boolean;
-
     // -----------------------------------------------------------------------------------
     //									Custom server
     // -----------------------------------------------------------------------------------

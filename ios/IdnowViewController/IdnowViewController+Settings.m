@@ -98,7 +98,7 @@
 	idnowAppearance.checkBoxesSquared = appearance[@"checkBoxesSquared"];
 	idnowAppearance.inputFieldsSquared = appearance[@"inputFieldsSquared"];
 	idnowAppearance.identCodeLayoutHalf = appearance[@"identCodeLayoutHalf"];
-	idnowAppearance.usedNewBrand = appearance[@"usedNewBrand"];
+	idnowAppearance.usedNewBrand = appearance[@"newBranding"];
 	// Not implemented
 	// idnowAppearance.customBackButtonItem = appearance[@"customBackButtonItem"];
 	// Not implemented
