@@ -31,7 +31,6 @@ rules:
     no-ternary: 0 # Worsens the structure
     no-undefined: 0 # Sometimes necessary
     one-var: 0 # Worsens the structure
-    prefer-object-has-own: 0 # https://github.com/microsoft/TypeScript/issues/44253
     simple-import-sort/exports: 2 # Enabling the plugin simple-import-sort
     simple-import-sort/imports: 2 # Enabling the plugin simple-import-sort
     sort-imports: 0 # We already use the simple-import-sort plugin
