@@ -104,7 +104,7 @@ import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 try {
     const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' });
     console.log(resultCode);
-} catch (error: any) {
+} catch (error) {
     if (error !== null && typeof error === 'object' && 'resultCode' in error) {
         const identificationError = error as IIdentificationErrorResult;
         console.log(identificationError.resultCode);
@@ -121,7 +121,7 @@ import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
 IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
     .then(({ resultCode }) => console.log(resultCode))
-    .catch((error: any) => {
+    .catch((error) => {
         if (error !== null && typeof error === 'object' && 'resultCode' in error) {
             const identificationError = error as IIdentificationErrorResult;
             console.log(identificationError.resultCode);
