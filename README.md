@@ -93,9 +93,9 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 ## Usage
 
-`startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with the `resultCode`. Also an optional `errorMessage` can be included.
+`startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with a `resultCode`. Also, an optional `errorMessage` can be included.
 
-You have the possibility to integrate it with a `try...catch`:
+You have the possibility to integrate it with a `try...catch` block:
 
 ```ts
 import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
@@ -113,7 +113,7 @@ try {
 }
 ```
 
-Also it is possible to work with `Promises` here:
+It is also possible to work with `Promises` here:
 
 ```ts
 import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
