@@ -40,7 +40,7 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 ### iOS
 
-2. Add the following line to your iOS Podfile:
+2. Add the following line to the target in your iOS Podfile:
 
     ```ruby
     use_frameworks! linkage: :static
