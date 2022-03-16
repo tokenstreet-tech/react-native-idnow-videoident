@@ -1,2 +1,12 @@
 export { IDnowManager } from './IDnowManager';
+export type { AndroidLanguageEnum } from './model/enums/android/AndroidLanguageEnum';
+export type { ConnectionTypeEnum } from './model/enums/ConnectionTypeEnum';
+export type { EnvironmentEnum } from './model/enums/EnvironmentEnum';
+export type { IosAppearanceModeEnum } from './model/enums/ios/IosAppearanceModeEnum';
+export type { IosCheckboxPositionEnum } from './model/enums/ios/IosCheckboxPositionEnum';
+export type { IosNumberLabelPositionEnum } from './model/enums/ios/IosNumberLabelPositionEnum';
+export type { IosRequestCodeAgainLayoutTypeEnum } from './model/enums/ios/IosRequestCodeAgainLayoutTypeEnum';
+export type { IosUIModalPresentationStyleEnum } from './model/enums/ios/IosUIModalPresentationStyleEnum';
+export type { ResultCodeEnum } from './model/enums/ResultCodeEnum';
+export type { IIdentificationErrorResult, IIdentificationResult } from './model/interfaces/INativeModules';
 export type { ISettings } from './model/interfaces/ISettings';
