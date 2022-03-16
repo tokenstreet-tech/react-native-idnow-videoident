@@ -12,7 +12,7 @@ on:
 jobs:
     yarn_script_validation:
         name: yarn script validation
-        runs-on: [self-hosted, linux]
+        runs-on: ubuntu-latest
         strategy:
             matrix:
                 VALIDATION: ['Typecheck files', 'Lint files', 'Run unit tests']
