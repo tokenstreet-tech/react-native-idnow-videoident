@@ -69,6 +69,7 @@ However, almost the entire code has been rewritten since then, so there are now 
     allprojects {
         repositories {
             ...
+            jcenter()
             maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
         }
     }
