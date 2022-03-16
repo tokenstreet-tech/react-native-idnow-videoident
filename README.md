@@ -93,11 +93,41 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 ## Usage
 
-```js
+`startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with the `resultCode`. Also an optional `errorMessage` can be included.
+
+You have the possibility to integrate it with a `try...catch`:
+
+```ts
+import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
 import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
-const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' });
-console.log(resultCode);
+try {
+    const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' });
+    console.log(resultCode);
+} catch (error: any) {
+    if (error.resultCode) {
+        const identificationError = error as IIdentificationErrorResult;
+        console.log(identificationError.resultCode);
+        console.log(identificationError.errorMessage);
+    }
+}
+```
+
+Also it is possible to work with `Promises` here:
+
+```ts
+import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
+import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+
+IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
+    .then(({ resultCode }) => console.log(resultCode))
+    .catch((error: any) => {
+        if (error.resultCode) {
+            const identificationError = error as IIdentificationErrorResult;
+            console.log(identificationError.resultCode);
+            console.log(identificationError.errorMessage);
+        }
+    });
 ```
 
 All configuration options are documented in the [TypeScript interfaces](src/model/interfaces/ISettings.ts) and [an example](example/src/createFullSettings.ts) is also available.

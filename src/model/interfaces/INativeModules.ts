@@ -6,7 +6,7 @@ import type { ResultCodeEnum } from '../enums/ResultCodeEnum';
 export interface IIdentificationResult {
     resultCode: ResultCodeEnum;
 }
-interface IIdentificationErrorResult extends IIdentificationResult {
+export interface IIdentificationErrorResult extends IIdentificationResult {
     errorMessage?: string;
 }
 
