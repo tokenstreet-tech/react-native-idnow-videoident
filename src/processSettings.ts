@@ -1,11 +1,16 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
 import { processColor } from 'react-native';
 
+import { ConnectionTypeEnum } from './model/enums/ConnectionTypeEnum';
 import type { IIosColors } from './model/interfaces/ios/IIosColors';
 import type { ISettings } from './model/interfaces/ISettings';
 
 const defaultSettings: Omit<ISettings, 'transactionToken'> = {
     ignoreCompanyID: true,
+    connectionType: ConnectionTypeEnum.WEBSOCKET,
+    appearance: {
+        newBranding: true,
+    },
 };
 
 /**
@@ -29,6 +34,7 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
          * It can be an empty object, but it should be present.
          */
         appearance: {
+            ...defaultSettings.appearance,
             ...settings.appearance,
             colors: processedColors,
         },
