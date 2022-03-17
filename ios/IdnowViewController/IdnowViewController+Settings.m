@@ -161,6 +161,8 @@
 	idnowAppearance.titleBackgroundColor = [RCTConvert UIColor:colors[@"titleBackgroundColor"]];
 	idnowAppearance.resultScreenHeaderLabelColor = [RCTConvert UIColor:colors[@"resultScreenHeaderLabelColor"]];
 	idnowAppearance.backgroundColor = [RCTConvert UIColor:colors[@"backgroundColor"]];
+    idnowAppearance.primaryAlertActionColor = [RCTConvert UIColor:colors[@"primaryAlertActionColor"]];
+    idnowAppearance.secondaryAlertActionColor = [RCTConvert UIColor:colors[@"secondaryAlertActionColor"]];
 	idnowAppearance.cqcOuterRingColor = [RCTConvert UIColor:colors[@"cqcOuterRingColor"]];
 	idnowAppearance.cqcDefaultInnerRingColor = [RCTConvert UIColor:colors[@"cqcDefaultInnerRingColor"]];
 	idnowAppearance.cqcPoorQualityInnerColor = [RCTConvert UIColor:colors[@"cqcPoorQualityInnerColor"]];
