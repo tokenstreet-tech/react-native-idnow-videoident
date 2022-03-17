@@ -56,4 +56,3 @@ rules:
     max-lines: 0
     multiline-comment-style: 0
     require-unicode-regexp: 0
-    sort-keys: 0

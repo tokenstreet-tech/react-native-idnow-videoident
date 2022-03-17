@@ -174,6 +174,18 @@ export interface IIosColors<TColor extends ColorValue | ProcessedColorValue> {
      */
     backgroundColor?: TColor;
 
+    /**
+     *  Optional color, that replaces the color on the left action of alert controller
+     *  Default: lighter grey color (#8D96A6)
+     */
+    primaryAlertActionColor?: TColor;
+
+    /**
+     *  Optional color, that replaces the color on the right action of alert controller
+     *  Default: black for light mode and white for dark mode.
+     */
+    secondaryAlertActionColor?: TColor;
+
     // -----------------------------------------------------------------------------------
     //                                    Call Quality Check
     // -----------------------------------------------------------------------------------

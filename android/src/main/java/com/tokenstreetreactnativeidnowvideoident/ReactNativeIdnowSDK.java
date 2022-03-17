@@ -171,6 +171,10 @@ public class ReactNativeIdnowSDK {
         environmentMap.put("DEV_3", IDnowSDK.Server.DV3);
         environmentMap.put("DEV_4", IDnowSDK.Server.DV4);
         environmentMap.put("DEV_5", IDnowSDK.Server.DV5);
+        environmentMap.put("DEV_6", null);
+        environmentMap.put("DEV_7", null);
+        environmentMap.put("DEV_8", null);
+        environmentMap.put("DEV_9", null);
 
         // -----------------------------------------------------------------------------------
         //                                    Test

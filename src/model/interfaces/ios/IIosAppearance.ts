@@ -6,11 +6,17 @@ import type { IosNumberLabelPositionEnum } from '../../enums/ios/IosNumberLabelP
 import type { IosRequestCodeAgainLayoutTypeEnum } from '../../enums/ios/IosRequestCodeAgainLayoutTypeEnum';
 
 export interface IIosAppearance {
+    // -----------------------------------------------------------------------------------
+    //                                    Initialization
+    // -----------------------------------------------------------------------------------
     /**
      * Mode
      */
     mode?: IosAppearanceModeEnum;
 
+    // -----------------------------------------------------------------------------------
+    //                                    Colors
+    // -----------------------------------------------------------------------------------
     /**
      * Header file:
      * Optional corner radius for text fields

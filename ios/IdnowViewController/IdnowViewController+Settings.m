@@ -39,6 +39,7 @@
 	idnowSettings.ignoreCompanyID = settings[@"ignoreCompanyID"];
 	// Not implemented
 	// idnowSettings.externalLogger = settings[@"externalLogger"];
+	idnowSettings.automaticPagingTimeInterval = [RCTConvert double:settings[@"automaticPagingTimeInterval"]];
 
 	// -----------------------------------------------------------------------------------
 	//                                    Localization
@@ -49,14 +50,13 @@
 	//									Server Properties (optional)
 	// -----------------------------------------------------------------------------------
 	idnowSettings.environment = [self getEnvironment:settings[@"environment"]];
-	idnowSettings.connectionType = [self getConnectionType:settings[@"connectionType"]];
-
 	idnowSettings.allowInvalidCertificates = settings[@"allowInvalidCertificates"];
 	idnowSettings.apiHost = settings[@"apiHost"];
 	idnowSettings.websocketHost = settings[@"websocketHost"];
 	idnowSettings.videoHost = settings[@"videoHost"];
 	idnowSettings.stunHost = settings[@"stunHost"];
 	idnowSettings.stunPort = [RCTConvert NSInteger:settings[@"stunPort"]];
+	idnowSettings.connectionType = [self getConnectionType:settings[@"connectionType"]];
 
 	[self applyAppearance:appearance];
 
@@ -70,14 +70,43 @@
 	NSDictionary *colors = appearance[@"colors"];
 
 	// -----------------------------------------------------------------------------------
-	//									Appearance
+	//                                    Initialization
 	// -----------------------------------------------------------------------------------
 	idnowAppearance.mode = [self getMode:appearance[@"mode"]];
+
+	// -----------------------------------------------------------------------------------
+	//                                    Colors
+	// -----------------------------------------------------------------------------------
+	idnowAppearance.defaultTextColor = [RCTConvert UIColor:colors[@"defaultTextColor"]];
+	idnowAppearance.primaryBrandColor = [RCTConvert UIColor:colors[@"primaryBrandColor"]];
+	idnowAppearance.headlineColor = [RCTConvert UIColor:colors[@"headlineColor"]];
+	idnowAppearance.linkColor = [RCTConvert UIColor:colors[@"linkColor"]];
+	idnowAppearance.checkIconColor = [RCTConvert UIColor:colors[@"checkIconColor"]];
+	idnowAppearance.proceedButtonBackgroundColor = [RCTConvert UIColor:colors[@"proceedButtonBackgroundColor"]];
+	idnowAppearance.proceedButtonTextColor = [RCTConvert UIColor:colors[@"proceedButtonTextColor"]];
+	idnowAppearance.photoIdentRetakeButtonBackgroundColor = [RCTConvert UIColor:colors[@"photoIdentRetakeButtonBackgroundColor"]];
+	idnowAppearance.photoIdentRetakeButtonTextColor = [RCTConvert UIColor:colors[@"photoIdentRetakeButtonTextColor"]];
+	idnowAppearance.checkContractFooterButtonBackgroundColor = [RCTConvert UIColor:colors[@"checkContractFooterButtonBackgroundColor"]];
+	idnowAppearance.checkContractFooterButtonTextColor = [RCTConvert UIColor:colors[@"checkContractFooterButtonTextColor"]];
+	idnowAppearance.textFieldColor = [RCTConvert UIColor:colors[@"textFieldColor"]];
 	idnowAppearance.textFieldCornerRadius = appearance[@"textFieldCornerRadius"];
+	idnowAppearance.textFieldBorderColor = [RCTConvert UIColor:colors[@"textFieldBorderColor"]];
+	idnowAppearance.failureColor = [RCTConvert UIColor:colors[@"failureColor"]];
+	idnowAppearance.successColor = [RCTConvert UIColor:colors[@"successColor"]];
+	idnowAppearance.titleBackgroundColor = [RCTConvert UIColor:colors[@"titleBackgroundColor"]];
+	idnowAppearance.resultScreenHeaderLabelColor = [RCTConvert UIColor:colors[@"resultScreenHeaderLabelColor"]];
+	idnowAppearance.backgroundColor = [RCTConvert UIColor:colors[@"backgroundColor"]];
+	idnowAppearance.primaryAlertActionColor = [RCTConvert UIColor:colors[@"primaryAlertActionColor"]];
+	idnowAppearance.secondaryAlertActionColor = [RCTConvert UIColor:colors[@"secondaryAlertActionColor"]];
 
 	// -----------------------------------------------------------------------------------
 	//                                    Call Quality Check
 	// -----------------------------------------------------------------------------------
+	idnowAppearance.cqcOuterRingColor = [RCTConvert UIColor:colors[@"cqcOuterRingColor"]];
+	idnowAppearance.cqcDefaultInnerRingColor = [RCTConvert UIColor:colors[@"cqcDefaultInnerRingColor"]];
+	idnowAppearance.cqcPoorQualityInnerColor = [RCTConvert UIColor:colors[@"cqcPoorQualityInnerColor"]];
+	idnowAppearance.cqcModerateQualityInnerColor = [RCTConvert UIColor:colors[@"cqcModerateQualityInnerColor"]];
+	idnowAppearance.cqcExcellentQualityInnerColor = [RCTConvert UIColor:colors[@"cqcExcellentQualityInnerColor"]];
 	idnowAppearance.useTitleSeparator = appearance[@"useTitleSeparator"];
 	idnowAppearance.titleBackgroundImage = [RCTConvert UIImage:appearance[@"titleBackgroundImage"]];
 	idnowAppearance.titleBackgroundImageOffset = [RCTConvert CGFloat:appearance[@"titleBackgroundImageOffset"]];
@@ -85,7 +114,7 @@
 	idnowAppearance.useResultIcon = appearance[@"useResultIcon"];
 
 	// -----------------------------------------------------------------------------------
-	//									Table View
+	//                                    Table View
 	// -----------------------------------------------------------------------------------
 	idnowAppearance.checkBoxPosition = [self getCheckBoxPosition:appearance[@"checkBoxPosition"]];
 	idnowAppearance.shouldShowGTCInline = appearance[@"shouldShowGTCInline"];
@@ -109,12 +138,12 @@
 	idnowAppearance.customActivityIndicatorURL = [RCTConvert NSURL:appearance[@"customActivityIndicatorURL"]];
 
 	// -----------------------------------------------------------------------------------
-	//									Status Bar
+	//                                    Status Bar
 	// -----------------------------------------------------------------------------------
 	idnowAppearance.enableStatusBarStyleLightContent = appearance[@"enableStatusBarStyleLightContent"];
 
 	// -----------------------------------------------------------------------------------
-	//									Font Names
+	//                                    Font Names
 	// -----------------------------------------------------------------------------------
 	idnowAppearance.fontNameBold = appearance[@"fontNameBold"];
 	idnowAppearance.fontNameRegular = appearance[@"fontNameRegular"];
@@ -139,33 +168,6 @@
 	idnowAppearance.recheckButtonsBordered = appearance[@"recheckButtonsBordered"];
 	idnowAppearance.shouldSeparateFooter = appearance[@"shouldSeparateFooter"];
 	idnowAppearance.suggestionListBulleted = appearance[@"suggestionListBulleted"];
-
-	// -----------------------------------------------------------------------------------
-	//									Colors
-	// -----------------------------------------------------------------------------------
-	idnowAppearance.defaultTextColor = [RCTConvert UIColor:colors[@"defaultTextColor"]];
-	idnowAppearance.primaryBrandColor = [RCTConvert UIColor:colors[@"primaryBrandColor"]];
-	idnowAppearance.headlineColor = [RCTConvert UIColor:colors[@"headlineColor"]];
-	idnowAppearance.linkColor = [RCTConvert UIColor:colors[@"linkColor"]];
-	idnowAppearance.checkIconColor = [RCTConvert UIColor:colors[@"checkIconColor"]];
-	idnowAppearance.proceedButtonBackgroundColor = [RCTConvert UIColor:colors[@"proceedButtonBackgroundColor"]];
-	idnowAppearance.proceedButtonTextColor = [RCTConvert UIColor:colors[@"proceedButtonTextColor"]];
-	idnowAppearance.photoIdentRetakeButtonBackgroundColor = [RCTConvert UIColor:colors[@"photoIdentRetakeButtonBackgroundColor"]];
-	idnowAppearance.photoIdentRetakeButtonTextColor = [RCTConvert UIColor:colors[@"photoIdentRetakeButtonTextColor"]];
-	idnowAppearance.checkContractFooterButtonBackgroundColor = [RCTConvert UIColor:colors[@"checkContractFooterButtonBackgroundColor"]];
-	idnowAppearance.checkContractFooterButtonTextColor = [RCTConvert UIColor:colors[@"checkContractFooterButtonTextColor"]];
-	idnowAppearance.textFieldColor = [RCTConvert UIColor:colors[@"textFieldColor"]];
-	idnowAppearance.textFieldBorderColor = [RCTConvert UIColor:colors[@"textFieldBorderColor"]];
-	idnowAppearance.failureColor = [RCTConvert UIColor:colors[@"failureColor"]];
-	idnowAppearance.successColor = [RCTConvert UIColor:colors[@"successColor"]];
-	idnowAppearance.titleBackgroundColor = [RCTConvert UIColor:colors[@"titleBackgroundColor"]];
-	idnowAppearance.resultScreenHeaderLabelColor = [RCTConvert UIColor:colors[@"resultScreenHeaderLabelColor"]];
-	idnowAppearance.backgroundColor = [RCTConvert UIColor:colors[@"backgroundColor"]];
-	idnowAppearance.cqcOuterRingColor = [RCTConvert UIColor:colors[@"cqcOuterRingColor"]];
-	idnowAppearance.cqcDefaultInnerRingColor = [RCTConvert UIColor:colors[@"cqcDefaultInnerRingColor"]];
-	idnowAppearance.cqcPoorQualityInnerColor = [RCTConvert UIColor:colors[@"cqcPoorQualityInnerColor"]];
-	idnowAppearance.cqcModerateQualityInnerColor = [RCTConvert UIColor:colors[@"cqcModerateQualityInnerColor"]];
-	idnowAppearance.cqcExcellentQualityInnerColor = [RCTConvert UIColor:colors[@"cqcExcellentQualityInnerColor"]];
 }
 
 - (UIModalPresentationStyle)getModalPresentationStyle: (NSString *)modalPresentationStyle {
@@ -199,6 +201,10 @@
 		@"DEV_3": @(IDnowEnvironmentDev3),
 		@"DEV_4": @(IDnowEnvironmentDev4),
 		@"DEV_5": @(IDnowEnvironmentDev5),
+		@"DEV_6": @(IDnowEnvironmentDev6),
+		@"DEV_7": @(IDnowEnvironmentDev7),
+		@"DEV_8": @(IDnowEnvironmentDev8),
+		@"DEV_9": @(IDnowEnvironmentDev9),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Test
