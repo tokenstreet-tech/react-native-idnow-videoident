@@ -1,69 +1,131 @@
-import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
 import type { ProcessedColorValue } from 'react-native';
 
+import { ConnectionTypeEnum } from '../model/enums/ConnectionTypeEnum';
+import type { ISettings } from '../model/interfaces/ISettings';
 import { processSettings } from '../processSettings';
 
 describe('processSettings', () => {
-    it('should process the color values for iOS', () => {
-        // Arrange
-        const transactionTokenMock = 'TST-XXXXX';
-        const settings: ISettings = {
-            transactionToken: transactionTokenMock,
-            appearance: {
-                colors: {
-                    defaultTextColor: '#ffffff',
-                    primaryBrandColor: 'blue',
-                    proceedButtonBackgroundColor: 'rgb(255, 0, 255)',
+    describe('defaultSettings', () => {
+        it('should apply the default settings', () => {
+            // Arrange
+            const transactionTokenMock = 'XXX-XXXXX';
+            const settings: ISettings = {
+                appearance: {
+                    colors: {},
+                    newBranding: true,
                 },
-            },
-        };
+                connectionType: ConnectionTypeEnum.WEBSOCKET,
+                ignoreCompanyID: true,
+                transactionToken: transactionTokenMock,
+            };
 
-        // Act
-        const result = processSettings(settings);
+            // Act
+            const result = processSettings(settings);
 
-        // Assert
-        const expectedResult: ISettings<ProcessedColorValue> = {
-            appearance: {
-                colors: {
-                    defaultTextColor: 4294967295,
-                    primaryBrandColor: 4278190335,
-                    proceedButtonBackgroundColor: 4294902015,
+            // Assert
+            const expectedResult: ISettings<ProcessedColorValue> = {
+                appearance: {
+                    colors: {},
+                    newBranding: true,
                 },
-            },
-            ignoreCompanyID: true,
-            transactionToken: transactionTokenMock,
-        };
-        expect(result).toEqual(expectedResult);
+                connectionType: ConnectionTypeEnum.WEBSOCKET,
+                ignoreCompanyID: true,
+                transactionToken: transactionTokenMock,
+            };
+            expect(result).toEqual(expectedResult);
+        });
+        it('should not override the given settings', () => {
+            // Arrange
+            const transactionTokenMock = 'XXX-XXXXX';
+            const settings: ISettings = {
+                transactionToken: transactionTokenMock,
+                ignoreCompanyID: false,
+                connectionType: ConnectionTypeEnum.LONG_POLLING,
+                appearance: {
+                    newBranding: false,
+                },
+            };
+
+            // Act
+            const result = processSettings(settings);
+
+            // Assert
+            const expectedResult: ISettings<ProcessedColorValue> = {
+                appearance: {
+                    colors: {},
+                    newBranding: false,
+                },
+                connectionType: ConnectionTypeEnum.LONG_POLLING,
+                ignoreCompanyID: false,
+                transactionToken: transactionTokenMock,
+            };
+            expect(result).toEqual(expectedResult);
+        });
     });
-    // it('should process the color values for Android', () => {
-    //     // Arrange
-    //     const transactionTokenMock = 'TST-XXXXX';
-    //     const settings: ISettings = {
-    //         transactionToken: transactionTokenMock,
-    //         appearance: {
-    //             colors: {
-    //                 primaryColor: '#ffffff',
-    //                 primaryVariantColor: 'blue',
-    //                 primaryTextColor: 'rgb(255, 0, 255)',
-    //             },
-    //         },
-    //     };
-    //
-    //     // Act
-    //     const result = processSettings(settings);
-    //
-    //     // Assert
-    //     const expectedResult: ISettings<ProcessedColorValue> = {
-    //         appearance: {
-    //             colors: {
-    //                 primaryColor: 4294967295,
-    //                 primaryVariantColor: 4278190335,
-    //                 primaryTextColor: 4294902015,
-    //             },
-    //         },
-    //         ignoreCompanyID: true,
-    //         transactionToken: transactionTokenMock,
-    //     };
-    //     expect(result).toEqual(expectedResult);
-    // });
+    describe('processColor', () => {
+        it('should process the color values for iOS', () => {
+            // Arrange
+            const transactionTokenMock = 'XXX-XXXXX';
+            const settings: ISettings = {
+                transactionToken: transactionTokenMock,
+                appearance: {
+                    colors: {
+                        defaultTextColor: '#ffffff',
+                        primaryBrandColor: 'blue',
+                        proceedButtonBackgroundColor: 'rgb(255, 0, 255)',
+                    },
+                },
+            };
+
+            // Act
+            const result = processSettings(settings);
+
+            // Assert
+            const expectedResult: ISettings<ProcessedColorValue> = {
+                appearance: {
+                    colors: {
+                        defaultTextColor: 4294967295,
+                        primaryBrandColor: 4278190335,
+                        proceedButtonBackgroundColor: 4294902015,
+                    },
+                    newBranding: true,
+                },
+                connectionType: ConnectionTypeEnum.WEBSOCKET,
+                ignoreCompanyID: true,
+                transactionToken: transactionTokenMock,
+            };
+            expect(result).toEqual(expectedResult);
+        });
+        // it('should process the color values for Android', () => {
+        //     // Arrange
+        //     const transactionTokenMock = 'XXX-XXXXX';
+        //     const settings: ISettings = {
+        //         transactionToken: transactionTokenMock,
+        //         appearance: {
+        //             colors: {
+        //                 primaryColor: '#ffffff',
+        //                 primaryVariantColor: 'blue',
+        //                 primaryTextColor: 'rgb(255, 0, 255)',
+        //             },
+        //         },
+        //     };
+        //
+        //     // Act
+        //     const result = processSettings(settings);
+        //
+        //     // Assert
+        //     const expectedResult: ISettings<ProcessedColorValue> = {
+        //         appearance: {
+        //             colors: {
+        //                 primaryColor: 4294967295,
+        //                 primaryVariantColor: 4278190335,
+        //                 primaryTextColor: 4294902015,
+        //             },
+        //         },
+        //         ignoreCompanyID: true,
+        //         transactionToken: transactionTokenMock,
+        //     };
+        //     expect(result).toEqual(expectedResult);
+        // });
+    });
 });
