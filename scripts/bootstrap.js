@@ -6,9 +6,9 @@ const root = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const options = {
     cwd: process.cwd(),
+    encoding: 'utf-8',
     env: process.env,
     stdio: 'inherit',
-    encoding: 'utf-8',
 };
 
 if (os.type() === 'Windows_NT') {

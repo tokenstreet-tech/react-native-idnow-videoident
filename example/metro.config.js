@@ -11,8 +11,6 @@ const modules = Object.keys({
 
 module.exports = {
     projectRoot: __dirname,
-    watchFolders: [root],
-
     /*
      * We need to make sure that only one version is loaded for peerDependencies
      * So we blacklist them at the root, and alias them to the versions in example's node_modules
@@ -27,13 +25,8 @@ module.exports = {
             return acc;
         }, {}),
     },
-
     transformer: {
-        getTransformOptions: () => ({
-            transform: {
-                experimentalImportSupport: false,
-                inlineRequires: true,
-            },
-        }),
+        getTransformOptions: () => ({ transform: { experimentalImportSupport: false, inlineRequires: true } }),
     },
+    watchFolders: [root],
 };

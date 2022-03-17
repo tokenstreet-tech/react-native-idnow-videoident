@@ -39,12 +39,12 @@ describe('processSettings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
             const settings: ISettings = {
-                transactionToken: transactionTokenMock,
-                ignoreCompanyID: false,
-                connectionType: ConnectionTypeEnum.LONG_POLLING,
                 appearance: {
                     newBranding: false,
                 },
+                connectionType: ConnectionTypeEnum.LONG_POLLING,
+                ignoreCompanyID: false,
+                transactionToken: transactionTokenMock,
             };
 
             // Act
@@ -68,7 +68,6 @@ describe('processSettings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
             const settings: ISettings = {
-                transactionToken: transactionTokenMock,
                 appearance: {
                     colors: {
                         defaultTextColor: '#ffffff',
@@ -76,6 +75,7 @@ describe('processSettings', () => {
                         proceedButtonBackgroundColor: 'rgb(255, 0, 255)',
                     },
                 },
+                transactionToken: transactionTokenMock,
             };
 
             // Act
