@@ -1,6 +1,7 @@
 import type { ProcessedColorValue } from 'react-native';
 
 import { ConnectionTypeEnum } from '../model/enums/ConnectionTypeEnum';
+import type { IColors } from '../model/interfaces/IColors';
 import type { ISettings } from '../model/interfaces/ISettings';
 import { processSettings } from '../processSettings';
 
@@ -81,20 +82,12 @@ describe('processSettings', () => {
             const result = processSettings(settings);
 
             // Assert
-            const expectedResult: ISettings<ProcessedColorValue> = {
-                appearance: {
-                    colors: {
-                        defaultTextColor: 4294967295,
-                        primaryBrandColor: 4278190335,
-                        proceedButtonBackgroundColor: 4294902015,
-                    },
-                    newBranding: true,
-                },
-                connectionType: ConnectionTypeEnum.WEBSOCKET,
-                ignoreCompanyID: true,
-                transactionToken: transactionTokenMock,
+            const expectedResult: IColors<ProcessedColorValue> = {
+                defaultTextColor: 4294967295,
+                primaryBrandColor: 4278190335,
+                proceedButtonBackgroundColor: 4294902015,
             };
-            expect(result).toEqual(expectedResult);
+            expect(result.appearance?.colors).toEqual(expectedResult);
         });
         // it('should process the color values for Android', () => {
         //     // Arrange
@@ -114,18 +107,12 @@ describe('processSettings', () => {
         //     const result = processSettings(settings);
         //
         //     // Assert
-        //     const expectedResult: ISettings<ProcessedColorValue> = {
-        //         appearance: {
-        //             colors: {
-        //                 primaryColor: 4294967295,
-        //                 primaryVariantColor: 4278190335,
-        //                 primaryTextColor: 4294902015,
-        //             },
-        //         },
-        //         ignoreCompanyID: true,
-        //         transactionToken: transactionTokenMock,
+        //     const expectedResult: IColors<ProcessedColorValue> = {
+        //         primaryColor: 4294967295,
+        //         primaryVariantColor: 4278190335,
+        //         primaryTextColor: 4294902015,
         //     };
-        //     expect(result).toEqual(expectedResult);
+        //     expect(result.appearance?.colors).toEqual(expectedResult);
         // });
     });
 });
