@@ -7,7 +7,7 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 ## Features
 
--   All configuration options of the SDKs are possible from the JavaScript side (except `customBackButtonItem`, `customCancelButton` & `customAgentView` for iOS, and the [colors for Android](https://github.com/tokenstreet-tech/react-native-idnow-videoident/issues/139))
+-   All configuration options of the SDKs are possible from the JavaScript side (except `externalLogger`, `customBackButtonItem`, `customCancelButton` & `customAgentView` for iOS, and the [colors for Android](https://github.com/tokenstreet-tech/react-native-idnow-videoident/issues/139))
 -   Latest dependencies of the IDnow [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDKs (secured by Dependabot)
 -   No need to manually include native files
 -   Published as CommonJS & ESmodules, with type definitions
