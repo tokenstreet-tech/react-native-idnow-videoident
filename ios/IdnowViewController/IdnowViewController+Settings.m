@@ -199,6 +199,10 @@
 		@"DEV_3": @(IDnowEnvironmentDev3),
 		@"DEV_4": @(IDnowEnvironmentDev4),
 		@"DEV_5": @(IDnowEnvironmentDev5),
+        @"DEV_6": @(IDnowEnvironmentDev6),
+        @"DEV_7": @(IDnowEnvironmentDev7),
+        @"DEV_8": @(IDnowEnvironmentDev8),
+        @"DEV_9": @(IDnowEnvironmentDev9),
 
 		// -----------------------------------------------------------------------------------
 		//                                    Test

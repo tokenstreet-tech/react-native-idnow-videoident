@@ -69,6 +69,30 @@ export enum EnvironmentEnum {
      */
     DEV_5 = 'DEV_5',
 
+    /**
+     * iOS header file:
+     * Dev6 server environment
+     */
+    DEV_6 = 'DEV_6',
+
+    /**
+     * iOS header file:
+     * Dev7 server environment
+     */
+    DEV_7 = 'DEV_7',
+
+    /**
+     * iOS header file:
+     * Dev8 server environment
+     */
+    DEV_8 = 'DEV_8',
+
+    /**
+     * iOS header file:
+     * Dev9 server environment
+     */
+    DEV_9 = 'DEV_9',
+
     // -----------------------------------------------------------------------------------
     //                                    Test
     // -----------------------------------------------------------------------------------
