@@ -134,7 +134,7 @@ All configuration options are documented in the [TypeScript interfaces](src/mode
 
 ## Versioning
 
-We do not follow [Semantic Versioning 2.0.0](https://semver.org/lang/de/) until `v1` is landed. Breaking changes in minor updates are possible.
+We do not follow [Semantic Versioning 2.0.0](https://semver.org/) until `v1` is landed. Breaking changes in minor updates are possible.
 
 ## Contributing
 
