@@ -6,7 +6,9 @@ import type { IIosColors } from './model/interfaces/ios/IIosColors';
 import type { ISettings } from './model/interfaces/ISettings';
 
 const defaultSettings: Omit<ISettings, 'transactionToken'> = {
+    allowHttpConnections: false,
     allowInvalidCertificates: false,
+    appGoogleRating: false,
     appearance: {
         newBranding: true,
     },
