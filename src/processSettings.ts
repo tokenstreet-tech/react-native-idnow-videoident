@@ -6,9 +6,11 @@ import type { IIosColors } from './model/interfaces/ios/IIosColors';
 import type { ISettings } from './model/interfaces/ISettings';
 
 const defaultSettings: Omit<ISettings, 'transactionToken'> = {
+    allowInvalidCertificates: false,
     appearance: {
         newBranding: true,
     },
+    calledFromIDnowApp: false,
     connectionType: ConnectionTypeEnum.WEBSOCKET,
     ignoreCompanyID: true,
 };
