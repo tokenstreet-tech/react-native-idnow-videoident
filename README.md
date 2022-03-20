@@ -75,7 +75,14 @@ However, almost the entire code has been rewritten since then, so there are now 
     allprojects {
         repositories {
             ...
-            jcenter()
+            jcenter() {
+                // JCenter is now read-only. Therefore, no new versions are published there any more.
+                // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.
+                content {
+                    includeModule("me.relex", "circleindicator")
+                    includeModule("com.github.barteksc", "android-pdf-viewer")
+                }
+            }
             maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
         }
     }
