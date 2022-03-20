@@ -38,7 +38,5 @@ allprojects {
         }
         google()
         maven { url "https://www.jitpack.io" }
-        jcenter()
-        maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
     }
 }
