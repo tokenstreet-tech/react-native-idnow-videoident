@@ -25,10 +25,14 @@ describe('processSettings', () => {
 
             // Assert
             const expectedResult: ISettings<ProcessedColorValue> = {
+                allowHttpConnections: false,
+                allowInvalidCertificates: false,
+                appGoogleRating: false,
                 appearance: {
                     colors: {},
                     newBranding: true,
                 },
+                calledFromIDnowApp: false,
                 connectionType: ConnectionTypeEnum.WEBSOCKET,
                 ignoreCompanyID: true,
                 transactionToken: transactionTokenMock,
@@ -39,9 +43,13 @@ describe('processSettings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
             const settings: ISettings = {
+                allowHttpConnections: true,
+                allowInvalidCertificates: true,
+                appGoogleRating: true,
                 appearance: {
                     newBranding: false,
                 },
+                calledFromIDnowApp: true,
                 connectionType: ConnectionTypeEnum.LONG_POLLING,
                 ignoreCompanyID: false,
                 transactionToken: transactionTokenMock,
@@ -52,10 +60,14 @@ describe('processSettings', () => {
 
             // Assert
             const expectedResult: ISettings<ProcessedColorValue> = {
+                allowHttpConnections: true,
+                allowInvalidCertificates: true,
+                appGoogleRating: true,
                 appearance: {
                     colors: {},
                     newBranding: false,
                 },
+                calledFromIDnowApp: true,
                 connectionType: ConnectionTypeEnum.LONG_POLLING,
                 ignoreCompanyID: false,
                 transactionToken: transactionTokenMock,
