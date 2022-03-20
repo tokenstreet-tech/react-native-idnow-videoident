@@ -11,8 +11,7 @@ import {
     IosUIModalPresentationStyleEnum,
 } from '@tokenstreet/react-native-idnow-videoident';
 import { Appearance } from 'react-native';
-
-import type { DeepRequired } from './DeepRequired';
+import type { DeepRequired } from 'ts-essentials';
 
 const getCurrentThemeColor = (lightColor: string, darkColor: string): string =>
     Appearance.getColorScheme() === 'light' ? lightColor : darkColor;
@@ -38,7 +37,6 @@ export const createFullSettings = (transactionToken: string): DeepRequired<ISett
     allowInvalidCertificates: false,
     apiHost: '',
     appGoogleRating: false,
-
     appearance: {
         agbInOneLine: false,
         alphaBlurViewValue: 1.0,

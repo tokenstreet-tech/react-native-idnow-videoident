@@ -56,6 +56,9 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },
+    "dependencies": {
+        "ts-essentials": "^9.1.2"
+    },
     "devDependencies": {
         "@commitlint/config-conventional": "^16.2.1",
         "@prettier/plugin-ruby": "2.0.0",
