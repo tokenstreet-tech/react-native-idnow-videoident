@@ -11,7 +11,6 @@ interface FeatureItem {
 
 const FeatureList: Array<FeatureItem> = [
     {
-        title: 'Easy to Use',
         Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
         description: (
             <>
@@ -19,9 +18,9 @@ const FeatureList: Array<FeatureItem> = [
                 running quickly.
             </>
         ),
+        title: 'Easy to Use',
     },
     {
-        title: 'Focus on What Matters',
         Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
         description: (
             <>
@@ -29,9 +28,9 @@ const FeatureList: Array<FeatureItem> = [
                 the <code>docs</code> directory.
             </>
         ),
+        title: 'Focus on What Matters',
     },
     {
-        title: 'Powered by React',
         Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
         description: (
             <>
@@ -39,6 +38,7 @@ const FeatureList: Array<FeatureItem> = [
                 same header and footer.
             </>
         ),
+        title: 'Powered by React',
     },
 ];
 
