@@ -1,3 +1,4 @@
+import type { IosLanguageEnum } from '../../enums/ios/IosLanguageEnum';
 import type { IosUIModalPresentationStyleEnum } from '../../enums/ios/IosUIModalPresentationStyleEnum';
 
 /**
@@ -98,10 +99,12 @@ export interface IIosSettings {
     //                                    Localization
     // -----------------------------------------------------------------------------------
     /**
-     * This sets the user interface language. Allowed values are: en (English), de (German), fr (French),
-     * es (Spanish), it (Italian), pt (Portugese), et (Estonian), hr (Croatian), hu (Hungarian), ka (Georgian), ko(Korean), lt(Lithuanian), lv (Latvian), nl (Dutch), pl (Polish),  ru (Russian), zh (Chinese).
+     * This sets the user interface language. Allowed values are:
+     * en (English), de (German), fr (French), es (Spanish), it (Italian), pt (Portugese), et (Estonian),
+     * hr (Croatian), hu (Hungarian), ka (Georgian), ko(Korean), lt(Lithuanian), lv (Latvian), nl (Dutch),
+     * pl (Polish),  ru (Russian), zh (Chinese).
      */
-    userInterfaceLanguage?: string;
+    userInterfaceLanguage?: IosLanguageEnum;
 
     // -----------------------------------------------------------------------------------
     //									Server Properties (optional)
