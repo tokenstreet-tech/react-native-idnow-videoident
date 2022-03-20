@@ -55,4 +55,5 @@ rules:
     '@typescript-eslint/restrict-template-expressions': 0
     max-lines: 0
     multiline-comment-style: 0
+    no-warning-comments: 0
     require-unicode-regexp: 0
