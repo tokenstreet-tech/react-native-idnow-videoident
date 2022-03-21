@@ -44,6 +44,7 @@ rules:
     simple-import-sort/exports: 2 # Enabling the plugin simple-import-sort
     simple-import-sort/imports: 2 # Enabling the plugin simple-import-sort
     sort-imports: 0 # We already use the simple-import-sort plugin
+    react/jsx-max-depth: 0 # As long as the file remains uncluttered, this limitation only encourages more complex structures
 
     '@typescript-eslint/explicit-function-return-type': 0
     '@typescript-eslint/naming-convention': 0
