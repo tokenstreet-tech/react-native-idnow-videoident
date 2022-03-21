@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-raw-text */
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';

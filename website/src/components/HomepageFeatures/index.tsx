@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-raw-text */
 import clsx from 'clsx';
 import React from 'react';
 
@@ -54,16 +55,15 @@ const Feature = ({ title, Svg, description }: FeatureItem) => (
     </div>
 );
 
-export default function HomepageFeatures(): JSX.Element {
-    return (
-        <section className={styles.features}>
-            <div className="container">
-                <div className="row">
-                    {FeatureList.map((props, idx) => (
-                        <Feature key={idx} {...props} />
-                    ))}
-                </div>
+const HomepageFeatures: React.FC = () => (
+    <section className={styles.features}>
+        <div className="container">
+            <div className="row">
+                {FeatureList.map((props: FeatureItem) => (
+                    <Feature key={props.title} {...props} />
+                ))}
             </div>
-        </section>
-    );
-}
+        </div>
+    </section>
+);
+export default HomepageFeatures;
