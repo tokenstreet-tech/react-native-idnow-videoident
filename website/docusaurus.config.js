@@ -117,7 +117,6 @@ const config = {
     plugins: [
         [
             'docusaurus-plugin-typedoc',
-
             // Plugin / TypeDoc options
             {
                 entryPoints: ['../src/index.ts'],
