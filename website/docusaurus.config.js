@@ -114,6 +114,17 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
         }),
+    plugins: [
+        [
+            'docusaurus-plugin-typedoc',
+
+            // Plugin / TypeDoc options
+            {
+                entryPoints: ['../src/index.ts'],
+                tsconfig: '../tsconfig.json',
+            },
+        ],
+    ],
 };
 
 module.exports = config;
