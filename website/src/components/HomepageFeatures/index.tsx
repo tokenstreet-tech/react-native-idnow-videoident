@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 
-// @ts-ignore
-import styles from './styles.module.css';
+import styles from './index.module.css';
 
 interface FeatureItem {
     title: string;
