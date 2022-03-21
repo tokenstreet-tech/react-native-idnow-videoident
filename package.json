@@ -34,7 +34,8 @@
         "release": "release-it",
         "example": "yarn --cwd example",
         "pods": "export LC_ALL=\"en_US.UTF-8\" && cd example && arch -x86_64 pod-install --quiet",
-        "bootstrap": "yarn && yarn build && yarn example && yarn pods",
+        "website": "yarn --cwd website",
+        "bootstrap": "yarn && yarn build && yarn example && yarn pods && yarn website",
         "prepare": "husky install"
     },
     "lint-staged": {
