@@ -1,18 +1,16 @@
 /* eslint-disable react-native/no-raw-text */
-import clsx from 'clsx';
+import undrawDocusaurusMountain from '@site/static/img/undraw_docusaurus_mountain.svg';
+import undrawDocusaurusReact from '@site/static/img/undraw_docusaurus_react.svg';
+import undrawDocusaurusTree from '@site/static/img/undraw_docusaurus_tree.svg';
 import React from 'react';
 
+import type { IFeatureItem } from './Feature';
+import { Feature } from './Feature';
 import styles from './index.module.css';
 
-interface FeatureItem {
-    title: string;
-    Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-    description: JSX.Element;
-}
-
-const FeatureList: Array<FeatureItem> = [
+const FeatureList: Array<IFeatureItem> = [
     {
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+        Svg: undrawDocusaurusMountain,
         description: (
             <>
                 Docusaurus was designed from the ground up to be easily installed and used to get your website up and
@@ -22,7 +20,7 @@ const FeatureList: Array<FeatureItem> = [
         title: 'Easy to Use',
     },
     {
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+        Svg: undrawDocusaurusTree,
         description: (
             <>
                 Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into
@@ -32,7 +30,7 @@ const FeatureList: Array<FeatureItem> = [
         title: 'Focus on What Matters',
     },
     {
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+        Svg: undrawDocusaurusReact,
         description: (
             <>
                 Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
@@ -43,23 +41,11 @@ const FeatureList: Array<FeatureItem> = [
     },
 ];
 
-const Feature = ({ title, Svg, description }: FeatureItem) => (
-    <div className={clsx('col col--4')}>
-        <div className="text--center">
-            <Svg className={styles.featureSvg} role="img" />
-        </div>
-        <div className="text--center padding-horiz--md">
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </div>
-    </div>
-);
-
 const HomepageFeatures: React.FC = () => (
     <section className={styles.features}>
         <div className="container">
             <div className="row">
-                {FeatureList.map((props: FeatureItem) => (
+                {FeatureList.map((props: IFeatureItem) => (
                     <Feature key={props.title} {...props} />
                 ))}
             </div>
