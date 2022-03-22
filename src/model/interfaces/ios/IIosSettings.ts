@@ -61,7 +61,7 @@ export interface IIosSettings {
 
     /**
      * Header file:
-     * If you use Sentry with your app, set sentryDSN to https://login:secret@<sentry-fqdn>/<project>
+     * If you use Sentry with your app, set sentryDSN to `https://login:secret@<sentry-fqdn>/<project>`
      */
     sentryDSN?: string;
 
