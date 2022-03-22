@@ -20,4 +20,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/interfaces/INativeModules.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/interfaces/INativeModules.ts#L7)
+[model/interfaces/INativeModules.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/interfaces/INativeModules.ts#L7)

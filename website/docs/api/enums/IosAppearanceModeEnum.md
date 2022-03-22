@@ -16,7 +16,7 @@ Appearance mode
 
 #### Defined in
 
-[model/enums/ios/IosAppearanceModeEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ios/IosAppearanceModeEnum.ts#L6)
+[model/enums/ios/IosAppearanceModeEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ios/IosAppearanceModeEnum.ts#L6)
 
 ---
 
@@ -26,7 +26,7 @@ Appearance mode
 
 #### Defined in
 
-[model/enums/ios/IosAppearanceModeEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ios/IosAppearanceModeEnum.ts#L5)
+[model/enums/ios/IosAppearanceModeEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ios/IosAppearanceModeEnum.ts#L5)
 
 ---
 
@@ -36,4 +36,4 @@ Appearance mode
 
 #### Defined in
 
-[model/enums/ios/IosAppearanceModeEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ios/IosAppearanceModeEnum.ts#L7)
+[model/enums/ios/IosAppearanceModeEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ios/IosAppearanceModeEnum.ts#L7)

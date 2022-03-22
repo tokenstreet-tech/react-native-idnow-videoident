@@ -58,7 +58,7 @@ const config = {
                     },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        href: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident',
                         label: 'GitHub',
                         position: 'right',
                     },
@@ -71,25 +71,25 @@ const config = {
                         title: 'Docs',
                         items: [
                             {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
+                                label: 'API',
+                                to: '/docs/api',
                             },
                         ],
                     },
                     {
-                        title: 'Community',
+                        title: 'Company',
                         items: [
                             {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                                label: 'Website',
+                                href: 'https://en.tokenstreet.com/',
                             },
                             {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
+                                label: 'Career',
+                                href: 'https://en.tokenstreet.com/career',
                             },
                             {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
+                                label: 'LinkedIn',
+                                href: 'https://www.linkedin.com/company/tokenstreet-com/',
                             },
                         ],
                     },
@@ -102,7 +102,7 @@ const config = {
                             },
                             {
                                 label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
+                                href: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident',
                             },
                         ],
                     },

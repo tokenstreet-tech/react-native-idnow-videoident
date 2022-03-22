@@ -16,7 +16,7 @@ Result codes
 
 #### Defined in
 
-[model/enums/ResultCodeEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ResultCodeEnum.ts#L6)
+[model/enums/ResultCodeEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ResultCodeEnum.ts#L6)
 
 ---
 
@@ -26,7 +26,7 @@ Result codes
 
 #### Defined in
 
-[model/enums/ResultCodeEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ResultCodeEnum.ts#L7)
+[model/enums/ResultCodeEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ResultCodeEnum.ts#L7)
 
 ---
 
@@ -36,7 +36,7 @@ Result codes
 
 #### Defined in
 
-[model/enums/ResultCodeEnum.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ResultCodeEnum.ts#L8)
+[model/enums/ResultCodeEnum.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ResultCodeEnum.ts#L8)
 
 ---
 
@@ -46,4 +46,4 @@ Result codes
 
 #### Defined in
 
-[model/enums/ResultCodeEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/3ccd201/src/model/enums/ResultCodeEnum.ts#L5)
+[model/enums/ResultCodeEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/39b52cc/src/model/enums/ResultCodeEnum.ts#L5)
