@@ -46,7 +46,7 @@ const config = {
             navbar: {
                 title: 'React Native IDnow VideoIdent',
                 logo: {
-                    alt: 'My Site Logo',
+                    alt: 'tokenstreet Logo',
                     src: 'img/logo.svg',
                 },
                 items: [
@@ -99,6 +99,10 @@ const config = {
                             {
                                 label: 'Blog',
                                 to: '/blog',
+                            },
+                            {
+                                label: 'Medium',
+                                href: 'https://medium.com/tokenstreet-tech',
                             },
                             {
                                 label: 'GitHub',
