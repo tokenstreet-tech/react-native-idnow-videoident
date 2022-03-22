@@ -44,7 +44,7 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: 'My Site',
+                title: 'React Native IDnow VideoIdent',
                 logo: {
                     alt: 'My Site Logo',
                     src: 'img/logo.svg',
@@ -52,9 +52,9 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'api/index',
                         position: 'left',
-                        label: 'Tutorial',
+                        label: 'Docs',
                     },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
