@@ -2,7 +2,7 @@
 slug: open source release
 title: Open Source release
 authors:
-    name: Daniel Reichart
+    name: Daniel Reichhart
     title: Frontend Lead @ tokenstreet
     url: https://github.com/reichhartd
     image_url: https://github.com/reichhartd.png
