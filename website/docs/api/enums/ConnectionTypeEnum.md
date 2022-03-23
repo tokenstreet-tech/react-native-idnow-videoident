@@ -23,7 +23,7 @@ Use long polling
 
 #### Defined in
 
-[model/enums/ConnectionTypeEnum.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/0d9fcdd/src/model/enums/ConnectionTypeEnum.ts#L18)
+[model/enums/ConnectionTypeEnum.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/enums/ConnectionTypeEnum.ts#L18)
 
 ---
 
@@ -36,4 +36,4 @@ Use websockets using SocketRocket (default)
 
 #### Defined in
 
-[model/enums/ConnectionTypeEnum.ts:13](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/0d9fcdd/src/model/enums/ConnectionTypeEnum.ts#L13)
+[model/enums/ConnectionTypeEnum.ts:13](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/enums/ConnectionTypeEnum.ts#L13)

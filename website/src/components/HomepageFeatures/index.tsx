@@ -1,5 +1,7 @@
 /* eslint-disable react-native/no-raw-text */
+import { useColorMode } from '@docusaurus/theme-common';
 import configurable from '@site/static/img/configurable.svg';
+import configurableDark from '@site/static/img/configurableDark.svg';
 import dependabot from '@site/static/img/dependabot.svg';
 import typescript from '@site/static/img/typescript.svg';
 import React, { useMemo } from 'react';
@@ -9,6 +11,8 @@ import { Feature } from './Feature';
 import styles from './index.module.css';
 
 const HomepageFeatures: React.FC = () => {
+    const { isDarkTheme } = useColorMode();
+
     const FeatureList = useMemo<Array<IFeatureItem>>(
         () => [
             {
@@ -22,7 +26,7 @@ const HomepageFeatures: React.FC = () => {
                 title: 'First class TypeScript support',
             },
             {
-                Svg: configurable,
+                Svg: isDarkTheme ? configurableDark : configurable,
                 description: <>All configuration options of the SDKs are possible from the JavaScript side.</>,
                 title: 'Highly configurable',
             },
@@ -37,7 +41,7 @@ const HomepageFeatures: React.FC = () => {
                 title: 'Always up to date',
             },
         ],
-        []
+        [isDarkTheme]
     );
 
     return (
