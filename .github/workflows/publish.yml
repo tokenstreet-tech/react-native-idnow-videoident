@@ -23,6 +23,7 @@ jobs:
                   node-version: 16
                   registry-url: 'https://registry.npmjs.org'
             - run: yarn install --frozen-lockfile
+            - run: yarn install --cwd website --frozen-lockfile
             - run: yarn build
             - run: yarn version --${{ github.event.inputs.version }}
             - run: git push --follow-tags

@@ -23,6 +23,10 @@ updates:
           interval: 'daily'
       ignore:
           - dependency-name: 'idnow-android-sdk'
+    - package-ecosystem: 'npm'
+      directory: '/website'
+      schedule:
+          interval: 'daily'
     - package-ecosystem: 'github-actions'
       directory: '/'
       schedule:
