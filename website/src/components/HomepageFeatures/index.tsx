@@ -11,33 +11,27 @@ import styles from './index.module.css';
 const FeatureList: Array<IFeatureItem> = [
     {
         Svg: undrawDocusaurusMountain,
-        description: (
-            <>
-                Docusaurus was designed from the ground up to be easily installed and used to get your website up and
-                running quickly.
-            </>
-        ),
-        title: 'Easy to Use',
+        description: <>All configuration options of the SDKs are possible from the JavaScript side.</>,
+        title: 'Highly configurable',
     },
     {
         Svg: undrawDocusaurusTree,
         description: (
             <>
-                Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into
-                the <code>docs</code> directory.
+                Latest dependencies of the IDnow <a href="https://github.com/idnow/de.idnow.ios">iOS</a> and{' '}
+                <a href="https://github.com/idnow/de.idnow.android">Android</a> SDKs. Secured by Dependabot.
             </>
         ),
-        title: 'Focus on What Matters',
+        title: 'Always up to date',
     },
     {
         Svg: undrawDocusaurusReact,
         description: (
             <>
-                Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
-                same header and footer.
+                Strong type declarations are included in this package. There isn&apos;t a single <code>any</code>.
             </>
         ),
-        title: 'Powered by React',
+        title: 'First class TypeScript support',
     },
 ];
 

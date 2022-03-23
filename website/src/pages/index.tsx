@@ -7,7 +7,7 @@ import React from 'react';
 const Home: React.FC = () => {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout description="Description will go into a meta tag in <head />" title={`Hello from ${siteConfig.title}`}>
+        <Layout description={siteConfig.tagline} title={siteConfig.title}>
             <HomepageHeader />
             <main>
                 <HomepageFeatures />
