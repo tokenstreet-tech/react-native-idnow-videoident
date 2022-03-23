@@ -12,6 +12,16 @@ const HomepageFeatures: React.FC = () => {
     const FeatureList = useMemo<Array<IFeatureItem>>(
         () => [
             {
+                Svg: typescript,
+                description: (
+                    <>
+                        Strong type declarations are included in this package. There isn&apos;t a single{' '}
+                        <code>any</code>.
+                    </>
+                ),
+                title: 'First class TypeScript support',
+            },
+            {
                 Svg: configurable,
                 description: <>All configuration options of the SDKs are possible from the JavaScript side.</>,
                 title: 'Highly configurable',
@@ -25,16 +35,6 @@ const HomepageFeatures: React.FC = () => {
                     </>
                 ),
                 title: 'Always up to date',
-            },
-            {
-                Svg: typescript,
-                description: (
-                    <>
-                        Strong type declarations are included in this package. There isn&apos;t a single{' '}
-                        <code>any</code>.
-                    </>
-                ),
-                title: 'First class TypeScript support',
             },
         ],
         []
