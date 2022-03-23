@@ -40,4 +40,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[IDnowManager.ts:13](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6ecc208/src/IDnowManager.ts#L13)
+[IDnowManager.ts:13](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/0d9fcdd/src/IDnowManager.ts#L13)
