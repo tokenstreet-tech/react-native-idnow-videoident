@@ -30,6 +30,7 @@ jobs:
                   node-version: 16
             - run: |
                   yarn install --frozen-lockfile
+                  yarn install --cwd website --frozen-lockfile
                   yarn build
                   yarn install --cwd example --frozen-lockfile
             - run: yarn ${{ matrix.COMMAND }}
