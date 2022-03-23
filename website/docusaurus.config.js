@@ -33,9 +33,7 @@ const config = {
                     editUrl:
                         'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
-                theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
-                },
+                theme: { customCss: require.resolve('./src/css/custom.css') },
             }),
         ],
     ],
@@ -45,17 +43,9 @@ const config = {
         ({
             navbar: {
                 title: 'React Native IDnow VideoIdent',
-                logo: {
-                    alt: 'tokenstreet Logo',
-                    src: 'img/logo.svg',
-                },
+                logo: { alt: 'tokenstreet Logo', src: 'img/logo.svg', srcDark: 'img/logoDark.svg' },
                 items: [
-                    {
-                        type: 'doc',
-                        docId: 'api/index',
-                        position: 'left',
-                        label: 'Docs',
-                    },
+                    { type: 'doc', docId: 'api/index', position: 'left', label: 'Docs' },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident',
@@ -69,41 +59,21 @@ const config = {
                 links: [
                     {
                         title: 'Docs',
-                        items: [
-                            {
-                                label: 'API',
-                                to: '/docs/api',
-                            },
-                        ],
+                        items: [{ label: 'API', to: '/docs/api' }],
                     },
                     {
                         title: 'Company',
                         items: [
-                            {
-                                label: 'Website',
-                                href: 'https://en.tokenstreet.com/',
-                            },
-                            {
-                                label: 'Career',
-                                href: 'https://en.tokenstreet.com/career',
-                            },
-                            {
-                                label: 'LinkedIn',
-                                href: 'https://www.linkedin.com/company/tokenstreet-com/',
-                            },
+                            { label: 'Website', href: 'https://en.tokenstreet.com/' },
+                            { label: 'Career', href: 'https://en.tokenstreet.com/career' },
+                            { label: 'LinkedIn', href: 'https://www.linkedin.com/company/tokenstreet-com/' },
                         ],
                     },
                     {
                         title: 'More',
                         items: [
-                            {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
-                            {
-                                label: 'Medium',
-                                href: 'https://medium.com/tokenstreet-tech',
-                            },
+                            { label: 'Blog', to: '/blog' },
+                            { label: 'Medium', href: 'https://medium.com/tokenstreet-tech' },
                             {
                                 label: 'GitHub',
                                 href: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident',
@@ -113,10 +83,7 @@ const config = {
                 ],
                 copyright: `Copyright © ${new Date().getFullYear()} tokenstreet GmbH`,
             },
-            prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
-            },
+            prism: { theme: lightCodeTheme, darkTheme: darkCodeTheme },
         }),
     plugins: [
         [
