@@ -35,7 +35,7 @@ IIosColors.backgroundColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:175](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L175)
+[model/interfaces/ios/IIosColors.ts:175](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L175)
 
 ---
 
@@ -53,7 +53,7 @@ IIosColors.checkContractFooterButtonBackgroundColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:110](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L110)
+[model/interfaces/ios/IIosColors.ts:110](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L110)
 
 ---
 
@@ -71,7 +71,7 @@ IIosColors.checkContractFooterButtonTextColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:117](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L117)
+[model/interfaces/ios/IIosColors.ts:117](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L117)
 
 ---
 
@@ -90,7 +90,7 @@ IIosColors.checkIconColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:56](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L56)
+[model/interfaces/ios/IIosColors.ts:56](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L56)
 
 ---
 
@@ -112,7 +112,7 @@ IIosColors.cqcDefaultInnerRingColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:212](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L212)
+[model/interfaces/ios/IIosColors.ts:212](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L212)
 
 ---
 
@@ -135,7 +135,7 @@ IIosColors.cqcExcellentQualityInnerColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:248](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L248)
+[model/interfaces/ios/IIosColors.ts:248](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L248)
 
 ---
 
@@ -158,7 +158,7 @@ IIosColors.cqcModerateQualityInnerColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:236](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L236)
+[model/interfaces/ios/IIosColors.ts:236](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L236)
 
 ---
 
@@ -180,7 +180,7 @@ IIosColors.cqcOuterRingColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:201](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L201)
+[model/interfaces/ios/IIosColors.ts:201](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L201)
 
 ---
 
@@ -203,7 +203,7 @@ IIosColors.cqcPoorQualityInnerColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:224](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L224)
+[model/interfaces/ios/IIosColors.ts:224](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L224)
 
 ---
 
@@ -227,7 +227,7 @@ IIosColors.defaultTextColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L18)
+[model/interfaces/ios/IIosColors.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L18)
 
 ---
 
@@ -249,7 +249,7 @@ IIosColors.failureColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:145](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L145)
+[model/interfaces/ios/IIosColors.ts:145](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L145)
 
 ---
 
@@ -268,7 +268,7 @@ IIosColors.headlineColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:40](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L40)
+[model/interfaces/ios/IIosColors.ts:40](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L40)
 
 ---
 
@@ -287,7 +287,7 @@ IIosColors.linkColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:48](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L48)
+[model/interfaces/ios/IIosColors.ts:48](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L48)
 
 ---
 
@@ -310,7 +310,7 @@ IIosColors.photoIdentRetakeButtonBackgroundColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:91](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L91)
+[model/interfaces/ios/IIosColors.ts:91](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L91)
 
 ---
 
@@ -333,7 +333,7 @@ IIosColors.photoIdentRetakeButtonTextColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:103](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L103)
+[model/interfaces/ios/IIosColors.ts:103](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L103)
 
 ---
 
@@ -350,7 +350,7 @@ IIosColors.primaryAlertActionColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:181](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L181)
+[model/interfaces/ios/IIosColors.ts:181](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L181)
 
 ---
 
@@ -375,7 +375,7 @@ IIosColors.primaryBrandColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:32](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L32)
+[model/interfaces/ios/IIosColors.ts:32](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L32)
 
 ---
 
@@ -397,7 +397,7 @@ IIosColors.proceedButtonBackgroundColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:67](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L67)
+[model/interfaces/ios/IIosColors.ts:67](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L67)
 
 ---
 
@@ -420,7 +420,7 @@ IIosColors.proceedButtonTextColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:79](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L79)
+[model/interfaces/ios/IIosColors.ts:79](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L79)
 
 ---
 
@@ -437,7 +437,7 @@ IIosColors.resultScreenHeaderLabelColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:169](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L169)
+[model/interfaces/ios/IIosColors.ts:169](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L169)
 
 ---
 
@@ -454,7 +454,7 @@ IIosColors.secondaryAlertActionColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:187](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L187)
+[model/interfaces/ios/IIosColors.ts:187](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L187)
 
 ---
 
@@ -476,7 +476,7 @@ IIosColors.successColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:156](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L156)
+[model/interfaces/ios/IIosColors.ts:156](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L156)
 
 ---
 
@@ -493,7 +493,7 @@ IIosColors.textFieldBorderColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:134](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L134)
+[model/interfaces/ios/IIosColors.ts:134](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L134)
 
 ---
 
@@ -515,7 +515,7 @@ IIosColors.textFieldColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:128](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L128)
+[model/interfaces/ios/IIosColors.ts:128](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L128)
 
 ---
 
@@ -533,4 +533,4 @@ IIosColors.titleBackgroundColor
 
 #### Defined in
 
-[model/interfaces/ios/IIosColors.ts:163](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/f03b8d7/src/model/interfaces/ios/IIosColors.ts#L163)
+[model/interfaces/ios/IIosColors.ts:163](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/ios/IIosColors.ts#L163)

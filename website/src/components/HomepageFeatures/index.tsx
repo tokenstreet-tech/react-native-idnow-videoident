@@ -27,7 +27,14 @@ const HomepageFeatures: React.FC = () => {
             },
             {
                 Svg: isDarkTheme ? configurableDark : configurable,
-                description: <>All configuration options of the SDKs are possible from the JavaScript side.</>,
+                description: (
+                    <>
+                        All configuration options of the SDKs are possible from the JavaScript side.{' '}
+                        <a href="https://github.com/tokenstreet-tech/react-native-idnow-videoident#features">
+                            At the moment, with a few exceptions.
+                        </a>
+                    </>
+                ),
                 title: 'Highly configurable',
             },
             {
