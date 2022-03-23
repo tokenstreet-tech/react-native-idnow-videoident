@@ -16,7 +16,7 @@ Number label positions
 
 #### Defined in
 
-[model/enums/ios/IosNumberLabelPositionEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6cdb5f5/src/model/enums/ios/IosNumberLabelPositionEnum.ts#L6)
+[model/enums/ios/IosNumberLabelPositionEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6ecc208/src/model/enums/ios/IosNumberLabelPositionEnum.ts#L6)
 
 ---
 
@@ -26,7 +26,7 @@ Number label positions
 
 #### Defined in
 
-[model/enums/ios/IosNumberLabelPositionEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6cdb5f5/src/model/enums/ios/IosNumberLabelPositionEnum.ts#L7)
+[model/enums/ios/IosNumberLabelPositionEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6ecc208/src/model/enums/ios/IosNumberLabelPositionEnum.ts#L7)
 
 ---
 
@@ -36,4 +36,4 @@ Number label positions
 
 #### Defined in
 
-[model/enums/ios/IosNumberLabelPositionEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6cdb5f5/src/model/enums/ios/IosNumberLabelPositionEnum.ts#L5)
+[model/enums/ios/IosNumberLabelPositionEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6ecc208/src/model/enums/ios/IosNumberLabelPositionEnum.ts#L5)

@@ -20,6 +20,8 @@ custom_edit_url: null
 
 ## Interfaces
 
+-   [IAppearance](interfaces/IAppearance.md)
+-   [IColors](interfaces/IColors.md)
 -   [IIdentificationErrorResult](interfaces/IIdentificationErrorResult.md)
 -   [IIdentificationResult](interfaces/IIdentificationResult.md)
 -   [ISettings](interfaces/ISettings.md)
@@ -38,4 +40,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[IDnowManager.ts:13](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6cdb5f5/src/IDnowManager.ts#L13)
+[IDnowManager.ts:13](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/6ecc208/src/IDnowManager.ts#L13)
