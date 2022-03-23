@@ -1647,13 +1647,13 @@
   dependencies:
     prettier ">=2.3.0"
 
-"@prettier/plugin-xml@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-1.2.0.tgz#8bc75e3f715338e2f72efae5cd3a370f4d3ad23f"
-  integrity sha512-bFvVAZKs59XNmntYjyefn3K4TBykS6E+d6ZW8IcylAs88ZO+TzLhp0dPpi0VKfPzq1Nb+kpDnPRTiwb4zY6NgA==
+"@prettier/plugin-xml@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-2.0.1.tgz#947d80d2e3bca798ee37130302c99ddd0ce863b6"
+  integrity sha512-zJ2+/J5ujo23oHwaiuo3DEnxnRWSw/52IP7to+XmHiTC/qG17w2ld6FbDfVrsnO2PTPp0HFotPtZFlbrPJnaqA==
   dependencies:
     "@xml-tools/parser" "^1.0.11"
-    prettier ">=2.3"
+    prettier ">=2.4.0"
 
 "@react-native-community/cli-debugger-ui@^6.0.0-rc.0":
   version "6.0.0"
@@ -7659,7 +7659,7 @@ prettier@2.5.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
   integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
 
-prettier@>=2.3, prettier@>=2.3.0, prettier@^2.0.2:
+prettier@>=2.3.0, prettier@>=2.4.0, prettier@^2.0.2:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.0.tgz#12f8f504c4d8ddb76475f441337542fa799207d4"
   integrity sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==
