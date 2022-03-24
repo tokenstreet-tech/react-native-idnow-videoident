@@ -16,6 +16,8 @@ const config = {
     favicon: 'img/favicon.ico',
     organizationName: 'tokenstreet-tech', // Usually your GitHub org/user name.
     projectName: 'react-native-idnow-videoident', // Usually your repo name.
+    deploymentBranch: 'gh-pages',
+    trailingSlash: false,
     presets: [
         [
             'classic',

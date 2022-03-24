@@ -23,7 +23,7 @@ Api Host
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:196](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L196)
+[model/enums/EnvironmentEnum.ts:196](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L196)
 
 ---
 
@@ -39,7 +39,7 @@ https://api.dev.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:16](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L16)
+[model/enums/EnvironmentEnum.ts:16](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L16)
 
 ---
 
@@ -55,7 +55,7 @@ https://api.dev0.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:25](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L25)
+[model/enums/EnvironmentEnum.ts:25](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L25)
 
 ---
 
@@ -71,7 +71,7 @@ https://api.dev1.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:34](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L34)
+[model/enums/EnvironmentEnum.ts:34](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L34)
 
 ---
 
@@ -87,7 +87,7 @@ https://api.dev2.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:43](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L43)
+[model/enums/EnvironmentEnum.ts:43](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L43)
 
 ---
 
@@ -103,7 +103,7 @@ https://api.dev3.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:52](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L52)
+[model/enums/EnvironmentEnum.ts:52](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L52)
 
 ---
 
@@ -119,7 +119,7 @@ https://api.dev4.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:61](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L61)
+[model/enums/EnvironmentEnum.ts:61](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L61)
 
 ---
 
@@ -135,7 +135,7 @@ https://api.dev5.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:70](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L70)
+[model/enums/EnvironmentEnum.ts:70](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L70)
 
 ---
 
@@ -150,7 +150,7 @@ Dev6 server environment
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:78](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L78)
+[model/enums/EnvironmentEnum.ts:78](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L78)
 
 ---
 
@@ -165,7 +165,7 @@ Dev7 server environment
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:86](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L86)
+[model/enums/EnvironmentEnum.ts:86](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L86)
 
 ---
 
@@ -180,7 +180,7 @@ Dev8 server environment
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:94](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L94)
+[model/enums/EnvironmentEnum.ts:94](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L94)
 
 ---
 
@@ -195,7 +195,7 @@ Dev9 server environment
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:102](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L102)
+[model/enums/EnvironmentEnum.ts:102](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L102)
 
 ---
 
@@ -212,7 +212,7 @@ https://api.online-ident.ch
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:206](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L206)
+[model/enums/EnvironmentEnum.ts:206](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L206)
 
 ---
 
@@ -227,7 +227,7 @@ Intrum server environment
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:176](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L176)
+[model/enums/EnvironmentEnum.ts:176](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L176)
 
 ---
 
@@ -242,7 +242,7 @@ Intrum test server environment
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:184](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L184)
+[model/enums/EnvironmentEnum.ts:184](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L184)
 
 ---
 
@@ -258,7 +258,7 @@ https://api.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:165](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L165)
+[model/enums/EnvironmentEnum.ts:165](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L165)
 
 ---
 
@@ -273,7 +273,7 @@ Server environment not defined
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:214](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L214)
+[model/enums/EnvironmentEnum.ts:214](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L214)
 
 ---
 
@@ -288,7 +288,7 @@ https://api.staging1.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:153](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L153)
+[model/enums/EnvironmentEnum.ts:153](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L153)
 
 ---
 
@@ -305,7 +305,7 @@ https://api.test.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:115](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L115)
+[model/enums/EnvironmentEnum.ts:115](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L115)
 
 ---
 
@@ -321,7 +321,7 @@ https://api.test1.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:124](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L124)
+[model/enums/EnvironmentEnum.ts:124](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L124)
 
 ---
 
@@ -337,7 +337,7 @@ https://api.test2.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:133](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L133)
+[model/enums/EnvironmentEnum.ts:133](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L133)
 
 ---
 
@@ -353,4 +353,4 @@ https://api.test3.idnow.de
 
 #### Defined in
 
-[model/enums/EnvironmentEnum.ts:142](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/enums/EnvironmentEnum.ts#L142)
+[model/enums/EnvironmentEnum.ts:142](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/EnvironmentEnum.ts#L142)
