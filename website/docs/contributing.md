@@ -1,10 +1,4 @@
 ---
-id: 'contributing'
-title: 'Contributing'
-slug: '/contributing/'
-sidebar_label: 'Contributing'
-sidebar_position: 1
-custom_edit_url: null
 ---
 
 # Contributing
