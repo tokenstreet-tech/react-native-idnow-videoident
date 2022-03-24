@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://tokenstreet-tech.github.io/react-native-idnow-videoident/blog</id>
+    <title>React Native IDnow VideoIdent Blog</title>
+    <updated>2022-03-22T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://tokenstreet-tech.github.io/react-native-idnow-videoident/blog"/>
+    <subtitle>React Native IDnow VideoIdent Blog</subtitle>
+    <icon>https://tokenstreet-tech.github.io/react-native-idnow-videoident/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Open Source release]]></title>
+        <id>open source release</id>
+        <link href="https://tokenstreet-tech.github.io/react-native-idnow-videoident/blog/open source release"/>
+        <updated>2022-03-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
+        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <author>
+            <name>Daniel Reichhart</name>
+            <uri>https://github.com/reichhartd</uri>
+        </author>
+        <category label="open" term="open"/>
+        <category label="source" term="source"/>
+        <category label="release" term="release"/>
+    </entry>
+</feed>
