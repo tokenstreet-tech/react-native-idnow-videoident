@@ -143,7 +143,7 @@ IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
     });
 ```
 
-All configuration options are documented in the [TypeScript interfaces](src/model/interfaces/ISettings.ts) and [an example](example/src/createFullSettings.ts) is also available.
+All configuration options are documented in the [TypeScript interfaces](https://tokenstreet-tech.github.io/react-native-idnow-videoident/docs/api/interfaces/ISettings) and [an example](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/main/example/src/createFullSettings.ts) is also available.
 
 ## Versioning
 
@@ -151,7 +151,7 @@ We do not follow [Semantic Versioning 2.0.0](https://semver.org/) until `v1` is 
 
 ## Contributing
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+See the [contributing guide](https://tokenstreet-tech.github.io/react-native-idnow-videoident/docs/contributing) to learn how to contribute to the repository and the development workflow.
 
 ## License
 

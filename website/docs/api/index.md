@@ -23,10 +23,10 @@ However, almost the entire code has been rewritten since then, so there are now 
 ## Features
 
 -   All configuration options of the SDKs are possible from the JavaScript side (except `externalLogger`, `customBackButtonItem`, `customCancelButton` & `customAgentView` for iOS, and the [colors for Android](https://github.com/tokenstreet-tech/react-native-idnow-videoident/issues/139))
--   Latest dependencies of the IDnow [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDKs (secured by Dependabot)
+-   Latest dependencies of the IDnow [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDKs - Secured by Dependabot
 -   No need to manually include native files
--   Published as CommonJS & ESmodules, with type definitions
--   Strong type system - Not a single <code>any</code>
+-   Published as CommonJS & ESmodules
+-   Strong type declarations are included in this package - There isn't a single `any`
 
 ## Requirements
 
@@ -152,7 +152,7 @@ IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
     });
 ```
 
-All configuration options are documented in the [TypeScript interfaces](src/model/interfaces/ISettings.ts) and [an example](example/src/createFullSettings.ts) is also available.
+All configuration options are documented in the [TypeScript interfaces](https://tokenstreet-tech.github.io/react-native-idnow-videoident/docs/api/interfaces/ISettings) and [an example](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/main/example/src/createFullSettings.ts) is also available.
 
 ## Versioning
 
@@ -160,7 +160,7 @@ We do not follow [Semantic Versioning 2.0.0](https://semver.org/) until `v1` is 
 
 ## Contributing
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+See the [contributing guide](https://tokenstreet-tech.github.io/react-native-idnow-videoident/docs/contributing) to learn how to contribute to the repository and the development workflow.
 
 ## License
 

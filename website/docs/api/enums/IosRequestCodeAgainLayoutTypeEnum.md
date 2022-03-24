@@ -16,7 +16,7 @@ Request code again layout type
 
 #### Defined in
 
-[model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts#L5)
+[model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts#L5)
 
 ---
 
@@ -26,4 +26,4 @@ Request code again layout type
 
 #### Defined in
 
-[model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts#L6)
+[model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/ios/IosRequestCodeAgainLayoutTypeEnum.ts#L6)

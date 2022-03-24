@@ -16,7 +16,7 @@ Checkbox positions
 
 #### Defined in
 
-[model/enums/ios/IosCheckboxPositionEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosCheckboxPositionEnum.ts#L5)
+[model/enums/ios/IosCheckboxPositionEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/ios/IosCheckboxPositionEnum.ts#L5)
 
 ---
 
@@ -26,7 +26,7 @@ Checkbox positions
 
 #### Defined in
 
-[model/enums/ios/IosCheckboxPositionEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosCheckboxPositionEnum.ts#L6)
+[model/enums/ios/IosCheckboxPositionEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/ios/IosCheckboxPositionEnum.ts#L6)
 
 ---
 
@@ -36,4 +36,4 @@ Checkbox positions
 
 #### Defined in
 
-[model/enums/ios/IosCheckboxPositionEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosCheckboxPositionEnum.ts#L7)
+[model/enums/ios/IosCheckboxPositionEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/314d601/src/model/enums/ios/IosCheckboxPositionEnum.ts#L7)
