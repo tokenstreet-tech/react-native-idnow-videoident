@@ -37,7 +37,7 @@ IAndroidSettings.allowHttpConnections
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:30](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L30)
+[model/interfaces/android/IAndroidSettings.ts:30](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L30)
 
 ---
 
@@ -57,7 +57,7 @@ IIosSettings.allowInvalidCertificates
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:117](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L117)
+[model/interfaces/ios/IIosSettings.ts:117](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L117)
 
 ---
 
@@ -77,7 +77,7 @@ IIosSettings.apiHost
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:126](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L126)
+[model/interfaces/ios/IIosSettings.ts:126](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L126)
 
 ---
 
@@ -91,7 +91,7 @@ IAndroidSettings.appGoogleRating
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:66](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L66)
+[model/interfaces/android/IAndroidSettings.ts:66](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L66)
 
 ---
 
@@ -103,7 +103,7 @@ Appearance
 
 #### Defined in
 
-[model/interfaces/ISettings.ts:93](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ISettings.ts#L93)
+[model/interfaces/ISettings.ts:93](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ISettings.ts#L93)
 
 ---
 
@@ -122,7 +122,7 @@ IIosSettings.automaticPagingTimeInterval
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:95](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L95)
+[model/interfaces/ios/IIosSettings.ts:95](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L95)
 
 ---
 
@@ -136,7 +136,7 @@ IAndroidSettings.callFromHighCallVolumeActivity
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:16](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L16)
+[model/interfaces/android/IAndroidSettings.ts:16](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L16)
 
 ---
 
@@ -155,7 +155,7 @@ IAndroidSettings.calledFromIDnowApp
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:26](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L26)
+[model/interfaces/android/IAndroidSettings.ts:26](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L26)
 
 ---
 
@@ -169,7 +169,7 @@ IAndroidSettings.checkScreenBoxConsentRequired
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:40](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L40)
+[model/interfaces/android/IAndroidSettings.ts:40](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L40)
 
 ---
 
@@ -183,7 +183,7 @@ IAndroidSettings.checkScreenBoxDocumentRequired
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:36](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L36)
+[model/interfaces/android/IAndroidSettings.ts:36](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L36)
 
 ---
 
@@ -197,7 +197,7 @@ IAndroidSettings.checkScreenBoxEMailRequired
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:38](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L38)
+[model/interfaces/android/IAndroidSettings.ts:38](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L38)
 
 ---
 
@@ -211,7 +211,7 @@ IAndroidSettings.checkScreenBoxPhoneNumberRequired
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:34](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L34)
+[model/interfaces/android/IAndroidSettings.ts:34](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L34)
 
 ---
 
@@ -225,7 +225,7 @@ IAndroidSettings.checkScreenLinesLong
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:32](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L32)
+[model/interfaces/android/IAndroidSettings.ts:32](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L32)
 
 ---
 
@@ -245,7 +245,7 @@ IDnowSDK is a singleton class, so just call it with IDnowSDK.getInstance()
 
 #### Defined in
 
-[model/interfaces/ISettings.ts:42](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ISettings.ts#L42)
+[model/interfaces/ISettings.ts:42](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ISettings.ts#L42)
 
 ---
 
@@ -264,7 +264,7 @@ You can set the connection type to use: websockets.
 
 #### Defined in
 
-[model/interfaces/ISettings.ts:85](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ISettings.ts#L85)
+[model/interfaces/ISettings.ts:85](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ISettings.ts#L85)
 
 ---
 
@@ -281,7 +281,7 @@ IAndroidSettings.disableLogging
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:14](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L14)
+[model/interfaces/android/IAndroidSettings.ts:14](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L14)
 
 ---
 
@@ -315,7 +315,7 @@ You can force one of the environments to use. Default is to determine this by th
 
 #### Defined in
 
-[model/interfaces/ISettings.ts:73](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ISettings.ts#L73)
+[model/interfaces/ISettings.ts:73](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ISettings.ts#L73)
 
 ---
 
@@ -329,7 +329,7 @@ IAndroidSettings.firebaseToken
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:51](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L51)
+[model/interfaces/android/IAndroidSettings.ts:51](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L51)
 
 ---
 
@@ -346,7 +346,7 @@ IIosSettings.forceErrorSuccessScreen
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:33](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L33)
+[model/interfaces/ios/IIosSettings.ts:33](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L33)
 
 ---
 
@@ -369,7 +369,7 @@ IIosSettings.forceModalPresentation
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:27](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L27)
+[model/interfaces/ios/IIosSettings.ts:27](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L27)
 
 ---
 
@@ -383,7 +383,7 @@ IAndroidSettings.forcedWaitingList
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:55](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L55)
+[model/interfaces/android/IAndroidSettings.ts:55](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L55)
 
 ---
 
@@ -400,7 +400,7 @@ IIosSettings.ignoreCompanyID
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:78](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L78)
+[model/interfaces/ios/IIosSettings.ts:78](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L78)
 
 ---
 
@@ -414,7 +414,7 @@ IAndroidSettings.language
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:4](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L4)
+[model/interfaces/android/IAndroidSettings.ts:4](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L4)
 
 ---
 
@@ -428,7 +428,7 @@ IAndroidSettings.locale
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L6)
+[model/interfaces/android/IAndroidSettings.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L6)
 
 ---
 
@@ -450,7 +450,7 @@ IIosSettings.modalPresentationStyle
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:44](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L44)
+[model/interfaces/ios/IIosSettings.ts:44](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L44)
 
 ---
 
@@ -464,7 +464,7 @@ IAndroidSettings.newLocale
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L8)
+[model/interfaces/android/IAndroidSettings.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L8)
 
 ---
 
@@ -480,7 +480,7 @@ IAndroidSettings.overrideEntryActivity
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:64](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L64)
+[model/interfaces/android/IAndroidSettings.ts:64](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L64)
 
 ---
 
@@ -494,7 +494,7 @@ IAndroidSettings.phoneNo
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:42](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L42)
+[model/interfaces/android/IAndroidSettings.ts:42](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L42)
 
 ---
 
@@ -511,7 +511,7 @@ IIosSettings.productName
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:72](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L72)
+[model/interfaces/ios/IIosSettings.ts:72](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L72)
 
 ---
 
@@ -528,7 +528,7 @@ IIosSettings.pushDeviceToken
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:60](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L60)
+[model/interfaces/ios/IIosSettings.ts:60](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L60)
 
 ---
 
@@ -545,7 +545,7 @@ IIosSettings.sentryDSN
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:66](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L66)
+[model/interfaces/ios/IIosSettings.ts:66](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L66)
 
 ---
 
@@ -561,7 +561,7 @@ IAndroidSettings.showDialogsWithIcon
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:49](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L49)
+[model/interfaces/android/IAndroidSettings.ts:49](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L49)
 
 ---
 
@@ -579,7 +579,7 @@ IIosSettings.showIdentTokenOnCheckScreen
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:15](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L15)
+[model/interfaces/ios/IIosSettings.ts:15](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L15)
 
 ---
 
@@ -593,7 +593,7 @@ IAndroidSettings.showRatingDialog
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:53](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L53)
+[model/interfaces/android/IAndroidSettings.ts:53](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L53)
 
 ---
 
@@ -607,7 +607,7 @@ IAndroidSettings.startCallIssued
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:57](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L57)
+[model/interfaces/android/IAndroidSettings.ts:57](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L57)
 
 ---
 
@@ -624,7 +624,7 @@ IIosSettings.stunHost
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:147](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L147)
+[model/interfaces/ios/IIosSettings.ts:147](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L147)
 
 ---
 
@@ -641,7 +641,7 @@ IIosSettings.stunPort
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:153](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L153)
+[model/interfaces/ios/IIosSettings.ts:153](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L153)
 
 ---
 
@@ -657,7 +657,7 @@ Set the transactionToken, for example from a TextField
 
 #### Defined in
 
-[model/interfaces/ISettings.ts:29](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ISettings.ts#L29)
+[model/interfaces/ISettings.ts:29](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ISettings.ts#L29)
 
 ---
 
@@ -674,7 +674,7 @@ IIosSettings.userInterfaceLanguage
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:104](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L104)
+[model/interfaces/ios/IIosSettings.ts:104](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L104)
 
 ---
 
@@ -691,7 +691,7 @@ IIosSettings.videoHost
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:141](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L141)
+[model/interfaces/ios/IIosSettings.ts:141](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L141)
 
 ---
 
@@ -709,7 +709,7 @@ IAndroidSettings.webHost
 
 #### Defined in
 
-[model/interfaces/android/IAndroidSettings.ts:89](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/android/IAndroidSettings.ts#L89)
+[model/interfaces/android/IAndroidSettings.ts:89](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidSettings.ts#L89)
 
 ---
 
@@ -729,4 +729,4 @@ IIosSettings.websocketHost
 
 #### Defined in
 
-[model/interfaces/ios/IIosSettings.ts:135](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/ios/IIosSettings.ts#L135)
+[model/interfaces/ios/IIosSettings.ts:135](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosSettings.ts#L135)

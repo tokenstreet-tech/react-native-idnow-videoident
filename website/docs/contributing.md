@@ -1,3 +1,12 @@
+---
+id: 'contributing'
+title: 'Contributing'
+slug: '/contributing/'
+sidebar_label: 'Contributing'
+sidebar_position: 1
+custom_edit_url: null
+---
+
 # Contributing
 
 We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project.

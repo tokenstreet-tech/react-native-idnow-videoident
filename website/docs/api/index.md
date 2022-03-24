@@ -160,7 +160,7 @@ We do not follow [Semantic Versioning 2.0.0](https://semver.org/) until `v1` is 
 
 ## Contributing
 
-See the [contributing guide](website/docs/contributing.md) to learn how to contribute to the repository and the development workflow.
+See the [contributing guide](https://tokenstreet-tech.github.io/react-native-idnow-videoident/docs/contributing) to learn how to contribute to the repository and the development workflow.
 
 ## License
 

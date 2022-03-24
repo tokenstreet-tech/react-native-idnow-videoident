@@ -9,8 +9,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'React Native IDnow VideoIdent',
     tagline: 'React Native IDnow VideoIdent bindings for the iOS and Android SDK.',
-    url: 'https://tokenstreet-tech.github.io/react-native-idnow-videoident',
-    baseUrl: '/',
+    url: 'https://tokenstreet-tech.github.io',
+    baseUrl: '/react-native-idnow-videoident/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
