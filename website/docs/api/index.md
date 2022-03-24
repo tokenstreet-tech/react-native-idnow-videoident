@@ -1,3 +1,12 @@
+---
+id: 'index'
+title: '@tokenstreet/react-native-idnow-videoident'
+slug: '/api/'
+sidebar_label: 'Readme'
+sidebar_position: 0
+custom_edit_url: null
+---
+
 # @tokenstreet/react-native-idnow-videoident
 
 React Native IDnow VideoIdent bindings for the [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDK.
