@@ -4,10 +4,6 @@ on:
     pull_request:
         branches:
             - main
-    push:
-        branches:
-            - main
-    workflow_dispatch:
 
 jobs:
     yarn_script_validation:
