@@ -11,7 +11,7 @@ import {
     IosUIModalPresentationStyleEnum,
 } from '@tokenstreet/react-native-idnow-videoident';
 import { Appearance } from 'react-native';
-import type { DeepRequired } from 'ts-essentials';
+import type { DeepRequired } from 'utility-types';
 
 const getCurrentThemeColor = (lightColor: string, darkColor: string): string =>
     Appearance.getColorScheme() === 'light' ? lightColor : darkColor;
