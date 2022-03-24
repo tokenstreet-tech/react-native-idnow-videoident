@@ -32,7 +32,7 @@ IAndroidAppearance.agbInOneLine
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:12](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L12)
+[model/interfaces/android/IAndroidAppearance.ts:12](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L12)
 
 ---
 
@@ -49,7 +49,7 @@ IIosAppearance.alphaBlurViewValue
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:241](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L241)
+[model/interfaces/ios/IIosAppearance.ts:241](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L241)
 
 ---
 
@@ -67,7 +67,7 @@ IIosAppearance.boldButtonTitles
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:103](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L103)
+[model/interfaces/ios/IIosAppearance.ts:103](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L103)
 
 ---
 
@@ -85,7 +85,7 @@ IIosAppearance.boldTitles
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:110](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L110)
+[model/interfaces/ios/IIosAppearance.ts:110](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L110)
 
 ---
 
@@ -99,7 +99,7 @@ IAndroidAppearance.checkBoxOrientationRight
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:4](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L4)
+[model/interfaces/android/IAndroidAppearance.ts:4](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L4)
 
 ---
 
@@ -117,7 +117,7 @@ IIosAppearance.checkBoxPosition
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:65](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L65)
+[model/interfaces/ios/IIosAppearance.ts:65](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L65)
 
 ---
 
@@ -134,7 +134,7 @@ IIosAppearance.checkBoxesSquared
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:123](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L123)
+[model/interfaces/ios/IIosAppearance.ts:123](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L123)
 
 ---
 
@@ -148,7 +148,7 @@ IAndroidAppearance.checkboxesOrientationTop
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:14](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L14)
+[model/interfaces/android/IAndroidAppearance.ts:14](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L14)
 
 ---
 
@@ -158,7 +158,7 @@ IAndroidAppearance.checkboxesOrientationTop
 
 #### Defined in
 
-[model/interfaces/IAppearance.ts:23](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/IAppearance.ts#L23)
+[model/interfaces/IAppearance.ts:23](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/IAppearance.ts#L23)
 
 ---
 
@@ -175,7 +175,7 @@ IIosAppearance.customActivityIndicatorURL
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:165](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L165)
+[model/interfaces/ios/IIosAppearance.ts:165](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L165)
 
 ---
 
@@ -189,7 +189,7 @@ IAndroidAppearance.customiseCallQualityCheckScreen
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L6)
+[model/interfaces/android/IAndroidAppearance.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L6)
 
 ---
 
@@ -203,7 +203,7 @@ IAndroidAppearance.doNotShowCompanyImageInResultActivity
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:16](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L16)
+[model/interfaces/android/IAndroidAppearance.ts:16](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L16)
 
 ---
 
@@ -228,7 +228,7 @@ IIosAppearance.enableStatusBarStyleLightContent
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:182](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L182)
+[model/interfaces/ios/IIosAppearance.ts:182](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L182)
 
 ---
 
@@ -246,7 +246,7 @@ IIosAppearance.fontNameBold
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:192](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L192)
+[model/interfaces/ios/IIosAppearance.ts:192](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L192)
 
 ---
 
@@ -268,7 +268,7 @@ IIosAppearance.fontNameLight
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:225](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L225)
+[model/interfaces/ios/IIosAppearance.ts:225](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L225)
 
 ---
 
@@ -290,7 +290,7 @@ IIosAppearance.fontNameMedium
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:214](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L214)
+[model/interfaces/ios/IIosAppearance.ts:214](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L214)
 
 ---
 
@@ -312,7 +312,7 @@ IIosAppearance.fontNameRegular
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:203](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L203)
+[model/interfaces/ios/IIosAppearance.ts:203](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L203)
 
 ---
 
@@ -326,7 +326,7 @@ IAndroidAppearance.fullSizeModalSmsWindow
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:20](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L20)
+[model/interfaces/android/IAndroidAppearance.ts:20](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L20)
 
 ---
 
@@ -340,7 +340,7 @@ IAndroidAppearance.headerBolded
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L18)
+[model/interfaces/android/IAndroidAppearance.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L18)
 
 ---
 
@@ -357,7 +357,7 @@ IIosAppearance.identCodeLayoutHalf
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:135](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L135)
+[model/interfaces/ios/IIosAppearance.ts:135](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L135)
 
 ---
 
@@ -374,7 +374,7 @@ IIosAppearance.inputFieldsSquared
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:129](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L129)
+[model/interfaces/ios/IIosAppearance.ts:129](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L129)
 
 ---
 
@@ -391,7 +391,7 @@ IIosAppearance.lightBlurForIdentCodeContainer
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:247](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L247)
+[model/interfaces/ios/IIosAppearance.ts:247](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L247)
 
 ---
 
@@ -409,7 +409,7 @@ IIosAppearance.markMandatoryCells
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:89](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L89)
+[model/interfaces/ios/IIosAppearance.ts:89](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L89)
 
 ---
 
@@ -425,7 +425,7 @@ IIosAppearance.mode
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:15](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L15)
+[model/interfaces/ios/IIosAppearance.ts:15](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L15)
 
 ---
 
@@ -439,7 +439,7 @@ IAndroidAppearance.nameForActionBar
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:2](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L2)
+[model/interfaces/android/IAndroidAppearance.ts:2](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L2)
 
 ---
 
@@ -456,7 +456,7 @@ You can set the new branding
 
 #### Defined in
 
-[model/interfaces/IAppearance.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/IAppearance.ts#L18)
+[model/interfaces/IAppearance.ts:18](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/IAppearance.ts#L18)
 
 ---
 
@@ -475,7 +475,7 @@ IIosAppearance.numberLabelPosition
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:75](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L75)
+[model/interfaces/ios/IIosAppearance.ts:75](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L75)
 
 ---
 
@@ -492,7 +492,7 @@ IIosAppearance.progressBarsSquared
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:268](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L268)
+[model/interfaces/ios/IIosAppearance.ts:268](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L268)
 
 ---
 
@@ -509,7 +509,7 @@ IIosAppearance.recheckButtonsBordered
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:286](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L286)
+[model/interfaces/ios/IIosAppearance.ts:286](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L286)
 
 ---
 
@@ -527,7 +527,7 @@ IIosAppearance.requestCodeAgainLayoutType
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:117](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L117)
+[model/interfaces/ios/IIosAppearance.ts:117](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L117)
 
 ---
 
@@ -544,7 +544,7 @@ IIosAppearance.resultButtonsAsUIButtonsBelow
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:53](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L53)
+[model/interfaces/ios/IIosAppearance.ts:53](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L53)
 
 ---
 
@@ -562,7 +562,7 @@ IIosAppearance.seperatorLineComplete
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:82](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L82)
+[model/interfaces/ios/IIosAppearance.ts:82](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L82)
 
 ---
 
@@ -579,7 +579,7 @@ IIosAppearance.shouldSeparateFooter
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:292](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L292)
+[model/interfaces/ios/IIosAppearance.ts:292](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L292)
 
 ---
 
@@ -597,7 +597,7 @@ IIosAppearance.shouldShowBlurOverlayLayer
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:235](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L235)
+[model/interfaces/ios/IIosAppearance.ts:235](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L235)
 
 ---
 
@@ -611,7 +611,7 @@ IIosAppearance.shouldShowGTCInline
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:67](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L67)
+[model/interfaces/ios/IIosAppearance.ts:67](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L67)
 
 ---
 
@@ -628,7 +628,7 @@ IIosAppearance.shouldShowNavigationBarOnCQCScreen
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:256](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L256)
+[model/interfaces/ios/IIosAppearance.ts:256](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L256)
 
 ---
 
@@ -645,7 +645,7 @@ IIosAppearance.shouldShowNetworkIndicatorForCQCResult
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:280](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L280)
+[model/interfaces/ios/IIosAppearance.ts:280](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L280)
 
 ---
 
@@ -662,7 +662,7 @@ IIosAppearance.shouldShowResultTitleForCQCResult
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:274](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L274)
+[model/interfaces/ios/IIosAppearance.ts:274](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L274)
 
 ---
 
@@ -679,7 +679,7 @@ IIosAppearance.shouldUseHeadlineColorForPreCheckTitle
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:262](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L262)
+[model/interfaces/ios/IIosAppearance.ts:262](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L262)
 
 ---
 
@@ -701,7 +701,7 @@ The defaults for the both parameters are "true";
 
 #### Defined in
 
-[model/interfaces/IAppearance.ts:56](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/IAppearance.ts#L56)
+[model/interfaces/IAppearance.ts:56](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/IAppearance.ts#L56)
 
 ---
 
@@ -715,7 +715,7 @@ IAndroidAppearance.showTokenDuringCheckScreen
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L8)
+[model/interfaces/android/IAndroidAppearance.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L8)
 
 ---
 
@@ -736,7 +736,7 @@ You can decide whether to let the user confirm the legal points.
 
 #### Defined in
 
-[model/interfaces/IAppearance.ts:40](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/IAppearance.ts#L40)
+[model/interfaces/IAppearance.ts:40](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/IAppearance.ts#L40)
 
 ---
 
@@ -750,7 +750,7 @@ IAndroidAppearance.squareCheckboxForm
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:10](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L10)
+[model/interfaces/android/IAndroidAppearance.ts:10](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L10)
 
 ---
 
@@ -764,7 +764,7 @@ IIosAppearance.suggestionListBulleted
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:294](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L294)
+[model/interfaces/ios/IIosAppearance.ts:294](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L294)
 
 ---
 
@@ -782,7 +782,7 @@ IIosAppearance.textFieldCornerRadius
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:25](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L25)
+[model/interfaces/ios/IIosAppearance.ts:25](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L25)
 
 ---
 
@@ -799,7 +799,7 @@ IIosAppearance.titleBackgroundImage
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:41](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L41)
+[model/interfaces/ios/IIosAppearance.ts:41](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L41)
 
 ---
 
@@ -816,7 +816,7 @@ IIosAppearance.titleBackgroundImageOffset
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:47](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L47)
+[model/interfaces/ios/IIosAppearance.ts:47](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L47)
 
 ---
 
@@ -830,7 +830,7 @@ IAndroidAppearance.transparentBackgroundModalSmsWindow
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:22](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L22)
+[model/interfaces/android/IAndroidAppearance.ts:22](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L22)
 
 ---
 
@@ -848,7 +848,7 @@ IIosAppearance.underlineButtonTitles
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:96](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L96)
+[model/interfaces/ios/IIosAppearance.ts:96](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L96)
 
 ---
 
@@ -862,7 +862,7 @@ IIosAppearance.useResultIcon
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:55](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L55)
+[model/interfaces/ios/IIosAppearance.ts:55](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L55)
 
 ---
 
@@ -880,7 +880,7 @@ IIosAppearance.useTitleSeparator
 
 #### Defined in
 
-[model/interfaces/ios/IIosAppearance.ts:35](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/ios/IIosAppearance.ts#L35)
+[model/interfaces/ios/IIosAppearance.ts:35](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/ios/IIosAppearance.ts#L35)
 
 ---
 
@@ -894,4 +894,4 @@ IAndroidAppearance.whiteAgentThumbnailBackground
 
 #### Defined in
 
-[model/interfaces/android/IAndroidAppearance.ts:24](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/c8a49ad/src/model/interfaces/android/IAndroidAppearance.ts#L24)
+[model/interfaces/android/IAndroidAppearance.ts:24](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/e5039cd/src/model/interfaces/android/IAndroidAppearance.ts#L24)
