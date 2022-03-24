@@ -24,7 +24,7 @@ jobs:
                     - VALIDATION: 'Run unit tests'
                       COMMAND: test
                     - VALIDATION: 'Test build website'
-                      COMMAND: yarn --cwd website build
+                      COMMAND: --cwd website build
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3.0.0
