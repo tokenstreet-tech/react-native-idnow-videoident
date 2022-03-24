@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:10](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L10)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:10](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L10)
 
 ---
 
@@ -24,7 +24,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:4](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L4)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:4](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L4)
 
 ---
 
@@ -34,7 +34,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L5)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:5](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L5)
 
 ---
 
@@ -44,7 +44,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:3](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L3)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:3](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L3)
 
 ---
 
@@ -54,7 +54,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:9](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L9)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:9](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L9)
 
 ---
 
@@ -64,7 +64,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L7)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L7)
 
 ---
 
@@ -74,7 +74,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L6)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:6](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L6)
 
 ---
 
@@ -84,7 +84,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:2](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L2)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:2](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L2)
 
 ---
 
@@ -94,4 +94,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/enums/ios/IosUIModalPresentationStyleEnum.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L8)
+[model/enums/ios/IosUIModalPresentationStyleEnum.ts:8](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/enums/ios/IosUIModalPresentationStyleEnum.ts#L8)

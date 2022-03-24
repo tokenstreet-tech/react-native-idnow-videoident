@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/interfaces/INativeModules.ts:10](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/INativeModules.ts#L10)
+[model/interfaces/INativeModules.ts:10](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/INativeModules.ts#L10)
 
 ---
 
@@ -34,4 +34,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[model/interfaces/INativeModules.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/46300f0/src/model/interfaces/INativeModules.ts#L7)
+[model/interfaces/INativeModules.ts:7](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/ab5f05b/src/model/interfaces/INativeModules.ts#L7)
