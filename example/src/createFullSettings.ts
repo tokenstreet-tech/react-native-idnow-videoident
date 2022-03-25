@@ -69,7 +69,6 @@ export const createFullSettings = (transactionToken: string): DeepRequired<ISett
             primaryBrandColor: tokenstreetColors.blue,
             proceedButtonBackgroundColor: tokenstreetColors.blue,
             proceedButtonTextColor: tokenstreetColors.white,
-
             // Could not be tested because we use Video Ident Plus
             resultScreenHeaderLabelColor: 'black',
             secondaryAlertActionColor: tokenstreetColors.blue,
