@@ -11,12 +11,6 @@ describe('processSettings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
             const settings: ISettings = {
-                appearance: {
-                    colors: {},
-                    newBranding: true,
-                },
-                connectionType: ConnectionTypeEnum.WEBSOCKET,
-                ignoreCompanyID: true,
                 transactionToken: transactionTokenMock,
             };
 
@@ -31,6 +25,7 @@ describe('processSettings', () => {
                 appearance: {
                     colors: {},
                     newBranding: true,
+                    titleBackgroundImage: {},
                 },
                 calledFromIDnowApp: false,
                 connectionType: ConnectionTypeEnum.WEBSOCKET,
@@ -66,6 +61,7 @@ describe('processSettings', () => {
                 appearance: {
                     colors: {},
                     newBranding: false,
+                    titleBackgroundImage: {},
                 },
                 calledFromIDnowApp: true,
                 connectionType: ConnectionTypeEnum.LONG_POLLING,
