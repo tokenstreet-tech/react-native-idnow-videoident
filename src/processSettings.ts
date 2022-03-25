@@ -1,14 +1,18 @@
 import type { ColorValue, ProcessedColorValue } from 'react-native';
-import { processColor } from 'react-native';
+import { Image, processColor } from 'react-native';
 
 import { ConnectionTypeEnum } from './model/enums/ConnectionTypeEnum';
 import type { IIosColors } from './model/interfaces/ios/IIosColors';
 import type { ISettings } from './model/interfaces/ISettings';
 
 const defaultSettings: Omit<ISettings, 'transactionToken'> = {
+    allowHttpConnections: false,
+    allowInvalidCertificates: false,
+    appGoogleRating: false,
     appearance: {
         newBranding: true,
     },
+    calledFromIDnowApp: false,
     connectionType: ConnectionTypeEnum.WEBSOCKET,
     ignoreCompanyID: true,
 };
@@ -26,6 +30,9 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
         processedColors[colorKey] = processedColor === null ? undefined : processedColor;
     });
 
+    const titleBackgroundImage = settings.appearance?.titleBackgroundImage ?? {};
+    const processedTitleBackgroundImage = Image.resolveAssetSource(titleBackgroundImage);
+
     return {
         ...defaultSettings,
         ...settings,
@@ -37,6 +44,10 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
             ...defaultSettings.appearance,
             ...settings.appearance,
             colors: processedColors,
+            // resolveAssetSource can be null
+            // TODO: Create a Pull Request for it
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+            titleBackgroundImage: processedTitleBackgroundImage === null ? undefined : processedTitleBackgroundImage,
         },
     };
 };

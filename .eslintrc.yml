@@ -41,6 +41,9 @@ rules:
         - namedComponents: arrow-function
           unnamedComponents: arrow-function
     react/jsx-filename-extension: 0 # We use tsx files
+    react/jsx-max-depth: 0 # As long as the file remains uncluttered, this limitation only encourages more complex structures
+    react/jsx-no-literals: 0 # It is just more complicated to read
+    react/jsx-props-no-spreading: 0 # Easier to write
     simple-import-sort/exports: 2 # Enabling the plugin simple-import-sort
     simple-import-sort/imports: 2 # Enabling the plugin simple-import-sort
     sort-imports: 0 # We already use the simple-import-sort plugin
@@ -55,4 +58,5 @@ rules:
     '@typescript-eslint/restrict-template-expressions': 0
     max-lines: 0
     multiline-comment-style: 0
+    no-warning-comments: 0
     require-unicode-regexp: 0

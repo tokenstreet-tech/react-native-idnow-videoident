@@ -10,25 +10,22 @@ describe('processSettings', () => {
         it('should apply the default settings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
-            const settings: ISettings = {
-                appearance: {
-                    colors: {},
-                    newBranding: true,
-                },
-                connectionType: ConnectionTypeEnum.WEBSOCKET,
-                ignoreCompanyID: true,
-                transactionToken: transactionTokenMock,
-            };
+            const settings: ISettings = { transactionToken: transactionTokenMock };
 
             // Act
             const result = processSettings(settings);
 
             // Assert
             const expectedResult: ISettings<ProcessedColorValue> = {
+                allowHttpConnections: false,
+                allowInvalidCertificates: false,
+                appGoogleRating: false,
                 appearance: {
                     colors: {},
                     newBranding: true,
+                    titleBackgroundImage: {},
                 },
+                calledFromIDnowApp: false,
                 connectionType: ConnectionTypeEnum.WEBSOCKET,
                 ignoreCompanyID: true,
                 transactionToken: transactionTokenMock,
@@ -39,9 +36,13 @@ describe('processSettings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
             const settings: ISettings = {
+                allowHttpConnections: true,
+                allowInvalidCertificates: true,
+                appGoogleRating: true,
                 appearance: {
                     newBranding: false,
                 },
+                calledFromIDnowApp: true,
                 connectionType: ConnectionTypeEnum.LONG_POLLING,
                 ignoreCompanyID: false,
                 transactionToken: transactionTokenMock,
@@ -52,10 +53,15 @@ describe('processSettings', () => {
 
             // Assert
             const expectedResult: ISettings<ProcessedColorValue> = {
+                allowHttpConnections: true,
+                allowInvalidCertificates: true,
+                appGoogleRating: true,
                 appearance: {
                     colors: {},
                     newBranding: false,
+                    titleBackgroundImage: {},
                 },
+                calledFromIDnowApp: true,
                 connectionType: ConnectionTypeEnum.LONG_POLLING,
                 ignoreCompanyID: false,
                 transactionToken: transactionTokenMock,
