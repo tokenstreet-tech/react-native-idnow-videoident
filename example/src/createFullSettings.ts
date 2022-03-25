@@ -51,27 +51,34 @@ export const createFullSettings = (transactionToken: string): DeepRequired<ISett
             checkContractFooterButtonBackgroundColor: tokenstreetColors.blue,
             checkContractFooterButtonTextColor: tokenstreetColors.white,
             checkIconColor: tokenstreetColors.green,
-            cqcDefaultInnerRingColor: 'pink',
+            // Could not be tested because we use Video Ident Plus
+            cqcDefaultInnerRingColor: 'black',
             cqcExcellentQualityInnerColor: tokenstreetColors.green,
             cqcModerateQualityInnerColor: tokenstreetColors.yellow,
-            cqcOuterRingColor: 'pink',
+            // Could not be tested because we use Video Ident Plus
+            cqcOuterRingColor: 'black',
             cqcPoorQualityInnerColor: tokenstreetColors.red,
             defaultTextColor: themeColors.textColor,
             failureColor: tokenstreetColors.failureColor,
-            headlineColor: 'pink',
+            // Could not be tested because we use Video Ident Plus
+            headlineColor: 'black',
             linkColor: tokenstreetColors.blue,
             photoIdentRetakeButtonBackgroundColor: tokenstreetColors.blue,
             photoIdentRetakeButtonTextColor: tokenstreetColors.white,
-            primaryAlertActionColor: 'pink',
+            primaryAlertActionColor: tokenstreetColors.blue,
             primaryBrandColor: tokenstreetColors.blue,
             proceedButtonBackgroundColor: tokenstreetColors.blue,
             proceedButtonTextColor: tokenstreetColors.white,
-            resultScreenHeaderLabelColor: 'pink',
-            secondaryAlertActionColor: 'pink',
+
+            // Could not be tested because we use Video Ident Plus
+            resultScreenHeaderLabelColor: 'black',
+            secondaryAlertActionColor: tokenstreetColors.blue,
             successColor: tokenstreetColors.successColor,
-            textFieldBorderColor: 'pink',
+            // Could not be tested because we use Video Ident Plus
+            textFieldBorderColor: 'black',
             textFieldColor: getCurrentThemeColor(tokenstreetColors.fontSemiDarkGrey, tokenstreetColors.white),
-            titleBackgroundColor: 'pink',
+            // Could not be tested because we use Video Ident Plus
+            titleBackgroundColor: 'black',
         },
         customActivityIndicatorURL: '',
         customiseCallQualityCheckScreen: false,
