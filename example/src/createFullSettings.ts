@@ -128,7 +128,7 @@ export const createFullSettings = (transactionToken: string): DeepRequired<ISett
     companyId: '',
     connectionType: ConnectionTypeEnum.WEBSOCKET,
     disableLogging: false,
-    environment: EnvironmentEnum.DEV,
+    environment: EnvironmentEnum.TEST,
     firebaseToken: '',
     forceErrorSuccessScreen: false,
     forceModalPresentation: false,
