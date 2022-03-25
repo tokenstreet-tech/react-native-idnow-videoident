@@ -10,9 +10,7 @@ describe('processSettings', () => {
         it('should apply the default settings', () => {
             // Arrange
             const transactionTokenMock = 'XXX-XXXXX';
-            const settings: ISettings = {
-                transactionToken: transactionTokenMock,
-            };
+            const settings: ISettings = { transactionToken: transactionTokenMock };
 
             // Act
             const result = processSettings(settings);
