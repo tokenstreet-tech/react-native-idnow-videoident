@@ -104,6 +104,8 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 4. Unfortunately, it is not yet possible to customise the colours for Android via JavaScript. To edit them, please follow the [official guide](https://github.com/idnow/de.idnow.android#colors).
 
+5. If you are using Android ProGuard, please include their [rules](https://github.com/idnow/de.idnow.android/blob/master/proguard-rules.pro) in your project.
+
 ## Usage
 
 `startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with a `resultCode`. Also, an optional `errorMessage` can be included.
