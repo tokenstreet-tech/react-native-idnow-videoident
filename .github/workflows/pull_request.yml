@@ -4,10 +4,6 @@ on:
     pull_request:
         branches:
             - main
-    push:
-        branches:
-            - main
-    workflow_dispatch:
 
 jobs:
     yarn_script_validation:
@@ -23,13 +19,17 @@ jobs:
                       COMMAND: lint
                     - VALIDATION: 'Run unit tests'
                       COMMAND: test
+                    - VALIDATION: 'Test build website'
+                      COMMAND: --cwd website build
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3.0.0
               with:
                   node-version: 16
+                  cache: yarn
             - run: |
                   yarn install --frozen-lockfile
+                  yarn install --cwd website --frozen-lockfile
                   yarn build
                   yarn install --cwd example --frozen-lockfile
             - run: yarn ${{ matrix.COMMAND }}
