@@ -1,0 +1,12 @@
+{
+    "defaultLocale": "en",
+    "locales": ["en"],
+    "currentLocale": "en",
+    "localeConfigs": {
+        "en": {
+            "label": "English",
+            "direction": "ltr",
+            "htmlLang": "en"
+        }
+    }
+}

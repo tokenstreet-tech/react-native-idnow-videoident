@@ -1,0 +1,19 @@
+{
+    "unversionedId": "contributing",
+    "id": "contributing",
+    "title": "Contributing",
+    "description": "We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project.",
+    "source": "@site/docs/contributing.md",
+    "sourceDirName": ".",
+    "slug": "/contributing",
+    "permalink": "/react-native-idnow-videoident/docs/contributing",
+    "editUrl": "https://github.com/tokenstreet-tech/react-native-idnow-videoident/tree/main/website/docs/contributing.md",
+    "tags": [],
+    "version": "current",
+    "frontMatter": {},
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "ISettings",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/ISettings"
+    }
+}

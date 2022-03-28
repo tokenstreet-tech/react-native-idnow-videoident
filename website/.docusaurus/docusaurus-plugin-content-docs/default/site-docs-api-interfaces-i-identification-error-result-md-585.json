@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/interfaces/IIdentificationErrorResult",
+    "id": "api/interfaces/IIdentificationErrorResult",
+    "title": "Interface: IIdentificationErrorResult",
+    "description": "Hierarchy",
+    "source": "@site/docs/api/interfaces/IIdentificationErrorResult.md",
+    "sourceDirName": "api/interfaces",
+    "slug": "/api/interfaces/IIdentificationErrorResult",
+    "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IIdentificationErrorResult",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "IIdentificationErrorResult",
+        "title": "Interface: IIdentificationErrorResult",
+        "sidebar_label": "IIdentificationErrorResult",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "IColors",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IColors"
+    },
+    "next": {
+        "title": "IIdentificationResult",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IIdentificationResult"
+    }
+}

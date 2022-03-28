@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/interfaces/IAppearance",
+    "id": "api/interfaces/IAppearance",
+    "title": "Interface: IAppearance<TColor>",
+    "description": "Type parameters",
+    "source": "@site/docs/api/interfaces/IAppearance.md",
+    "sourceDirName": "api/interfaces",
+    "slug": "/api/interfaces/IAppearance",
+    "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IAppearance",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "IAppearance",
+        "title": "Interface: IAppearance<TColor>",
+        "sidebar_label": "IAppearance",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "ResultCodeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/ResultCodeEnum"
+    },
+    "next": {
+        "title": "IColors",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IColors"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/enums/IosNumberLabelPositionEnum",
+    "id": "api/enums/IosNumberLabelPositionEnum",
+    "title": "Enumeration: IosNumberLabelPositionEnum",
+    "description": "Number label positions",
+    "source": "@site/docs/api/enums/IosNumberLabelPositionEnum.md",
+    "sourceDirName": "api/enums",
+    "slug": "/api/enums/IosNumberLabelPositionEnum",
+    "permalink": "/react-native-idnow-videoident/docs/api/enums/IosNumberLabelPositionEnum",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "IosNumberLabelPositionEnum",
+        "title": "Enumeration: IosNumberLabelPositionEnum",
+        "sidebar_label": "IosNumberLabelPositionEnum",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "IosLanguageEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/IosLanguageEnum"
+    },
+    "next": {
+        "title": "IosRequestCodeAgainLayoutTypeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/IosRequestCodeAgainLayoutTypeEnum"
+    }
+}

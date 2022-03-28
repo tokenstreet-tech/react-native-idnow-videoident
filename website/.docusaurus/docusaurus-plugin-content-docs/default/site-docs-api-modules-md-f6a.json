@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/modules",
+    "id": "api/modules",
+    "title": "@tokenstreet/react-native-idnow-videoident",
+    "description": "Enumerations",
+    "source": "@site/docs/api/modules.md",
+    "sourceDirName": "api",
+    "slug": "/api/modules",
+    "permalink": "/react-native-idnow-videoident/docs/api/modules",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0.5,
+    "frontMatter": {
+        "id": "modules",
+        "title": "@tokenstreet/react-native-idnow-videoident",
+        "sidebar_label": "Exports",
+        "sidebar_position": 0.5,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "Readme",
+        "permalink": "/react-native-idnow-videoident/docs/api/"
+    },
+    "next": {
+        "title": "AndroidLanguageEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/AndroidLanguageEnum"
+    }
+}

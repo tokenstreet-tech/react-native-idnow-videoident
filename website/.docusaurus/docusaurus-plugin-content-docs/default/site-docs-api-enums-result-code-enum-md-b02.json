@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/enums/ResultCodeEnum",
+    "id": "api/enums/ResultCodeEnum",
+    "title": "Enumeration: ResultCodeEnum",
+    "description": "Result codes",
+    "source": "@site/docs/api/enums/ResultCodeEnum.md",
+    "sourceDirName": "api/enums",
+    "slug": "/api/enums/ResultCodeEnum",
+    "permalink": "/react-native-idnow-videoident/docs/api/enums/ResultCodeEnum",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "ResultCodeEnum",
+        "title": "Enumeration: ResultCodeEnum",
+        "sidebar_label": "ResultCodeEnum",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "IosUIModalPresentationStyleEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/IosUIModalPresentationStyleEnum"
+    },
+    "next": {
+        "title": "IAppearance",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IAppearance"
+    }
+}

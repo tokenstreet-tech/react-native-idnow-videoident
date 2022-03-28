@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/enums/EnvironmentEnum",
+    "id": "api/enums/EnvironmentEnum",
+    "title": "Enumeration: EnvironmentEnum",
+    "description": "iOS Header file:",
+    "source": "@site/docs/api/enums/EnvironmentEnum.md",
+    "sourceDirName": "api/enums",
+    "slug": "/api/enums/EnvironmentEnum",
+    "permalink": "/react-native-idnow-videoident/docs/api/enums/EnvironmentEnum",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "EnvironmentEnum",
+        "title": "Enumeration: EnvironmentEnum",
+        "sidebar_label": "EnvironmentEnum",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "ConnectionTypeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/ConnectionTypeEnum"
+    },
+    "next": {
+        "title": "IosAppearanceModeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/IosAppearanceModeEnum"
+    }
+}

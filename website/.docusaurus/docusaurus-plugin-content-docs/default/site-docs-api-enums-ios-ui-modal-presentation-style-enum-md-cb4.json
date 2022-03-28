@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/enums/IosUIModalPresentationStyleEnum",
+    "id": "api/enums/IosUIModalPresentationStyleEnum",
+    "title": "Enumeration: IosUIModalPresentationStyleEnum",
+    "description": "Enumeration members",
+    "source": "@site/docs/api/enums/IosUIModalPresentationStyleEnum.md",
+    "sourceDirName": "api/enums",
+    "slug": "/api/enums/IosUIModalPresentationStyleEnum",
+    "permalink": "/react-native-idnow-videoident/docs/api/enums/IosUIModalPresentationStyleEnum",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "IosUIModalPresentationStyleEnum",
+        "title": "Enumeration: IosUIModalPresentationStyleEnum",
+        "sidebar_label": "IosUIModalPresentationStyleEnum",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "IosRequestCodeAgainLayoutTypeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/IosRequestCodeAgainLayoutTypeEnum"
+    },
+    "next": {
+        "title": "ResultCodeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/ResultCodeEnum"
+    }
+}

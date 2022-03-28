@@ -1,0 +1,27 @@
+{
+    "unversionedId": "api/index",
+    "id": "api/index",
+    "title": "@tokenstreet/react-native-idnow-videoident",
+    "description": "React Native IDnow VideoIdent bindings for the iOS and Android SDK.",
+    "source": "@site/docs/api/index.md",
+    "sourceDirName": "api",
+    "slug": "/api/",
+    "permalink": "/react-native-idnow-videoident/docs/api/",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "index",
+        "title": "@tokenstreet/react-native-idnow-videoident",
+        "slug": "/api/",
+        "sidebar_label": "Readme",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "next": {
+        "title": "Exports",
+        "permalink": "/react-native-idnow-videoident/docs/api/modules"
+    }
+}

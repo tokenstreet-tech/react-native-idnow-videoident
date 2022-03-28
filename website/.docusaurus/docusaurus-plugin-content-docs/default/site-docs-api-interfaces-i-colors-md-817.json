@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/interfaces/IColors",
+    "id": "api/interfaces/IColors",
+    "title": "Interface: IColors<TColor>",
+    "description": "Type parameters",
+    "source": "@site/docs/api/interfaces/IColors.md",
+    "sourceDirName": "api/interfaces",
+    "slug": "/api/interfaces/IColors",
+    "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IColors",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "IColors",
+        "title": "Interface: IColors<TColor>",
+        "sidebar_label": "IColors",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "IAppearance",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IAppearance"
+    },
+    "next": {
+        "title": "IIdentificationErrorResult",
+        "permalink": "/react-native-idnow-videoident/docs/api/interfaces/IIdentificationErrorResult"
+    }
+}

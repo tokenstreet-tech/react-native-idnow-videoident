@@ -1,0 +1,30 @@
+{
+    "unversionedId": "api/enums/AndroidLanguageEnum",
+    "id": "api/enums/AndroidLanguageEnum",
+    "title": "Enumeration: AndroidLanguageEnum",
+    "description": "Enumeration members",
+    "source": "@site/docs/api/enums/AndroidLanguageEnum.md",
+    "sourceDirName": "api/enums",
+    "slug": "/api/enums/AndroidLanguageEnum",
+    "permalink": "/react-native-idnow-videoident/docs/api/enums/AndroidLanguageEnum",
+    "editUrl": null,
+    "tags": [],
+    "version": "current",
+    "sidebarPosition": 0,
+    "frontMatter": {
+        "id": "AndroidLanguageEnum",
+        "title": "Enumeration: AndroidLanguageEnum",
+        "sidebar_label": "AndroidLanguageEnum",
+        "sidebar_position": 0,
+        "custom_edit_url": null
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "Exports",
+        "permalink": "/react-native-idnow-videoident/docs/api/modules"
+    },
+    "next": {
+        "title": "ConnectionTypeEnum",
+        "permalink": "/react-native-idnow-videoident/docs/api/enums/ConnectionTypeEnum"
+    }
+}

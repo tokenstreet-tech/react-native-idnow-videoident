@@ -1,0 +1,117 @@
+{
+    "docusaurus-plugin-content-docs": {
+        "default": {
+            "path": "/react-native-idnow-videoident/docs",
+            "versions": [
+                {
+                    "name": "current",
+                    "label": "Next",
+                    "isLast": true,
+                    "path": "/react-native-idnow-videoident/docs",
+                    "mainDocId": "api/index",
+                    "docs": [
+                        {
+                            "id": "api/enums/AndroidLanguageEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/AndroidLanguageEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/ConnectionTypeEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/ConnectionTypeEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/EnvironmentEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/EnvironmentEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/IosAppearanceModeEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/IosAppearanceModeEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/IosCheckboxPositionEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/IosCheckboxPositionEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/IosLanguageEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/IosLanguageEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/IosNumberLabelPositionEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/IosNumberLabelPositionEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/IosRequestCodeAgainLayoutTypeEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/IosRequestCodeAgainLayoutTypeEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/IosUIModalPresentationStyleEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/IosUIModalPresentationStyleEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/enums/ResultCodeEnum",
+                            "path": "/react-native-idnow-videoident/docs/api/enums/ResultCodeEnum",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/index",
+                            "path": "/react-native-idnow-videoident/docs/api/",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/interfaces/IAppearance",
+                            "path": "/react-native-idnow-videoident/docs/api/interfaces/IAppearance",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/interfaces/IColors",
+                            "path": "/react-native-idnow-videoident/docs/api/interfaces/IColors",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/interfaces/IIdentificationErrorResult",
+                            "path": "/react-native-idnow-videoident/docs/api/interfaces/IIdentificationErrorResult",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/interfaces/IIdentificationResult",
+                            "path": "/react-native-idnow-videoident/docs/api/interfaces/IIdentificationResult",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/interfaces/ISettings",
+                            "path": "/react-native-idnow-videoident/docs/api/interfaces/ISettings",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "api/modules",
+                            "path": "/react-native-idnow-videoident/docs/api/modules",
+                            "sidebar": "tutorialSidebar"
+                        },
+                        {
+                            "id": "contributing",
+                            "path": "/react-native-idnow-videoident/docs/contributing",
+                            "sidebar": "tutorialSidebar"
+                        }
+                    ],
+                    "sidebars": {
+                        "tutorialSidebar": {
+                            "link": {
+                                "path": "/react-native-idnow-videoident/docs/api/",
+                                "label": "API"
+                            }
+                        }
+                    }
+                }
+            ],
+            "breadcrumbs": true
+        }
+    }
+}
