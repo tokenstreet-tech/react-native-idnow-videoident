@@ -26,7 +26,11 @@ module.exports = {
         }, {}),
     },
     transformer: {
-        getTransformOptions: () => ({ transform: { experimentalImportSupport: false, inlineRequires: true } }),
+        getTransformOptions: async () => ({
+            transform: {
+                experimentalImportSupport: false,
+                inlineRequires: true,
+            },
+        }),
     },
-    watchFolders: [root],
 };
