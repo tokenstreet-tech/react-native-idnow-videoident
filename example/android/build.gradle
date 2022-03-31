@@ -39,6 +39,7 @@ allprojects {
             }
         }
         google()
+        maven { url "https://www.jitpack.io" }
         jcenter() {
             // JCenter is now read-only. Therefore, no new versions are published there any more.
             // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.
