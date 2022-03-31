@@ -1,7 +1,10 @@
-package com.rndiffapp.newarchitecture;
+package com.example.tokenstreetreactnativeidnowvideoident.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
+import com.example.tokenstreetreactnativeidnowvideoident.BuildConfig;
+import com.example.tokenstreetreactnativeidnowvideoident.newarchitecture.components.MainComponentsRegistry;
+import com.example.tokenstreetreactnativeidnowvideoident.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
@@ -19,9 +22,6 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.rndiffapp.BuildConfig;
-import com.rndiffapp.newarchitecture.components.MainComponentsRegistry;
-import com.rndiffapp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
