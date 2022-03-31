@@ -18,10 +18,10 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('ReactNativeIdnowVideoident_compileSdkVersion', 30)
+    compileSdkVersion safeExtGet('ReactNativeIdnowVideoident_compileSdkVersion', 31)
     defaultConfig {
         minSdkVersion safeExtGet('ReactNativeIdnowVideoident_minSdkVersion', 21)
-        targetSdkVersion safeExtGet('ReactNativeIdnowVideoident_targetSdkVersion', 30)
+        targetSdkVersion safeExtGet('ReactNativeIdnowVideoident_targetSdkVersion', 31)
         versionCode 1
         versionName "1.0"
     }
@@ -35,8 +35,8 @@ android {
         disable 'GradleCompatible'
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
