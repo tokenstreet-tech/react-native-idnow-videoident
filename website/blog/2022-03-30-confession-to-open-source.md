@@ -9,9 +9,11 @@ authors:
 tags: [opensource, reactnative]
 ---
 
-A few weeks ago, Coinpanion approached us with a request that accelerated the process of releasing our first open-source package. I described this journey and our open-source strategy as part of our new tech blog.
+A few weeks ago, Coinpanion approached us with a request that accelerated the process of releasing our first open-source package.
+I described this journey and our open-source strategy as part of our new tech blog.
 
-I'm excited to currently have the opportunity to shape the developer culture at tokenstreet. Cheers to the open-source community and good cooperation!
+I'm excited to currently have the opportunity to shape the developer culture at tokenstreet.
+Cheers to the open-source community and good cooperation!
 
 ![Spark plugs](../static/img/sparkPlugs.jpg)
 
