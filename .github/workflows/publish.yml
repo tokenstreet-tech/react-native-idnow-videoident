@@ -24,10 +24,9 @@ jobs:
                   cache: yarn
                   registry-url: 'https://registry.npmjs.org'
             - run: yarn install --frozen-lockfile
-            - run: yarn install --cwd website --frozen-lockfile
             - run: yarn build
-            - run: yarn version --${{ github.event.inputs.version }}
+            - run: yarn --cwd packages/core version --${{ github.event.inputs.version }}
             - run: git push --follow-tags
-            - run: yarn publish
+            - run: yarn --cwd packages/core publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
