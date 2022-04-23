@@ -346,7 +346,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - tokenstreet-react-native-idnow-videoident (from `../..`)
+  - tokenstreet-react-native-idnow-videoident (from `../../core`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -421,7 +421,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   tokenstreet-react-native-idnow-videoident:
-    :path: "../.."
+    :path: "../../core"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -466,6 +466,6 @@ SPEC CHECKSUMS:
   tokenstreet-react-native-idnow-videoident: a32140e386e0c25bd45fdc3cd0948af1dde3c322
   Yoga: 17cd9a50243093b547c1e539c749928dd68152da
 
-PODFILE CHECKSUM: 6782063762e189f4c88f7a75eb08d5112f6dd5c5
+PODFILE CHECKSUM: e2ae54e55c0ec2f0cd4076c7a10fc99603e4a2e1
 
 COCOAPODS: 1.11.3

@@ -1,9 +1,15 @@
 {
     "private": true,
-    "workspaces": [
-        "packages/core",
-        "packages/*"
-    ],
+    "workspaces": {
+        "packages": [
+            "packages/core",
+            "packages/*"
+        ],
+        "nohoist": [
+            "**/react-native",
+            "**/react-native/**"
+        ]
+    },
     "scripts": {
         "typescript": "yarn workspaces run typescript",
         "lint": "eslint .",
