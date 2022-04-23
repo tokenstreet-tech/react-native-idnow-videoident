@@ -11,16 +11,16 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                VALIDATION: ['Typecheck files', 'Lint files', 'Run unit tests']
+                VALIDATION: [TypeScript, ESLint, Tests, Buildable]
                 include:
-                    - VALIDATION: 'Typecheck files'
+                    - VALIDATION: TypeScript
                       COMMAND: typescript
-                    - VALIDATION: 'Lint files'
+                    - VALIDATION: ESLint
                       COMMAND: lint
-                    - VALIDATION: 'Run unit tests'
+                    - VALIDATION: Tests
                       COMMAND: test
-                    - VALIDATION: 'Test build website'
-                      COMMAND: --cwd website build
+                    - VALIDATION: Buildable
+                      COMMAND: build
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3.1.1
