@@ -2,7 +2,7 @@ root: true
 parser: '@typescript-eslint/parser'
 parserOptions:
     project:
-        - './tsconfig.json'
+        - './packages/shared/tsconfig.json'
 plugins:
     - '@typescript-eslint'
     - react

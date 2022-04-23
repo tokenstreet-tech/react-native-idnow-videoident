@@ -25,18 +25,8 @@
         "xcode": "open ios/ReactNativeIdnowVideoident.xcodeproj",
         "test": "jest",
         "typescript": "tsc --noEmit",
-        "lint": "eslint .",
-        "lint:fix": "npm run lint -- --fix",
         "build": "bob build",
-        "release": "release-it",
-        "example": "yarn --cwd example",
-        "pods": "export LC_ALL=\"en_US.UTF-8\" && cd example && arch -x86_64 pod-install --quiet",
-        "website": "yarn --cwd website",
-        "prepare": "husky install"
-    },
-    "lint-staged": {
-        "*": "prettier --ignore-unknown --write",
-        "*.(js|jsx|ts|tsx)": "eslint --fix"
+        "release": "release-it"
     },
     "keywords": [
         "react-native",
@@ -54,22 +44,11 @@
         "registry": "https://registry.npmjs.org/"
     },
     "devDependencies": {
-        "@react-native-community/eslint-config": "^3.0.1",
         "@release-it/conventional-changelog": "^4.2.2",
         "@types/jest": "^27.4.1",
         "@types/react": "^17.0.40",
         "@types/react-native": "0.67.5",
-        "@typescript-eslint/eslint-plugin": "^5.15.0",
-        "@typescript-eslint/parser": "^5.15.0",
-        "eslint": "^8.11.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-flowtype": "^8.0.3",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.29.4",
-        "eslint-plugin-react-native": "^4.0.0",
-        "eslint-plugin-simple-import-sort": "^7.0.0",
         "jest": "^27.5.1",
-        "pod-install": "^0.1.32",
         "react": "17.0.2",
         "react-native": "0.68.1",
         "react-native-builder-bob": "^0.18.0",
@@ -98,10 +77,6 @@
             }
         }
     },
-    "eslintIgnore": [
-        "node_modules/",
-        "lib/"
-    ],
     "react-native-builder-bob": {
         "source": "src",
         "output": "lib",
