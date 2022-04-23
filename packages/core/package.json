@@ -45,6 +45,7 @@
     },
     "devDependencies": {
         "@release-it/conventional-changelog": "^4.2.2",
+        "@tokenstreet/react-native-idnow-videoident-shared": "^0.0.0",
         "@types/jest": "^27.4.1",
         "@types/react": "^17.0.40",
         "@types/react-native": "0.67.5",
