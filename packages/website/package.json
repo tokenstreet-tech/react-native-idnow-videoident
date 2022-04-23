@@ -26,6 +26,7 @@
     },
     "devDependencies": {
         "@docusaurus/module-type-aliases": "2.0.0-beta.18",
+        "@tokenstreet/react-native-idnow-videoident": "^0.5.0",
         "@tsconfig/docusaurus": "^1.0.4",
         "docusaurus-plugin-typedoc": "^0.17.4",
         "typedoc": "^0.22.15",
