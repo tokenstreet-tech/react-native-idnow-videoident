@@ -5,6 +5,7 @@
     "scripts": {
         "typescript": "echo \"typescript\"",
         "test": "echo \"test\"",
-        "build": "echo \"build\""
+        "build": "echo \"build\"",
+        "prepare": "echo \"prepare\""
     }
 }
