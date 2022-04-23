@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                validation: [typescript, lint, test, build]
+                script: [typescript, lint, test, build]
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3.1.1
@@ -19,4 +19,4 @@ jobs:
                   node-version: 16
                   cache: yarn
             - run: yarn install --frozen-lockfile
-            - run: yarn ${{ matrix.COMMAND }}
+            - run: yarn ${{ matrix.script }}
