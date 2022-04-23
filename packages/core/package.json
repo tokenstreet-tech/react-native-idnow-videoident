@@ -26,7 +26,8 @@
         "test": "jest",
         "build": "bob build",
         "xcode": "open ios/ReactNativeIdnowVideoident.xcodeproj",
-        "release": "release-it"
+        "release": "release-it",
+        "prepare": "yarn build"
     },
     "keywords": [
         "react-native",
