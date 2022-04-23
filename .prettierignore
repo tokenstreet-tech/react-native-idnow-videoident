@@ -9,4 +9,6 @@
 
 # Misc
 /coverage
-tsconfig.json
+packages/core/tsconfig.json
+packages/example/tsconfig.json
+packages/shared/tsconfig.json
