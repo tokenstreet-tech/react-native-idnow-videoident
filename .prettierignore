@@ -2,11 +2,11 @@
 
 # Dependencies
 /node_modules
-example/ios/Pods
+/Pods
 
 # Build
 /lib
 
 # Misc
 /coverage
-/tsconfig.json
+tsconfig.json
