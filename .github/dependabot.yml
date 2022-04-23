@@ -5,29 +5,50 @@
 
 version: 2
 updates:
+    # Root
     - package-ecosystem: 'npm'
       directory: '/'
-      schedule:
-          interval: 'daily'
-    - package-ecosystem: 'gradle'
-      directory: '/android'
-      schedule:
-          interval: 'daily'
-    - package-ecosystem: 'npm'
-      directory: '/example'
-      schedule:
-          interval: 'daily'
-    - package-ecosystem: 'gradle'
-      directory: '/example/android'
-      schedule:
-          interval: 'daily'
-      ignore:
-          - dependency-name: 'idnow-android-sdk'
-    - package-ecosystem: 'npm'
-      directory: '/website'
       schedule:
           interval: 'daily'
     - package-ecosystem: 'github-actions'
       directory: '/'
+      schedule:
+          interval: 'daily'
+
+    # Core
+    - package-ecosystem: 'npm'
+      directory: '/packages/core'
+      schedule:
+          interval: 'daily'
+    - package-ecosystem: 'gradle'
+      directory: '/packages/core/android'
+      schedule:
+          interval: 'daily'
+
+    # Example
+    - package-ecosystem: 'npm'
+      directory: '/packages/example'
+      schedule:
+          interval: 'daily'
+    - package-ecosystem: 'bundler'
+      directory: '/packages/example'
+      schedule:
+          interval: 'daily'
+    - package-ecosystem: 'gradle'
+      directory: '/packages/example/android'
+      schedule:
+          interval: 'daily'
+      ignore:
+          - dependency-name: 'idnow-android-sdk'
+
+    # Shared
+    - package-ecosystem: 'npm'
+      directory: '/packages/shared'
+      schedule:
+          interval: 'daily'
+
+    # Website
+    - package-ecosystem: 'npm'
+      directory: '/packages/website'
       schedule:
           interval: 'daily'
