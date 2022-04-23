@@ -1,7 +1,7 @@
 {
     "name": "@tokenstreet/react-native-idnow-videoident-example",
     "description": "Example app for @tokenstreet/react-native-idnow-videoident",
-    "version": "0.0.1",
+    "version": "0.0.0",
     "private": true,
     "scripts": {
         "start": "react-native start",
@@ -11,6 +11,7 @@
         "pods": "export LC_ALL=\"en_US.UTF-8\" arch -x86_64 pod-install --quiet"
     },
     "dependencies": {
+        "@tokenstreet/react-native-idnow-videoident": "^0.5.0",
         "react": "17.0.2",
         "react-native": "0.68.1",
         "utility-types": "^3.10.0"

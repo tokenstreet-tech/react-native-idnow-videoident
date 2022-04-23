@@ -1,4 +1,5 @@
 {
     "private": true,
-    "name": "shared"
+    "name": "@tokenstreet/react-native-idnow-videoident-shared",
+    "version": "0.0.0"
 }
