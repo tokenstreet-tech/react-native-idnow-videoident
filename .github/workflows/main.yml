@@ -17,6 +17,8 @@ env:
     NODE_VERSION: 16
     CACHE: yarn
     REGISTRY_URL: 'https://registry.npmjs.org'
+    GIT_USER_NAME: tokenstreet-tools
+    GIT_USER_EMAIL: tools@tokenstreet.com
 
 jobs:
     yarn_script_validation:
@@ -62,8 +64,8 @@ jobs:
                   # https://github.com/actions/checkout/issues/13#issuecomment-724415212
                   # The GH actions bot is used by default if you didn't specify the two fields.
                   # You can swap them out with your own user credentials.
-                  user_name: tokenstreet-tools
-                  user_email: tools@tokenstreet.com
+                  user_name: ${{ env.GIT_USER_NAME }}
+                  user_email: ${{ env.GIT_USER_EMAIL }}
     publish:
         name: Publish
         runs-on: ubuntu-latest
@@ -76,8 +78,8 @@ jobs:
                   token: ${{ secrets.PERSONAL_ACCESS_TOKEN_TOOLS_TOKENSTREET }}
             - name: Set git credentials
               run: |
-                  git config --global user.name "tokenstreet Tools"
-                  git config --global user.email "tools@tokenstreet.com"
+                  git config --global user.name "${{ env.GIT_USER_NAME }}"
+                  git config --global user.email "${{ env.GIT_USER_EMAIL }}"
             - uses: actions/setup-node@v3.1.1
               with:
                   node-version: ${{ env.NODE_VERSION }}
