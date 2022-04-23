@@ -20,7 +20,6 @@ target 'ReactNativeIdnowVideoidentExample' do
     )
 
     use_frameworks! linkage: :static
-    pod 'tokenstreet-react-native-idnow-videoident', path: '../..'
 
     # Enables Flipper.
     #
