@@ -11,7 +11,7 @@ import { Feature } from './Feature';
 import styles from './index.module.css';
 
 const HomepageFeatures: React.FC = () => {
-    const { isDarkTheme } = useColorMode();
+    const { colorMode } = useColorMode();
 
     const FeatureList = useMemo<Array<IFeatureItem>>(
         () => [
@@ -26,7 +26,7 @@ const HomepageFeatures: React.FC = () => {
                 title: 'First class TypeScript support',
             },
             {
-                Svg: isDarkTheme ? configurableDark : configurable,
+                Svg: colorMode === 'light' ? configurable : configurableDark,
                 description: (
                     <>
                         All configuration options of the SDKs are possible from the JavaScript side.{' '}
@@ -48,7 +48,7 @@ const HomepageFeatures: React.FC = () => {
                 title: 'Always up to date',
             },
         ],
-        [isDarkTheme]
+        [colorMode]
     );
 
     return (
