@@ -92,11 +92,12 @@ const config = {
             'docusaurus-plugin-typedoc',
             // Plugin / TypeDoc options
             {
-                entryPoints: ['./node_modules/@tokenstreet/react-native-idnow-videoident//src/index.ts'],
+                entryPoints: ['./node_modules/@tokenstreet/react-native-idnow-videoident/src/index.ts'],
                 tsconfig: './node_modules/@tokenstreet/react-native-idnow-videoident/tsconfig.json',
                 sidebar: {
                     position: 2,
                 },
+                entryDocument: 0,
             },
         ],
     ],
