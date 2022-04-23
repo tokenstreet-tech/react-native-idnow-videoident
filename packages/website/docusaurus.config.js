@@ -43,7 +43,7 @@ const config = {
                 title: 'React Native IDnow VideoIdent',
                 logo: { alt: 'tokenstreet Logo', src: 'img/logo.svg', srcDark: 'img/logoDark.svg' },
                 items: [
-                    { type: 'doc', docId: 'api/index', position: 'left', label: 'Docs' },
+                    { type: 'doc', docId: 'getting-started', position: 'left', label: 'Docs' },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident',
@@ -57,7 +57,11 @@ const config = {
                 links: [
                     {
                         title: 'Docs',
-                        items: [{ label: 'API', to: '/docs/api' }],
+                        items: [
+                            { label: 'Getting started', to: '/docs/getting-started' },
+                            { label: 'API', to: '/docs/api/modules' },
+                            { label: 'Contributing', to: '/docs/contributing' },
+                        ],
                     },
                     {
                         title: 'Company',
@@ -90,6 +94,9 @@ const config = {
             {
                 entryPoints: ['./node_modules/@tokenstreet/react-native-idnow-videoident//src/index.ts'],
                 tsconfig: './node_modules/@tokenstreet/react-native-idnow-videoident/tsconfig.json',
+                sidebar: {
+                    position: 2,
+                },
             },
         ],
     ],
