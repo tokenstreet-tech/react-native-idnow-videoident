@@ -100,6 +100,8 @@ sidebar_position: -1
 
 `startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with a `resultCode`. Also, an optional `errorMessage` can be included.
 
+### `try...catch`
+
 You have the possibility to integrate it with a `try...catch` block:
 
 ```ts
@@ -117,6 +119,8 @@ try {
     }
 }
 ```
+
+### `Promises`
 
 It is also possible to work with `Promises` here:
 
