@@ -1,7 +1,7 @@
-import type { ISettings } from '@tokenstreet/react-native-idnow-videoident';
 import type { ProcessedColorValue } from 'react-native';
 
 import type { ResultCodeEnum } from '../enums/ResultCodeEnum';
+import type { ISettings } from './ISettings';
 
 export interface IIdentificationResult {
     resultCode: ResultCodeEnum;
