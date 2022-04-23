@@ -6,7 +6,7 @@
     "scripts": {
         "typescript": "yarn workspaces run typescript",
         "lint": "eslint .",
-        "lint:fix": "npm run lint -- --fix",
+        "lint:fix": "yarn lint --fix",
         "test": "yarn workspaces run test",
         "prettier": "prettier --write . --ignore-path ./.prettierignore",
         "prettier:staged": "pretty-quick --staged",

@@ -1,5 +1,10 @@
 {
     "private": true,
     "name": "@tokenstreet/react-native-idnow-videoident-shared",
-    "version": "0.0.0"
+    "version": "0.0.0",
+    "scripts": {
+        "typescript": "echo \"typescript\"",
+        "test": "echo \"test\"",
+        "build": "echo \"build\""
+    }
 }

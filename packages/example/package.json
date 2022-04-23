@@ -9,6 +9,8 @@
         "android": "react-native run-android",
         "xcode": "open ios/ReactNativeIdnowVideoidentExample.xcworkspace",
         "typescript": "tsc",
+        "test": "echo \"test\"",
+        "build": "echo \"build\"",
         "pods": "export LC_ALL=\"en_US.UTF-8\" arch -x86_64 pod-install --quiet"
     },
     "dependencies": {
