@@ -8,6 +8,7 @@
         "ios": "arch -x86_64 react-native run-ios",
         "android": "react-native run-android",
         "xcode": "open ios/ReactNativeIdnowVideoidentExample.xcworkspace",
+        "typescript": "tsc",
         "pods": "export LC_ALL=\"en_US.UTF-8\" arch -x86_64 pod-install --quiet"
     },
     "dependencies": {

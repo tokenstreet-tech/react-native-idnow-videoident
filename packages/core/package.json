@@ -22,10 +22,10 @@
         "!**/__mocks__"
     ],
     "scripts": {
-        "xcode": "open ios/ReactNativeIdnowVideoident.xcodeproj",
-        "test": "jest",
         "typescript": "tsc --noEmit",
+        "test": "jest",
         "build": "bob build",
+        "xcode": "open ios/ReactNativeIdnowVideoident.xcodeproj",
         "release": "release-it"
     },
     "keywords": [
@@ -53,8 +53,7 @@
         "react-native": "0.68.1",
         "react-native-builder-bob": "^0.18.0",
         "release-it": "^14.12.5",
-        "ts-node": "^10.7.0",
-        "typescript": "^4.6.2"
+        "ts-node": "^10.7.0"
     },
     "peerDependencies": {
         "react": "*",
