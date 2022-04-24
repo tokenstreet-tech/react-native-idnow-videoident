@@ -3,6 +3,11 @@
     "description": "Example app for @tokenstreet/react-native-idnow-videoident",
     "version": "0.0.0",
     "private": true,
+    "workspaces": {
+        "nohoist": [
+            "@tokenstreet/react-native-idnow-videoident"
+        ]
+    },
     "scripts": {
         "start": "react-native start",
         "ios": "arch -x86_64 react-native run-ios",
