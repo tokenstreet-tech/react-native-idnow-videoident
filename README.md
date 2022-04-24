@@ -21,7 +21,7 @@ However, almost the entire code has been rewritten since then, so there are now 
 
 ## Website
 
-Visit [https://tokenstreet-tech.github.io/react-native-idnow-videoident/](https://tokenstreet-tech.github.io/react-native-idnow-videoident/) for docs, guides, API and more!
+Visit the [website](https://tokenstreet-tech.github.io/react-native-idnow-videoident/) for docs, guides, API and more!
 
 ## Contributing
 
