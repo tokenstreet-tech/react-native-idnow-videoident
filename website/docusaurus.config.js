@@ -32,6 +32,10 @@ const config = {
                     editUrl: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident/tree/main/website/',
                 },
                 theme: { customCss: require.resolve('./src/css/custom.css') },
+                googleAnalytics: {
+                    trackingID: 'UA-227265647-1',
+                    anonymizeIP: true,
+                },
             }),
         ],
     ],
