@@ -32,11 +32,10 @@ jobs:
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: ${{ env.CACHE }}
-            - run: |
-                  yarn install --frozen-lockfile
-                  yarn install --cwd website --frozen-lockfile
-                  yarn build
-                  yarn install --cwd example --frozen-lockfile
+            - run: yarn install --frozen-lockfile
+            - run: yarn install --cwd website --frozen-lockfile
+            - run: yarn build
+            - run: yarn install --cwd example --frozen-lockfile
             - run: yarn ${{ matrix.COMMAND }}
     deploy_website:
         runs-on: ubuntu-latest
@@ -49,11 +48,10 @@ jobs:
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: ${{ env.CACHE }}
-            - run: |
-                  yarn install --frozen-lockfile
-                  yarn install --cwd website --frozen-lockfile
-                  yarn build
-                  yarn install --cwd example --frozen-lockfile
+            - run: yarn install --frozen-lockfile
+            - run: yarn install --cwd website --frozen-lockfile
+            - run: yarn build
+            - run: yarn install --cwd example --frozen-lockfile
             - run: yarn --cwd website build
             # Popular action to deploy to GitHub Pages:
             # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -88,11 +86,10 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: ${{ env.CACHE }}
                   registry-url: ${{ env.REGISTRY_URL }}
-            - run: |
-                  yarn install --frozen-lockfile
-                  yarn install --cwd website --frozen-lockfile
-                  yarn build
-                  yarn install --cwd example --frozen-lockfile
+            - run: yarn install --frozen-lockfile
+            - run: yarn install --cwd website --frozen-lockfile
+            - run: yarn build
+            - run: yarn install --cwd example --frozen-lockfile
             - run: yarn version --${{ github.event.inputs.version }}
             - run: git push --follow-tags
             - run: yarn publish
