@@ -1,0 +1,97 @@
+name: main
+
+on:
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+        inputs:
+            version:
+                description: "Version ['patch', 'minor', 'major']"
+                required: true
+
+env:
+    NODE_VERSION: 16
+    CACHE: yarn
+    REGISTRY_URL: 'https://registry.npmjs.org'
+    GIT_USER_NAME: tokenstreet-tools
+    GIT_USER_EMAIL: tools@tokenstreet.com
+
+jobs:
+    yarn_script_validation:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                script: [typescript, lint, test, --cwd website build]
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3.1.1
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: yarn
+            - run: |
+                  yarn install --frozen-lockfile
+                  yarn install --cwd website --frozen-lockfile
+                  yarn build
+                  yarn install --cwd example --frozen-lockfile
+            - run: yarn ${{ matrix.COMMAND }}
+    deploy_website:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        needs:
+            - yarn_script_validation
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3.1.1
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: ${{ env.CACHE }}
+            - run: |
+                  yarn install --frozen-lockfile
+                  yarn install --cwd website --frozen-lockfile
+                  yarn build
+                  yarn install --cwd example --frozen-lockfile
+            - run: yarn --cwd website build
+            # Popular action to deploy to GitHub Pages:
+            # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  # Build output to publish to the `gh-pages` branch:
+                  publish_dir: ./website/build
+                  # The following lines assign commit authorship to the official
+                  # GH-Actions bot for deploys to `gh-pages` branch:
+                  # https://github.com/actions/checkout/issues/13#issuecomment-724415212
+                  # The GH actions bot is used by default if you didn't specify the two fields.
+                  # You can swap them out with your own user credentials.
+                  user_name: ${{ env.GIT_USER_NAME }}
+                  user_email: ${{ env.GIT_USER_EMAIL }}
+    publish_package:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+        needs:
+            - yarn_script_validation
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  token: ${{ secrets.PERSONAL_ACCESS_TOKEN_TOOLS_TOKENSTREET }}
+            - name: Set git credentials
+              run: |
+                  git config --global user.name "${{ env.GIT_USER_NAME }}"
+                  git config --global user.email "${{ env.GIT_USER_EMAIL }}"
+            - uses: actions/setup-node@v3.1.1
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: ${{ env.CACHE }}
+                  registry-url: ${{ env.REGISTRY_URL }}
+            - run: |
+                  yarn install --frozen-lockfile
+                  yarn install --cwd website --frozen-lockfile
+                  yarn build
+                  yarn install --cwd example --frozen-lockfile
+            - run: yarn version --${{ github.event.inputs.version }}
+            - run: git push --follow-tags
+            - run: yarn publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
