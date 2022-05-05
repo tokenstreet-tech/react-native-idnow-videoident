@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[707],{4349:function(e){e.exports=JSON.parse('{"allTagsPath":"/react-native-idnow-videoident/blog/tags","name":"opensource","count":1,"permalink":"/react-native-idnow-videoident/blog/tags/opensource"}')}}]);
