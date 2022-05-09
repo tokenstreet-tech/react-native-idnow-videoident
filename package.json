@@ -77,7 +77,7 @@
         "eslint-plugin-react-native": "^4.0.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
         "husky": "^7.0.4",
-        "jest": "^28.0.3",
+        "jest": "^28.1.0",
         "lint-staged": "^12.4.1",
         "pod-install": "^0.1.35",
         "prettier": "2.6.2",
