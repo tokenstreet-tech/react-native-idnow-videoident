@@ -79,7 +79,7 @@
         "husky": "^8.0.1",
         "jest": "^28.1.0",
         "lint-staged": "^12.4.1",
-        "pod-install": "^0.1.35",
+        "pod-install": "^0.1.36",
         "prettier": "2.6.2",
         "prettier-plugin-java": "1.6.1",
         "pretty-quick": "^3.1.3",
