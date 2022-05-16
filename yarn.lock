@@ -1777,10 +1777,10 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
-"@prettier/plugin-ruby@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-ruby/-/plugin-ruby-3.1.1.tgz#3ef4b0117857a8473a561dbce47cbf9b4d99442c"
-  integrity sha512-GNTgRy/dCSQTYfzXNwnW0DIwN0v3bKVIg+mOxjZzY19XlszN7TBDPaC3BZ0L7jjPrVzaVB+UuPqhF6jHGELBYw==
+"@prettier/plugin-ruby@3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-ruby/-/plugin-ruby-3.1.2.tgz#184b154d666fb4af3c41cf6bd55c373bb3b3540f"
+  integrity sha512-0riBsZYu9MEdWgiZPKpZTdCbvLOk01xTvOs1wJbO7Hw4Fd/rX4Qhz+qsgJm+zloO99Zng88OQy96nSb6KUQHZg==
   dependencies:
     prettier ">=2.3.0"
 
