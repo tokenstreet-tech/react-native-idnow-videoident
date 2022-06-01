@@ -68,7 +68,7 @@
         "@types/react-native": "0.67.7",
         "@typescript-eslint/eslint-plugin": "^5.27.0",
         "@typescript-eslint/parser": "^5.27.0",
-        "commitlint": "^17.0.1",
+        "commitlint": "^17.0.2",
         "eslint": "^8.16.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-flowtype": "^8.0.3",
