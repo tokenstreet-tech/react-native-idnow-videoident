@@ -63,7 +63,7 @@
         "@prettier/plugin-xml": "2.2.0",
         "@react-native-community/eslint-config": "^3.0.2",
         "@release-it/conventional-changelog": "^5.0.0",
-        "@types/jest": "^28.1.0",
+        "@types/jest": "^28.1.1",
         "@types/react": "^17.0.45",
         "@types/react-native": "0.67.8",
         "@typescript-eslint/eslint-plugin": "^5.27.0",
