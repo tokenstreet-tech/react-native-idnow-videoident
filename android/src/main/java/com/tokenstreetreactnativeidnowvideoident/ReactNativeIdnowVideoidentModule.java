@@ -27,7 +27,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
 
     public static final String NAME = "ReactNativeIdnowVideoident";
     private final ReactApplicationContext reactContext;
-    private Callback globalFailureCallback;
+    private Callback globalErrorCallback;
     private Callback globalSuccessCallback;
 
     public ReactNativeIdnowVideoidentModule(@NonNull ReactApplicationContext reactContext) {
@@ -64,7 +64,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
             case IDnowSDK.RESULT_CODE_FAILED:
                 params.putString(resultCodeKey, "FAILED");
                 if (e != null) params.putString(errorMessageKey, e.getMessage());
-                globalFailureCallback.invoke(params);
+                globalErrorCallback.invoke(params);
                 break;
             case IDnowSDK.RESULT_CODE_SUCCESS:
                 params.putString(resultCodeKey, "SUCCESS");
@@ -73,7 +73,7 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
             case IDnowSDK.RESULT_CODE_CANCEL:
                 params.putString(resultCodeKey, "CANCEL");
                 if (e != null) params.putString(errorMessageKey, e.getMessage());
-                globalFailureCallback.invoke(params);
+                globalErrorCallback.invoke(params);
                 break;
             case IDnowSDK.RESULT_CODE_WRONG_IDENT:
             case IDnowSDK.RESULT_CODE_FALLBACK_VID:
@@ -82,17 +82,17 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
             default:
                 params.putString(resultCodeKey, "INTERNAL_ERROR");
                 if (e != null) params.putString(errorMessageKey, e.getMessage());
-                globalFailureCallback.invoke(params);
+                globalErrorCallback.invoke(params);
         }
     }
 
     @ReactMethod
     public void startVideoIdent(
         @NonNull final ReadableMap settings,
-        @NonNull Callback failureCallback,
-        @NonNull Callback successCallback
+        @NonNull Callback successCallback,
+        @NonNull Callback errorCallback
     ) {
-        globalFailureCallback = failureCallback;
+        globalErrorCallback = errorCallback;
         globalSuccessCallback = successCallback;
 
         Activity currentActivity = getCurrentActivity();
