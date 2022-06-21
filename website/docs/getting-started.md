@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ### iOS
 
--   `Deployment Target`: iOS 8.0 or later
+-   `Deployment Target`: iOS 12.0 or later
 
 ### Android
 
