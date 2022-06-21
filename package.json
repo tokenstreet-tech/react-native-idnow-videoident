@@ -23,7 +23,6 @@
     ],
     "scripts": {
         "xcode": "open ios/ReactNativeIdnowVideoident.xcodeproj",
-        "xcode:example": "open example/ios/ReactNativeIdnowVideoidentExample.xcworkspace",
         "test": "jest",
         "typescript": "tsc --noEmit",
         "lint": "eslint .",
