@@ -1,4 +1,5 @@
 export { IDnowManager } from './IDnowManager';
+export type { IIdentificationErrorResult, IIdentificationResult } from './model/common';
 export { AndroidLanguageEnum } from './model/enums/android/AndroidLanguageEnum';
 export { ConnectionTypeEnum } from './model/enums/ConnectionTypeEnum';
 export { EnvironmentEnum } from './model/enums/EnvironmentEnum';
@@ -11,5 +12,4 @@ export { IosUIModalPresentationStyleEnum } from './model/enums/ios/IosUIModalPre
 export { ResultCodeEnum } from './model/enums/ResultCodeEnum';
 export type { IAppearance } from './model/interfaces/IAppearance';
 export type { IColors } from './model/interfaces/IColors';
-export type { IIdentificationErrorResult, IIdentificationResult } from './model/interfaces/INativeModules';
 export type { ISettings } from './model/interfaces/ISettings';
