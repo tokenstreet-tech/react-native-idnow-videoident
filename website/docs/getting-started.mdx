@@ -151,7 +151,7 @@ It is also possible to work with callbacks here:
 ```ts
 import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
-await IDnowManager.startVideoIdent(
+void IDnowManager.startVideoIdent(
     { transactionToken: 'YOUR_TRANSACTION_TOKEN' },
     {
         onSuccess: ({ resultCode }) => console.log(resultCode),
