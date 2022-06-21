@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Getting started
 
 ## Requirements
@@ -100,9 +103,9 @@ sidebar_position: 1
 
 `startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with a `resultCode`. Also, an optional `errorMessage` can be included.
 
-### `try...catch`
-
-You have the possibility to integrate it with a `try...catch` block:
+<Tabs>
+<TabItem value="try_catch" label={<code>try...catch</code>} default>
+You have the possibility to integrate it with a <code>try...catch</code> block:
 
 ```ts
 import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
@@ -120,9 +123,9 @@ try {
 }
 ```
 
-### `Promises`
-
-It is also possible to work with `Promises` here:
+</TabItem>
+<TabItem value="promises" label={<code>Promises</code>}>
+It is also possible to work with <code>Promises</code> here:
 
 ```ts
 import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
@@ -138,5 +141,8 @@ IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
         }
     });
 ```
+
+</TabItem>
+</Tabs>
 
 All configuration options are documented in the [TypeScript interfaces](api/interfaces/ISettings) and [an example](https://github.com/tokenstreet-tech/react-native-idnow-videoident/blob/main/example/src/createFullSettings.ts) is also available.
