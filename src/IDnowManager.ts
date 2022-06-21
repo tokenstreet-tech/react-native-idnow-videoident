@@ -12,13 +12,9 @@ export const IDnowManager = {
     /**
      * Start the video ident process
      * @param settings
-     * @param onSuccess
-     * @param onError
+     * @param callbacks
      */
-    startVideoIdent: async (
-        settings: ISettings,
-        { onSuccess, onError }: ICallbacks = {}
-    ): Promise<IIdentificationResult> => {
+    startVideoIdent: async (settings: ISettings, callbacks?: ICallbacks): Promise<IIdentificationResult> => {
         const nativeClient: IReactNativeIdnowVideoidentNativeModule = (NativeModules as INativeModules)
             .ReactNativeIdnowVideoident
             ? NativeModules.ReactNativeIdnowVideoident
@@ -38,11 +34,11 @@ export const IDnowManager = {
                     nativeClient.startVideoIdent(
                         processSettings(settings),
                         (result) => {
-                            if (onSuccess) onSuccess(result);
+                            if (callbacks?.onSuccess) callbacks.onSuccess(result);
                             resolve(result);
                         },
                         (errorResult) => {
-                            if (onError) onError(errorResult);
+                            if (callbacks?.onError) callbacks.onError(errorResult);
                             reject(errorResult);
                         }
                     );
