@@ -89,8 +89,8 @@ public class ReactNativeIdnowVideoidentModule extends ReactContextBaseJavaModule
     @ReactMethod
     public void startVideoIdent(
         @NonNull final ReadableMap settings,
-        @NonNull Callback successCallback
-        @NonNull Callback errorCallback,
+        @NonNull Callback successCallback,
+        @NonNull Callback errorCallback
     ) {
         globalErrorCallback = errorCallback;
         globalSuccessCallback = successCallback;
