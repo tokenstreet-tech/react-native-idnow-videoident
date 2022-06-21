@@ -4,7 +4,11 @@ import type { TOnError, TOnSuccess } from '../common';
 import type { ISettings } from './ISettings';
 
 export interface IReactNativeIdnowVideoidentNativeModule {
-    startVideoIdent: (settings: ISettings<ProcessedColorValue>, onSuccess: TOnSuccess, onError: TOnError) => void;
+    startVideoIdent: (
+        settings: ISettings<ProcessedColorValue>,
+        successCallback: TOnSuccess,
+        errorCallback: TOnError
+    ) => void;
 }
 
 export interface INativeModules {
