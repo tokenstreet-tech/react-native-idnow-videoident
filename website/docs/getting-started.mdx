@@ -103,6 +103,8 @@ import TabItem from '@theme/TabItem';
 
 `startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with a `resultCode`. Also, an optional `errorMessage` can be included.
 
+You have the possibility to integrate it with a <code>try...catch</code> block, with <code>Promises</code> or with callbacks:
+
 <Tabs>
 <TabItem value="try_catch" label={<code>try...catch</code>} default>
 You have the possibility to integrate it with a <code>try...catch</code> block:
@@ -140,6 +142,22 @@ IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
             console.log(identificationError.errorMessage);
         }
     });
+```
+
+</TabItem>
+<TabItem value="callbacks" label="Callbacks">
+It is also possible to work with callbacks here:
+
+```ts
+import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+
+await IDnowManager.startVideoIdent(
+    { transactionToken: 'YOUR_TRANSACTION_TOKEN' },
+    {
+        onSuccess: ({ resultCode }) => console.log(resultCode),
+        onError: ({ resultCode, errorMessage }) => console.log(`${resultCode}\n${errorMessage}`),
+    }
+);
 ```
 
 </TabItem>
