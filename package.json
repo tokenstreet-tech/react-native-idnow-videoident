@@ -33,7 +33,7 @@
         "build": "bob build",
         "release": "release-it",
         "example": "yarn --cwd example",
-        "pods": "export LC_ALL=\"en_US.UTF-8\" && cd example && arch -x86_64 pod-install --quiet",
+        "pods": "export LC_ALL=\"en_US.UTF-8\" && cd example && pod-install --quiet",
         "website": "yarn --cwd website",
         "bootstrap": "yarn && yarn website && yarn build && yarn example && yarn pods",
         "prepare": "husky install"
@@ -59,7 +59,7 @@
     },
     "devDependencies": {
         "@commitlint/config-conventional": "^17.0.2",
-        "@prettier/plugin-ruby": "3.1.2",
+        "@prettier/plugin-ruby": "2.1.0",
         "@prettier/plugin-xml": "2.2.0",
         "@react-native-community/eslint-config": "^3.0.2",
         "@release-it/conventional-changelog": "^5.0.0",

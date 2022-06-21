@@ -5,7 +5,7 @@
     "private": true,
     "scripts": {
         "start": "react-native start",
-        "ios": "arch -x86_64 react-native run-ios",
+        "ios": "react-native run-ios",
         "android": "react-native run-android",
         "xcode": "open ios/ReactNativeIdnowVideoidentExample.xcworkspace"
     },
