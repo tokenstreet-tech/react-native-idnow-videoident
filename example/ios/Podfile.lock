@@ -463,9 +463,9 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: b960b687d2dfef0d3761fbb187e01812ebab8b23
   ReactCommon: 095366164a276d91ea704ce53cb03825c487a3f2
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  tokenstreet-react-native-idnow-videoident: 199f22c3ebaf308a7c4f97be08aea4ae13f2c1ba
+  tokenstreet-react-native-idnow-videoident: d75a7668dd53d80922865045afbf396e09b6dc64
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
 
-PODFILE CHECKSUM: 6782063762e189f4c88f7a75eb08d5112f6dd5c5
+PODFILE CHECKSUM: c97b54a3581738117be93dade3cc5d482af421da
 
 COCOAPODS: 1.11.3
