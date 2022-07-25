@@ -18,10 +18,15 @@ target 'ReactNativeIdnowVideoidentExample' do
         production: production,
         hermes_enabled: flags[:hermes_enabled],
         fabric_enabled: flags[:fabric_enabled],
-        flipper_configuration: FlipperConfiguration.enabled,
+        flipper_configuration: FlipperConfiguration.disabled,
         # An absolute path to your application root.
         app_path: "#{Pod::Config.instance.installation_root}/.."
     )
+
+    target 'ReactNativeIdnowVideoidentExampleTests' do
+        inherit! :complete
+        # Pods for testing
+    end
 
     use_frameworks! linkage: :static
     pod 'tokenstreet-react-native-idnow-videoident', path: '../..'
@@ -29,9 +34,5 @@ target 'ReactNativeIdnowVideoidentExample' do
     post_install do |installer|
         react_native_post_install(installer)
         __apply_Xcode_12_5_M1_post_install_workaround(installer)
-
-        installer.pods_project.build_configurations.each do |config|
-            config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-        end
     end
 end
