@@ -56,6 +56,7 @@ public class ReactNativeIdnowSDK {
             reactApplicationContext,
             Objects.requireNonNull(settings.getString("newLocale"))
         );
+        if (appearance.hasKey("showIDnowLogo")) IDnowSDK.setShowIDnowLogo(appearance.getBoolean("showIDnowLogo"));
         if (settings.hasKey("disableLogging")) if (settings.getBoolean("disableLogging")) {
             IDnowSDK.disableLogging();
         } else {

@@ -9,12 +9,14 @@ plugins:
     - react-native
     - prettier
     - simple-import-sort
+    - jest
 extends:
     - '@react-native-community'
     - eslint:all
     - plugin:@typescript-eslint/all
     - plugin:react/all
     - plugin:react-native/all
+    - plugin:jest/all
     - prettier
 rules:
     '@typescript-eslint/array-type':
