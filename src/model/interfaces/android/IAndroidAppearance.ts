@@ -1,5 +1,5 @@
 export interface IAndroidAppearance {
-    showIDnowLogo?: boolean;
+    // showIDnowLogo?: boolean;
 
     nameForActionBar?: string;
 
