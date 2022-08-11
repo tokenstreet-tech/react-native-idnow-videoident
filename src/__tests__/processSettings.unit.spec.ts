@@ -30,7 +30,7 @@ describe('processSettings', () => {
                 ignoreCompanyID: true,
                 transactionToken: transactionTokenMock,
             };
-            expect(result).toEqual(expectedResult);
+            expect(result).toStrictEqual(expectedResult);
         });
         it('should not override the given settings', () => {
             // Arrange
@@ -66,7 +66,7 @@ describe('processSettings', () => {
                 ignoreCompanyID: false,
                 transactionToken: transactionTokenMock,
             };
-            expect(result).toEqual(expectedResult);
+            expect(result).toStrictEqual(expectedResult);
         });
     });
     describe('processColor', () => {
@@ -93,7 +93,7 @@ describe('processSettings', () => {
                 primaryBrandColor: 4278190335,
                 proceedButtonBackgroundColor: 4294902015,
             };
-            expect(result.appearance?.colors).toEqual(expectedResult);
+            expect(result.appearance?.colors).toStrictEqual(expectedResult);
         });
         // it('should process the color values for Android', () => {
         //     // Arrange
