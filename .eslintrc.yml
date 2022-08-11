@@ -9,12 +9,14 @@ plugins:
     - react-native
     - prettier
     - simple-import-sort
+    - jest
 extends:
     - '@react-native-community'
     - eslint:all
     - plugin:@typescript-eslint/all
     - plugin:react/all
     - plugin:react-native/all
+    - plugin:jest/all
     - prettier
 rules:
     '@typescript-eslint/array-type':
@@ -28,6 +30,7 @@ rules:
     '@typescript-eslint/no-empty-interface': 0 # Worsens the structure
     '@typescript-eslint/no-magic-numbers': 0 # Worsens the structure
     capitalized-comments: 0 # Worsens the structure
+    jest/require-hook: 0 # Error prone
     line-comment-position: 0 # Worsens the structure
     max-lines-per-function: 0 # Worsens the structure
     no-inline-comments: 0 # Worsens the structure
@@ -57,6 +60,8 @@ rules:
     '@typescript-eslint/no-var-requires': 0
     '@typescript-eslint/prefer-readonly-parameter-types': 0
     '@typescript-eslint/restrict-template-expressions': 0
+    jest/no-commented-out-tests: 0
+    jest/prefer-expect-assertions: 0
     max-lines: 0
     multiline-comment-style: 0
     no-warning-comments: 0

@@ -1,4 +1,6 @@
 export interface IAndroidAppearance {
+    // showIDnowLogo?: boolean;
+
     nameForActionBar?: string;
 
     checkBoxOrientationRight?: boolean;

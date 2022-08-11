@@ -110,6 +110,7 @@ export const createFullSettings = (transactionToken: string): DeepRequired<ISett
         shouldShowResultTitleForCQCResult: false,
         shouldUseHeadlineColorForPreCheckTitle: false,
         showErrorSuccessScreen: true,
+        // showIDnowLogo: false,
         showTokenDuringCheckScreen: false,
         showVideoOverviewCheck: true,
         squareCheckboxForm: false,
