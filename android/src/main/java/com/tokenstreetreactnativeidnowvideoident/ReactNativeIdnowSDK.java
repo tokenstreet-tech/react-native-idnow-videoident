@@ -56,8 +56,9 @@ public class ReactNativeIdnowSDK {
             reactApplicationContext,
             Objects.requireNonNull(settings.getString("newLocale"))
         );
-        //Can be used when we have raised the Android SDK to version 5.1.12.
+        // Can be used when we have raised the Android SDK to version 5.1.12.
         // However, this version is currently causing problems:
+        // Could not find de.authada.library:aal:4.15.2
         // if (appearance.hasKey("showIDnowLogo")) IDnowSDK.setShowIDnowLogo(appearance.getBoolean("showIDnowLogo"));
         if (settings.hasKey("disableLogging")) if (settings.getBoolean("disableLogging")) {
             IDnowSDK.disableLogging();
