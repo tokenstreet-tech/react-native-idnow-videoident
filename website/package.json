@@ -15,7 +15,7 @@
         "typecheck": "tsc"
     },
     "dependencies": {
-        "@docusaurus/core": "2.0.1",
+        "@docusaurus/core": "2.1.0",
         "@docusaurus/preset-classic": "2.1.0",
         "@mdx-js/react": "^1.6.22",
         "clsx": "^1.2.1",
@@ -24,11 +24,11 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@docusaurus/module-type-aliases": "2.0.1",
+        "@docusaurus/module-type-aliases": "2.1.0",
         "@tsconfig/docusaurus": "^1.0.6",
         "docusaurus-plugin-typedoc": "^0.17.5",
         "typedoc": "^0.23.11",
-        "typedoc-plugin-markdown": "^3.13.4",
+        "typedoc-plugin-markdown": "^3.13.6",
         "typescript": "^4.8.2"
     },
     "browserslist": {
