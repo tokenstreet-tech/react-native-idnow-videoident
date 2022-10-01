@@ -466,7 +466,7 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 0612c8f2dbd774414bb778247c6ec6cb05aa4c50
   FLAnimatedImage: bbf914596368867157cc71b38a8ec834b3eeb32b
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 3d02b25ca00c2d456734d0bcff864cbc62f6ae1a
+  glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 9cd393f741bfa14d1d0cd90cc373e3619c0bc7ea
   IDnowSDK: b810e6ba6c52ab0d10520dddf1d3304f1e441d9f
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
