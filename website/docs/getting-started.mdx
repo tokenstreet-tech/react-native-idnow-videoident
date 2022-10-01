@@ -76,7 +76,13 @@ import TabItem from '@theme/TabItem';
                     includeModule("com.github.barteksc", "android-pdf-viewer")
                 }
             }
-            maven { url "https://raw.githubusercontent.com/idnow/de.idnow.android/master" }
+            maven() {
+                url "https://raw.githubusercontent.com/idnow/de.idnow.android/master"
+                content {
+                    includeModule("de.idnow.sdk", "idnow-android-sdk")
+                    includeModule("de.idnow.insights", "idnow-android-insights-sdk")
+                }
+            }
         }
     }
     ```
