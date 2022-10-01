@@ -10,8 +10,8 @@
         "xcode": "open ios/ReactNativeIdnowVideoidentExample.xcworkspace"
     },
     "dependencies": {
-        "react": "18.0.0",
-        "react-native": "0.69.6",
+        "react": "18.1.0",
+        "react-native": "0.70.1",
         "utility-types": "^3.10.0"
     },
     "devDependencies": {
