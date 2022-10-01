@@ -342,7 +342,6 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes/hermes-engine.podspec`)
-  - IDnowSDK (= 5.1.12)
   - libevent (~> 2.1.12)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
@@ -503,6 +502,6 @@ SPEC CHECKSUMS:
   tokenstreet-react-native-idnow-videoident: e2db2cf5b21c9eb523ec3672f61fd13409bedece
   Yoga: 6c8252e38d65aa387daee699eacf027e055e0b31
 
-PODFILE CHECKSUM: 2e1788ce3cd213d702e15226338aa96fa06a3801
+PODFILE CHECKSUM: 9c31b83af34c55b9d9a82fe60525717793340071
 
 COCOAPODS: 1.11.3
