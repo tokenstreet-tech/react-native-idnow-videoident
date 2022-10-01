@@ -16,21 +16,27 @@ An [issue](https://github.com/idnow/de.idnow.ios/issues/119) has already been cr
 A workaround to remove the line `use_frameworks! linkage: :static` is to use the plugin [`cocoapods-user-defined-build-types`](https://github.com/joncardasis/cocoapods-user-defined-build-types).
 For this temporary solution the following lines have to be added to the `Podfile`:
 
-```ruby
+```diff
 ...
 install! 'cocoapods', deterministic_uuids: false
 
-plugin 'cocoapods-user-defined-build-types'
-enable_user_defined_build_types!
++ plugin 'cocoapods-user-defined-build-types'
++ enable_user_defined_build_types!
 
 target 'App' do
 ...
 ```
 
-```ruby
-...
-pod 'IDnowSDK', '5.1.12', build_type: :static_framework
-...
+```diff
+    ...
+        app_path: "#{Pod::Config.instance.installation_root}/.."
+    )
+
+-   use_frameworks! linkage: :static
++   pod 'IDnowSDK', '5.1.12', build_type: :static_framework
+
+    target 'AppTests' do
+    ...
 ```
 
 :::caution version sync
