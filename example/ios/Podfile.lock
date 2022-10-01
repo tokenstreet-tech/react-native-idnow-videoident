@@ -28,7 +28,7 @@ PODS:
   - fmt (6.2.1)
   - glog (0.3.5)
   - hermes-engine (0.70.1)
-  - IDnowSDK (5.1.12):
+  - IDnowSDK (5.1.6):
     - AFNetworking (~> 4.0)
     - FLAnimatedImage (~> 1.0)
     - libPhoneNumber-iOS (~> 0.9)
@@ -330,19 +330,21 @@ PODS:
     - React-logger (= 0.70.1)
     - React-perflogger (= 0.70.1)
   - SocketRocket (0.5.1)
-  - tokenstreet-react-native-idnow-videoident (0.7.0):
-    - IDnowSDK (= 5.1.12)
-    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
+  - AFNetworking (= 4.0.1)
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
+  - FLAnimatedImage (= 1.0.16)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes/hermes-engine.podspec`)
+  - IDnowSDK (= 5.1.6)
   - libevent (~> 2.1.12)
+  - libPhoneNumber-iOS (= 0.9.15)
+  - Masonry (= 1.1.0)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -371,7 +373,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - tokenstreet-react-native-idnow-videoident (from `../..`)
+  - SocketRocket (= 0.5.1)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -452,8 +454,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
-  tokenstreet-react-native-idnow-videoident:
-    :path: "../.."
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -467,7 +467,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 3d02b25ca00c2d456734d0bcff864cbc62f6ae1a
   hermes-engine: 9cd393f741bfa14d1d0cd90cc373e3619c0bc7ea
-  IDnowSDK: b810e6ba6c52ab0d10520dddf1d3304f1e441d9f
+  IDnowSDK: e5fa97215321df585055d5257e626c3fb90ba42d
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -499,9 +499,8 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: a11d0c2e14140baf1e449264ca9168ae9ae6bbd0
   ReactCommon: 7f86326b92009925c6dcf93f8e825060171c379f
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  tokenstreet-react-native-idnow-videoident: e908da5de0ab887bf3280ac7e5e4cbf98be782bd
   Yoga: 6c8252e38d65aa387daee699eacf027e055e0b31
 
-PODFILE CHECKSUM: 18702e967638b4dc20fdc0caf83cd88332edd799
+PODFILE CHECKSUM: 2862f75b493281f0a1d6a079e6afc6a21a3916aa
 
 COCOAPODS: 1.11.3
