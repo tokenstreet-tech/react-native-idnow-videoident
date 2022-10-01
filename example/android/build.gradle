@@ -52,6 +52,7 @@ allprojects {
             // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.
             content {
                 includeModule("me.relex", "circleindicator")
+                includeModule("com.github.barteksc", "android-pdf-viewer")
             }
         }
         maven() {
