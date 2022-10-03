@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# CocoaPods build-types
+# CocoaPods build types
 
 Unfortunately, the IDnow iOS enforces the build type static framework with the following line `use_frameworks! linkage: :static`.
 
