@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "react": "18.1.0",
-        "react-native": "0.70.2",
+        "react-native": "0.70.3",
         "utility-types": "^3.10.0"
     },
     "devDependencies": {
