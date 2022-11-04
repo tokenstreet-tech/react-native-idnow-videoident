@@ -66,10 +66,10 @@ const withPodfileUpdate = (config: ExpoConfig) =>
         },
     ]);
 
-async function editPodfile(
+const editPodfile = async (
     config: ExportedConfigWithProps<unknown>,
     action: { (podfile: any): any; (arg0: string): any }
-) {
+) => {
     const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
     try {
         const podfile = action(await readFileAsync(podfilePath));
@@ -79,13 +79,11 @@ async function editPodfile(
     } catch (e) {
         WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${e}.`);
     }
-}
+};
 
-async function readFileAsync(path: PathLike | promises.FileHandle) {
-    return promises.readFile(path, 'utf8');
-}
+const readFileAsync = async (path: PathLike | promises.FileHandle) => promises.readFile(path, 'utf8');
 
-async function saveFileAsync(
+const saveFileAsync = async (
     path: PathLike | promises.FileHandle,
     content:
         | AsyncIterable<NodeJS.ArrayBufferView | string>
@@ -93,11 +91,9 @@ async function saveFileAsync(
         | NodeJS.ArrayBufferView
         | Stream
         | string
-) {
-    return promises.writeFile(path, content, 'utf8');
-}
+) => promises.writeFile(path, content, 'utf8');
 
-function addLines(content: string, find: string, offset: number, toAdd: Array<string>) {
+const addLines = (content: string, find: string, offset: number, toAdd: Array<string>) => {
     const lines = content.split('\n');
 
     let lineIndex = lines.findIndex((line: string) => line.match(find));
@@ -108,7 +104,7 @@ function addLines(content: string, find: string, offset: number, toAdd: Array<st
     }
 
     return lines.join('\n');
-}
+};
 
 const ERROR_MSG_PREFIX = 'An error occurred while configuring iOS project. ';
 const filePaths = ['./RNIdnow'];
@@ -125,7 +121,7 @@ const withXCodeProjectUpdate = (config: ExpoConfig) =>
         return config;
     });
 
-export function addRNIdNowFiles({
+export const addRNIdNowFiles = ({
     projectRoot,
     currentDir,
     filePaths,
@@ -137,7 +133,7 @@ export function addRNIdNowFiles({
     filePaths: Array<string>;
     project: XcodeProject;
     projectName: string | undefined;
-}): XcodeProject {
+}): XcodeProject => {
     if (!projectName) {
         throw new Error(`${ERROR_MSG_PREFIX}Unable to find iOS project name.`);
     }
@@ -159,7 +155,7 @@ export function addRNIdNowFiles({
         });
     }
     return project;
-}
+};
 
 const addMFile = (file: IFile) => {
     let { fileRelativePath, currentDir, sourceRoot, project, projectName } = file;
