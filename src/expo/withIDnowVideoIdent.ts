@@ -127,7 +127,7 @@ const withXCodeProjectUpdate = (config: ExpoConfig) =>
         return config;
     });
 
-export const addRNIdNowFiles = ({
+ const addRNIdNowFiles = ({
     projectRoot,
     currentDir,
     filePaths,
