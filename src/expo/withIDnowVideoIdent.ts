@@ -1,8 +1,7 @@
-import type { ConfigPlugin, ExportedConfigWithProps, XcodeProject } from '@expo/config-plugins';
+import type { ConfigPlugin, ExportedConfigWithProps } from '@expo/config-plugins';
 import {
     AndroidConfig,
     createRunOncePlugin,
-    IOSConfig,
     WarningAggregator,
     withAndroidManifest,
     withAppBuildGradle,
@@ -10,21 +9,12 @@ import {
     withMainApplication,
     withProjectBuildGradle,
     withSettingsGradle,
-    withXcodeProject,
 } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 import type { PathLike } from 'fs';
-import { copyFileSync, promises } from 'fs';
-import { basename, join, resolve } from 'path';
+import { promises } from 'fs';
+import { join } from 'path';
 import type { Stream } from 'stream';
-
-interface IFile {
-    fileRelativePath: string;
-    currentDir: string;
-    sourceRoot: string;
-    project: XcodeProject;
-    projectName: string;
-}
 
 const { getMainApplicationOrThrow } = AndroidConfig.Manifest;
 
@@ -110,92 +100,6 @@ const addLines = (content: string, find: string, offset: number, toAdd: Array<st
     }
 
     return lines.join('\n');
-};
-
-const ERROR_MSG_PREFIX = 'An error occurred while configuring iOS project. ';
-const filePaths = ['./RNIdnow'];
-
-const withXCodeProjectUpdate = (config: ExpoConfig) =>
-    withXcodeProject(config, (config) => {
-        addRNIdNowFiles({
-            projectRoot: config.modRequest.projectRoot,
-            currentDir: __dirname,
-            filePaths,
-            project: config.modResults,
-            projectName: config.modRequest.projectName,
-        });
-        return config;
-    });
-
- const addRNIdNowFiles = ({
-    projectRoot,
-    currentDir,
-    filePaths,
-    project,
-    projectName,
-}: {
-    projectRoot: string;
-    currentDir: string;
-    filePaths: Array<string>;
-    project: XcodeProject;
-    projectName: string | undefined;
-}): XcodeProject => {
-    if (!projectName) {
-        throw new Error(`${ERROR_MSG_PREFIX}Unable to find iOS project name.`);
-    }
-    const sourceRoot = IOSConfig.Paths.getSourceRoot(projectRoot);
-    for (const fileRelativePath of filePaths) {
-        addMFile({
-            fileRelativePath: `${fileRelativePath}.m`,
-            currentDir,
-            sourceRoot,
-            project,
-            projectName,
-        });
-        addHFile({
-            fileRelativePath: `${fileRelativePath}.h`,
-            currentDir,
-            sourceRoot,
-            project,
-            projectName,
-        });
-    }
-    return project;
-};
-
-const addMFile = (file: IFile) => {
-    let { fileRelativePath, currentDir, sourceRoot, project, projectName } = file;
-    const fileName = basename(fileRelativePath);
-    const sourceFilepath = resolve(currentDir, fileRelativePath);
-    const destinationFilepath = resolve(sourceRoot, '..', fileName);
-
-    copyFileSync(sourceFilepath, destinationFilepath);
-    if (!project.hasFile(`${projectName}/${fileName}`)) {
-        project = IOSConfig.XcodeUtils.addBuildSourceFileToGroup({
-            filepath: fileName,
-            groupName: projectName,
-            project,
-        });
-    }
-};
-
-const addHFile = (file: IFile) => {
-    let { fileRelativePath, currentDir, sourceRoot, project, projectName } = file;
-    const fileName = basename(fileRelativePath);
-    const sourceFilepath = resolve(currentDir, fileRelativePath);
-    const destinationFilepath = resolve(sourceRoot, '..', fileName);
-
-    copyFileSync(sourceFilepath, destinationFilepath);
-    if (!project.hasFile(`${projectName}/${fileName}`)) {
-        project = IOSConfig.XcodeUtils.addFileToGroupAndLink({
-            filepath: fileName,
-            groupName: projectName,
-            project,
-            addFileToProject({ project, file }) {
-                project.addToPbxFileReferenceSection(file);
-            },
-        });
-    }
 };
 
 // Updating Android...
@@ -355,7 +259,6 @@ const withIDnowVideoIdent: ConfigPlugin = (expoConfig: ExpoConfig) => {
     });
 
     expoConfig = withPodfileUpdate(expoConfig);
-    expoConfig = withXCodeProjectUpdate(expoConfig);
 
     return expoConfig;
 };
