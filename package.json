@@ -32,10 +32,10 @@
         "uncrustify": "cd ios && find . \\( -name \"*.h\" -o -name \"*.m\" \\) -exec uncrustify -c ../uncrustifyrc.cfg --no-backup {} +",
         "build": "bob build",
         "release": "release-it",
-        "example": "yarn --cwd example",
         "pods": "export LC_ALL=\"en_US.UTF-8\" && cd examples/bare && pod-install --quiet",
+        "examples": "yarn --cwd examples/bare && yarn pods && yarn --cwd examples/expo",
         "website": "yarn --cwd website",
-        "bootstrap": "yarn && yarn website && yarn build && yarn examples/bare && yarn pods && yarn examples/expo",
+        "bootstrap": "yarn && yarn website && yarn build && yarn examples",
         "prepare": "husky install"
     },
     "lint-staged": {
