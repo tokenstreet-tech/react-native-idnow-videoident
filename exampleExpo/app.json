@@ -1,10 +1,10 @@
 {
-    "name": "@tokenstreet/react-native-extended-stylesheet-example",
-    "displayName": "ReactNativeExtendedStylesheet Example",
+    "name": "ReactNativeIdnowVideoidentExample",
+    "displayName": "ReactNativeIdnowVideoident Example",
     "expo": {
-        "name": "@tokenstreet/react-native-extended-stylesheet-example",
-        "slug": "tokenstreet-react-native-extended-stylesheet-example",
-        "description": "Example app for @tokenstreet/react-native-extended-stylesheet",
+        "name": "@tokenstreet/react-native-idnow-videoident-example",
+        "slug": "tokenstreet-react-native-idnow-videoident-example",
+        "description": "Example app for @tokenstreet/react-native-idnow-videoident",
         "privacy": "public",
         "version": "1.0.0",
         "platforms": ["ios", "android", "web"],
