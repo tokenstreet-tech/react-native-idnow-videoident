@@ -17,7 +17,6 @@ import { join } from 'path';
 import type { Stream } from 'stream';
 
 const readFileAsync = async (path: PathLike | promises.FileHandle): Promise<string> => promises.readFile(path, 'utf8');
-
 const saveFileAsync = async (
     path: PathLike | promises.FileHandle,
     content:
