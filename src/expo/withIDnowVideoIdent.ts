@@ -18,7 +18,7 @@ import { copyFileSync, promises } from 'fs';
 import { basename, join, resolve } from 'path';
 import type { Stream } from 'stream';
 
-import type { IFile } from './file';
+import type { IFile } from './IFile';
 
 const { getMainApplicationOrThrow } = AndroidConfig.Manifest;
 
@@ -325,7 +325,7 @@ const applyPackagingOptionsAndConfigurations = (appBuildGradle: string) => {
     return appBuildGradle;
 };
 
-const withIDnow: ConfigPlugin = (expoConfig: ExpoConfig) => {
+const withIDnowVideoIdent: ConfigPlugin = (expoConfig: ExpoConfig) => {
     expoConfig = withMainApplication(expoConfig, (config) => {
         config.modResults.contents = applyPackage(config.modResults.contents);
         return config;
@@ -359,4 +359,4 @@ const withIDnow: ConfigPlugin = (expoConfig: ExpoConfig) => {
     return expoConfig;
 };
 
-export default createRunOncePlugin(withIDnow, 'IDNowSDK', '1.0.11');
+export default createRunOncePlugin(withIDnowVideoIdent, 'IDNowSDK', '1.0.11');
