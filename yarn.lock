@@ -1263,13 +1263,13 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@expo/config-plugins@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.1.1.tgz#ffb20b3d2be4e2509e8bf846721641dc072718c7"
-  integrity sha512-lo3tVxRhwM9jfxPHJcURsH5WvU26kX12h5EB3C7kjVhgdQPLkvT8Jk8Cx0KSL8MXKcry2xQvZ2uuwWLkMeplJw==
+"@expo/config-plugins@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-5.0.1.tgz#66bc8d15785bdcd3598e466344f8c0518390179d"
+  integrity sha512-1OfnsOrfeSkB0VZfT01UjQ5Uq6p+yYbq8yNkj0e99K/6NLHpyvIxj+5tZIV0nQXgkOcqBIABL2uA7lwB8CkaBQ==
   dependencies:
-    "@expo/config-types" "^44.0.0"
-    "@expo/json-file" "8.2.35"
+    "@expo/config-types" "^46.0.0"
+    "@expo/json-file" "8.2.36"
     "@expo/plist" "0.0.18"
     "@expo/sdk-runtime-versions" "^1.0.0"
     "@react-native/normalize-color" "^2.0.0"
@@ -1284,15 +1284,15 @@
     xcode "^3.0.1"
     xml2js "0.4.23"
 
-"@expo/config-types@44.0.0", "@expo/config-types@^44.0.0":
-  version "44.0.0"
-  resolved "https://registry.yarnpkg.com/@expo/config-types/-/config-types-44.0.0.tgz#d3480fe2c99f9e895dae4ebba58b74ed72d03e26"
-  integrity sha512-d+gpdKOAhqaD5RmcMzGgKzNtvE1w+GCqpFQNSXLliYlXjj+Tv0eL8EPeAdPtvke0vowpPFwd5McXLA90dgY6Jg==
+"@expo/config-types@^46.0.0", "@expo/config-types@^46.0.2":
+  version "46.0.2"
+  resolved "https://registry.yarnpkg.com/@expo/config-types/-/config-types-46.0.2.tgz#191f225ebfcbe624868ddc40efae79593f948dd8"
+  integrity sha512-PXkmOgNwRyBfgVT1HmFZhfh3Qm7WKKyV6mk3/5HJ/LzPh1t+Zs2JrWX8U2YncTLV1QzV7nV8tnkyvszzqnZEzQ==
 
-"@expo/json-file@8.2.35":
-  version "8.2.35"
-  resolved "https://registry.yarnpkg.com/@expo/json-file/-/json-file-8.2.35.tgz#d0f0c74cdde2ae26686708912cf23ff81a8d67ac"
-  integrity sha512-cQFLGSNRRFbN9EIhVDpMCYuzXbrHUOmKEqitBR+nrU6surjKGsOsN9Ubyn/L/LAGlFvT293E4XY5zsOtJyiPZQ==
+"@expo/json-file@8.2.36":
+  version "8.2.36"
+  resolved "https://registry.yarnpkg.com/@expo/json-file/-/json-file-8.2.36.tgz#62a505cb7f30a34d097386476794680a3f7385ff"
+  integrity sha512-tOZfTiIFA5KmMpdW9KF7bc6CFiGjb0xnbieJhTGlHrLL+ps2G0OkqmuZ3pFEXBOMnJYUVpnSy++52LFxvpa5ZQ==
   dependencies:
     "@babel/code-frame" "~7.10.4"
     json5 "^1.0.1"
