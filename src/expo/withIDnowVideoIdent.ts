@@ -198,7 +198,7 @@ const addHFile = (file: IFile) => {
 // updating android...
 // Update AndroidManifest by adding xmlns:tools to the manifest tag and tools:replace to the application tag
 const applyManifestConfig = async (
-    config: Pick<ExpoConfig, 'android'>,
+    _config: Pick<ExpoConfig, 'android'>,
     androidManifest: AndroidConfig.Manifest.AndroidManifest
 ): Promise<AndroidConfig.Manifest.AndroidManifest> => {
     // Get the <application /> tag and assert if it doesn't exist.
