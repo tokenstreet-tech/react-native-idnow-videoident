@@ -16,7 +16,7 @@ import { promises } from 'fs';
 import { join } from 'path';
 import type { Stream } from 'stream';
 
-const readFileAsync = async (path: PathLike | promises.FileHandle) => promises.readFile(path, 'utf8');
+const readFileAsync = async (path: PathLike | promises.FileHandle): Promise<string> => promises.readFile(path, 'utf8');
 
 const saveFileAsync = async (
     path: PathLike | promises.FileHandle,
@@ -26,7 +26,7 @@ const saveFileAsync = async (
         | NodeJS.ArrayBufferView
         | Stream
         | string
-) => promises.writeFile(path, content, 'utf8');
+): Promise<void> => promises.writeFile(path, content, 'utf8');
 
 const editPodfile = async (
     config: ExportedConfigWithProps<unknown>,
@@ -41,6 +41,19 @@ const editPodfile = async (
     } catch (e) {
         WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${e}.`);
     }
+};
+
+const addLines = (content: string, find: string, offset: number, toAdd: Array<string>) => {
+    const lines = content.split('\n');
+
+    let lineIndex = lines.findIndex((line: string) => line.match(find));
+
+    for (const newLine of toAdd) {
+        lines.splice(lineIndex + offset, 0, newLine);
+        lineIndex += 1;
+    }
+
+    return lines.join('\n');
 };
 
 // Updating iOS...
@@ -86,19 +99,6 @@ const withPodfileUpdate = (config: ExpoConfig) =>
             return config;
         },
     ]);
-
-const addLines = (content: string, find: string, offset: number, toAdd: Array<string>) => {
-    const lines = content.split('\n');
-
-    let lineIndex = lines.findIndex((line: string) => line.match(find));
-
-    for (const newLine of toAdd) {
-        lines.splice(lineIndex + offset, 0, newLine);
-        lineIndex++;
-    }
-
-    return lines.join('\n');
-};
 
 // Updating Android...
 // Update AndroidManifest by adding xmlns:tools to the manifest tag and tools:replace to the application tag
