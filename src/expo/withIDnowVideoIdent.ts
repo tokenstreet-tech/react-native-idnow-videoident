@@ -11,35 +11,23 @@ import {
     withSettingsGradle,
 } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
-import type { PathLike } from 'fs';
 import { promises } from 'fs';
 import { join } from 'path';
-import type { Stream } from 'stream';
 
-const readFileAsync = async (path: PathLike | promises.FileHandle): Promise<string> => promises.readFile(path, 'utf8');
-const saveFileAsync = async (
-    path: PathLike | promises.FileHandle,
-    content:
-        | AsyncIterable<NodeJS.ArrayBufferView | string>
-        | Iterable<NodeJS.ArrayBufferView | string>
-        | NodeJS.ArrayBufferView
-        | Stream
-        | string
-): Promise<void> => promises.writeFile(path, content, 'utf8');
-
-const editPodfile = async (config: ExportedConfigWithProps<unknown>, action: (podfile: string) => string) => {
+const editPodfile = async (
+    config: ExportedConfigWithProps<unknown>,
+    action: (podfile: string) => string
+): Promise<void> => {
     const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
     try {
-        const podfile = action(await readFileAsync(podfilePath));
-
-        await saveFileAsync(podfilePath, podfile);
-        return;
-    } catch (e) {
-        WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${e}.`);
+        const podfile = action(await promises.readFile(podfilePath, 'utf8'));
+        await promises.writeFile(podfilePath, podfile, 'utf8');
+    } catch (error) {
+        WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${error}.`);
     }
 };
 
-const addLines = (content: string, find: string, offset: number, toAdd: Array<string>) => {
+const addLines = (content: string, find: string, offset: number, toAdd: Array<string>): string => {
     const lines = content.split('\n');
 
     let lineIndex = lines.findIndex((line: string) => line.match(find));
