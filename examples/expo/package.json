@@ -9,6 +9,7 @@
         "ios": "expo start --ios",
         "android": "expo start --android",
         "web": "expo start --web",
+        "prebuild": "export LC_ALL=en_US.UTF-8 && expo prebuild --clean",
         "test": "jest"
     },
     "dependencies": {
