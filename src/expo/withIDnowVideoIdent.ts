@@ -28,10 +28,7 @@ const saveFileAsync = async (
         | string
 ): Promise<void> => promises.writeFile(path, content, 'utf8');
 
-const editPodfile = async (
-    config: ExportedConfigWithProps<unknown>,
-    action: { (podfile: any): any; (arg0: string): any }
-) => {
+const editPodfile = async (config: ExportedConfigWithProps<unknown>, action: (podfile: string) => string) => {
     const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
     try {
         const podfile = action(await readFileAsync(podfilePath));
@@ -61,7 +58,7 @@ const withPodfileUpdate = (config: ExpoConfig) =>
     withDangerousMod(config, [
         'ios',
         async (config) => {
-            await editPodfile(config, (podfile: any) => {
+            await editPodfile(config, (podfile) => {
                 // Fix for an error taken from here
                 // https://dev.to/kylefoo/xcode-12-new-build-system-warns-multiple-commands-produce-assets-car-56im
                 // solution (2)
