@@ -16,7 +16,32 @@ import { promises } from 'fs';
 import { join } from 'path';
 import type { Stream } from 'stream';
 
-const { getMainApplicationOrThrow } = AndroidConfig.Manifest;
+const readFileAsync = async (path: PathLike | promises.FileHandle) => promises.readFile(path, 'utf8');
+
+const saveFileAsync = async (
+    path: PathLike | promises.FileHandle,
+    content:
+        | AsyncIterable<NodeJS.ArrayBufferView | string>
+        | Iterable<NodeJS.ArrayBufferView | string>
+        | NodeJS.ArrayBufferView
+        | Stream
+        | string
+) => promises.writeFile(path, content, 'utf8');
+
+const editPodfile = async (
+    config: ExportedConfigWithProps<unknown>,
+    action: { (podfile: any): any; (arg0: string): any }
+) => {
+    const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
+    try {
+        const podfile = action(await readFileAsync(podfilePath));
+
+        await saveFileAsync(podfilePath, podfile);
+        return;
+    } catch (e) {
+        WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${e}.`);
+    }
+};
 
 // Updating iOS...
 const withPodfileUpdate = (config: ExpoConfig) =>
@@ -62,33 +87,6 @@ const withPodfileUpdate = (config: ExpoConfig) =>
         },
     ]);
 
-const editPodfile = async (
-    config: ExportedConfigWithProps<unknown>,
-    action: { (podfile: any): any; (arg0: string): any }
-) => {
-    const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
-    try {
-        const podfile = action(await readFileAsync(podfilePath));
-
-        await saveFileAsync(podfilePath, podfile);
-        return;
-    } catch (e) {
-        WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${e}.`);
-    }
-};
-
-const readFileAsync = async (path: PathLike | promises.FileHandle) => promises.readFile(path, 'utf8');
-
-const saveFileAsync = async (
-    path: PathLike | promises.FileHandle,
-    content:
-        | AsyncIterable<NodeJS.ArrayBufferView | string>
-        | Iterable<NodeJS.ArrayBufferView | string>
-        | NodeJS.ArrayBufferView
-        | Stream
-        | string
-) => promises.writeFile(path, content, 'utf8');
-
 const addLines = (content: string, find: string, offset: number, toAdd: Array<string>) => {
     const lines = content.split('\n');
 
@@ -108,6 +106,7 @@ const applyManifestConfig = async (
     _config: Pick<ExpoConfig, 'android'>,
     androidManifest: AndroidConfig.Manifest.AndroidManifest
 ): Promise<AndroidConfig.Manifest.AndroidManifest> => {
+    const { getMainApplicationOrThrow } = AndroidConfig.Manifest;
     // Get the <application /> tag and assert if it doesn't exist.
     const mainApplication = getMainApplicationOrThrow(androidManifest);
     const { manifest } = androidManifest;
