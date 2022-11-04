@@ -1,30 +1,30 @@
+import type { ConfigPlugin, ExportedConfigWithProps, XcodeProject } from '@expo/config-plugins';
 import {
-    ConfigPlugin,
-    withSettingsGradle,
-    withMainApplication,
-    withAppBuildGradle,
-    withProjectBuildGradle,
     AndroidConfig,
-    withAndroidManifest,
     createRunOncePlugin,
-    WarningAggregator,
-    withDangerousMod,
-    withXcodeProject,
-    XcodeProject,
     IOSConfig,
-    ExportedConfigWithProps,
+    WarningAggregator,
+    withAndroidManifest,
+    withAppBuildGradle,
+    withDangerousMod,
+    withMainApplication,
+    withProjectBuildGradle,
+    withSettingsGradle,
+    withXcodeProject,
 } from '@expo/config-plugins';
-import { Stream } from 'stream';
-import { ExpoConfig } from '@expo/config-types';
-import { copyFileSync, PathLike, promises } from 'fs';
-import { basename, resolve, join } from 'path';
-import { IFile } from './file';
+import type { ExpoConfig } from '@expo/config-types';
+import type { PathLike } from 'fs';
+import { copyFileSync, promises } from 'fs';
+import { basename, join, resolve } from 'path';
+import type { Stream } from 'stream';
+
+import type { IFile } from './file';
 
 const { getMainApplicationOrThrow } = AndroidConfig.Manifest;
 
 // updating ios...
-const withPodfileUpdate = (config: ExpoConfig) => {
-    return withDangerousMod(config, [
+const withPodfileUpdate = (config: ExpoConfig) =>
+    withDangerousMod(config, [
         'ios',
         async (config) => {
             await editPodfile(config, (podfile: any) => {
@@ -47,7 +47,7 @@ const withPodfileUpdate = (config: ExpoConfig) => {
                     '',
                 ]);
 
-                //Fix from https://github.com/idnow/de.idnow.ios#cocoapods--xcode-9
+                // Fix from https://github.com/idnow/de.idnow.ios#cocoapods--xcode-9
                 podfile = addLines(podfile, 'react_native_post_install', 2, [
                     '',
                     // 'post_install do |installer|', // this was used before a similar section started being included on the podFile
@@ -65,7 +65,6 @@ const withPodfileUpdate = (config: ExpoConfig) => {
             return config;
         },
     ]);
-};
 
 async function editPodfile(
     config: ExportedConfigWithProps<unknown>,
@@ -75,7 +74,8 @@ async function editPodfile(
     try {
         const podfile = action(await readFileAsync(podfilePath));
 
-        return await saveFileAsync(podfilePath, podfile);
+        await saveFileAsync(podfilePath, podfile);
+        return;
     } catch (e) {
         WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${e}.`);
     }
@@ -88,16 +88,16 @@ async function readFileAsync(path: PathLike | promises.FileHandle) {
 async function saveFileAsync(
     path: PathLike | promises.FileHandle,
     content:
-        | string
+        | AsyncIterable<NodeJS.ArrayBufferView | string>
+        | Iterable<NodeJS.ArrayBufferView | string>
         | NodeJS.ArrayBufferView
-        | Iterable<string | NodeJS.ArrayBufferView>
-        | AsyncIterable<string | NodeJS.ArrayBufferView>
         | Stream
+        | string
 ) {
     return promises.writeFile(path, content, 'utf8');
 }
 
-function addLines(content: string, find: string, offset: number, toAdd: string[]) {
+function addLines(content: string, find: string, offset: number, toAdd: Array<string>) {
     const lines = content.split('\n');
 
     let lineIndex = lines.findIndex((line: string) => line.match(find));
@@ -113,8 +113,8 @@ function addLines(content: string, find: string, offset: number, toAdd: string[]
 const ERROR_MSG_PREFIX = 'An error occurred while configuring iOS project. ';
 const filePaths = ['./RNIdnow'];
 
-const withXCodeProjectUpdate = (config: ExpoConfig) => {
-    return withXcodeProject(config, (config) => {
+const withXCodeProjectUpdate = (config: ExpoConfig) =>
+    withXcodeProject(config, (config) => {
         addRNIdNowFiles({
             projectRoot: config.modRequest.projectRoot,
             currentDir: __dirname,
@@ -124,7 +124,6 @@ const withXCodeProjectUpdate = (config: ExpoConfig) => {
         });
         return config;
     });
-};
 
 export function addRNIdNowFiles({
     projectRoot,
@@ -135,24 +134,24 @@ export function addRNIdNowFiles({
 }: {
     projectRoot: string;
     currentDir: string;
-    filePaths: string[];
+    filePaths: Array<string>;
     project: XcodeProject;
     projectName: string | undefined;
 }): XcodeProject {
     if (!projectName) {
-        throw new Error(ERROR_MSG_PREFIX + `Unable to find iOS project name.`);
+        throw new Error(`${ERROR_MSG_PREFIX}Unable to find iOS project name.`);
     }
     const sourceRoot = IOSConfig.Paths.getSourceRoot(projectRoot);
     for (const fileRelativePath of filePaths) {
         addMFile({
-            fileRelativePath: fileRelativePath + '.m',
+            fileRelativePath: `${fileRelativePath}.m`,
             currentDir,
             sourceRoot,
             project,
             projectName,
         });
         addHFile({
-            fileRelativePath: fileRelativePath + '.h',
+            fileRelativePath: `${fileRelativePath}.h`,
             currentDir,
             sourceRoot,
             project,
@@ -204,7 +203,7 @@ const applyManifestConfig = async (
 ): Promise<AndroidConfig.Manifest.AndroidManifest> => {
     // Get the <application /> tag and assert if it doesn't exist.
     const mainApplication = getMainApplicationOrThrow(androidManifest);
-    const manifest = androidManifest.manifest;
+    const { manifest } = androidManifest;
     const xmlnsTools = {
         'xmlns:tools': 'http://schemas.android.com/tools',
     };
@@ -292,7 +291,7 @@ const applyRepositories = (appBuildGradle: string) => {
     return appBuildGradle;
 };
 
-//exclude section
+// exclude section
 const applyPackagingOptionsAndConfigurations = (appBuildGradle: string) => {
     const idnowPackagingOptions = `\nandroid {
     packagingOptions {
