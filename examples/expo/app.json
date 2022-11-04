@@ -11,6 +11,7 @@
         "ios": {
             "supportsTablet": true
         },
-        "assetBundlePatterns": ["**/*"]
+        "assetBundlePatterns": ["**/*"],
+        "plugins": ["@tokenstreet/react-native-idnow-videoident"]
     }
 }
