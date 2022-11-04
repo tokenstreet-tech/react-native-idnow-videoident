@@ -18,11 +18,17 @@ import { copyFileSync, promises } from 'fs';
 import { basename, join, resolve } from 'path';
 import type { Stream } from 'stream';
 
-import type { IFile } from './IFile';
+interface IFile {
+    fileRelativePath: string;
+    currentDir: string;
+    sourceRoot: string;
+    project: XcodeProject;
+    projectName: string;
+}
 
 const { getMainApplicationOrThrow } = AndroidConfig.Manifest;
 
-// updating ios...
+// Updating iOS...
 const withPodfileUpdate = (config: ExpoConfig) =>
     withDangerousMod(config, [
         'ios',
@@ -172,6 +178,7 @@ const addMFile = (file: IFile) => {
         });
     }
 };
+
 const addHFile = (file: IFile) => {
     let { fileRelativePath, currentDir, sourceRoot, project, projectName } = file;
     const fileName = basename(fileRelativePath);
@@ -191,7 +198,7 @@ const addHFile = (file: IFile) => {
     }
 };
 
-// updating android...
+// Updating Android...
 // Update AndroidManifest by adding xmlns:tools to the manifest tag and tools:replace to the application tag
 const applyManifestConfig = async (
     _config: Pick<ExpoConfig, 'android'>,
@@ -241,9 +248,7 @@ const applyPackage = (mainApplication: string) => {
     return mainApplication;
 };
 
-/*
-include react-native-idnow android/settings.gradle
-*/
+// Include react-native-idnow android/settings.gradle
 const applySettings = (gradleSettings: string) => {
     const idnowSettings = `include ':react-native-idnow'\nproject(':react-native-idnow').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-idnow/android')`;
     // Make sure the project does not have the settings already
@@ -287,7 +292,7 @@ const applyRepositories = (appBuildGradle: string) => {
     return appBuildGradle;
 };
 
-// exclude section
+// Exclude section
 const applyPackagingOptionsAndConfigurations = (appBuildGradle: string) => {
     const idnowPackagingOptions = `\nandroid {
     packagingOptions {
