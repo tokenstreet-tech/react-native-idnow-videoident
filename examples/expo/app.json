@@ -1,10 +1,10 @@
 {
-    "name": "ReactNativeIdnowVideoidentExample",
-    "displayName": "ReactNativeIdnowVideoident Example",
+    "name": "ReactNativeIdnowVideoidentExampleExpo",
+    "displayName": "ReactNativeIdnowVideoident Example Expo",
     "expo": {
-        "name": "@tokenstreet/react-native-idnow-videoident-example",
-        "slug": "tokenstreet-react-native-idnow-videoident-example",
-        "description": "Example app for @tokenstreet/react-native-idnow-videoident",
+        "name": "@tokenstreet/react-native-idnow-videoident-example-expo",
+        "slug": "tokenstreet-react-native-idnow-videoident-example-expo",
+        "description": "Expo example app for @tokenstreet/react-native-idnow-videoident",
         "privacy": "public",
         "version": "1.0.0",
         "platforms": ["ios", "android", "web"],

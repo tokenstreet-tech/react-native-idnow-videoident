@@ -1,13 +1,11 @@
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/exclusionList');
 const escape = require('escape-string-regexp');
-const pak = require('../package.json');
+const pak = require('../../package.json');
 
 const root = path.resolve(__dirname, '..');
 
-const modules = Object.keys({
-    ...pak.peerDependencies,
-});
+const modules = Object.keys({...pak.peerDependencies,});
 
 module.exports = {
     projectRoot: __dirname,
@@ -29,8 +27,6 @@ module.exports = {
     },
 
     transformer: {
-        // TODO: Make PR to disabled return types in JS files
-        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
         getTransformOptions: () => ({
             transform: {
                 experimentalImportSupport: false,
