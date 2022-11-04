@@ -57,6 +57,10 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },
+    "dependencies": {
+        "@expo/config-plugins": "4.1.1",
+        "@expo/config-types": "44.0.0"
+    },
     "devDependencies": {
         "@commitlint/config-conventional": "^17.1.0",
         "@prettier/plugin-ruby": "2.1.0",
