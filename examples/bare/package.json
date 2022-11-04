@@ -1,6 +1,6 @@
 {
-    "name": "@tokenstreet/react-native-idnow-videoident-example-bare",
-    "description": "Base example app for @tokenstreet/react-native-idnow-videoident",
+    "name": "@tokenstreet/react-native-idnow-videoident-example",
+    "description": "Example app for @tokenstreet/react-native-idnow-videoident",
     "version": "0.0.1",
     "private": true,
     "scripts": {
