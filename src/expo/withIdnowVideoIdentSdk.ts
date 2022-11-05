@@ -6,11 +6,11 @@ import type { ExpoConfig } from '@expo/config-types';
 import pak from '../../../package.json';
 import type pakType from '../../package.json';
 import { withIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
-import { withPodfileUpdate } from './withIosIdnowVideoIdentSdk';
+import { withStaticFrameworkBuildType } from './withIosIdnowVideoIdentSdk';
 
 const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
+    expoConfig = withStaticFrameworkBuildType(expoConfig);
     expoConfig = withIdnowRepositories(expoConfig);
-    expoConfig = withPodfileUpdate(expoConfig);
     return expoConfig;
 };
 

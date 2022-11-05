@@ -30,7 +30,7 @@ const addLines = (content: string, find: string, offset: number, toAdd: Array<st
     return lines.join('\n');
 };
 
-export const withPodfileUpdate = (config: ExpoConfig): ExpoConfig =>
+export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
     withDangerousMod(config, [
         'ios',
         async (withDangerousModConfig): Promise<ExportedConfigWithProps> => {
