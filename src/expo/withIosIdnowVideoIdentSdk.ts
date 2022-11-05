@@ -47,11 +47,11 @@ export const withPodfileUpdate = (config: ExpoConfig): ExpoConfig =>
                 // https://github.com/expo/expo/issues/15800
                 podfile = addLines(podfile, '__apply_Xcode_12_5_M1_post_install_workaround(installer)', 1, [
                     '',
-                    'installer.pods_project.targets.each do |target|',
-                    '  target.build_configurations.each do |config|',
-                    '    config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"',
-                    '  end',
-                    'end',
+                    '    installer.pods_project.targets.each do |target|',
+                    '      target.build_configurations.each do |config|',
+                    '        config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"',
+                    '      end',
+                    '    end',
                 ]);
                 return podfile;
             });
