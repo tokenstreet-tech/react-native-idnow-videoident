@@ -9,11 +9,9 @@ export const applyRepositories = (appBuildGradle: string): string => {
 
     // Make sure the project does not have the repositories already
     if (!appBuildGradle.includes(idnowRepositories)) {
-        return appBuildGradle.replace(
-            /allprojects\s{\n\s*repositories\s{/,
-            `allprojects {\nrepositories {
-          ${idnowRepositories}`
-        );
+        const searchRegex = /allprojects\s{\n.*repositories\s{\n/su;
+        const test = appBuildGradle.replace(searchRegex, (substring) => substring.concat(idnowRepositories));
+        return test;
     }
 
     return appBuildGradle;
