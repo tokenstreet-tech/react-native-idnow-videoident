@@ -1,21 +1,16 @@
 import type { ConfigPlugin } from '@expo/config-plugins';
-import { createRunOncePlugin, withProjectBuildGradle } from '@expo/config-plugins';
+import { createRunOncePlugin } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
 // @ts-expect-error The TypeScript compiler doesn't resolve the relative import path
 import pak from '../../../package.json';
 import type pakType from '../../package.json';
-import { applyRepositories } from './withAndroidIdnowVideoIdentSdk';
+import { addIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
 import { withPodfileUpdate } from './withIosIdnowVideoIdentSdk';
 
 const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
-    expoConfig = withProjectBuildGradle(expoConfig, (config) => {
-        config.modResults.contents = applyRepositories(config.modResults.contents);
-        return config;
-    });
-
+    expoConfig = addIdnowRepositories(expoConfig);
     expoConfig = withPodfileUpdate(expoConfig);
-
     return expoConfig;
 };
 

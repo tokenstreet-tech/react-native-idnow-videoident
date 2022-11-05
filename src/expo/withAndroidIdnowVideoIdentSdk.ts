@@ -1,5 +1,8 @@
+import { withProjectBuildGradle } from '@expo/config-plugins';
+import type { ExpoConfig } from '@expo/config-types';
+
 // Add the following to allprojects/repositories in android/build.gradle
-export const applyRepositories = (appBuildGradle: string): string => {
+const applyRepositories = (appBuildGradle: string): string => {
     const idnowRepositories =
         '        jcenter() {\n' +
         '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
@@ -25,3 +28,9 @@ export const applyRepositories = (appBuildGradle: string): string => {
 
     return appBuildGradle;
 };
+
+export const addIdnowRepositories = (expoConfig: ExpoConfig): ExpoConfig =>
+    withProjectBuildGradle(expoConfig, (config) => {
+        config.modResults.contents = applyRepositories(config.modResults.contents);
+        return config;
+    });
