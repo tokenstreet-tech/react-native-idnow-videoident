@@ -5,11 +5,11 @@ import type { ExpoConfig } from '@expo/config-types';
 // @ts-expect-error The TypeScript compiler doesn't resolve the relative import path
 import pak from '../../../package.json';
 import type pakType from '../../package.json';
-import { addIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
+import { withIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
 import { withPodfileUpdate } from './withIosIdnowVideoIdentSdk';
 
 const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
-    expoConfig = addIdnowRepositories(expoConfig);
+    expoConfig = withIdnowRepositories(expoConfig);
     expoConfig = withPodfileUpdate(expoConfig);
     return expoConfig;
 };
