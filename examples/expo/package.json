@@ -1,0 +1,32 @@
+{
+    "name": "@tokenstreet/react-native-idnow-videoident-example",
+    "description": "Example app for @tokenstreet/react-native-idnow-videoident",
+    "version": "0.0.1",
+    "private": true,
+    "main": "index",
+    "scripts": {
+        "start": "expo start",
+        "ios": "expo start --ios",
+        "android": "expo start --android",
+        "web": "expo start --web",
+        "prebuild": "export LC_ALL=en_US.UTF-8 && expo prebuild --clean",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@tokenstreet/react-native-idnow-videoident": "file:../..",
+        "expo": "~46.0.16",
+        "react": "18.0.0",
+        "react-dom": "18.0.0",
+        "react-native": "0.69.6",
+        "react-native-web": "~0.18.10"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.2",
+        "@types/react": "^18.0.25",
+        "@types/react-test-renderer": "^18.0.0",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "babel-preset-expo": "^9.2.0",
+        "react-test-renderer": "18.0.0",
+        "utility-types": "^3.10.0"
+    }
+}

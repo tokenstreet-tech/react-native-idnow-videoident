@@ -1,5 +1,5 @@
 {
-    "name": "@tokenstreet/react-native-idnow-videoident-example",
+    "name": "@tokenstreet/react-native-idnow-videoident-example-bare",
     "description": "Example app for @tokenstreet/react-native-idnow-videoident",
     "version": "0.0.1",
     "private": true,
@@ -11,13 +11,13 @@
     },
     "dependencies": {
         "react": "18.1.0",
-        "react-native": "0.70.4",
-        "utility-types": "^3.10.0"
+        "react-native": "0.70.4"
     },
     "devDependencies": {
         "@babel/core": "^7.19.6",
         "@babel/runtime": "^7.20.0",
         "babel-plugin-module-resolver": "^4.1.0",
-        "metro-react-native-babel-preset": "^0.73.3"
+        "metro-react-native-babel-preset": "^0.73.3",
+        "utility-types": "^3.10.0"
     }
 }

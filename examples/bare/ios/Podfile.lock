@@ -330,7 +330,7 @@ PODS:
     - React-logger (= 0.70.4)
     - React-perflogger (= 0.70.4)
   - SocketRocket (0.5.1)
-  - tokenstreet-react-native-idnow-videoident (0.9.0):
+  - tokenstreet-react-native-idnow-videoident (0.10.0):
     - IDnowSDK (= 5.3.0)
     - React-Core
   - Yoga (1.14.0)
@@ -371,7 +371,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - tokenstreet-react-native-idnow-videoident (from `../..`)
+  - tokenstreet-react-native-idnow-videoident (from `../../..`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -453,7 +453,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   tokenstreet-react-native-idnow-videoident:
-    :path: "../.."
+    :path: "../../.."
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -499,9 +499,9 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 5407e26b5aaafa9b01a08e33653255f8247e7c31
   ReactCommon: abf3605a56f98b91671d0d1327addc4ffb87af77
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  tokenstreet-react-native-idnow-videoident: 88ca654b7266722febd492b91653709aa0cc328d
+  tokenstreet-react-native-idnow-videoident: 74f26e8b3e3c2eb38b95e233e8662b74c16ee9ca
   Yoga: 1f02ef4ce4469aefc36167138441b27d988282b1
 
-PODFILE CHECKSUM: 580365a0bfc80394fba83685da652ca686a2b2d1
+PODFILE CHECKSUM: 54e24e98ae8258203006f83170011c3c8182d8fd
 
 COCOAPODS: 1.11.3

@@ -1,0 +1,21 @@
+{
+    "name": "ReactNativeIdnowVideoidentExample",
+    "displayName": "ReactNativeIdnowVideoident Example",
+    "expo": {
+        "name": "@tokenstreet/react-native-idnow-videoident-example",
+        "slug": "tokenstreet-react-native-idnow-videoident-example",
+        "description": "Example app for @tokenstreet/react-native-idnow-videoident",
+        "privacy": "public",
+        "version": "1.0.0",
+        "platforms": ["ios", "android", "web"],
+        "ios": {
+            "bundleIdentifier": "com.example.tokenstreetreactnativeidnowvideoident",
+            "supportsTablet": true
+        },
+        "android": {
+            "package": "com.example.tokenstreetreactnativeidnowvideoident"
+        },
+        "assetBundlePatterns": ["**/*"],
+        "plugins": ["../../app.plugin.js"]
+    }
+}

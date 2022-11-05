@@ -36,7 +36,8 @@ jobs:
                   yarn install --frozen-lockfile
                   yarn install --cwd website --frozen-lockfile
                   yarn build
-                  yarn install --cwd example --frozen-lockfile
+                  yarn install --cwd examples/bare --frozen-lockfile
+                  yarn install --cwd examples/expo --frozen-lockfile
             - run: yarn ${{ matrix.script }}
     deploy_website:
         runs-on: ubuntu-latest

@@ -14,15 +14,23 @@ updates:
       schedule:
           interval: 'weekly'
     - package-ecosystem: 'npm'
-      directory: '/example'
+      directory: '/examples/bare'
       schedule:
           interval: 'weekly'
     - package-ecosystem: 'gradle'
-      directory: '/example/android'
+      directory: '/examples/bare/android'
       schedule:
           interval: 'weekly'
       ignore:
           - dependency-name: 'idnow-android-sdk'
+    - package-ecosystem: 'npm'
+      directory: '/examples/expo'
+      schedule:
+          interval: 'weekly'
+      ignore:
+          - dependency-name: 'react'
+          - dependency-name: 'react-dom'
+          - dependency-name: 'react-native'
     - package-ecosystem: 'npm'
       directory: '/website'
       schedule:
