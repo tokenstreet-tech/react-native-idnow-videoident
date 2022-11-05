@@ -1,9 +1,10 @@
 import type { ConfigPlugin } from '@expo/config-plugins';
+
+import { withIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
 const pak = require('../../../package.json');
 import { createRunOncePlugin } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
-import { withIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
 import { withStaticFrameworkBuildType } from './withIosIdnowVideoIdentSdk';
 
 const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
