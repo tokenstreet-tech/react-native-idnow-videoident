@@ -39,20 +39,12 @@ export const withPodfileUpdate = (config: ExpoConfig) =>
                 // Fix for an error taken from here
                 // https://dev.to/kylefoo/xcode-12-new-build-system-warns-multiple-commands-produce-assets-car-56im
                 // solution (2)
-                podfile = addLines(podfile, 'platform :ios', 1, [
-                    "install! 'cocoapods', :disable_input_output_paths => true",
+                podfile = addLines(podfile, "install! 'cocoapods'", 1, [
                     "plugin 'cocoapods-user-defined-build-types'",
-                    '',
-                    'enable_user_defined_build_types!',
+                    "enable_user_defined_build_types!",
                 ]);
                 podfile = addLines(podfile, 'config = use_native_modules!', 1, [
-                    "  pod 'IDnowSDK', '5.3.0', :build_type => :static_framework",
-                    "  pod 'AFNetworking', '4.0.1', :modular_headers => true",
-                    "  pod 'FLAnimatedImage', '1.0.16', :modular_headers => true",
-                    "  pod 'libPhoneNumber-iOS', '0.9.15', :modular_headers => true",
-                    "  pod 'Masonry', '1.1.0', :modular_headers => true",
-                    "  pod 'SocketRocket', '0.5.1', :modular_headers => true",
-                    '',
+                    "pod 'IDnowSDK', '5.3.0', build_type: :static_framework",
                 ]);
 
                 // Fix from https://github.com/idnow/de.idnow.ios#cocoapods--xcode-9
