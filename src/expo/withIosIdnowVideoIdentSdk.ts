@@ -40,7 +40,7 @@ export const withPodfileUpdate = (config: ExpoConfig): ExpoConfig =>
                     "plugin 'cocoapods-user-defined-build-types'",
                     'enable_user_defined_build_types!',
                 ]);
-                podfile = addLines(podfile, ':app_path => "#{Dir.pwd}/.."\n)', 1, [
+                podfile = addLines(podfile, 'flags = get_default_flags()', 1, [
                     '',
                     "  pod 'IDnowSDK', '5.3.0', build_type: :static_framework",
                 ]);
