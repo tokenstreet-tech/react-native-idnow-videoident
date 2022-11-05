@@ -13,5 +13,5 @@ const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
     return expoConfig;
 };
 
-const typedPack: { name: string; version: string } = pak;
-export default createRunOncePlugin(withIdnowVideoIdentSdk, typedPack.name, typedPack.version);
+const typedPak: { name: string; version: string } = pak;
+export default createRunOncePlugin(withIdnowVideoIdentSdk, typedPak.name, typedPak.version);
