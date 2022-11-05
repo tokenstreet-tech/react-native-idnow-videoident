@@ -1,17 +1,16 @@
 import type { ExportedConfigWithProps } from '@expo/config-plugins';
 import { WarningAggregator, withDangerousMod } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
-import { promises } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
-const editPodfile = async (
-    config: ExportedConfigWithProps<unknown>,
-    action: (podfile: string) => string
-): Promise<void> => {
+const bufferEncoding: BufferEncoding = 'utf8';
+
+const editPodfile = (config: ExportedConfigWithProps<unknown>, action: (podfile: string) => string): void => {
     const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
     try {
-        const podfile = action(await promises.readFile(podfilePath, 'utf8'));
-        await promises.writeFile(podfilePath, podfile, 'utf8');
+        const podfile = action(readFileSync(podfilePath, bufferEncoding));
+        writeFileSync(podfilePath, podfile, bufferEncoding);
     } catch (error) {
         WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${error}.`);
     }
@@ -33,8 +32,8 @@ const addLines = (content: string, find: string, offset: number, toAdd: Array<st
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
     withDangerousMod(config, [
         'ios',
-        async (withDangerousModConfig): Promise<ExportedConfigWithProps> => {
-            await editPodfile(withDangerousModConfig, (podfile) => {
+        (withDangerousModConfig): ExportedConfigWithProps => {
+            editPodfile(withDangerousModConfig, (podfile) => {
                 podfile = addLines(podfile, ':deterministic_uuids => false', 1, [
                     '',
                     "plugin 'cocoapods-user-defined-build-types'",
