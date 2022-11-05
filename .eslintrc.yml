@@ -66,8 +66,4 @@ rules:
     no-warning-comments: 0
     no-param-reassign: 0
     max-params: 0
-    require-atomic-updates: 0
-    no-prototype-builtins: 0
-    '@typescript-eslint/require-await': 0
-    id-length: 0
     require-unicode-regexp: 0
