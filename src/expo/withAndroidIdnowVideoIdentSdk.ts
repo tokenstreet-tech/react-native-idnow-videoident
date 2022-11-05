@@ -44,7 +44,7 @@ export const applyPackage = (mainApplication: string): string => {
     // Make sure the project does not have the settings already
     if (!mainApplication.includes(idnowPackageImport)) {
         mainApplication = mainApplication.replace(
-            /package com.heyfina.app;/u,
+            /package com.heyfina.app;/,
             `package com.heyfina.app;\n${idnowPackageImport}`
         );
     }
@@ -87,7 +87,7 @@ export const applyRepositories = (appBuildGradle: string): string => {
     // Make sure the project does not have the repositories already
     if (!appBuildGradle.includes(idnowRepositories)) {
         return appBuildGradle.replace(
-            /allprojects\s{\n\s*repositories\s{/u,
+            /allprojects\s{\n\s*repositories\s{/,
             `allprojects {\nrepositories {
           ${idnowRepositories}`
         );
