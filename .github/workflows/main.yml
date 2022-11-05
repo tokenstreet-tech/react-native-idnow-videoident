@@ -54,7 +54,8 @@ jobs:
                   yarn install --frozen-lockfile
                   yarn install --cwd website --frozen-lockfile
                   yarn build
-                  yarn install --cwd example --frozen-lockfile
+                  yarn install --cwd examples/bare --frozen-lockfile
+                  yarn install --cwd examples/expo --frozen-lockfile
             - run: yarn --cwd website build
             # Popular action to deploy to GitHub Pages:
             # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -93,7 +94,8 @@ jobs:
                   yarn install --frozen-lockfile
                   yarn install --cwd website --frozen-lockfile
                   yarn build
-                  yarn install --cwd example --frozen-lockfile
+                  yarn install --cwd examples/bare --frozen-lockfile
+                  yarn install --cwd examples/expo --frozen-lockfile
             - run: yarn version --${{ github.event.inputs.version }}
             - run: git push --follow-tags
             - run: yarn publish
