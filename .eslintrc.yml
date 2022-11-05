@@ -62,8 +62,7 @@ rules:
     jest/no-commented-out-tests: 0
     jest/prefer-expect-assertions: 0
     max-lines: 0
-    multiline-comment-style: 0
-    no-warning-comments: 0
-    no-param-reassign: 0
     max-params: 0
-    require-unicode-regexp: 0
+    multiline-comment-style: 0
+    no-param-reassign: 0
+    no-warning-comments: 0
