@@ -9,7 +9,9 @@ import {
 } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
-import pak from '../../package.json';
+// @ts-expect-error The TypeScript compiler doesn't resolve the relative import path
+import pak from '../../../package.json';
+import type pakType from '../../package.json';
 import {
     applyImplementation,
     applyManifestConfig,
@@ -53,4 +55,5 @@ const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
     return expoConfig;
 };
 
-export default createRunOncePlugin(withIdnowVideoIdentSdk, pak.name, pak.version);
+const typedPak = pak as typeof pakType;
+export default createRunOncePlugin(withIdnowVideoIdentSdk, typedPak.name, typedPak.version);
