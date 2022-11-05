@@ -45,7 +45,7 @@ export const withPodfileUpdate = (config: ExpoConfig): ExpoConfig =>
                     "  pod 'IDnowSDK', '5.3.0', build_type: :static_framework",
                 ]);
                 // https://github.com/expo/expo/issues/15800
-                podfile = addLines(podfile, '__apply_Xcode_12_5_M1_post_install_workaround(installer)', 1, [
+                podfile = addLines(podfile, 'react_native_post_install', 2, [
                     '',
                     '    installer.pods_project.targets.each do |target|',
                     '      target.build_configurations.each do |config|',
