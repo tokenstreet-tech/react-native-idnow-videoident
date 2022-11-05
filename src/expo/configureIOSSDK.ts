@@ -39,7 +39,7 @@ export const withPodfileUpdate = (config: ExpoConfig) =>
                 // Fix for an error taken from here
                 // https://dev.to/kylefoo/xcode-12-new-build-system-warns-multiple-commands-produce-assets-car-56im
                 // solution (2)
-                podfile = addLines(podfile, "install! 'cocoapods', deterministic_uuids: false", 1, [
+                podfile = addLines(podfile, ':deterministic_uuids => false', 1, [
                     "plugin 'cocoapods-user-defined-build-types'",
                     'enable_user_defined_build_types!',
                 ]);
