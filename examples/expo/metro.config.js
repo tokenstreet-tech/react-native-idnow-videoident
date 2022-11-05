@@ -1,5 +1,3 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
-const { getDefaultConfig } = require('expo/metro-config');
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/exclusionList');
 const escape = require('escape-string-regexp');
@@ -10,7 +8,6 @@ const root = path.resolve(__dirname, '../..');
 const modules = Object.keys({ ...pak.peerDependencies });
 
 module.exports = {
-    ...getDefaultConfig(__dirname),
     projectRoot: __dirname,
     /*
      * We need to make sure that only one version is loaded for peerDependencies

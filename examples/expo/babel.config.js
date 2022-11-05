@@ -17,7 +17,6 @@ module.exports = function babelConfig(api) {
                     extensions: ['.tsx', '.ts', '.js', '.json'],
                 },
             ],
-            'react-native-reanimated/plugin',
         ],
         presets: ['babel-preset-expo'],
     };

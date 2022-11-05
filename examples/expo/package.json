@@ -13,27 +13,19 @@
         "test": "jest"
     },
     "dependencies": {
-        "expo": "^46.0.16",
-        "expo-splash-screen": "~0.16.2",
+        "expo": "~46.0.16",
         "react": "18.0.0",
         "react-dom": "18.0.0",
         "react-native": "0.69.6",
-        "react-native-gesture-handler": "~2.5.0",
-        "react-native-reanimated": "~2.9.1",
-        "react-native-safe-area-context": "4.3.1",
-        "react-native-screens": "~3.15.0",
-        "react-native-unimodules": "~0.15.0",
-        "react-native-web": "~0.18.9"
+        "react-native-web": "~0.18.10"
     },
     "devDependencies": {
-        "@babel/core": "^7.18.10",
-        "@babel/runtime": "^7.20.0",
-        "@types/react": "~17.0.45",
+        "@babel/core": "^7.20.2",
+        "@types/react": "^18.0.25",
         "@types/react-test-renderer": "^18.0.0",
-        "babel-plugin-module-resolver": "^4.0.0",
-        "babel-preset-expo": "9.2.0",
-        "expo-cli": "^6.0.6",
-        "react-test-renderer": "^18.2.0",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "babel-preset-expo": "^9.2.0",
+        "react-test-renderer": "18.0.0",
         "utility-types": "^3.10.0"
     }
 }
