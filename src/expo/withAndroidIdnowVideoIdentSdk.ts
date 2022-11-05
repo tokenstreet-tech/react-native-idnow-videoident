@@ -15,7 +15,7 @@ export const applyRepositories = (appBuildGradle: string): string => {
         '                includeModule("de.idnow.sdk", "idnow-android-sdk")\n' +
         '                includeModule("de.idnow.insights", "idnow-android-insights-sdk")\n' +
         '            }\n' +
-        '        }';
+        '        }\n';
 
     // Make sure the project does not have the repositories already
     if (!appBuildGradle.includes(idnowRepositories)) {
