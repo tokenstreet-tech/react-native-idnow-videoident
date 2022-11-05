@@ -38,13 +38,13 @@ export const applyManifestConfig = async (
 };
 
 // Add import com.bitwala.idnow.RNIdnowPackage; to the imports at the top of the file
-export const applyPackage = (mainApplication: string) => {
+export const applyPackage = (mainApplication: string): string => {
     const idnowPackageImport = `import com.bitwala.idnow.RNIdnowPackage;\n`;
 
     // Make sure the project does not have the settings already
     if (!mainApplication.includes(idnowPackageImport)) {
         mainApplication = mainApplication.replace(
-            /package com.heyfina.app;/,
+            /package com.heyfina.app;/u,
             `package com.heyfina.app;\n${idnowPackageImport}`
         );
     }
@@ -53,7 +53,7 @@ export const applyPackage = (mainApplication: string) => {
 };
 
 // Include react-native-idnow android/settings.gradle
-export const applySettings = (gradleSettings: string) => {
+export const applySettings = (gradleSettings: string): string => {
     const idnowSettings = `include ':react-native-idnow'\nproject(':react-native-idnow').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-idnow/android')`;
     // Make sure the project does not have the settings already
     if (!gradleSettings.includes(idnowSettings)) {
@@ -64,19 +64,19 @@ export const applySettings = (gradleSettings: string) => {
 };
 
 // Add react-native-idnow inside the dependencies block in android/app/build.gradle
-export const applyImplementation = (appBuildGradle: string) => {
+export const applyImplementation = (appBuildGradle: string): string => {
     const idnowImplementation = `compile project(':react-native-idnow')\nimplementation ('de.idnow.android.sdk:idnow-platform:4.12.0')`;
 
     // Make sure the project does not have the dependency already
     if (!appBuildGradle.includes(idnowImplementation)) {
-        return appBuildGradle.replace(/dependencies\s?{/, `dependencies {\n${idnowImplementation}`);
+        return appBuildGradle.replace(/dependencies\s?{/u, `dependencies {\n${idnowImplementation}`);
     }
 
     return appBuildGradle;
 };
 
 // Add the following to allprojects/repositories in android/build.gradle
-export const applyRepositories = (appBuildGradle: string) => {
+export const applyRepositories = (appBuildGradle: string): string => {
     const idnowRepositories = `maven {
         url "https://raw.githubusercontent.com/idnow/de.idnow.android.sdk/master"
      }
@@ -87,7 +87,7 @@ export const applyRepositories = (appBuildGradle: string) => {
     // Make sure the project does not have the repositories already
     if (!appBuildGradle.includes(idnowRepositories)) {
         return appBuildGradle.replace(
-            /allprojects\s{\n\s*repositories\s{/,
+            /allprojects\s{\n\s*repositories\s{/u,
             `allprojects {\nrepositories {
           ${idnowRepositories}`
         );
@@ -97,7 +97,7 @@ export const applyRepositories = (appBuildGradle: string) => {
 };
 
 // Exclude section
-export const applyPackagingOptionsAndConfigurations = (appBuildGradle: string) => {
+export const applyPackagingOptionsAndConfigurations = (appBuildGradle: string): string => {
     const idnowPackagingOptions = `\nandroid {
     packagingOptions {
         exclude "org.bouncycastle"

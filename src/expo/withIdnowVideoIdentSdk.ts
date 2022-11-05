@@ -9,6 +9,7 @@ import {
 } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
+import pak from '../../package.json';
 import {
     applyImplementation,
     applyManifestConfig,
@@ -16,10 +17,10 @@ import {
     applyPackagingOptionsAndConfigurations,
     applyRepositories,
     applySettings,
-} from './configureAndroidSDK';
-import { withPodfileUpdate } from './configureIOSSDK';
+} from './withAndroidIdnowVideoIdentSdk';
+import { withPodfileUpdate } from './withIosIdnowVideoIdentSdk';
 
-const withIDnowVideoIdent: ConfigPlugin = (expoConfig: ExpoConfig) => {
+const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
     expoConfig = withMainApplication(expoConfig, (config) => {
         config.modResults.contents = applyPackage(config.modResults.contents);
         return config;
@@ -52,4 +53,4 @@ const withIDnowVideoIdent: ConfigPlugin = (expoConfig: ExpoConfig) => {
     return expoConfig;
 };
 
-export default createRunOncePlugin(withIDnowVideoIdent, 'IDNowSDK', '1.0.11');
+export default createRunOncePlugin(withIdnowVideoIdentSdk, pak.name, pak.version);

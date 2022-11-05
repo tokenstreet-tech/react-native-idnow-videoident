@@ -30,12 +30,11 @@ const addLines = (content: string, find: string, offset: number, toAdd: Array<st
     return lines.join('\n');
 };
 
-// Updating iOS...
-export const withPodfileUpdate = (config: ExpoConfig) =>
+export const withPodfileUpdate = (config: ExpoConfig): ExpoConfig =>
     withDangerousMod(config, [
         'ios',
-        async (config) => {
-            await editPodfile(config, (podfile) => {
+        async (withDangerousModConfig) => {
+            await editPodfile(withDangerousModConfig, (podfile) => {
                 podfile = addLines(podfile, ':deterministic_uuids => false', 1, [
                     '',
                     "plugin 'cocoapods-user-defined-build-types'",
@@ -47,6 +46,6 @@ export const withPodfileUpdate = (config: ExpoConfig) =>
                 ]);
                 return podfile;
             });
-            return config;
+            return withDangerousModConfig;
         },
     ]);

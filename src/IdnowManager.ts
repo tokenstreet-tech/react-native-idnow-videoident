@@ -8,7 +8,7 @@ import type { INativeModules, IReactNativeIdnowVideoidentNativeModule } from './
 import type { ISettings } from './model/interfaces/ISettings';
 import { processSettings } from './processSettings';
 
-export const IDnowManager = {
+export const IdnowManager = {
     /**
      * Start the video ident process
      * @param settings

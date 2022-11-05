@@ -1,4 +1,4 @@
-export { IDnowManager } from './IDnowManager';
+export { IdnowManager } from './IdnowManager';
 export type { IIdentificationErrorResult, IIdentificationResult, TOnError, TOnSuccess } from './model/common';
 export { AndroidLanguageEnum } from './model/enums/android/AndroidLanguageEnum';
 export { ConnectionTypeEnum } from './model/enums/ConnectionTypeEnum';
