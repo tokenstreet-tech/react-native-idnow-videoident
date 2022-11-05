@@ -114,10 +114,10 @@ You have the possibility to integrate it with a <code>try...catch</code> block, 
 
 ```ts
 import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
-import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+import { IdnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
 try {
-    const { resultCode } = await IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' });
+    const { resultCode } = await IdnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' });
     console.log(resultCode);
 } catch (error) {
     if (error !== null && typeof error === 'object' && 'resultCode' in error) {
@@ -133,9 +133,9 @@ try {
 
 ```ts
 import type { IIdentificationErrorResult } from '@tokenstreet/react-native-idnow-videoident';
-import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+import { IdnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
-IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
+IdnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
     .then(({ resultCode }) => console.log(resultCode))
     .catch((error) => {
         if (error !== null && typeof error === 'object' && 'resultCode' in error) {
@@ -150,9 +150,9 @@ IDnowManager.startVideoIdent({ transactionToken: 'YOUR_TRANSACTION_TOKEN' })
 <TabItem value="callbacks" label="Callbacks">
 
 ```ts
-import { IDnowManager } from '@tokenstreet/react-native-idnow-videoident';
+import { IdnowManager } from '@tokenstreet/react-native-idnow-videoident';
 
-void IDnowManager.startVideoIdent(
+void IdnowManager.startVideoIdent(
     { transactionToken: 'YOUR_TRANSACTION_TOKEN' },
     {
         onSuccess: ({ resultCode }) => console.log(resultCode),
