@@ -5,9 +5,9 @@
     "private": true,
     "main": "index",
     "scripts": {
-        "start": "expo start",
-        "ios": "expo start --ios",
-        "android": "expo start --android",
+        "start": "expo start --dev-client",
+        "ios": "expo run:ios",
+        "android": "expo run:android",
         "web": "expo start --web",
         "prebuild": "export LC_ALL=en_US.UTF-8 && expo prebuild --clean",
         "test": "jest"
@@ -17,7 +17,9 @@
         "react": "18.0.0",
         "react-dom": "18.0.0",
         "react-native": "0.69.6",
-        "react-native-web": "~0.18.10"
+        "react-native-web": "~0.18.10",
+        "expo-splash-screen": "~0.16.2",
+        "expo-status-bar": "~1.4.0"
     },
     "devDependencies": {
         "@babel/core": "^7.20.2",

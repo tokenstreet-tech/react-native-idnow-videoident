@@ -69,7 +69,7 @@ export const applyImplementation = (appBuildGradle: string): string => {
 
     // Make sure the project does not have the dependency already
     if (!appBuildGradle.includes(idnowImplementation)) {
-        return appBuildGradle.replace(/dependencies\s?{/u, `dependencies {\n${idnowImplementation}`);
+        return appBuildGradle.replace(/dependencies\s?{/, `dependencies {\n${idnowImplementation}`);
     }
 
     return appBuildGradle;
