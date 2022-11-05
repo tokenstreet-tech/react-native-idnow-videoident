@@ -1,1 +1,1 @@
-module.exports = require('./lib/commonjs/expo/withIDnowVideoIdent');
+module.exports = require('./lib/commonjs/expo/withIdnowVideoIdentSdk');
