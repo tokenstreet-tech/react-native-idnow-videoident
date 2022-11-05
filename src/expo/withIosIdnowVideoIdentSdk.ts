@@ -33,7 +33,7 @@ const addLines = (content: string, find: string, offset: number, toAdd: Array<st
 export const withPodfileUpdate = (config: ExpoConfig): ExpoConfig =>
     withDangerousMod(config, [
         'ios',
-        async (withDangerousModConfig) => {
+        async (withDangerousModConfig): Promise<ExportedConfigWithProps> => {
             await editPodfile(withDangerousModConfig, (podfile) => {
                 podfile = addLines(podfile, ':deterministic_uuids => false', 1, [
                     '',

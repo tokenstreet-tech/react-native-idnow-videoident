@@ -5,6 +5,7 @@ const { resolver } = require('./metro.config');
 const root = path.resolve(__dirname, '..');
 const nodeModules = path.join(__dirname, 'node_modules');
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 module.exports = async function webpackConfig(env, argv) {
     const config = await createExpoWebpackConfigAsync(env, argv);
 

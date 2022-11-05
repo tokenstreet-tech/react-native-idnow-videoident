@@ -21,7 +21,7 @@ export const IdnowManager = {
             : new Proxy(
                   {},
                   {
-                      get() {
+                      get(): never {
                           throw new LinkingError();
                       },
                   }

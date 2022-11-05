@@ -1,6 +1,7 @@
 const path = require('path');
 const pak = require('../../package.json');
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 module.exports = function babelConfig(api) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     api.cache(true);
