@@ -58,11 +58,11 @@
         "registry": "https://registry.npmjs.org/"
     },
     "dependencies": {
-        "@expo/config-plugins": "^5.0.1",
-        "@expo/config-types": "^46.0.2"
+        "@expo/config-plugins": "^5.0.1"
     },
     "devDependencies": {
         "@commitlint/config-conventional": "^17.2.0",
+        "@expo/config-types": "^46.0.2",
         "@prettier/plugin-ruby": "2.1.0",
         "@prettier/plugin-xml": "2.2.0",
         "@react-native-community/eslint-config": "^3.2.0",
