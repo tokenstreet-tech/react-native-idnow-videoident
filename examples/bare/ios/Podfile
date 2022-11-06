@@ -43,7 +43,7 @@ target 'ReactNativeIdnowVideoidentExample' do
         installer.pod_targets.each do |pod|
             bt = pod.send(:build_type)
             if $static_library.include?(pod.name)
-                puts "Overriding the build_type to static_framework from from for #{pod.name}"
+                puts "Overriding the build_type to static_framework from static_library for #{pod.name}"
                 def pod.build_type
                     Pod::BuildType.static_framework
                 end
