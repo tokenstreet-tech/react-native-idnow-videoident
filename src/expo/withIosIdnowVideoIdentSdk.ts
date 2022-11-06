@@ -29,29 +29,46 @@ const addLines = (content: string, find: string, offset: number, toAdd: Array<st
     return lines.join('\n');
 };
 
+const buildTypeModification =
+    '    $static_library = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
+    '\n' +
+    '    pre_install do |installer|\n' +
+    '        Pod::Installer::Xcode::TargetValidator.send(\n' +
+    '            :define_method,\n' +
+    '            :verify_no_static_framework_transitive_dependencies\n' +
+    '        ) {}\n' +
+    '        installer.pod_targets.each do |pod|\n' +
+    '            bt = pod.send(:build_type)\n' +
+    '            if $static_library.include?(pod.name)\n' +
+    '                puts "Overriding the build_type to static_framework from static_library for #{pod.name}"\n' +
+    '                def pod.build_type\n' +
+    '                    Pod::BuildType.static_framework\n' +
+    '                end\n' +
+    '            end\n' +
+    '        end\n' +
+    '        installer.pod_targets.each do |pod|\n' +
+    '            bt = pod.send(:build_type)\n' +
+    '            puts "#{pod.name} (#{bt})"\n' +
+    '            puts "  linkage: #{bt.send(:linkage)} packaging: #{bt.send(:packaging)}"\n' +
+    '        end\n' +
+    '    end\n';
+const appleSiliconFix =
+    'post_install do |installer|\n' +
+    '  installer.pods_project.targets.each do |target|\n' +
+    '    target.build_configurations.each do |config|\n' +
+    '      config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"\n' +
+    '    end\n' +
+    '  end\n' +
+    'end\n';
+
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
     withDangerousMod(config, [
         'ios',
         (withDangerousModConfig): ExportedConfigWithProps => {
             editPodfile(withDangerousModConfig, (podfile) => {
-                podfile = addLines(podfile, ':deterministic_uuids => false', 1, [
-                    '',
-                    "plugin 'cocoapods-user-defined-build-types'",
-                    'enable_user_defined_build_types!',
-                ]);
-                podfile = addLines(podfile, 'flags = get_default_flags()', 1, [
-                    '',
-                    "  pod 'IDnowSDK', '5.3.0', build_type: :static_framework",
-                ]);
+                podfile = addLines(podfile, 'flags = get_default_flags()', 10, [buildTypeModification]);
                 // https://github.com/expo/expo/issues/15800
-                podfile = addLines(podfile, 'react_native_post_install', 2, [
-                    '',
-                    '    installer.pods_project.targets.each do |target|',
-                    '      target.build_configurations.each do |config|',
-                    '        config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"',
-                    '      end',
-                    '    end',
-                ]);
+                podfile = addLines(podfile, 'react_native_post_install', 2, ['', appleSiliconFix]);
                 return podfile;
             });
             return withDangerousModConfig;
