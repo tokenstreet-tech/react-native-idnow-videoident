@@ -4,27 +4,24 @@ import type { ExpoConfig } from '@expo/config-types';
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
+import { typedPak } from './typedPak';
+
 const bufferEncoding: BufferEncoding = 'utf8';
 
 const editPodfile = (config: ExportedConfigWithProps<unknown>, action: (podfile: string) => string): void => {
     const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
     try {
-        const podfile = action(readFileSync(podfilePath, bufferEncoding));
-        writeFileSync(podfilePath, podfile, bufferEncoding);
+        const newPodfile = action(readFileSync(podfilePath, bufferEncoding));
+        writeFileSync(podfilePath, newPodfile, bufferEncoding);
     } catch (error) {
-        WarningAggregator.addWarningIOS('idnow', `Couldn't modified Podfile - ${error}.`);
+        WarningAggregator.addWarningIOS(typedPak.name, `Couldn't modified Podfile - ${error}.`);
     }
 };
 
-const addLines = (content: string, find: string, offset: number, toAdd: Array<string>): string => {
+const addLines = (content: string, find: string, offset: number, toAdd: string): string => {
     const lines = content.split('\n');
-
-    let lineIndex = lines.findIndex((line: string) => line.match(find));
-
-    for (const newLine of toAdd) {
-        lines.splice(lineIndex + offset, 0, newLine);
-        lineIndex += 1;
-    }
+    const lineIndex = lines.findIndex((line: string) => line.match(find));
+    lines.splice(lineIndex + offset, 0, toAdd);
 
     return lines.join('\n');
 };
@@ -67,8 +64,8 @@ export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
         'ios',
         (withDangerousModConfig): ExportedConfigWithProps => {
             editPodfile(withDangerousModConfig, (podfile) => {
-                podfile = addLines(podfile, 'flags = get_default_flags()', 10, [buildTypeModification]);
-                podfile = addLines(podfile, 'react_native_post_install', 2, [appleSiliconFix]);
+                podfile = addLines(podfile, 'flags = get_default_flags()', 10, buildTypeModification);
+                podfile = addLines(podfile, 'react_native_post_install', 2, appleSiliconFix);
                 return podfile;
             });
             return withDangerousModConfig;
