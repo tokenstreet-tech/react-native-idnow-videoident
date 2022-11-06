@@ -16,6 +16,6 @@
             "package": "com.example.tokenstreetreactnativeidnowvideoident"
         },
         "assetBundlePatterns": ["**/*"],
-        "plugins": ["../../app.plugin"]
+        "plugins": ["../../app.plugin.js"]
     }
 }
