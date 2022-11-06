@@ -53,13 +53,14 @@ const buildTypeModification =
     '        end\n' +
     '    end\n';
 const appleSiliconFix =
-    'post_install do |installer|\n' +
-    '  installer.pods_project.targets.each do |target|\n' +
-    '    target.build_configurations.each do |config|\n' +
-    '      config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"\n' +
-    '    end\n' +
-    '  end\n' +
-    'end\n';
+    '    # https://github.com/expo/expo/issues/15800' +
+    '    post_install do |installer|\n' +
+    '      installer.pods_project.targets.each do |target|\n' +
+    '        target.build_configurations.each do |config|\n' +
+    '          config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"\n' +
+    '        end\n' +
+    '      end\n' +
+    '    end\n';
 
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
     withDangerousMod(config, [
@@ -67,8 +68,7 @@ export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
         (withDangerousModConfig): ExportedConfigWithProps => {
             editPodfile(withDangerousModConfig, (podfile) => {
                 podfile = addLines(podfile, 'flags = get_default_flags()', 10, [buildTypeModification]);
-                // https://github.com/expo/expo/issues/15800
-                podfile = addLines(podfile, 'react_native_post_install', 2, ['', appleSiliconFix]);
+                podfile = addLines(podfile, 'react_native_post_install', 2, [appleSiliconFix]);
                 return podfile;
             });
             return withDangerousModConfig;
