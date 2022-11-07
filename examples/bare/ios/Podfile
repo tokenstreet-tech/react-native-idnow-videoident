@@ -4,9 +4,6 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '12.4'
 install! 'cocoapods', deterministic_uuids: false
 
-# plugin 'cocoapods-user-defined-build-types'
-# enable_user_defined_build_types!
-
 target 'ReactNativeIdnowVideoidentExample' do
     config = use_native_modules!
 
@@ -29,14 +26,34 @@ target 'ReactNativeIdnowVideoidentExample' do
         app_path: "#{Pod::Config.instance.installation_root}/.."
     )
 
-    use_frameworks! linkage: :static
     pod 'tokenstreet-react-native-idnow-videoident', path: '../../..'
-
-    # pod 'IDnowSDK', '5.3.0', build_type: :static_framework
 
     target 'ReactNativeIdnowVideoidentExampleTests' do
         inherit! :complete
         # Pods for testing
+    end
+
+    $static_library = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]
+
+    pre_install do |installer|
+        Pod::Installer::Xcode::TargetValidator.send(
+            :define_method,
+            :verify_no_static_framework_transitive_dependencies
+        ) {}
+        installer.pod_targets.each do |pod|
+            bt = pod.send(:build_type)
+            if $static_library.include?(pod.name)
+                puts "Overriding the build_type to static_framework from static_library for #{pod.name}"
+                def pod.build_type
+                    Pod::BuildType.static_framework
+                end
+            end
+        end
+        installer.pod_targets.each do |pod|
+            bt = pod.send(:build_type)
+            puts "#{pod.name} (#{bt})"
+            puts "  linkage: #{bt.send(:linkage)} packaging: #{bt.send(:packaging)}"
+        end
     end
 
     post_install do |installer|
