@@ -20,7 +20,7 @@ const idnowRepositories =
 const searchRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
 
 /**
- * Adds the necessary IDnow repositories to thhe allprojects in the project build gradle
+ * Adds the necessary IDnow repositories to the allprojects in the project build gradle
  * @param config
  */
 export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig =>

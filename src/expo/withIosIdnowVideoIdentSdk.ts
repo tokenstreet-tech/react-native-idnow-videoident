@@ -60,7 +60,7 @@ export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
         (withDangerousModConfig): ExportedConfigWithProps => {
             editPodfile(withDangerousModConfig, (podfile) => {
                 podfile = addLines(podfile, 'flags = get_default_flags()', 10, buildTypeModification);
-                podfile = addLines(podfile, 'react_native_post_install', 2, appleSiliconFix);
+                podfile = addLines(podfile, 'react_native_post_install', 3, appleSiliconFix);
                 return podfile;
             });
             return withDangerousModConfig;
