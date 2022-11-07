@@ -33,7 +33,7 @@ target 'ReactNativeIdnowVideoidentExample' do
         # Pods for testing
     end
 
-    $static_library = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]
+    $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]
 
     pre_install do |installer|
         Pod::Installer::Xcode::TargetValidator.send(
@@ -42,7 +42,7 @@ target 'ReactNativeIdnowVideoidentExample' do
         ) {}
         installer.pod_targets.each do |pod|
             bt = pod.send(:build_type)
-            if $static_library.include?(pod.name)
+            if $static_frameworks.include?(pod.name)
                 puts "Overriding the build_type to static_framework from static_library for #{pod.name}"
                 def pod.build_type
                     Pod::BuildType.static_framework
