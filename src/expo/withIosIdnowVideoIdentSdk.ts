@@ -47,11 +47,10 @@ const buildTypeModification =
     '    end\n' +
     '  end\n';
 const appleSiliconFix =
-    '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
     '      target.build_configurations.each do |config|\n' +
-    '        config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"\n' +
+    "        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
     '      end\n' +
     '    end\n';
 
