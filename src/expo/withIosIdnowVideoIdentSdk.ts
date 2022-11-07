@@ -27,13 +27,13 @@ const addLines = (content: string, find: string, offset: number, toAdd: string):
 };
 
 const buildTypeModification =
-    '  $static_library = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
+    '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
     '  pre_install do |installer|\n' +
     '    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}\n' +
     '    installer.pod_targets.each do |pod|\n' +
     '      bt = pod.send(:build_type)\n' +
-    '      if $static_library.include?(pod.name)\n' +
+    '      if $static_frameworks.include?(pod.name)\n' +
     "        puts 'Overriding the build_type to static_framework from static_library for #{pod.name}'\n" +
     '        def pod.build_type\n' +
     '          Pod::BuildType.static_framework\n' +
