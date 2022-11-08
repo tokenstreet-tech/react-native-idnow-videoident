@@ -167,6 +167,6 @@ describe('appendToFoundRegex', () => {
         const result = appendToFoundRegex(podfile, buildTypeModificationRegex, buildTypeModification);
 
         // Assert
-        expect(result).toStrictEqual(modfiedPodfile);
+        expect(result).toBe(modfiedPodfile);
     });
 });
