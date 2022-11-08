@@ -18,11 +18,6 @@ const buildTypeModification =
     '        end\n' +
     '      end\n' +
     '    end\n' +
-    '    installer.pod_targets.each do |pod|\n' +
-    '      bt = pod.send(:build_type)\n' +
-    "      puts '#{pod.name} (#{bt})'\n" +
-    "      puts '  linkage: #{bt.send(:linkage)} packaging: #{bt.send(:packaging)}'\n" +
-    '    end\n' +
     '  end\n' +
     '\n';
 
