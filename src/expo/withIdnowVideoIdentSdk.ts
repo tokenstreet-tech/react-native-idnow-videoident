@@ -4,10 +4,10 @@ import type { ExpoConfig } from '@expo/config-types';
 
 import { typedPak } from './util/typedPak';
 import { withIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
-import { withStaticFrameworkBuildType } from './withIosIdnowVideoIdentSdk';
+// import { withStaticFrameworkBuildType } from './withIosIdnowVideoIdentSdk';
 
 const withIdnowVideoIdentSdk: ConfigPlugin = (expoConfig: ExpoConfig) => {
-    expoConfig = withStaticFrameworkBuildType(expoConfig);
+    // expoConfig = withStaticFrameworkBuildType(expoConfig);
     expoConfig = withIdnowRepositories(expoConfig);
     return expoConfig;
 };
