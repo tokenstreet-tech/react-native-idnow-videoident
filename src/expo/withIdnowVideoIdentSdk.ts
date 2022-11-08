@@ -2,7 +2,7 @@ import type { ConfigPlugin } from '@expo/config-plugins';
 import { createRunOncePlugin } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
-import { typedPak } from './typedPak';
+import { typedPak } from './util/typedPak';
 import { withIdnowRepositories } from './withAndroidIdnowVideoIdentSdk';
 import { withStaticFrameworkBuildType } from './withIosIdnowVideoIdentSdk';
 

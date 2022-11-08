@@ -1,22 +1,6 @@
-import type { ExportedConfigWithProps } from '@expo/config-plugins';
-import { WarningAggregator, withDangerousMod } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
-import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
 
-import { typedPak } from './typedPak';
-
-const bufferEncoding: BufferEncoding = 'utf8';
-
-const editPodfile = (config: ExportedConfigWithProps<unknown>, action: (podfile: string) => string): void => {
-    const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
-    try {
-        const newPodfile = action(readFileSync(podfilePath, bufferEncoding));
-        writeFileSync(podfilePath, newPodfile, bufferEncoding);
-    } catch (error) {
-        WarningAggregator.addWarningIOS(typedPak.name, `Couldn't modified Podfile - ${error}.`);
-    }
-};
+import { withPodfile } from './util/withPodfile';
 
 const addLines = (content: string, find: string, offset: number, toAdd: string): string => {
     const lines = content.split('\n');
@@ -55,14 +39,8 @@ const appleSiliconFix =
     '    end\n';
 
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
-    withDangerousMod(config, [
-        'ios',
-        (withDangerousModConfig): ExportedConfigWithProps => {
-            editPodfile(withDangerousModConfig, (podfile) => {
-                podfile = addLines(podfile, 'flags = get_default_flags()', 10, buildTypeModification);
-                podfile = addLines(podfile, 'react_native_post_install', 3, appleSiliconFix);
-                return podfile;
-            });
-            return withDangerousModConfig;
-        },
-    ]);
+    withPodfile(config, (podfile) => {
+        podfile = addLines(podfile, 'flags = get_default_flags()', 10, buildTypeModification);
+        podfile = addLines(podfile, 'react_native_post_install', 3, appleSiliconFix);
+        return podfile;
+    });
