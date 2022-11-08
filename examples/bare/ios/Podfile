@@ -49,11 +49,6 @@ target 'ReactNativeIdnowVideoidentExample' do
                 end
             end
         end
-        installer.pod_targets.each do |pod|
-            bt = pod.send(:build_type)
-            puts "#{pod.name} (#{bt})"
-            puts "  linkage: #{bt.send(:linkage)} packaging: #{bt.send(:packaging)}"
-        end
     end
 
     post_install do |installer|

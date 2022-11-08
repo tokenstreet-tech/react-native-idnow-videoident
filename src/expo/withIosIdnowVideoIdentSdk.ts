@@ -1,32 +1,11 @@
-import type { ExportedConfigWithProps } from '@expo/config-plugins';
-import { WarningAggregator, withDangerousMod } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
-import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
 
-import { typedPak } from './typedPak';
+import { appendToFoundRegex } from './util/appendToFoundRegex';
+import { withPodfile } from './util/withPodfile';
 
-const bufferEncoding: BufferEncoding = 'utf8';
-
-const editPodfile = (config: ExportedConfigWithProps<unknown>, action: (podfile: string) => string): void => {
-    const podfilePath = join(config.modRequest.platformProjectRoot, 'Podfile');
-    try {
-        const newPodfile = action(readFileSync(podfilePath, bufferEncoding));
-        writeFileSync(podfilePath, newPodfile, bufferEncoding);
-    } catch (error) {
-        WarningAggregator.addWarningIOS(typedPak.name, `Couldn't modified Podfile - ${error}.`);
-    }
-};
-
-const addLines = (content: string, find: string, offset: number, toAdd: string): string => {
-    const lines = content.split('\n');
-    const lineIndex = lines.findIndex((line: string) => line.match(find));
-    lines.splice(lineIndex + offset, 0, toAdd);
-
-    return lines.join('\n');
-};
-
+const buildTypeModificationRegex = /use_react_native!\(\n.*\s\)\n/su;
 const buildTypeModification =
+    '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
     '  pre_install do |installer|\n' +
@@ -40,13 +19,11 @@ const buildTypeModification =
     '        end\n' +
     '      end\n' +
     '    end\n' +
-    '    installer.pod_targets.each do |pod|\n' +
-    '      bt = pod.send(:build_type)\n' +
-    "      puts '#{pod.name} (#{bt})'\n" +
-    "      puts '  linkage: #{bt.send(:linkage)} packaging: #{bt.send(:packaging)}'\n" +
-    '    end\n' +
     '  end\n';
+
+const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)\n/u;
 const appleSiliconFix =
+    '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
     '      target.build_configurations.each do |config|\n' +
@@ -54,15 +31,14 @@ const appleSiliconFix =
     '      end\n' +
     '    end\n';
 
+/**
+ * Modifies the build type for IDnow pods
+ * @param config
+ */
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
-    withDangerousMod(config, [
-        'ios',
-        (withDangerousModConfig): ExportedConfigWithProps => {
-            editPodfile(withDangerousModConfig, (podfile) => {
-                podfile = addLines(podfile, 'flags = get_default_flags()', 10, buildTypeModification);
-                podfile = addLines(podfile, 'react_native_post_install', 3, appleSiliconFix);
-                return podfile;
-            });
-            return withDangerousModConfig;
-        },
-    ]);
+    withPodfile(config, (podfile) => {
+        podfile = appendToFoundRegex(podfile, buildTypeModificationRegex, buildTypeModification);
+        podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFix);
+
+        return podfile;
+    });
