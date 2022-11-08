@@ -3,7 +3,7 @@ import type { ExpoConfig } from '@expo/config-types';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 import { withPodfile } from './util/withPodfile';
 
-const buildTypeModificationRegex = /use_react_native!\(.*\)/u;
+const buildTypeModificationRegex = /use_react_native!\(\n.*\s\)/su;
 const buildTypeModification =
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
