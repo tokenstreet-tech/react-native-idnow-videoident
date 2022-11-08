@@ -31,6 +31,10 @@ const appleSiliconFix =
     '      end\n' +
     '    end\n';
 
+/**
+ * Modifies the build type for IDnow pods
+ * @param config
+ */
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
     withPodfile(config, (podfile) => {
         podfile = appendToFoundRegex(podfile, buildTypeModificationRegex, buildTypeModification);
