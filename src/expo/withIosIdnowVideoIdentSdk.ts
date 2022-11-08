@@ -1,14 +1,7 @@
 import type { ExpoConfig } from '@expo/config-types';
 
+import { appendToRegex } from './util/appendToRegex';
 import { withPodfile } from './util/withPodfile';
-
-const addLines = (content: string, find: string, offset: number, toAdd: string): string => {
-    const lines = content.split('\n');
-    const lineIndex = lines.findIndex((line: string) => line.match(find));
-    lines.splice(lineIndex + offset, 0, toAdd);
-
-    return lines.join('\n');
-};
 
 const buildTypeModification =
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
@@ -29,7 +22,10 @@ const buildTypeModification =
     "      puts '#{pod.name} (#{bt})'\n" +
     "      puts '  linkage: #{bt.send(:linkage)} packaging: #{bt.send(:packaging)}'\n" +
     '    end\n' +
-    '  end\n';
+    '  end\n' +
+    '\n';
+const postInstallRegex = /use_react_native!\(.*\)/u;
+
 const appleSiliconFix =
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
@@ -37,10 +33,12 @@ const appleSiliconFix =
     "        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
     '      end\n' +
     '    end\n';
+const xcodeWorkaroundRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
 
 export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
     withPodfile(config, (podfile) => {
-        podfile = addLines(podfile, 'flags = get_default_flags()', 10, buildTypeModification);
-        podfile = addLines(podfile, 'react_native_post_install', 3, appleSiliconFix);
+        podfile = appendToRegex(podfile, postInstallRegex, buildTypeModification);
+        podfile = appendToRegex(podfile, xcodeWorkaroundRegex, appleSiliconFix);
+
         return podfile;
     });

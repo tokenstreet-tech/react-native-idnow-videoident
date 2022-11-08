@@ -1,6 +1,8 @@
 import { withProjectBuildGradle } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
+import { appendToRegex } from './util/appendToRegex';
+
 const idnowRepositories =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
@@ -25,14 +27,11 @@ const searchRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
  */
 export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig =>
     withProjectBuildGradle(config, (configWithProps) => {
-        const projectBuildGradle = configWithProps.modResults.contents;
-
-        // Make sure the project does not have the repositories already
-        if (!projectBuildGradle.includes(idnowRepositories)) {
-            configWithProps.modResults.contents = projectBuildGradle.replace(searchRegex, (substring) =>
-                substring.concat(idnowRepositories)
-            );
-        }
+        configWithProps.modResults.contents = appendToRegex(
+            configWithProps.modResults.contents,
+            searchRegex,
+            idnowRepositories
+        );
 
         return configWithProps;
     });
