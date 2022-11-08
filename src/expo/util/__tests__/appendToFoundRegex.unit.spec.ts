@@ -64,6 +64,8 @@ const podfile =
     'end ';
 const buildTypeModificationRegex = /use_react_native!\(\n.*\s\)/su;
 const buildTypeModification =
+    '\n' +
+    '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
     '  pre_install do |installer|\n' +
@@ -77,8 +79,7 @@ const buildTypeModification =
     '        end\n' +
     '      end\n' +
     '    end\n' +
-    '  end\n' +
-    '\n';
+    '  end\n';
 
 const modfiedPodfile =
     'require File.join(File.dirname(`node --print "require.resolve(\'expo/package.json\')"`), "scripts/autolinking")\n' +
@@ -112,6 +113,21 @@ const modfiedPodfile =
     '    # Note that if you have use_frameworks! enabled, Flipper will not work\n' +
     "    # :flipper_configuration => !ENV['CI'] ? FlipperConfiguration.enabled : FlipperConfiguration.disabled,\n" +
     '  )\n' +
+    '\n' +
+    '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
+    '\n' +
+    '  pre_install do |installer|\n' +
+    '    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}\n' +
+    '    installer.pod_targets.each do |pod|\n' +
+    '      bt = pod.send(:build_type)\n' +
+    '      if $static_frameworks.include?(pod.name)\n' +
+    "        puts 'Overriding the build_type to static_framework from static_library for #{pod.name}'\n" +
+    '        def pod.build_type\n' +
+    '          Pod::BuildType.static_framework\n' +
+    '        end\n' +
+    '      end\n' +
+    '    end\n' +
+    '  end\n' +
     '\n' +
     '  post_install do |installer|\n' +
     '    react_native_post_install(\n' +
