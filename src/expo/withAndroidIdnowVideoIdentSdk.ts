@@ -1,8 +1,9 @@
 import { withProjectBuildGradle } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
-import { appendToRegex } from './util/appendToRegex';
+import { appendToFoundRegex } from './util/appendToFoundRegex';
 
+const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
 const idnowRepositories =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
@@ -19,7 +20,6 @@ const idnowRepositories =
     '                includeModule("de.idnow.insights", "idnow-android-insights-sdk")\n' +
     '            }\n' +
     '        }\n';
-const searchRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
 
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
@@ -27,9 +27,9 @@ const searchRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
  */
 export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig =>
     withProjectBuildGradle(config, (configWithProps) => {
-        configWithProps.modResults.contents = appendToRegex(
+        configWithProps.modResults.contents = appendToFoundRegex(
             configWithProps.modResults.contents,
-            searchRegex,
+            idnowRepositoriesRegex,
             idnowRepositories
         );
 
