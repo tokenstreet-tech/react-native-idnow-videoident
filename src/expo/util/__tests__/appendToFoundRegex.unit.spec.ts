@@ -62,9 +62,8 @@ const podfile =
     '    end\n' +
     '  end\n' +
     'end ';
-const buildTypeModificationRegex = /use_react_native!\(\n.*\n\s\s\)/su;
+const buildTypeModificationRegex = /use_react_native!\(\n.*\n\s\s\)\n/su;
 const buildTypeModification =
-    '\n' +
     '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
@@ -79,7 +78,7 @@ const buildTypeModification =
     '        end\n' +
     '      end\n' +
     '    end\n' +
-    '  end';
+    '  end\n';
 
 const modfiedPodfile =
     'require File.join(File.dirname(`node --print "require.resolve(\'expo/package.json\')"`), "scripts/autolinking")\n' +

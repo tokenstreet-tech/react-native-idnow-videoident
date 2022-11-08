@@ -3,8 +3,9 @@ import type { ExpoConfig } from '@expo/config-types';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 import { withPodfile } from './util/withPodfile';
 
-const buildTypeModificationRegex = /use_react_native!\(\n.*\s\)/su;
+const buildTypeModificationRegex = /use_react_native!\(\n.*\s\)\n/su;
 const buildTypeModification =
+    '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
     '  pre_install do |installer|\n' +
@@ -18,11 +19,11 @@ const buildTypeModification =
     '        end\n' +
     '      end\n' +
     '    end\n' +
-    '  end\n' +
-    '\n';
+    '  end\n';
 
-const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
+const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)\n/u;
 const appleSiliconFix =
+    '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
     '      target.build_configurations.each do |config|\n' +
