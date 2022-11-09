@@ -168,4 +168,13 @@ describe('appendToFoundRegex', () => {
         // Assert
         expect(result).toBe(modfiedPodfile);
     });
+    it('should not append the new content if it is already added', () => {
+        // Arrange
+
+        // Act
+        const result = appendToFoundRegex(modfiedPodfile, buildTypeModificationRegex, buildTypeModification);
+
+        // Assert
+        expect(result).toBe(modfiedPodfile);
+    });
 });
