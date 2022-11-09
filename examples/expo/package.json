@@ -15,9 +15,9 @@
     "dependencies": {
         "@tokenstreet/react-native-idnow-videoident": "file:../..",
         "expo": "~47.0.3",
-        "react": "18.0.0",
-        "react-dom": "18.0.0",
-        "react-native": "0.69.6",
+        "react": "18.1.0",
+        "react-dom": "18.1.0",
+        "react-native": "0.70.5",
         "react-native-web": "~0.18.10"
     },
     "devDependencies": {
@@ -26,7 +26,7 @@
         "@types/react-test-renderer": "^18.0.0",
         "babel-plugin-module-resolver": "^4.1.0",
         "babel-preset-expo": "^9.2.2",
-        "react-test-renderer": "18.0.0",
+        "react-test-renderer": "18.1.0",
         "utility-types": "^3.10.0"
     }
 }
