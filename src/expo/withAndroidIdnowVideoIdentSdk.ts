@@ -21,14 +21,15 @@ const idnowRepositories =
     '            }\n' +
     '        }\n';
 
-const excludeDuplicateClassesRegex = /android(?:\s+)?\{/u;
+const excludeDuplicateClassesRegex = /android(?:\s+)?\{\n/su;
 const excludeDuplicateClasses =
     '    configurations {\n' +
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
     '        all*.exclude module: "bcutil-jdk15to18"\n' +
     '        all*.exclude module: "pdfium-android"\n' +
     '        all*.exclude module: "android-pdf-viewer"\n' +
-    '    }\n';
+    '    }\n' +
+    '\n';
 
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
