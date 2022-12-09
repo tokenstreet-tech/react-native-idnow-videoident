@@ -21,7 +21,7 @@ const idnowRepositories =
     '            }\n' +
     '        }\n';
 
-const excludeDuplicateClassesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
+const excludeDuplicateClassesRegex = /android(?:\s+)?\{/u;
 const excludeDuplicateClasses =
     '    configurations {\n' +
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
