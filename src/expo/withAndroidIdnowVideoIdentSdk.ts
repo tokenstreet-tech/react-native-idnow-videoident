@@ -1,4 +1,4 @@
-import { withProjectBuildGradle } from '@expo/config-plugins';
+import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins';
 import type { ExpoConfig } from '@expo/config-types';
 
 import { appendToFoundRegex } from './util/appendToFoundRegex';
@@ -21,12 +21,22 @@ const idnowRepositories =
     '            }\n' +
     '        }\n';
 
+const excludeDuplicateClassesRegex = /android(?:\s+)?\{\n/su;
+const excludeDuplicateClasses =
+    '    configurations {\n' +
+    '        all*.exclude module: "bcprov-jdk15to18"\n' +
+    '        all*.exclude module: "bcutil-jdk15to18"\n' +
+    '        all*.exclude module: "pdfium-android"\n' +
+    '        all*.exclude module: "android-pdf-viewer"\n' +
+    '    }\n' +
+    '\n';
+
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
  * @param config
  */
-export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig =>
-    withProjectBuildGradle(config, (configWithProps) => {
+export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig => {
+    const configWithIdnowRepositories = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = appendToFoundRegex(
             configWithProps.modResults.contents,
             idnowRepositoriesRegex,
@@ -35,3 +45,14 @@ export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig =>
 
         return configWithProps;
     });
+
+    return withAppBuildGradle(configWithIdnowRepositories, (configWithProps) => {
+        configWithProps.modResults.contents = appendToFoundRegex(
+            configWithProps.modResults.contents,
+            excludeDuplicateClassesRegex,
+            excludeDuplicateClasses
+        );
+
+        return configWithProps;
+    });
+};

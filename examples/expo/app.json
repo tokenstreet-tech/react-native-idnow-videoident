@@ -1,6 +1,4 @@
 {
-    "name": "ReactNativeIdnowVideoidentExample",
-    "displayName": "ReactNativeIdnowVideoident Example",
     "expo": {
         "name": "@tokenstreet/react-native-idnow-videoident-example",
         "slug": "tokenstreet-react-native-idnow-videoident-example",

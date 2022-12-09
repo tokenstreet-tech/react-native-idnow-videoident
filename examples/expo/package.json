@@ -5,9 +5,9 @@
     "private": true,
     "main": "index",
     "scripts": {
-        "start": "expo start",
-        "ios": "expo start --ios",
-        "android": "expo start --android",
+        "start": "expo start --dev-client",
+        "ios": "expo run:ios",
+        "android": "expo run:android",
         "web": "expo start --web",
         "prebuild": "export LC_ALL=en_US.UTF-8 && expo prebuild --clean",
         "test": "jest"
@@ -15,6 +15,8 @@
     "dependencies": {
         "@tokenstreet/react-native-idnow-videoident": "file:../..",
         "expo": "~47.0.8",
+        "expo-splash-screen": "~0.17.5",
+        "expo-status-bar": "~1.4.2",
         "react": "18.1.0",
         "react-dom": "18.1.0",
         "react-native": "0.70.5",
