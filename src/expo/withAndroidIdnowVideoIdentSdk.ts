@@ -5,7 +5,7 @@ import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 
 const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
-const idnowRepositories =
+const idnowRepositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
     '            // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.\n' +
@@ -23,7 +23,7 @@ const idnowRepositories =
     '        }\n';
 
 const excludeDuplicateClassesRegex = /android(?:\s+)?\{\n/su;
-const excludeDuplicateClasses =
+const excludeDuplicateClassesCode =
     '    configurations {\n' +
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
     '        all*.exclude module: "bcutil-jdk15to18"\n' +
@@ -35,25 +35,28 @@ const excludeDuplicateClasses =
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
  * @param config
- * @param props
+ * @param excludeDuplicateClasses
  */
-export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (config, props) => {
+export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
+    config,
+    { android: { excludeDuplicateClasses = false } = {} }
+) => {
     config = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = appendToFoundRegex(
             configWithProps.modResults.contents,
             idnowRepositoriesRegex,
-            idnowRepositories
+            idnowRepositoriesCode
         );
 
         return configWithProps;
     });
 
-    if (props.android.excludeDuplicateClasses)
+    if (excludeDuplicateClasses)
         config = withAppBuildGradle(config, (configWithProps) => {
             configWithProps.modResults.contents = appendToFoundRegex(
                 configWithProps.modResults.contents,
                 excludeDuplicateClassesRegex,
-                excludeDuplicateClasses
+                excludeDuplicateClassesCode
             );
 
             return configWithProps;

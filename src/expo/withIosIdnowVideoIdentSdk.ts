@@ -5,7 +5,7 @@ import { appendToFoundRegex } from './util/appendToFoundRegex';
 import { withPodfile } from './util/withPodfile';
 
 const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)\n/u;
-const overrideBuildTypeToStaticFramework =
+const overrideBuildTypeToStaticFrameworkCode =
     '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
@@ -23,7 +23,7 @@ const overrideBuildTypeToStaticFramework =
     '  end\n';
 
 const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)\n/u;
-const appleSiliconFix =
+const appleSiliconFixCode =
     '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
@@ -35,17 +35,21 @@ const appleSiliconFix =
 /**
  * Modifies the build type for IDnow pods
  * @param config
- * @param props
+ * @param overrideBuildTypeToStaticFramework
+ * @param appleSiliconFix
  */
-export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (config, props) =>
+export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
+    config,
+    { ios: { overrideBuildTypeToStaticFramework = false, appleSiliconFix = false } = {} }
+) =>
     withPodfile(config, (podfile) => {
-        if (props.ios.overrideBuildTypeToStaticFramework)
+        if (overrideBuildTypeToStaticFramework)
             podfile = appendToFoundRegex(
                 podfile,
                 overrideBuildTypeToStaticFrameworkRegex,
-                overrideBuildTypeToStaticFramework
+                overrideBuildTypeToStaticFrameworkCode
             );
-        if (props.ios.appleSiliconFix) podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFix);
+        if (appleSiliconFix) podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFixCode);
 
         return podfile;
     });
