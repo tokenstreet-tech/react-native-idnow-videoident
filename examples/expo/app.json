@@ -14,6 +14,14 @@
             "package": "com.example.tokenstreetreactnativeidnowvideoident"
         },
         "assetBundlePatterns": ["**/*"],
-        "plugins": ["../../app.plugin.js"]
+        "plugins": [
+            [
+                "../../app.plugin.js",
+                {
+                    "ios": { "overrideBuildTypeToStaticFramework": true, "appleSiliconFix": true },
+                    "android": { "excludeDuplicateClasses": true }
+                }
+            ]
+        ]
     }
 }
