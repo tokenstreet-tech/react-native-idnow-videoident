@@ -1,6 +1,7 @@
+import type { ConfigPlugin } from '@expo/config-plugins';
 import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins';
-import type { ExpoConfig } from '@expo/config-types';
 
+import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 
 const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
@@ -34,9 +35,10 @@ const excludeDuplicateClasses =
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
  * @param config
+ * @param props
  */
-export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig => {
-    const configWithIdnowRepositories = withProjectBuildGradle(config, (configWithProps) => {
+export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (config, props) => {
+    config = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = appendToFoundRegex(
             configWithProps.modResults.contents,
             idnowRepositoriesRegex,
@@ -46,13 +48,16 @@ export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig => {
         return configWithProps;
     });
 
-    return withAppBuildGradle(configWithIdnowRepositories, (configWithProps) => {
-        configWithProps.modResults.contents = appendToFoundRegex(
-            configWithProps.modResults.contents,
-            excludeDuplicateClassesRegex,
-            excludeDuplicateClasses
-        );
+    if (props.android.excludeDuplicateClasses)
+        config = withAppBuildGradle(config, (configWithProps) => {
+            configWithProps.modResults.contents = appendToFoundRegex(
+                configWithProps.modResults.contents,
+                excludeDuplicateClassesRegex,
+                excludeDuplicateClasses
+            );
 
-        return configWithProps;
-    });
+            return configWithProps;
+        });
+
+    return config;
 };

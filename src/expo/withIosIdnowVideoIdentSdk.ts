@@ -1,10 +1,11 @@
-import type { ExpoConfig } from '@expo/config-types';
+import type { ConfigPlugin } from '@expo/config-plugins';
 
+import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 import { withPodfile } from './util/withPodfile';
 
-const buildTypeModificationRegex = /flags = get_default_flags\(\)\n/u;
-const buildTypeModification =
+const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)\n/u;
+const overrideBuildTypeToStaticFramework =
     '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
@@ -34,11 +35,17 @@ const appleSiliconFix =
 /**
  * Modifies the build type for IDnow pods
  * @param config
+ * @param props
  */
-export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
+export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (config, props) =>
     withPodfile(config, (podfile) => {
-        podfile = appendToFoundRegex(podfile, buildTypeModificationRegex, buildTypeModification);
-        podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFix);
+        if (props.ios.overrideBuildTypeToStaticFramework)
+            podfile = appendToFoundRegex(
+                podfile,
+                overrideBuildTypeToStaticFrameworkRegex,
+                overrideBuildTypeToStaticFramework
+            );
+        if (props.ios.appleSiliconFix) podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFix);
 
         return podfile;
     });
