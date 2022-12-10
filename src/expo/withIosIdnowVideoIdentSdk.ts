@@ -1,10 +1,11 @@
-import type { ExpoConfig } from '@expo/config-types';
+import type { ConfigPlugin } from '@expo/config-plugins';
 
+import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 import { withPodfile } from './util/withPodfile';
 
-const buildTypeModificationRegex = /flags = get_default_flags\(\)\n/u;
-const buildTypeModification =
+const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)\n/u;
+const overrideBuildTypeToStaticFrameworkCode =
     '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
@@ -22,7 +23,7 @@ const buildTypeModification =
     '  end\n';
 
 const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)\n/u;
-const appleSiliconFix =
+const appleSiliconFixCode =
     '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
@@ -34,11 +35,21 @@ const appleSiliconFix =
 /**
  * Modifies the build type for IDnow pods
  * @param config
+ * @param overrideBuildTypeToStaticFramework
+ * @param appleSiliconFix
  */
-export const withStaticFrameworkBuildType = (config: ExpoConfig): ExpoConfig =>
+export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
+    config,
+    { ios: { overrideBuildTypeToStaticFramework = false, appleSiliconFix = false } = {} }
+) =>
     withPodfile(config, (podfile) => {
-        podfile = appendToFoundRegex(podfile, buildTypeModificationRegex, buildTypeModification);
-        podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFix);
+        if (overrideBuildTypeToStaticFramework)
+            podfile = appendToFoundRegex(
+                podfile,
+                overrideBuildTypeToStaticFrameworkRegex,
+                overrideBuildTypeToStaticFrameworkCode
+            );
+        if (appleSiliconFix) podfile = appendToFoundRegex(podfile, appleSiliconFixRegex, appleSiliconFixCode);
 
         return podfile;
     });

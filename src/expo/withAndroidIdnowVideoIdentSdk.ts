@@ -1,10 +1,11 @@
+import type { ConfigPlugin } from '@expo/config-plugins';
 import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins';
-import type { ExpoConfig } from '@expo/config-types';
 
+import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
 
 const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
-const idnowRepositories =
+const idnowRepositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
     '            // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.\n' +
@@ -22,7 +23,7 @@ const idnowRepositories =
     '        }\n';
 
 const excludeDuplicateClassesRegex = /android(?:\s+)?\{\n/su;
-const excludeDuplicateClasses =
+const excludeDuplicateClassesCode =
     '    configurations {\n' +
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
     '        all*.exclude module: "bcutil-jdk15to18"\n' +
@@ -34,25 +35,32 @@ const excludeDuplicateClasses =
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
  * @param config
+ * @param excludeDuplicateClasses
  */
-export const withIdnowRepositories = (config: ExpoConfig): ExpoConfig => {
-    const configWithIdnowRepositories = withProjectBuildGradle(config, (configWithProps) => {
+export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
+    config,
+    { android: { excludeDuplicateClasses = false } = {} }
+) => {
+    config = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = appendToFoundRegex(
             configWithProps.modResults.contents,
             idnowRepositoriesRegex,
-            idnowRepositories
+            idnowRepositoriesCode
         );
 
         return configWithProps;
     });
 
-    return withAppBuildGradle(configWithIdnowRepositories, (configWithProps) => {
-        configWithProps.modResults.contents = appendToFoundRegex(
-            configWithProps.modResults.contents,
-            excludeDuplicateClassesRegex,
-            excludeDuplicateClasses
-        );
+    if (excludeDuplicateClasses)
+        config = withAppBuildGradle(config, (configWithProps) => {
+            configWithProps.modResults.contents = appendToFoundRegex(
+                configWithProps.modResults.contents,
+                excludeDuplicateClassesRegex,
+                excludeDuplicateClassesCode
+            );
 
-        return configWithProps;
-    });
+            return configWithProps;
+        });
+
+    return config;
 };

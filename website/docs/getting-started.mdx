@@ -159,7 +159,20 @@ Please be aware that Expo support is experimental and not officially supported.
 
     ```json
     {
-        "plugins": ["@tokenstreet/react-native-idnow-videoident"]
+        "plugins": [
+            [
+                "@tokenstreet/react-native-idnow-videoident",
+                {
+                    "ios": {
+                        "overrideBuildTypeToStaticFramework": true,
+                        "appleSiliconFix": false
+                    },
+                    "android": {
+                        "excludeDuplicateClasses": false
+                    }
+                }
+            ]
+        ]
     }
     ```
 
