@@ -18,7 +18,7 @@
             [
                 "../../app.plugin.js",
                 {
-                    "ios": { "overrideBuildTypeToStaticFramework": false, "appleSiliconFix": false },
+                    "ios": { "overrideBuildTypeToStaticFramework": false, "appleSiliconFix": true },
                     "android": { "excludeDuplicateClasses": false }
                 }
             ],
