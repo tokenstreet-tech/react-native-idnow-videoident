@@ -38,7 +38,7 @@ public class ReactNativeIdnowSDK {
         // -----------------------------------------------------------------------------------
         //                                    General settings
         // -----------------------------------------------------------------------------------
-        IDnowSDK.setTransactionToken(settings.getString("transactionToken"), reactApplicationContext);
+        IDnowSDK.setTransactionToken(settings.getString("transactionToken"));
         IDnowSDK.setEnvironment(ReactNativeIdnowSDK.getEnvironment(settings.getString("environment")));
         IDnowSDK.setConnectionType(
             ReactNativeIdnowSDK.getConnectionType(settings.getString("connectionType")),
