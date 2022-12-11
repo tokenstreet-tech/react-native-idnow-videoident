@@ -1,5 +1,6 @@
 import type { ConfigPlugin } from '@expo/config-plugins';
 import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins';
+import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { appendToFoundRegex } from './util/appendToFoundRegex';
@@ -42,11 +43,14 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
     { android: { excludeDuplicateClasses = false } = {} }
 ) => {
     config = withProjectBuildGradle(config, (configWithProps) => {
-        configWithProps.modResults.contents = appendToFoundRegex(
-            configWithProps.modResults.contents,
-            idnowRepositoriesRegex,
-            idnowRepositoriesCode
-        );
+        configWithProps.modResults.contents = mergeContents({
+            anchor: idnowRepositoriesRegex,
+            comment: '#',
+            newSrc: idnowRepositoriesCode,
+            offset: 0,
+            src: configWithProps.modResults.contents,
+            tag: 'AppsFlyer Strict Mode',
+        }).contents;
 
         return configWithProps;
     });
