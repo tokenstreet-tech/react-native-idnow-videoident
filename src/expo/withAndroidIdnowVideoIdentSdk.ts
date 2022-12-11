@@ -44,7 +44,7 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
     config = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = mergeContents({
             anchor: idnowRepositoriesRegex,
-            comment: '#',
+            comment: '//',
             newSrc: idnowRepositoriesCode,
             offset: 0,
             src: configWithProps.modResults.contents,
@@ -58,7 +58,7 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
         config = withAppBuildGradle(config, (configWithProps) => {
             configWithProps.modResults.contents = mergeContents({
                 anchor: excludeDuplicateClassesRegex,
-                comment: '#',
+                comment: '//',
                 newSrc: excludeDuplicateClassesCode,
                 offset: 0,
                 src: configWithProps.modResults.contents,
