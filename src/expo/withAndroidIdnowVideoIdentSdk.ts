@@ -3,7 +3,6 @@ import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins
 import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
-import { appendToFoundRegex } from './util/appendToFoundRegex';
 
 const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
 const idnowRepositoriesCode =
@@ -49,7 +48,7 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
             newSrc: idnowRepositoriesCode,
             offset: 0,
             src: configWithProps.modResults.contents,
-            tag: 'AppsFlyer Strict Mode',
+            tag: 'IDnow repositories',
         }).contents;
 
         return configWithProps;
@@ -57,11 +56,14 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
 
     if (excludeDuplicateClasses)
         config = withAppBuildGradle(config, (configWithProps) => {
-            configWithProps.modResults.contents = appendToFoundRegex(
-                configWithProps.modResults.contents,
-                excludeDuplicateClassesRegex,
-                excludeDuplicateClassesCode
-            );
+            configWithProps.modResults.contents = mergeContents({
+                anchor: excludeDuplicateClassesRegex,
+                comment: '#',
+                newSrc: excludeDuplicateClassesCode,
+                offset: 0,
+                src: configWithProps.modResults.contents,
+                tag: 'Excluded duplicate classes',
+            }).contents;
 
             return configWithProps;
         });
