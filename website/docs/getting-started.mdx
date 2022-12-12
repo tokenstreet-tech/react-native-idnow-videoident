@@ -185,6 +185,21 @@ Please be aware that Expo support is experimental and not officially supported.
     | **ios.appleSiliconFix**                    | `boolean` | `false`       | For a fix added to the podfile so the project can be built on Apple Silicon machines and run in simulators. More information here: [https://github.com/expo/expo/issues/15800](https://github.com/expo/expo/issues/15800)                                                 |
     | **android.excludeDuplicateClasses**        | `boolean` | `false`       | The following classes appeared twice in our projects in connection with this SDK, and can be excluded with this option: `bcprov-jdk15to18`, `bcutil-jdk15to18`, `pdfium-android`, `android-pdf-viewer`.                                                                   |
 
+#### iOS
+
+3. Open your `app.json` again and update the `infoPlist` to give your app the necessary permissions:
+
+    ```json
+    {
+        "ios": {
+            "infoPlist": {
+                "NSCameraUsageDescription": "Allow camera access for video identification",
+                "NSMicrophoneUsageDescription": "Allow microphone access for video identification"
+            }
+        }
+    }
+    ```
+
 ## Usage
 
 `startVideoIdent` is asynchronous. For a successful identification the `resultCode` is returned directly. If the identification failed, an error is thrown with a `resultCode`. Also, an optional `errorMessage` can be included.

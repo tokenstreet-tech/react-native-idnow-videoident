@@ -8,7 +8,11 @@
         "platforms": ["ios", "android", "web"],
         "ios": {
             "bundleIdentifier": "com.example.tokenstreetreactnativeidnowvideoident",
-            "supportsTablet": true
+            "supportsTablet": true,
+            "infoPlist": {
+                "NSCameraUsageDescription": "Allow camera access for video identification",
+                "NSMicrophoneUsageDescription": "Allow microphone access for video identification"
+            }
         },
         "android": {
             "package": "com.example.tokenstreetreactnativeidnowvideoident"
