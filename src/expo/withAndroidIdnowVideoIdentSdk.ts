@@ -5,7 +5,7 @@ import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { getConfigPluginTag } from './util/getConfigPluginTag';
 
-const repositoriesRegex = /allprojects(?:\s+)?\{.*repositories(?:\s+)?\{/su;
+const repositoriesRegex = /maven(?:\s+)?\{(?:\s+)?url(?:\s+)?'https:\/\/www.jitpack.io'(?:\s+)?\}/u;
 const repositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
