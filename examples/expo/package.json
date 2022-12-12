@@ -10,6 +10,7 @@
         "android": "expo run:android",
         "web": "expo start --web",
         "prebuild": "export LC_ALL=en_US.UTF-8 && expo prebuild --clean",
+        "xcode": "open ios/tokenstreetreactnativeidnowvideoidentexample.xcworkspace",
         "test": "jest"
     },
     "dependencies": {
