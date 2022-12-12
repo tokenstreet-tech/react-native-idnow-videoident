@@ -5,7 +5,7 @@ import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { getConfigPluginTag } from './util/getConfigPluginTag';
 
-const repositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
+const repositoriesRegex = /allprojects\s\{\n.*repositories\s\{/su;
 const repositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
@@ -23,7 +23,7 @@ const repositoriesCode =
     '            }\n' +
     '        }\n';
 
-const excludeDuplicateClassesRegex = /android(?:\s+)?\{\n/su;
+const excludeDuplicateClassesRegex = /android(?:\s+)?\{/u;
 const excludeDuplicateClassesCode =
     '    configurations {\n' +
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
