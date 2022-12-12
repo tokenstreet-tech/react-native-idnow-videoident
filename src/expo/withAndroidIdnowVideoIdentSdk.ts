@@ -1,11 +1,12 @@
 import type { ConfigPlugin } from '@expo/config-plugins';
 import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins';
+import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
-import { appendToFoundRegex } from './util/appendToFoundRegex';
+import { getConfigPluginTag } from './util/getConfigPluginTag';
 
-const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
-const idnowRepositoriesCode =
+const repositoriesRegex = /maven(?:\s+)?\{(?:\s+)?url(?:\s+)?'https:\/\/www.jitpack.io'(?:\s+)?\}/u;
+const repositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
     '            // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.\n' +
@@ -20,17 +21,16 @@ const idnowRepositoriesCode =
     '                includeModule("de.idnow.sdk", "idnow-android-sdk")\n' +
     '                includeModule("de.idnow.insights", "idnow-android-insights-sdk")\n' +
     '            }\n' +
-    '        }\n';
+    '        }';
 
-const excludeDuplicateClassesRegex = /android(?:\s+)?\{\n/su;
+const excludeDuplicateClassesRegex = /android(?:\s+)?\{/u;
 const excludeDuplicateClassesCode =
     '    configurations {\n' +
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
     '        all*.exclude module: "bcutil-jdk15to18"\n' +
     '        all*.exclude module: "pdfium-android"\n' +
     '        all*.exclude module: "android-pdf-viewer"\n' +
-    '    }\n' +
-    '\n';
+    '    }';
 
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle
@@ -42,22 +42,28 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
     { android: { excludeDuplicateClasses = false } = {} }
 ) => {
     config = withProjectBuildGradle(config, (configWithProps) => {
-        configWithProps.modResults.contents = appendToFoundRegex(
-            configWithProps.modResults.contents,
-            idnowRepositoriesRegex,
-            idnowRepositoriesCode
-        );
+        configWithProps.modResults.contents = mergeContents({
+            anchor: repositoriesRegex,
+            comment: '//',
+            newSrc: repositoriesCode,
+            offset: 1,
+            src: configWithProps.modResults.contents,
+            tag: getConfigPluginTag('Repositories'),
+        }).contents;
 
         return configWithProps;
     });
 
     if (excludeDuplicateClasses)
         config = withAppBuildGradle(config, (configWithProps) => {
-            configWithProps.modResults.contents = appendToFoundRegex(
-                configWithProps.modResults.contents,
-                excludeDuplicateClassesRegex,
-                excludeDuplicateClassesCode
-            );
+            configWithProps.modResults.contents = mergeContents({
+                anchor: excludeDuplicateClassesRegex,
+                comment: '//',
+                newSrc: excludeDuplicateClassesCode,
+                offset: 1,
+                src: configWithProps.modResults.contents,
+                tag: getConfigPluginTag('Excluded duplicate classes'),
+            }).contents;
 
             return configWithProps;
         });
