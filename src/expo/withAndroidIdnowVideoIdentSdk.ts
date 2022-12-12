@@ -21,7 +21,7 @@ const repositoriesCode =
     '                includeModule("de.idnow.sdk", "idnow-android-sdk")\n' +
     '                includeModule("de.idnow.insights", "idnow-android-insights-sdk")\n' +
     '            }\n' +
-    '        }\n';
+    '        }';
 
 const excludeDuplicateClassesRegex = /android(?:\s+)?\{/u;
 const excludeDuplicateClassesCode =
@@ -30,8 +30,7 @@ const excludeDuplicateClassesCode =
     '        all*.exclude module: "bcutil-jdk15to18"\n' +
     '        all*.exclude module: "pdfium-android"\n' +
     '        all*.exclude module: "android-pdf-viewer"\n' +
-    '    }\n' +
-    '\n';
+    '    }';
 
 /**
  * Adds the necessary IDnow repositories to the allprojects in the project build gradle

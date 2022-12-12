@@ -7,7 +7,6 @@ import { withPodfile } from './util/withPodfile';
 
 const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)/u;
 const overrideBuildTypeToStaticFrameworkCode =
-    '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
     '\n' +
     '  pre_install do |installer|\n' +
@@ -21,17 +20,16 @@ const overrideBuildTypeToStaticFrameworkCode =
     '        end\n' +
     '      end\n' +
     '    end\n' +
-    '  end\n';
+    '  end';
 
 const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
 const appleSiliconFixCode =
-    '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
     '      target.build_configurations.each do |config|\n' +
     "        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
     '      end\n' +
-    '    end\n';
+    '    end';
 
 /**
  * Modifies the build type for IDnow pods
