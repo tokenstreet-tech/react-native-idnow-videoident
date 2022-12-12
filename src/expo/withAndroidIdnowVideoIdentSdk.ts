@@ -5,7 +5,7 @@ import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { getConfigPluginTag } from './util/getConfigPluginTag';
 
-const repositoriesRegex = /allprojects\s\{\n.*repositories\s\{/su;
+const repositoriesRegex = /allprojects\s\{\n(?<DotMatchesNewline>.|\n)*repositories\s\{/u;
 const repositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
