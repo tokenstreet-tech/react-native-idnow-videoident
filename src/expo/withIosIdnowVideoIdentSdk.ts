@@ -4,7 +4,7 @@ import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
 import { withPodfile } from './util/withPodfile';
 
-const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)\n/u;
+const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)/u;
 const overrideBuildTypeToStaticFrameworkCode =
     '\n' +
     '  $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]\n' +
@@ -22,7 +22,7 @@ const overrideBuildTypeToStaticFrameworkCode =
     '    end\n' +
     '  end\n';
 
-const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)\n/u;
+const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
 const appleSiliconFixCode =
     '\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
