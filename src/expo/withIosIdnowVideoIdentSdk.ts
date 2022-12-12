@@ -49,7 +49,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 anchor: overrideBuildTypeToStaticFrameworkRegex,
                 comment: '#',
                 newSrc: overrideBuildTypeToStaticFrameworkCode,
-                offset: 0,
+                offset: 1,
                 src: podfile,
                 tag: getConfigPluginTag('Override build type to static framework'),
             }).contents;
@@ -59,7 +59,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 anchor: appleSiliconFixRegex,
                 comment: '#',
                 newSrc: appleSiliconFixCode,
-                offset: 0,
+                offset: 1,
                 src: podfile,
                 tag: getConfigPluginTag('Apple silicon fix'),
             }).contents;

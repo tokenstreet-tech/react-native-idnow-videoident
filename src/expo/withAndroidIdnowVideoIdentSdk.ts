@@ -47,7 +47,7 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
             anchor: repositoriesRegex,
             comment: '//',
             newSrc: repositoriesCode,
-            offset: 0,
+            offset: 1,
             src: configWithProps.modResults.contents,
             tag: getConfigPluginTag('Repositories'),
         }).contents;
@@ -61,7 +61,7 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
                 anchor: excludeDuplicateClassesRegex,
                 comment: '//',
                 newSrc: excludeDuplicateClassesCode,
-                offset: 0,
+                offset: 1,
                 src: configWithProps.modResults.contents,
                 tag: getConfigPluginTag('Excluded duplicate classes'),
             }).contents;
