@@ -18,8 +18,8 @@
             [
                 "../../app.plugin.js",
                 {
-                    "ios": { "overrideBuildTypeToStaticFramework": false, "appleSiliconFix": true },
-                    "android": { "excludeDuplicateClasses": false }
+                    "ios": { "overrideBuildTypeToStaticFramework": true, "appleSiliconFix": true },
+                    "android": { "excludeDuplicateClasses": true }
                 }
             ],
             ["expo-build-properties", { "ios": { "useFrameworks": "static" } }]
