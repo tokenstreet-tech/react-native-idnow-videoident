@@ -3,4 +3,4 @@
  * @param operation
  */
 export const getConfigPluginTag = (operation: string): string =>
-    '@tokenstreet/react-native-idnow-videoident '.concat(operation);
+    '@tokenstreet/react-native-idnow-videoident - '.concat(operation);
