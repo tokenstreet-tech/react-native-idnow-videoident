@@ -2,6 +2,7 @@ import type { ConfigPlugin } from '@expo/config-plugins';
 import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
+import { getConfigPluginTag } from './util/getConfigPluginTag';
 import { withPodfile } from './util/withPodfile';
 
 const overrideBuildTypeToStaticFrameworkRegex = /flags = get_default_flags\(\)/u;
@@ -50,7 +51,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 newSrc: overrideBuildTypeToStaticFrameworkCode,
                 offset: 0,
                 src: podfile,
-                tag: 'Override build type to static framework',
+                tag: getConfigPluginTag('Override build type to static framework'),
             }).contents;
 
         if (appleSiliconFix)
@@ -60,7 +61,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 newSrc: appleSiliconFixCode,
                 offset: 0,
                 src: podfile,
-                tag: 'Apple silicon fix',
+                tag: getConfigPluginTag('Apple silicon fix'),
             }).contents;
 
         return podfile;

@@ -3,9 +3,10 @@ import { withAppBuildGradle, withProjectBuildGradle } from '@expo/config-plugins
 import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
 
 import type { IConfigPluginProps } from './model/IConfigPluginProps';
+import { getConfigPluginTag } from './util/getConfigPluginTag';
 
-const idnowRepositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
-const idnowRepositoriesCode =
+const repositoriesRegex = /allprojects\s\{\n.*repositories\s\{\n/su;
+const repositoriesCode =
     '        jcenter() {\n' +
     '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
     '            // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.\n' +
@@ -43,12 +44,12 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
 ) => {
     config = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = mergeContents({
-            anchor: idnowRepositoriesRegex,
+            anchor: repositoriesRegex,
             comment: '//',
-            newSrc: idnowRepositoriesCode,
+            newSrc: repositoriesCode,
             offset: 0,
             src: configWithProps.modResults.contents,
-            tag: 'IDnow repositories',
+            tag: getConfigPluginTag('Repositories'),
         }).contents;
 
         return configWithProps;
@@ -62,7 +63,7 @@ export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
                 newSrc: excludeDuplicateClassesCode,
                 offset: 0,
                 src: configWithProps.modResults.contents,
-                tag: 'Excluded duplicate classes',
+                tag: getConfigPluginTag('Excluded duplicate classes'),
             }).contents;
 
             return configWithProps;
