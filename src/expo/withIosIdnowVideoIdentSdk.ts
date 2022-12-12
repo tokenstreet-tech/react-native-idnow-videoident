@@ -24,6 +24,7 @@ const overrideBuildTypeToStaticFrameworkCode =
 
 const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
 const appleSiliconFixCode =
+    '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |target|\n' +
     '      target.build_configurations.each do |config|\n' +
     "        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
@@ -58,7 +59,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 newSrc: appleSiliconFixCode,
                 offset: 1,
                 src: podfile,
-                tag: getConfigPluginTag('Apple silicon fix - https://github.com/expo/expo/issues/15800'),
+                tag: getConfigPluginTag('Apple silicon fix'),
             }).contents;
 
         return podfile;
