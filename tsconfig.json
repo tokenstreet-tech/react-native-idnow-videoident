@@ -1,50 +1,39 @@
 {
-  "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "compilerOptions": {
+        /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
-    /* Language and Environment */
-    "target": "esnext",
-    "lib": ["esnext"],
-    "jsx": "react",
+        /* Language and Environment */
+        "target": "esnext",
+        "lib": ["esnext"],
+        "jsx": "react",
 
-    /* Modules */
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": "./",
-    "paths": {
-      "@tokenstreet/react-native-idnow-videoident": ["./src/index"],
-      "@site/*": ["./website/*"]
-    },
-    "types": [
-      "jest",
-      "node",
-      "./website/node_modules/@docusaurus/module-type-aliases",
-      "./website/node_modules/@docusaurus/theme-classic"
-    ],
+        /* Modules */
+        "module": "esnext",
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {"@tokenstreet/react-native-idnow-videoident": ["./src/index"], "@site/*": ["./website/*"]},
+        "types": ["jest", "node", "./website/node_modules/@docusaurus/module-type-aliases", "./website/node_modules/@docusaurus/theme-classic"],
+        "resolveJsonModule": true,
 
-    "resolveJsonModule": true,
+        /* Emit */
+        "importsNotUsedAsValues": "error",
 
+        /* Interop Constraints */
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
 
-    /* Emit */
-    "importsNotUsedAsValues": "error",
+        /* Type Checking */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowUnusedLabels": false,
+        "allowUnreachableCode": false,
+        "noImplicitUseStrict": false,
+        "noStrictGenericChecks": false,
 
-    /* Interop Constraints */
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-
-    /* Type Checking */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "noImplicitUseStrict": false,
-    "noStrictGenericChecks": false,
-
-    /* Completeness */
-
-    "skipLibCheck": true
-  }
+        /* Completeness */
+        "skipLibCheck": true
+    }
 }
