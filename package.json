@@ -32,7 +32,7 @@
         "uncrustify": "cd ios && find . \\( -name \"*.h\" -o -name \"*.m\" \\) -exec uncrustify -c ../uncrustifyrc.cfg --no-backup {} +",
         "build": "bob build",
         "release": "release-it",
-        "pods": "cd examples/bare/ios && LC_ALL=en_US.UTF-8 pod update",
+        "pods": "cd examples/bare/ios && LC_ALL=en_US.UTF-8 NO_FLIPPER=1 pod update",
         "examples": "yarn --cwd examples/bare && yarn pods && yarn --cwd examples/expo",
         "website": "yarn --cwd website",
         "bootstrap": "yarn && yarn website && yarn build && yarn examples",
