@@ -11,8 +11,13 @@
         "module": "esnext",
         "moduleResolution": "node",
         "baseUrl": "./",
-        "paths": {"@tokenstreet/react-native-idnow-videoident": ["./src/index"], "@site/*": ["./website/*"]},
-        "types": ["jest", "node", "./website/node_modules/@docusaurus/module-type-aliases", "./website/node_modules/@docusaurus/theme-classic"],
+        "paths": { "@tokenstreet/react-native-idnow-videoident": ["./src/index"], "@site/*": ["./website/*"] },
+        "types": [
+            "jest",
+            "node",
+            "./website/node_modules/@docusaurus/module-type-aliases",
+            "./website/node_modules/@docusaurus/theme-classic"
+        ],
         "resolveJsonModule": true,
 
         /* Emit */
