@@ -70,5 +70,5 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation "de.idnow.sdk:idnow-android-sdk:6.1.2"
+    implementation "de.idnow.sdk:idnow-android-sdk:6.1.3"
 }
