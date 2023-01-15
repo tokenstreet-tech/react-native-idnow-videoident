@@ -14,7 +14,7 @@ on:
                 required: true
 
 env:
-    NODE_VERSION: 16
+    NODE_VERSION: 18
     CACHE: yarn
     REGISTRY_URL: 'https://registry.npmjs.org'
     GIT_USER_NAME: tokenstreet-tools
@@ -28,7 +28,7 @@ jobs:
                 script: [typescript, lint, test, --cwd website build]
         steps:
             - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3.6.0
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: ${{ env.CACHE }}
@@ -46,7 +46,7 @@ jobs:
             - yarn_script_validation
         steps:
             - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3.6.0
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: ${{ env.CACHE }}
@@ -85,7 +85,7 @@ jobs:
               run: |
                   git config --global user.name "${{ env.GIT_USER_NAME }}"
                   git config --global user.email "${{ env.GIT_USER_EMAIL }}"
-            - uses: actions/setup-node@v3.6.0
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: ${{ env.CACHE }}
