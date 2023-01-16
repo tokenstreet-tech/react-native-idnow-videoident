@@ -19,7 +19,8 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
 import de.idnow.sdk.IDnowSDK
 
-class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext):ReactContextBaseJavaModule(reactContext) {
+class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
+    ReactContextBaseJavaModule(reactContext) {
 
     private val reactContext: ReactApplicationContext? = null
     private var globalErrorCallback: Callback? = null
