@@ -21,6 +21,25 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
     private var globalErrorCallback: Callback? = null
     private var globalSuccessCallback: Callback? = null
 
+    fun ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) {
+        super(reactContext)
+        reactContext.addActivityEventListener(
+            object : BaseActivityEventListener() {
+                fun onActivityResult(
+                    activity: Activity?,
+                    requestCode: Int,
+                    resultCode: Int,
+                    data: Intent?
+                ) {
+                    if (requestCode == IDnowSDK.REQUEST_ID_NOW_SDK) {
+                        resultCallback(resultCode, null)
+                    }
+                }
+            }
+        )
+        this.reactContext = reactContext
+    }
+
   override fun getName(): String {
     return NAME
   }
