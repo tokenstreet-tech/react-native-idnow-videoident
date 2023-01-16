@@ -16,9 +16,9 @@ import java.util.*
 object ReactNativeIdnowSDK {
     @Throws(Exception::class)
     fun initializeWithSettings(
-        currentActivity: Activity,
+        currentActivity: Activity?,
         settings: ReadableMap,
-        reactApplicationContext: ReactApplicationContext
+        reactApplicationContext: ReactApplicationContext?
     ): IDnowSDK {
         val appearance: ReadableMap = settings.getMap("appearance")!!
 

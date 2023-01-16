@@ -88,7 +88,7 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
     ) {
         globalErrorCallback = errorCallback
         globalSuccessCallback = successCallback
-        val currentActivity: Activity = getCurrentActivity()
+        val currentActivity: Activity? = getCurrentActivity()
         try {
             val instance = ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext)
             instance.start(IDnowSDK.getTransactionToken())
