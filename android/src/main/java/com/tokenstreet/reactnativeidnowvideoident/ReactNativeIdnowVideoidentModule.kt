@@ -22,14 +22,14 @@ import de.idnow.sdk.IDnowSDK
 class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
     ReactContextBaseJavaModule(reactContext) {
 
-    private val reactContext: ReactApplicationContext? = null
+    private var reactContext: ReactApplicationContext? = null
     private var globalErrorCallback: Callback? = null
     private var globalSuccessCallback: Callback? = null
 
     init {
         reactContext.addActivityEventListener(
             object : BaseActivityEventListener() {
-                fun onActivityResult(
+                override fun onActivityResult(
                     activity: Activity?,
                     requestCode: Int,
                     resultCode: Int,
@@ -56,26 +56,26 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
             IDnowSDK.RESULT_CODE_FAILED -> {
                 params.putString(resultCodeKey, "FAILED")
                 if (e != null) params.putString(errorMessageKey, e.message)
-                globalErrorCallback.invoke(params)
+                globalErrorCallback?.invoke(params)
             }
             IDnowSDK.RESULT_CODE_SUCCESS -> {
                 params.putString(resultCodeKey, "SUCCESS")
-                globalSuccessCallback.invoke(params)
+                globalSuccessCallback?.invoke(params)
             }
             IDnowSDK.RESULT_CODE_CANCEL -> {
                 params.putString(resultCodeKey, "CANCEL")
                 if (e != null) params.putString(errorMessageKey, e.message)
-                globalErrorCallback.invoke(params)
+                globalErrorCallback?.invoke(params)
             }
             IDnowSDK.RESULT_CODE_WRONG_IDENT, IDnowSDK.RESULT_CODE_FALLBACK_VID, 11, IDnowSDK.RESULT_CODE_INTERNAL -> {
                 params.putString(resultCodeKey, "INTERNAL_ERROR")
                 if (e != null) params.putString(errorMessageKey, e.message)
-                globalErrorCallback.invoke(params)
+                globalErrorCallback?.invoke(params)
             }
             else -> {
                 params.putString(resultCodeKey, "INTERNAL_ERROR")
                 if (e != null) params.putString(errorMessageKey, e.message)
-                globalErrorCallback.invoke(params)
+                globalErrorCallback?.invoke(params)
             }
         }
     }
@@ -90,7 +90,7 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
         globalSuccessCallback = successCallback
         val currentActivity: Activity = getCurrentActivity()
         try {
-            val instance = initializeWithSettings(currentActivity, settings, reactContext)
+            val instance = ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext)
             instance.start(IDnowSDK.getTransactionToken())
         } catch (e: Exception) {
             resultCallback(IDnowSDK.RESULT_CODE_INTERNAL, e)
