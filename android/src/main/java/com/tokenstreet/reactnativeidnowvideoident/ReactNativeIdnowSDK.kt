@@ -18,7 +18,7 @@ object ReactNativeIdnowSDK {
     fun initializeWithSettings(
         currentActivity: Activity?,
         settings: ReadableMap,
-        reactApplicationContext: ReactApplicationContext?
+        reactApplicationContext: ReactApplicationContext
     ): IDnowSDK {
         val appearance: ReadableMap = settings.getMap("appearance")!!
 

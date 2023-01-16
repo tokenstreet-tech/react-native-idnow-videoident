@@ -17,12 +17,13 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
+import com.tokenstreet.reactnativeidnowvideoident.ReactNativeIdnowSDK.initializeWithSettings
 import de.idnow.sdk.IDnowSDK
 
 class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
     ReactContextBaseJavaModule(reactContext) {
 
-    private var reactContext: ReactApplicationContext? = null
+    private val reactContext: ReactApplicationContext
     private var globalErrorCallback: Callback? = null
     private var globalSuccessCallback: Callback? = null
 
@@ -48,7 +49,7 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
         return NAME
     }
 
-    private fun resultCallback(resultCode: Int, e: java.lang.Exception?) {
+    private fun resultCallback(resultCode: Int, e: Exception?) {
         val params: WritableMap = Arguments.createMap()
         val resultCodeKey = "resultCode"
         val errorMessageKey = "errorMessage"
@@ -81,7 +82,7 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
     }
 
     @ReactMethod
-    open fun startVideoIdent(
+    fun startVideoIdent(
         settings: ReadableMap,
         successCallback: Callback,
         errorCallback: Callback
@@ -90,7 +91,7 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
         globalSuccessCallback = successCallback
         val currentActivity: Activity? = getCurrentActivity()
         try {
-            val instance = ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext)
+            val instance = initializeWithSettings(currentActivity, settings, reactContext)
             instance.start(IDnowSDK.getTransactionToken())
         } catch (e: Exception) {
             resultCallback(IDnowSDK.RESULT_CODE_INTERNAL, e)
