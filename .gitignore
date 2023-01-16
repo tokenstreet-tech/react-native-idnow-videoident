@@ -41,6 +41,11 @@ android.iml
 *.keystore
 !debug.keystore
 
+# Gradle
+android/gradle
+gradlew
+gradlew.bat
+
 # Cocoapods
 Pods/
 
