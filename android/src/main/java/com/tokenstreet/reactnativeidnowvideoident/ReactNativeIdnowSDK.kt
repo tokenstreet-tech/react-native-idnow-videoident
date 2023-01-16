@@ -216,7 +216,7 @@ object ReactNativeIdnowSDK {
 
         connectionTypeMap["WEBSOCKET"] = IDnowSDK.ConnectionType.WEBSOCKET
         connectionTypeMap["LONG_POLLING"] = IDnowSDK.ConnectionType.LONG_POLLING
-        
+
         return connectionTypeMap[connectionType]
     }
 }
