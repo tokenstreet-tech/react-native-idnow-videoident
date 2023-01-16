@@ -4,13 +4,15 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-package com.tokenstreetreactnativeidnowvideoident
+
+package com.tokenstreet.reactnativeidnowvideoident
 
 import android.app.Activity
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
 import de.idnow.sdk.IDnowSDK
-import java.util.*
+import java.util.HashMap
+import java.util.Objects
 
 object ReactNativeIdnowSDK {
     @Throws(Exception::class)
@@ -20,7 +22,9 @@ object ReactNativeIdnowSDK {
         reactApplicationContext: ReactApplicationContext
     ): IDnowSDK {
         val appearance: ReadableMap = settings.getMap("appearance")!!
+
         val instance = IDnowSDK.getInstance()
+
         instance.initialize(
             currentActivity,
             if (settings.hasKey("companyId")) settings.getString("companyId") else "",
@@ -203,13 +207,16 @@ object ReactNativeIdnowSDK {
         environmentMap["CUSTOM"] = IDnowSDK.Server.CUSTOM
         environmentMap["INT"] = IDnowSDK.Server.INT
         environmentMap["NOT_DEFINED"] = null
+
         return environmentMap[environment]
     }
 
     private fun getConnectionType(connectionType: String?): IDnowSDK.ConnectionType? {
         val connectionTypeMap = HashMap<String?, IDnowSDK.ConnectionType>()
+
         connectionTypeMap["WEBSOCKET"] = IDnowSDK.ConnectionType.WEBSOCKET
         connectionTypeMap["LONG_POLLING"] = IDnowSDK.ConnectionType.LONG_POLLING
+        
         return connectionTypeMap[connectionType]
     }
 }
