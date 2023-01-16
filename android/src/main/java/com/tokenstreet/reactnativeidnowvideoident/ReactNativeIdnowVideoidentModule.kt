@@ -10,12 +10,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
-import com.facebook.react.module.annotations.ReactModule
 import de.idnow.sdk.IDnowSDK
 
 
 class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
-  ReactContextBaseJavaModule(reactContext) {
+    ReactContextBaseJavaModule(reactContext) {
 
     private val reactContext: ReactApplicationContext? = null
     private var globalErrorCallback: Callback? = null
@@ -40,9 +39,9 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
         this.reactContext = reactContext
     }
 
-  override fun getName(): String {
-    return NAME
-  }
+    override fun getName(): String {
+        return NAME
+    }
 
     private fun resultCallback(resultCode: Int, e: java.lang.Exception?) {
         val params: WritableMap = Arguments.createMap()
@@ -76,25 +75,25 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
         }
     }
 
-  @ReactMethod
-  open fun startVideoIdent(
-      settings: ReadableMap,
-      successCallback: Callback,
-      errorCallback: Callback
-  ) {
-      globalErrorCallback = errorCallback
-      globalSuccessCallback = successCallback
-      val currentActivity: Activity = getCurrentActivity()
-      try {
-          val instance =
-              ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext)
-          instance.start(IDnowSDK.getTransactionToken())
-      } catch (e: Exception) {
-          resultCallback(IDnowSDK.RESULT_CODE_INTERNAL, e)
-      }
-  }
+    @ReactMethod
+    open fun startVideoIdent(
+        settings: ReadableMap,
+        successCallback: Callback,
+        errorCallback: Callback
+    ) {
+        globalErrorCallback = errorCallback
+        globalSuccessCallback = successCallback
+        val currentActivity: Activity = getCurrentActivity()
+        try {
+            val instance =
+                ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext)
+            instance.start(IDnowSDK.getTransactionToken())
+        } catch (e: Exception) {
+            resultCallback(IDnowSDK.RESULT_CODE_INTERNAL, e)
+        }
+    }
 
-  companion object {
-    const val NAME = "ReactNativeIdnowVideoident"
-  }
+    companion object {
+        const val NAME = "ReactNativeIdnowVideoident"
+    }
 }

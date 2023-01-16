@@ -11,8 +11,7 @@ import android.app.Activity
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
 import de.idnow.sdk.IDnowSDK
-import java.util.HashMap
-import java.util.Objects
+import java.util.*
 
 object ReactNativeIdnowSDK {
     @Throws(Exception::class)
