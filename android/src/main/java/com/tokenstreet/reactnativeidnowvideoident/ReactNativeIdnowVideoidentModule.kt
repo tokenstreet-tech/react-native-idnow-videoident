@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2022 tokenstreet GmbH.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package com.tokenstreet.reactnativeidnowvideoident
 
 import android.app.Activity
@@ -12,16 +19,13 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
 import de.idnow.sdk.IDnowSDK
 
-
-class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
-    ReactContextBaseJavaModule(reactContext) {
+class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext):ReactContextBaseJavaModule(reactContext) {
 
     private val reactContext: ReactApplicationContext? = null
     private var globalErrorCallback: Callback? = null
     private var globalSuccessCallback: Callback? = null
 
-    fun ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) {
-        super(reactContext)
+    init {
         reactContext.addActivityEventListener(
             object : BaseActivityEventListener() {
                 fun onActivityResult(
@@ -85,8 +89,7 @@ class ReactNativeIdnowVideoidentModule(reactContext: ReactApplicationContext) :
         globalSuccessCallback = successCallback
         val currentActivity: Activity = getCurrentActivity()
         try {
-            val instance =
-                ReactNativeIdnowSDK.initializeWithSettings(currentActivity, settings, reactContext)
+            val instance = initializeWithSettings(currentActivity, settings, reactContext)
             instance.start(IDnowSDK.getTransactionToken())
         } catch (e: Exception) {
             resultCallback(IDnowSDK.RESULT_CODE_INTERNAL, e)
