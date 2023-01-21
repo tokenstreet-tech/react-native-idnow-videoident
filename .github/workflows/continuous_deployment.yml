@@ -1,9 +1,5 @@
-name: main
-
+name: 🚀 Continuous deployment
 on:
-    pull_request:
-        branches:
-            - main
     push:
         branches:
             - main
@@ -21,24 +17,6 @@ env:
     GIT_USER_EMAIL: tools@tokenstreet.com
 
 jobs:
-    yarn_script_validation:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                script: [typescript, lint, test, --cwd website build]
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
-                  cache: ${{ env.CACHE }}
-            - run: |
-                  yarn install --frozen-lockfile
-                  yarn install --cwd website --frozen-lockfile
-                  yarn build
-                  yarn install --cwd examples/bare --frozen-lockfile
-                  yarn install --cwd examples/expo --frozen-lockfile
-            - run: yarn ${{ matrix.script }}
     deploy_website:
         runs-on: ubuntu-latest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
