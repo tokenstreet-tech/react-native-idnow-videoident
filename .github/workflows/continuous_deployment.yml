@@ -79,7 +79,7 @@ jobs:
                   cache: ${{ env.CACHE }}
                   registry-url: ${{ env.REGISTRY_URL }}
             - name: 📥 Download deps
-            - run: |
+              run: |
                   yarn install --frozen-lockfile
                   yarn install --cwd website --frozen-lockfile
                   yarn build
