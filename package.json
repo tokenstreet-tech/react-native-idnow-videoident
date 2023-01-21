@@ -1,6 +1,6 @@
 {
     "name": "@tokenstreet/react-native-idnow-videoident",
-    "version": "0.16.0",
+    "version": "0.16.1",
     "description": "📹 React Native IDnow VideoIdent bindings for the iOS and Android SDK",
     "main": "lib/commonjs/index",
     "module": "lib/module/index",
@@ -108,9 +108,6 @@
         "expo": {
             "optional": true
         }
-    },
-    "engines": {
-        "node": ">= 18.0.0"
     },
     "packageManager": "^yarn@1.22.15",
     "commitlint": {
