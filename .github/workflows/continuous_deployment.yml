@@ -18,6 +18,7 @@ env:
 
 jobs:
     deploy_website:
+        name: 🌐 Deploy website
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
         steps:
@@ -54,6 +55,7 @@ jobs:
                   user_name: ${{ env.GIT_USER_NAME }}
                   user_email: ${{ env.GIT_USER_EMAIL }}
     publish_package:
+        name: ⬆️ Publish package
         runs-on: ubuntu-latest
         if: github.event_name == 'workflow_dispatch'
         steps:
