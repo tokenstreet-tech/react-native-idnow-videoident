@@ -19,9 +19,7 @@ env:
 jobs:
     deploy_website:
         runs-on: ubuntu-latest
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        needs:
-            - yarn_script_validation
+        if: github.event_name == 'push'
         steps:
             - name: 🛑 Cancel Previous Runs
               uses: styfle/cancel-workflow-action@0.11.0
@@ -57,9 +55,7 @@ jobs:
                   user_email: ${{ env.GIT_USER_EMAIL }}
     publish_package:
         runs-on: ubuntu-latest
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
-        needs:
-            - yarn_script_validation
+        if: github.event_name == 'workflow_dispatch'
         steps:
             - name: 🛑 Cancel Previous Runs
               uses: styfle/cancel-workflow-action@0.11.0
