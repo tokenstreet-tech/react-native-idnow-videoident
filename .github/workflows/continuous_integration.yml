@@ -1,0 +1,45 @@
+name: ♻️ Continuous integration
+on: [pull_request]
+
+jobs:
+    yarn_script_validation:
+        name: ${{ matrix.job_name }}
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                key: [typecheck, lint, test, website]
+                include:
+                    - key: typecheck
+                      job_name: ʦ TypeScript
+                      step_name: 🔎 Type check
+                      script: typecheck
+                    - key: lint
+                      job_name: ⬣ ESLint
+                      step_name: 🔬 Lint
+                      script: lint
+                    - key: test
+                      job_name: 🤡 Jest
+                      step_name: ✅ Test
+                      script: test
+                    - key: website
+                      job_name: 🦖 Docusaurus
+                      step_name: 🌐 Build website
+                      script: --cwd website build
+        steps:
+            - name: 🛑 Cancel Previous Runs
+              uses: styfle/cancel-workflow-action@0.11.0
+            - name: ⬇️ Checkout repo
+              uses: actions/checkout@v3
+            - name: ⎔ Setup node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: 📥 Download deps
+              run: |
+                  yarn install --frozen-lockfile
+                  yarn install --cwd website --frozen-lockfile
+                  yarn build
+                  yarn install --cwd examples/bare --frozen-lockfile
+                  yarn install --cwd examples/expo --frozen-lockfile
+            - name: ${{ matrix.step_name }}
+              run: yarn ${{ matrix.script }}
