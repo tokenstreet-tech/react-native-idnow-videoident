@@ -79,9 +79,9 @@ target 'ReactNativeIdnowVideoidentExample' do
 
         # Mandatory for M1 Macs to work together with `use_frameworks! linkage: :static`
         # Inspiration and context: https://github.com/expo/expo/issues/15800
-        $non_arm64_pods = %w[AFNetworking FLAnimatedImage libPhoneNumber-iOS]
+        $pods_to_fix = %w[AFNetworking FLAnimatedImage libPhoneNumber-iOS SocketRocket]
         installer.pods_project.targets.each do |pod|
-            if $non_arm64_pods.include?(pod.name)
+            if $pods_to_fix.include?(pod.name)
                 pod.build_configurations.each do |config|
                     if config.name == 'Debug'
                         puts "Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}"
