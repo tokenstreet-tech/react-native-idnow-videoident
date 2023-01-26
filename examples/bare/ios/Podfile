@@ -91,7 +91,7 @@ target 'ReactNativeIdnowVideoidentExample' do
             NBPhoneNumberUtil
             RCTAppDelegate
             RCTBundleURLProvider
-            SRWebSocker
+            SRWebSocket
         ]
         installer.pods_project.targets.each do |pod|
             if $non_arm64_pods.include?(pod.name)
