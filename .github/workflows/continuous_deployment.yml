@@ -11,7 +11,6 @@ on:
 
 env:
     NODE_VERSION: 18
-    CACHE: yarn
     REGISTRY_URL: 'https://registry.npmjs.org'
     GIT_USER_NAME: tokenstreet-tools
     GIT_USER_EMAIL: tools@tokenstreet.com
@@ -30,7 +29,7 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ env.NODE_VERSION }}
-                  cache: ${{ env.CACHE }}
+                  registry-url: ${{ env.REGISTRY_URL }}
             - name: 📥 Download deps
               run: |
                   yarn install --frozen-lockfile
@@ -73,7 +72,6 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ env.NODE_VERSION }}
-                  cache: ${{ env.CACHE }}
                   registry-url: ${{ env.REGISTRY_URL }}
             - name: 📥 Download deps
               run: |
