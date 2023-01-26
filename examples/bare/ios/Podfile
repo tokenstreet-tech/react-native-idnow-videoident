@@ -94,7 +94,7 @@ target 'ReactNativeIdnowVideoidentExample' do
             SRWebSocker
         ]
         installer.pods_project.targets.each do |pod|
-            if $m1_frameworks.include?(pod.name)
+            if $non_arm64_pods.include?(pod.name)
                 target.build_configurations.each do |config|
                     if config == 'Debug'
                         puts "Overriding the build setting ONLY_ACTIVE_ARCH to NO for #{pod.name}"
