@@ -29,7 +29,6 @@ updates:
           interval: 'weekly'
       ignore:
           - dependency-name: 'react'
-          - dependency-name: 'react-dom'
           - dependency-name: 'react-native'
     - package-ecosystem: 'npm'
       directory: '/website'
