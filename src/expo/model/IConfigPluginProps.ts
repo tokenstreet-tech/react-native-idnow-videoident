@@ -1,7 +1,7 @@
 export interface IConfigPluginProps {
     ios?: {
         overrideBuildTypeToStaticFramework?: boolean;
-        appleSiliconFix?: boolean;
+        applyUseFrameworksM1SimulatorWorkaround?: boolean;
     };
     android?: {
         excludeDuplicateClasses?: boolean;

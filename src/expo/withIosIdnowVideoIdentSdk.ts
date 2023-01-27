@@ -22,9 +22,9 @@ const overrideBuildTypeToStaticFrameworkCode =
     '    end\n' +
     '  end';
 
-const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
-const appleSiliconFixCode =
-    '    # `use_frameworks! linkage: :static` M1 Mac workaround\n' +
+const applyUseFrameworksM1SimulatorWorkaroundRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
+const applyUseFrameworksM1SimulatorWorkaroundCode =
+    '    # `use_frameworks! linkage: :static` M1 Mac Simulator workaround\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
     '    installer.pods_project.targets.each do |pod|\n' +
     '      pod.build_configurations.each do |config|\n' +
@@ -39,11 +39,11 @@ const appleSiliconFixCode =
  * Modifies the build type for IDnow pods
  * @param config
  * @param overrideBuildTypeToStaticFramework
- * @param appleSiliconFix
+ * @param applyUseFrameworksM1SimulatorWorkaround
  */
 export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
     config,
-    { ios: { overrideBuildTypeToStaticFramework = false, appleSiliconFix = false } = {} }
+    { ios: { overrideBuildTypeToStaticFramework = false, applyUseFrameworksM1SimulatorWorkaround = false } = {} }
 ) =>
     withPodfile(config, (podfile) => {
         if (overrideBuildTypeToStaticFramework)
@@ -56,11 +56,11 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 tag: getConfigPluginTag('Override build type to static framework'),
             }).contents;
 
-        if (appleSiliconFix)
+        if (applyUseFrameworksM1SimulatorWorkaround)
             podfile = mergeContents({
-                anchor: appleSiliconFixRegex,
+                anchor: applyUseFrameworksM1SimulatorWorkaroundRegex,
                 comment: '#',
-                newSrc: appleSiliconFixCode,
+                newSrc: applyUseFrameworksM1SimulatorWorkaroundCode,
                 offset: 1,
                 src: podfile,
                 tag: getConfigPluginTag('Apple silicon fix'),

@@ -22,7 +22,10 @@
             [
                 "../../app.plugin.js",
                 {
-                    "ios": { "overrideBuildTypeToStaticFramework": false, "appleSiliconFix": true },
+                    "ios": {
+                        "overrideBuildTypeToStaticFramework": false,
+                        "applyUseFrameworksM1SimulatorWorkaround": true
+                    },
                     "android": { "excludeDuplicateClasses": false }
                 }
             ],

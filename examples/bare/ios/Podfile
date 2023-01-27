@@ -77,7 +77,7 @@ target 'ReactNativeIdnowVideoidentExample' do
         )
         __apply_Xcode_12_5_M1_post_install_workaround(installer)
 
-        # `use_frameworks! linkage: :static` M1 Mac workaround
+        # `use_frameworks! linkage: :static` M1 Mac Simulator workaround
         # https://github.com/expo/expo/issues/15800
         installer.pods_project.targets.each do |pod|
             pod.build_configurations.each do |config|
