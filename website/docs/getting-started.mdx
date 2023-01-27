@@ -100,6 +100,31 @@ and the issue has also been passed on to the IDnow support team.
     <string>Allow camera access for video identification</string>
     ```
 
+5. If you are using an M1 Mac and building the app for a simulator, please add the following workaround to your 'Podfile':
+
+    ```diff
+    post_install do |installer|
+        react_native_post_install(
+            installer,
+            # Set `mac_catalyst_enabled` to `true` in order to apply patches
+            # necessary for Mac Catalyst builds
+            mac_catalyst_enabled: false
+        )
+        __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    +
+    +   # `use_frameworks! linkage: :static` M1 Mac Simulator workaround
+    +   # https://github.com/expo/expo/issues/15800
+    +   installer.pods_project.targets.each do |pod|
+    +       pod.build_configurations.each do |config|
+    +           if config.name == 'Debug'
+    +               puts 'Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}'
+    +               config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+    +           end
+    +       end
+    +   end
+    end
+    ```
+
 #### Android
 
 2. Add the IDnow maven url to your top-level `build.gradle`:
