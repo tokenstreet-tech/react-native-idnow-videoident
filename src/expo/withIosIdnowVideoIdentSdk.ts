@@ -24,10 +24,14 @@ const overrideBuildTypeToStaticFrameworkCode =
 
 const appleSiliconFixRegex = /__apply_Xcode_12_5_M1_post_install_workaround\(installer\)/u;
 const appleSiliconFixCode =
+    '    # `use_frameworks! linkage: :static` M1 Mac workaround\n' +
     '    # https://github.com/expo/expo/issues/15800\n' +
-    '    installer.pods_project.targets.each do |target|\n' +
-    '      target.build_configurations.each do |config|\n' +
-    "        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
+    '    installer.pods_project.targets.each do |pod|\n' +
+    '      pod.build_configurations.each do |config|\n' +
+    "        if config.name == 'Debug'\n" +
+    "          puts 'Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}'\n" +
+    "          config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
+    '        end\n' +
     '      end\n' +
     '    end';
 
