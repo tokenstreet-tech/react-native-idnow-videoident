@@ -53,7 +53,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 newSrc: overrideBuildTypeToStaticFrameworkCode,
                 offset: 1,
                 src: podfile,
-                tag: getConfigPluginTag('Override build type to static framework'),
+                tag: getConfigPluginTag('Override build_type to static_framework'),
             }).contents;
 
         if (applyUseFrameworksM1SimulatorWorkaround)
@@ -63,7 +63,7 @@ export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
                 newSrc: applyUseFrameworksM1SimulatorWorkaroundCode,
                 offset: 1,
                 src: podfile,
-                tag: getConfigPluginTag('Apple silicon fix'),
+                tag: getConfigPluginTag('Overriding build_settings ONLY_ACTIVE_ARCH to NO'),
             }).contents;
 
         return podfile;
