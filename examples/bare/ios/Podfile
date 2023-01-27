@@ -77,16 +77,13 @@ target 'ReactNativeIdnowVideoidentExample' do
         )
         __apply_Xcode_12_5_M1_post_install_workaround(installer)
 
-        # Mandatory for M1 Macs to work together with `use_frameworks! linkage: :static`
-        # Inspiration and context: https://github.com/expo/expo/issues/15800
-        $pods_to_fix = %w[AFNetworking FLAnimatedImage libPhoneNumber-iOS SocketRocket]
+        # `use_frameworks! linkage: :static` M1 Mac workaround
+        # https://github.com/expo/expo/issues/15800
         installer.pods_project.targets.each do |pod|
-            if $pods_to_fix.include?(pod.name)
-                pod.build_configurations.each do |config|
-                    if config.name == 'Debug'
-                        puts "Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}"
-                        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-                    end
+            pod.build_configurations.each do |config|
+                if config.name == 'Debug'
+                    puts "Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}"
+                    config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
                 end
             end
         end
