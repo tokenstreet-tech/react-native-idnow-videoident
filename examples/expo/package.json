@@ -15,7 +15,7 @@
     },
     "dependencies": {
         "@tokenstreet/react-native-idnow-videoident": "file:../..",
-        "expo": "~47.0.13",
+        "expo": "~47.0.12",
         "expo-build-properties": "~0.4.1",
         "expo-splash-screen": "~0.17.5",
         "expo-status-bar": "~1.4.2",
