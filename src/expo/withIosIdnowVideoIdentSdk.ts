@@ -29,7 +29,7 @@ const applyUseFrameworksM1SimulatorWorkaroundCode =
     '    installer.pods_project.targets.each do |pod|\n' +
     '      pod.build_configurations.each do |config|\n' +
     "        if config.name == 'Debug'\n" +
-    "          puts 'Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}'\n" +
+    '          puts "Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}"\n' +
     "          config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'\n" +
     '        end\n' +
     '      end\n' +
