@@ -9,7 +9,7 @@
     <icon>https://tokenstreet-tech.github.io/react-native-idnow-videoident/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Confession to Open Source]]></title>
-        <id>confession-to-open-source</id>
+        <id>https://tokenstreet-tech.github.io/react-native-idnow-videoident/blog/confession-to-open-source</id>
         <link href="https://tokenstreet-tech.github.io/react-native-idnow-videoident/blog/confession-to-open-source"/>
         <updated>2022-03-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A few weeks ago, Coinpanion approached us with a request that accelerated the process of releasing our first open-source package.]]></summary>
