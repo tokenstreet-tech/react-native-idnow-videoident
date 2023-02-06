@@ -17,7 +17,7 @@
         "@babel/core": "^7.20.12",
         "@babel/runtime": "^7.20.13",
         "babel-plugin-module-resolver": "^5.0.0",
-        "metro-react-native-babel-preset": "^0.74.1",
+        "metro-react-native-babel-preset": "^0.75.0",
         "utility-types": "^3.10.0"
     }
 }
