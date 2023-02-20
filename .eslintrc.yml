@@ -64,5 +64,6 @@ rules:
     max-lines: 0
     max-params: 0
     multiline-comment-style: 0
+    no-duplicate-imports: 0
     no-param-reassign: 0
     no-warning-comments: 0
