@@ -1766,7 +1766,7 @@
   integrity sha512-1P1OROm/rdubP5aFDSZQILU0vrLCJ4fvHt6EoqHEM+2D/G5MK3bIaymUKLit8Js9gbns5UyJnkP/TZROLw4tUA==
 
 "@tokenstreet/react-native-idnow-videoident@file:../..":
-  version "0.17.0"
+  version "0.18.0"
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.4"
@@ -3067,10 +3067,10 @@ expo-asset@~8.7.0:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
-expo-build-properties@~0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/expo-build-properties/-/expo-build-properties-0.4.1.tgz#f2511d281898657b225710051860d71c63b9ad5e"
-  integrity sha512-Y492KoSfb8Jj5y8qA+J0Wu0HjuCmJuqCB7fxOAxqNDS5V8JJNUU9106ESDnlQ7xyxkjMlGmVZN1/oRUoC0zBJg==
+expo-build-properties@~0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/expo-build-properties/-/expo-build-properties-0.5.1.tgz#6221f6b93f4d21c16c94cb781da1ec5ba21d00ea"
+  integrity sha512-wa02F4dmQTCxZ7rEBtaZCU0rCzpoUYSKF51cKCRT8ECEEkHe/k78VN8wI9fj03L7cIqJA5CJb2ZYydxKTbRHxA==
   dependencies:
     ajv "^8.11.0"
     semver "^7.3.5"
