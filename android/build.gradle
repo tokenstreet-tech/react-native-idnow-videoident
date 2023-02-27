@@ -88,7 +88,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "de.idnow.sdk:idnow-android-sdk:6.1.4"
+  implementation "de.idnow.sdk:idnow-android-sdk:6.1.5"
 }
 
 if (isNewArchitectureEnabled()) {
