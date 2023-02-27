@@ -1,6 +1,8 @@
-import styles from '@site/src/components/HomepageFeatures/index.module.css';
 import clsx from 'clsx';
+import type { FC } from 'react';
 import React from 'react';
+
+import styles from './FeatureItem.module.css';
 
 export interface IFeatureItem {
     title: string;
@@ -8,7 +10,7 @@ export interface IFeatureItem {
     description: JSX.Element;
 }
 
-export const Feature: React.FC<IFeatureItem> = ({ title, Svg, description }) => (
+export const FeatureItem: FC<IFeatureItem> = ({ title, Svg, description }) => (
     <div className={clsx('col col--4')}>
         <div className="text--center">
             <Svg className={styles.featureSvg} role="img" />
