@@ -19,16 +19,16 @@
         "expo-build-properties": "~0.5.1",
         "expo-splash-screen": "~0.18.1",
         "expo-status-bar": "~1.4.4",
-        "react": "18.1.0",
-        "react-native": "0.70.5"
+        "react": "18.2.0",
+        "react-native": "0.71.3"
     },
     "devDependencies": {
         "@babel/core": "^7.21.0",
-        "@types/react": "^18.0.27",
+        "@types/react": "^18.0.28",
         "@types/react-test-renderer": "^18.0.0",
         "babel-plugin-module-resolver": "^5.0.0",
         "babel-preset-expo": "^9.3.0",
-        "react-test-renderer": "18.1.0",
+        "react-test-renderer": "18.2.0",
         "utility-types": "^3.10.0"
     }
 }
