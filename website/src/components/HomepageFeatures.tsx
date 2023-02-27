@@ -4,16 +4,17 @@ import configurable from '@site/static/img/configurable.svg';
 import configurableDark from '@site/static/img/configurableDark.svg';
 import dependabot from '@site/static/img/dependabot.svg';
 import typescript from '@site/static/img/typescript.svg';
+import type { FC } from 'react';
 import React, { useMemo } from 'react';
 
-import type { IFeatureItem } from './Feature';
-import { Feature } from './Feature';
-import styles from './index.module.css';
+import type { IFeatureItem } from './FeatureItem';
+import { FeatureItem } from './FeatureItem';
+import styles from './HomepageFeatures.module.css';
 
-const HomepageFeatures: React.FC = () => {
+export const HomepageFeatures: FC = () => {
     const { isDarkTheme } = useColorMode();
 
-    const FeatureList = useMemo<Array<IFeatureItem>>(
+    const featureList = useMemo<Array<IFeatureItem>>(
         () => [
             {
                 Svg: typescript,
@@ -55,12 +56,11 @@ const HomepageFeatures: React.FC = () => {
         <section className={styles.features}>
             <div className="container">
                 <div className="row">
-                    {FeatureList.map((props: IFeatureItem) => (
-                        <Feature key={props.title} {...props} />
+                    {featureList.map((props: IFeatureItem) => (
+                        <FeatureItem key={props.title} {...props} />
                     ))}
                 </div>
             </div>
         </section>
     );
 };
-export default HomepageFeatures;
