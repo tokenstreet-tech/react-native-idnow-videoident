@@ -27,7 +27,7 @@
         "@types/react": "^18.0.27",
         "@types/react-test-renderer": "^18.0.0",
         "babel-plugin-module-resolver": "^5.0.0",
-        "babel-preset-expo": "^9.2.2",
+        "babel-preset-expo": "^9.3.0",
         "react-test-renderer": "18.1.0",
         "utility-types": "^3.10.0"
     }
