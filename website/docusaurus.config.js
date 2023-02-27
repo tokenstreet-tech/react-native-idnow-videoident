@@ -29,7 +29,8 @@ const config = {
                 },
                 blog: {
                     showReadingTime: true,
-                    editUrl: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident/tree/main/website/blog/',
+                    editUrl:
+                        'https://github.com/tokenstreet-tech/react-native-idnow-videoident/tree/main/website/blog/',
                 },
                 theme: { customCss: require.resolve('./src/css/custom.css') },
                 googleAnalytics: {
