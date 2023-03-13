@@ -5835,10 +5835,10 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-java-parser@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/java-parser/-/java-parser-2.0.3.tgz#02b4d52d530c8ce569576e755e1c0a6f6bfbafb0"
-  integrity sha512-z+ZsqcY3LCN0NPK1KnC7AXFHQxtzlsADJ2OVQmenKS/4gHBQ6SkEQYIMVV/2WrxRBMWXMXW7KeOVmXPLHCMRAQ==
+java-parser@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/java-parser/-/java-parser-2.0.4.tgz#74ec358b4209051ec5d2b26dc66464e72262e4a9"
+  integrity sha512-8dzy+3lJdSakeXgYArzqJCTy2PuH4iW1WjbhPsDaiYDXPeeroksy0s1/TWoc9Zw8zWzS3x8soanHh0AThwwqrQ==
   dependencies:
     chevrotain "6.5.0"
     lodash "4.17.21"
@@ -7954,19 +7954,14 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-java@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-java/-/prettier-plugin-java-2.0.0.tgz#a5c983d8edfd55a4e5d6b7e6132e8bb2eb3e8272"
-  integrity sha512-ct7Zgog2XUpZ+olF3Ed4gPBNU7aWBu0cnpgDX7eqs0IZVH+9ZAduRkaJ0HlreoOm7SdUOc7UoKK1vk3T/coEoQ==
+prettier-plugin-java@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-java/-/prettier-plugin-java-2.1.0.tgz#02983f35fc9f47993d95addfed0b4c7e6fb26db5"
+  integrity sha512-fALvx3PoabX6gar5Ock/reSEJVTmmJXowkvEXWhn6AxXnLfXoZxKqPNsUdQ+jcVaXO7jnQTW39hVGBnbfgFj+A==
   dependencies:
-    java-parser "2.0.3"
+    java-parser "2.0.4"
     lodash "4.17.21"
-    prettier "2.8.0"
-
-prettier@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.0.tgz#c7df58393c9ba77d6fba3921ae01faf994fb9dc9"
-  integrity sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==
+    prettier "2.8.4"
 
 prettier@2.8.4, prettier@>=2.3.0, prettier@>=2.4.0:
   version "2.8.4"
