@@ -21,7 +21,7 @@
         "resolveJsonModule": true,
 
         /* Emit */
-        "importsNotUsedAsValues": "error",
+        "verbatimModuleSyntax": true,
 
         /* Interop Constraints */
         "esModuleInterop": true,
