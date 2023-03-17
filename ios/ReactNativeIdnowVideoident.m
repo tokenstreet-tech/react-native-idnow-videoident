@@ -19,9 +19,17 @@ RCT_EXPORT_MODULE()
 
 // Example method
 // See // https://reactnative.dev/docs/native-modules-ios
-RCT_EXPORT_METHOD(startVideoIdent : (NSDictionary *)settings successCallback : (RCTResponseSenderBlock)successCallback errorCallback : (RCTResponseSenderBlock)errorCallback) {
-	idnowViewController = [[IdnowViewController alloc] initializeWithSettings:settings];
-	[idnowViewController startVideoIdent:errorCallback successCallback:successCallback];
+RCT_EXPORT_METHOD(startVideoIdent: (NSDictionary *)settings
+                  successCallback: (RCTResponseSenderBlock)successCallback
+                  errorCallback: (RCTResponseSenderBlock)errorCallback) {
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf) {
+            strongSelf->idnowViewController = [[IdnowViewController alloc] initializeWithSettings:settings];
+            [strongSelf->idnowViewController startVideoIdent:errorCallback successCallback:successCallback];
+        }
+    });
 }
 
 @end
