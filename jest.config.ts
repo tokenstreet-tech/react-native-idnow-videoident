@@ -4,4 +4,5 @@ const config: Config.InitialOptions = {
     modulePathIgnorePatterns: ['<rootDir>/example/node_modules', '<rootDir>/lib/'],
     preset: 'react-native',
 };
-export default config;
+
+module.exports = config;
