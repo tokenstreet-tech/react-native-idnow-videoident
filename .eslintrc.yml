@@ -51,6 +51,7 @@ rules:
     simple-import-sort/imports: 2 # Enabling the plugin simple-import-sort
     sort-imports: 0 # We already use the simple-import-sort plugin
 
+    '@typescript-eslint/lines-around-comment': 0
     '@typescript-eslint/naming-convention': 0
     '@typescript-eslint/no-require-imports': 0
     '@typescript-eslint/no-type-alias': 0
