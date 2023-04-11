@@ -24,7 +24,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.21.4",
-        "@types/react": "^18.0.33",
+        "@types/react": "^18.0.34",
         "@types/react-test-renderer": "^18.0.0",
         "babel-plugin-module-resolver": "^5.0.0",
         "babel-preset-expo": "^9.3.0",
