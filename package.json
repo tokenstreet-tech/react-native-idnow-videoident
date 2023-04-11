@@ -91,7 +91,7 @@
         "typescript": "~5.0.4"
     },
     "resolutions": {
-        "@types/react": "^18"
+        "@types/react": "^18.0.34"
     },
     "peerDependencies": {
         "expo": ">=46.0.0",
