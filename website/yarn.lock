@@ -3449,10 +3449,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-typedoc@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-typedoc/-/docusaurus-plugin-typedoc-0.18.0.tgz#d04966c4ed843a285c72cdd641e2fb3973684f9f"
-  integrity sha512-kurIUu8LhVIOPT88HoeBcu0/D2GMDdg0pUYaFlqeuXT9an6Wlgvuy0C22ZMYcJUcp/gA/Mw2XdUHubsLK2M4uA==
+docusaurus-plugin-typedoc@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-typedoc/-/docusaurus-plugin-typedoc-0.19.0.tgz#c681366d0d51a6df6df74e564cbf6050c12cbf6a"
+  integrity sha512-3R2BWFEHQhsuwm3u2ppEj3skl+dnV3cKK7vTzSg+oqhmfFj7rA7XTUjQsrjDZuaBR92Fd97g6BrNKVWCb8a81A==
 
 dom-converter@^0.2.0:
   version "0.2.0"
@@ -7097,10 +7097,10 @@ typedoc-plugin-markdown@^3.15.0:
   dependencies:
     handlebars "^4.7.7"
 
-typedoc@^0.23.28:
-  version "0.23.28"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.23.28.tgz#3ce9c36ef1c273fa849d2dea18651855100d3ccd"
-  integrity sha512-9x1+hZWTHEQcGoP7qFmlo4unUoVJLB0H/8vfO/7wqTnZxg4kPuji9y3uRzEu0ZKez63OJAUmiGhUrtukC6Uj3w==
+typedoc@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.24.1.tgz#6b793a800400d46ec1b93246d175608626275c0b"
+  integrity sha512-u4HwjZcSQhQSkkhLjgcs0ooAf6HrFVLDHHrwU2xZW8WxH0KnGZlNkaWxiOcK5Gagj7mxJSgwWx0dv8ACDAOXAQ==
   dependencies:
     lunr "^2.3.9"
     marked "^4.2.12"
