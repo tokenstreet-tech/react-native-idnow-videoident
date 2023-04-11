@@ -30,7 +30,7 @@ PODS:
   - hermes-engine (0.71.6):
     - hermes-engine/Pre-built (= 0.71.6)
   - hermes-engine/Pre-built (0.71.6)
-  - IDnowSDK (6.2.0):
+  - IDnowSDK (6.4.0):
     - AFNetworking (~> 4.0)
     - FLAnimatedImage (~> 1.0)
     - libPhoneNumber-iOS (~> 0.9)
@@ -376,7 +376,7 @@ PODS:
     - React-perflogger (= 0.71.6)
   - SocketRocket (0.5.1)
   - tokenstreet-react-native-idnow-videoident (0.20.1):
-    - IDnowSDK (= 6.2.0)
+    - IDnowSDK (= 6.4.0)
     - React-Core
   - Yoga (1.14.0)
 
@@ -512,7 +512,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: b434cea529ad0152c56c7cb6486b0c4c0b23b5de
-  IDnowSDK: d48933439e32e756b170ebd6bc04e8ac831f01b4
+  IDnowSDK: a99e00e908171886db73e6ef087fdeb418deeddd
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -544,7 +544,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 8692ac548bec648fa121980ccb4304afd136d584
   ReactCommon: 0c43eaeaaee231d7d8dc24fc5a6e4cf2b75bf196
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  tokenstreet-react-native-idnow-videoident: fc4caa34f4ddc0c11c2056f174f4eb6ab354d3d8
+  tokenstreet-react-native-idnow-videoident: bcb2485e98b91fb16153f63c9e899b3c69de6b6f
   Yoga: ba09b6b11e6139e3df8229238aa794205ca6a02a
 
 PODFILE CHECKSUM: e29340ced025b59e6f3589ab1309580a9df941d3
