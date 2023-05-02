@@ -88,7 +88,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  // We stay at 6.3.0 until https://github.com/idnow/de.idnow.android/issues/184 is resolved
+  // We stay at version 6.3.0 until https://github.com/idnow/de.idnow.android/issues/184 is fixed
   implementation "de.idnow.sdk:idnow-android-sdk:6.3.0"
 }
 
