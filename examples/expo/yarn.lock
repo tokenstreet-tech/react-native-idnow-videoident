@@ -6505,10 +6505,10 @@ traverse@~0.6.6:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.7.tgz#46961cd2d57dd8706c36664acde06a248f1173fe"
   integrity sha512-/y956gpUo9ZNCb99YjxG7OaslxZWHfCHAUUfshwqOXmxUIvqLjVO581BT+gM59+QV9tFe6/CGG53tsA1Y7RSdg==
 
-ts-essentials@^9.3.1:
-  version "9.3.1"
-  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-9.3.1.tgz#f2d1e1584ef53c0251012258338421d7cf78a4d0"
-  integrity sha512-9CChSvQMyVRo29Vb1A2jbs+LKo3d/bAf+ndSaX0T8cEiy/HChVaRN/HY5DqUryZ8hZ6uol9bEgCnGmnDbwBR9Q==
+ts-essentials@^9.3.2:
+  version "9.3.2"
+  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-9.3.2.tgz#5f4ae6d24e20d042a033316c0592dbb51d1b273f"
+  integrity sha512-JxKJzuWqH1MmH4ZFHtJzGEhkfN3QvVR3C3w+4BIoWeoY68UVVoA2Np/Bca9z0IPSErVCWhv439aT0We4Dks8kQ==
 
 ts-interface-checker@^0.1.9:
   version "0.1.13"
