@@ -11,7 +11,7 @@ plugins:
     - simple-import-sort
     - jest
 extends:
-    - '@react-native-community'
+    - '@react-native'
     - eslint:all
     - plugin:@typescript-eslint/all
     - plugin:react/all
