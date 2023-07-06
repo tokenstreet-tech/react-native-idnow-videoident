@@ -49,7 +49,7 @@ export const HomepageFeatures: FC = () => {
                 title: 'Always up to date',
             },
         ],
-        [isDarkTheme]
+        [isDarkTheme],
     );
 
     return (

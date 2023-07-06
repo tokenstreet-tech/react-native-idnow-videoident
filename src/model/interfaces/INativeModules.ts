@@ -7,7 +7,7 @@ export interface IReactNativeIdnowVideoidentNativeModule {
     startVideoIdent: (
         settings: ISettings<ProcessedColorValue>,
         successCallback: TOnSuccess,
-        errorCallback: TOnError
+        errorCallback: TOnError,
     ) => void;
 }
 

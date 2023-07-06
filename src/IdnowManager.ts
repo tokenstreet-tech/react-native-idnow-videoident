@@ -24,7 +24,7 @@ export const IdnowManager = {
                       get(): never {
                           throw new LinkingError();
                       },
-                  }
+                  },
               );
 
         switch (Platform.OS) {
@@ -40,7 +40,7 @@ export const IdnowManager = {
                         (errorResult) => {
                             if (callbacks?.onError) callbacks.onError(errorResult);
                             reject(errorResult);
-                        }
+                        },
                     );
                 });
             default:
