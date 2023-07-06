@@ -39,7 +39,7 @@ const excludeDuplicateClassesCode =
  */
 export const withIdnowRepositories: ConfigPlugin<IConfigPluginProps> = (
     config,
-    { android: { excludeDuplicateClasses = false } = {} }
+    { android: { excludeDuplicateClasses = false } = {} },
 ) => {
     config = withProjectBuildGradle(config, (configWithProps) => {
         configWithProps.modResults.contents = mergeContents({

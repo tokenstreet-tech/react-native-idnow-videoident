@@ -43,7 +43,7 @@ const applyUseFrameworksM1SimulatorWorkaroundCode =
  */
 export const withStaticFrameworkBuildType: ConfigPlugin<IConfigPluginProps> = (
     config,
-    { ios: { overrideBuildTypeToStaticFramework = false, applyUseFrameworksM1SimulatorWorkaround = false } = {} }
+    { ios: { overrideBuildTypeToStaticFramework = false, applyUseFrameworksM1SimulatorWorkaround = false } = {} },
 ) =>
     withPodfile(config, (podfile) => {
         if (overrideBuildTypeToStaticFramework)
