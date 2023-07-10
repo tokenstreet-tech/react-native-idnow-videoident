@@ -2251,10 +2251,10 @@
   dependencies:
     prettier ">=3.0.0"
 
-"@prettier/plugin-xml@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-3.0.0.tgz#9082eb3098983a739cf46624a92869ef7b12360a"
-  integrity sha512-1W66QoM1xrL6cb4ZtblSL5pPIZuQ/sgsdD3XKa1YEfplu5p1I01jssJ8f8Rux9Nk9Dzr86joXTigkqHFBeal3A==
+"@prettier/plugin-xml@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-3.1.0.tgz#dd0cc9750df5fd21728783e3886e5d35db620f29"
+  integrity sha512-0RskvTvwQzTOq3nKXjHT7mnTUs/b8xh1iONC0lEYyWRtSHseE2N8pEvdYSy/7dIKEA34aPHKGrSAmKjK2xPAtQ==
   dependencies:
     "@xml-tools/parser" "^1.0.11"
     prettier ">=3.0.0"
