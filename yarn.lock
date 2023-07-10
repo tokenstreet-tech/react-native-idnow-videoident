@@ -2251,10 +2251,10 @@
   dependencies:
     prettier ">=3.0.0"
 
-"@prettier/plugin-xml@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-3.0.0.tgz#9082eb3098983a739cf46624a92869ef7b12360a"
-  integrity sha512-1W66QoM1xrL6cb4ZtblSL5pPIZuQ/sgsdD3XKa1YEfplu5p1I01jssJ8f8Rux9Nk9Dzr86joXTigkqHFBeal3A==
+"@prettier/plugin-xml@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-3.1.0.tgz#dd0cc9750df5fd21728783e3886e5d35db620f29"
+  integrity sha512-0RskvTvwQzTOq3nKXjHT7mnTUs/b8xh1iONC0lEYyWRtSHseE2N8pEvdYSy/7dIKEA34aPHKGrSAmKjK2xPAtQ==
   dependencies:
     "@xml-tools/parser" "^1.0.11"
     prettier ">=3.0.0"
@@ -7926,19 +7926,14 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-java@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-java/-/prettier-plugin-java-2.1.0.tgz#02983f35fc9f47993d95addfed0b4c7e6fb26db5"
-  integrity sha512-fALvx3PoabX6gar5Ock/reSEJVTmmJXowkvEXWhn6AxXnLfXoZxKqPNsUdQ+jcVaXO7jnQTW39hVGBnbfgFj+A==
+prettier-plugin-java@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-java/-/prettier-plugin-java-2.2.0.tgz#268f1799a8b2809dd656aa670f20cc8076cb372a"
+  integrity sha512-AMSWVU6Fmo6H0jbSyE50zVEeZgKcUrIscd/gpTBzUnCHDO/vCk0KUVi/arAenwMEfzMkTp36qCsylJcpjM+dWw==
   dependencies:
     java-parser "2.0.4"
     lodash "4.17.21"
-    prettier "2.8.4"
-
-prettier@2.8.4:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
-  integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==
+    prettier "3.0.0"
 
 prettier@3.0.0, prettier@>=3.0.0:
   version "3.0.0"
