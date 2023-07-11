@@ -155,15 +155,15 @@ and the issue has also been passed on to the IDnow support team.
 3. Add the following permissions to your `AndroidManifest.xml` (click [here](https://github.com/idnow/de.idnow.android#androidmanifest) for more details):
 
     ```xml
-    "android.permission.ACCESS_NETWORK_STATE",
-    "android.permission.INTERNET",
-    "android.permission.WRITE_EXTERNAL_STORAGE",
-    "android.permission.CAMERA" ,
-    "android.permission.FLASHLIGHT" ,
-    "android.permission.MODIFY_AUDIO_SETTINGS" ,
-    "android.permission.RECORD_AUDIO" ,
-    "android.permission.BLUETOOTH",
-    "android.permission.BLUETOOTH_ADMIN",
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     ```
 
 4. Unfortunately, it is not yet possible to customise the colours for Android via JavaScript. To edit them, please follow the [official guide](https://github.com/idnow/de.idnow.android#colors).
