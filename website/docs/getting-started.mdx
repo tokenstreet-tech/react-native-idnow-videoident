@@ -212,7 +212,7 @@ Please be aware that Expo support is experimental and not officially supported.
 
 #### iOS
 
-3. Open your `app.json` again and update the `infoPlist` to give your app the necessary permissions:
+3. Open your `app.json` and update the `infoPlist` to give your app the necessary permissions:
 
     ```json
     {
@@ -221,6 +221,28 @@ Please be aware that Expo support is experimental and not officially supported.
                 "NSCameraUsageDescription": "Allow camera access for video identification",
                 "NSMicrophoneUsageDescription": "Allow microphone access for video identification"
             }
+        }
+    }
+    ```
+
+#### Android
+
+3. Open your `app.json` and update the `permissions` to give your app the necessary permissions:
+
+    ```json
+    {
+        "android": {
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.CAMERA",
+                "android.permission.FLASHLIGHT",
+                "android.permission.MODIFY_AUDIO_SETTINGS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.BLUETOOTH",
+                "android.permission.BLUETOOTH_ADMIN"
+            ]
         }
     }
     ```
