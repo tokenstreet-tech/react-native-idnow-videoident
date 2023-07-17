@@ -2244,12 +2244,10 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@prettier/plugin-ruby@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-ruby/-/plugin-ruby-4.0.1.tgz#69e4f214e7c3355951832266cd49c9566fcfd925"
-  integrity sha512-j1xdHARMfKpIvgKOENiuiWY/W9wcuyS3KB87r3ZYCTUzmOuE1leGebaFuZZpsYSS59Pnbcs666MyVQxvw58k3A==
-  dependencies:
-    prettier ">=3.0.0"
+"@prettier/plugin-ruby@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-ruby/-/plugin-ruby-4.0.2.tgz#55bc899d2265de09c1f48493324c269ecb95126c"
+  integrity sha512-TOGsMoOLF0BLwRozqtTB/w7HpDHotDSBPfLsMBpCjlMONLSoCWBF1NhZQjiioyLim7tCltzFrCqZp11WcrPOzA==
 
 "@prettier/plugin-xml@3.1.0":
   version "3.1.0"
