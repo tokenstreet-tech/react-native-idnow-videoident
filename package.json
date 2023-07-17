@@ -63,7 +63,7 @@
     "dependencies": {},
     "devDependencies": {
         "@commitlint/config-conventional": "^17.6.6",
-        "@prettier/plugin-ruby": "4.0.1",
+        "@prettier/plugin-ruby": "4.0.2",
         "@prettier/plugin-xml": "3.1.0",
         "@react-native/eslint-config": "^0.72.2",
         "@types/jest": "^29.5.2",
