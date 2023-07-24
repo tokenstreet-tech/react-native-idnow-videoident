@@ -5,9 +5,9 @@ import React from 'react';
 import styles from './FeatureItem.module.css';
 
 export interface IFeatureItem {
-    title: string;
-    Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-    description: JSX.Element;
+    readonly title: string;
+    readonly Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+    readonly description: JSX.Element;
 }
 
 export const FeatureItem: FC<IFeatureItem> = ({ title, Svg, description }) => (
