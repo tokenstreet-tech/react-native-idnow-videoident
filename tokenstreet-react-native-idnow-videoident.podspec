@@ -14,11 +14,12 @@ Pod::Spec.new do |s|
     s.platforms = { ios: '11.0' }
     s.source = { git: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident.git', tag: "#{s.version}" }
 
+
     s.source_files = 'ios/**/*.{h,m,mm}'
 
     s.dependency 'React-Core'
     s.dependency 'IDnowSDK', '6.8.0'
-    s.dependency 'libPhoneNumber-iOS', :git => 'https://github.com/iziz/libPhoneNumber-iOS.git'
+    s.dependency 'libPhoneNumber-iOS'
 
     # Don't install the dependencies when we run `pod install` in the old architecture.
     if ENV['RCT_NEW_ARCH_ENABLED'] == '1'
