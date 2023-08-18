@@ -1,0 +1,21 @@
+// ReactNativeIdnowVideoident.swift
+
+import Foundation
+
+class ReactNativeIdnowVideoident: NSObject {
+    var idnowViewController: IdnowViewController?
+    
+    @objc
+    static func requiresMainQueueSetup() -> Bool {
+        return true
+    }
+    
+    @objc
+    func startVideoIdent(_ settings: [AnyHashable: Any], successCallback: @escaping RCTResponseSenderBlock, errorCallback: @escaping RCTResponseSenderBlock) {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.idnowViewController = IdnowViewController(settings: settings)
+            strongSelf.idnowViewController?.startVideoIdent(errorCallback: errorCallback, successCallback: successCallback)
+        }
+    }
+}
