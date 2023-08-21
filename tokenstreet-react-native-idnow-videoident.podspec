@@ -17,8 +17,7 @@ Pod::Spec.new do |s|
     s.source_files = 'ios/**/*.{h,m,mm}'
 
     s.dependency 'React-Core'
-    s.dependency 'IDnowSDK', '6.8.0'
-    s.dependency 'libPhoneNumber-iOS'
+    s.dependency 'IDnowSDK', '6.7.0'
 
     # Don't install the dependencies when we run `pod install` in the old architecture.
     if ENV['RCT_NEW_ARCH_ENABLED'] == '1'
