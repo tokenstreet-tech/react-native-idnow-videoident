@@ -1,4 +1,5 @@
 name: 🚀 Continuous deployment
+
 on:
     push:
         branches:
@@ -6,8 +7,12 @@ on:
     workflow_dispatch:
         inputs:
             version:
-                description: "Version ['patch', 'minor', 'major']"
-                required: true
+                type: choice
+                description: Version
+                options:
+                    - patch
+                    - minor
+                    - major
 
 env:
     NODE_VERSION: 18
