@@ -1,5 +1,4 @@
 name: 🚀 Continuous deployment
-
 on:
     push:
         branches:
