@@ -47,7 +47,7 @@ export const processSettings = (settings: ISettings): ISettings<ProcessedColorVa
             // resolveAssetSource can be null
             // TODO: Create a Pull Request for it
             // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-            titleBackgroundImage: processedTitleBackgroundImage === null ? undefined : processedTitleBackgroundImage,
+            titleBackgroundImage: processedTitleBackgroundImage ?? undefined,
         },
     };
 };
