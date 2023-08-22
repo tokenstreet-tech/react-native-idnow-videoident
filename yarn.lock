@@ -6043,10 +6043,10 @@ iterator.prototype@^1.1.0:
     has-tostringtag "^1.0.0"
     reflect.getprototypeof "^1.0.3"
 
-java-parser@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/java-parser/-/java-parser-2.0.4.tgz#74ec358b4209051ec5d2b26dc66464e72262e4a9"
-  integrity sha512-8dzy+3lJdSakeXgYArzqJCTy2PuH4iW1WjbhPsDaiYDXPeeroksy0s1/TWoc9Zw8zWzS3x8soanHh0AThwwqrQ==
+java-parser@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/java-parser/-/java-parser-2.0.5.tgz#6bd3e2f75670cca387b78c6a1b1d10dd29b09032"
+  integrity sha512-AwieTO24Itcu0GgP9pBXs8gkqBtkmReclpBgXF4NkbIjdS7cn7hqpebjTmb5ouYYLFR+m3yh5fR3nW1NRrthdg==
   dependencies:
     chevrotain "6.5.0"
     lodash "4.17.21"
@@ -8077,19 +8077,14 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-java@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-java/-/prettier-plugin-java-2.2.0.tgz#268f1799a8b2809dd656aa670f20cc8076cb372a"
-  integrity sha512-AMSWVU6Fmo6H0jbSyE50zVEeZgKcUrIscd/gpTBzUnCHDO/vCk0KUVi/arAenwMEfzMkTp36qCsylJcpjM+dWw==
+prettier-plugin-java@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-java/-/prettier-plugin-java-2.3.0.tgz#1f7219b29ef81fe6e56068cd867f3d3781b70a2e"
+  integrity sha512-tcI9GkcwB3StyoAKcYLJbw/qS8DQjK4wNUvlBhPkyJyHOwxhoVtvCinckJgXhjEdEsVmGsq4YMQ1gD1qiAXTaA==
   dependencies:
-    java-parser "2.0.4"
+    java-parser "2.0.5"
     lodash "4.17.21"
-    prettier "3.0.0"
-
-prettier@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.0.tgz#e7b19f691245a21d618c68bc54dc06122f6105ae"
-  integrity sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==
+    prettier "3.0.2"
 
 prettier@3.0.2:
   version "3.0.2"
