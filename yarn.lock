@@ -1426,10 +1426,10 @@
     mv "~2"
     safe-json-stringify "~1"
 
-"@expo/cli@0.10.11":
-  version "0.10.11"
-  resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.10.11.tgz#d4fa73e5629b9de71a9ba4bc517e6c910e99b529"
-  integrity sha512-ehaAOw4SwkJ9uL5z9c3RD4LJpmMDCXZBCWZG4fonUGutks4t/GLoNRcdENkWsf6NSgkdPNgNl8KwphU1p083PQ==
+"@expo/cli@0.10.12":
+  version "0.10.12"
+  resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.10.12.tgz#7a5f8d1a19912496fd6c848096321f8d60b5fa8c"
+  integrity sha512-sc4IkRBbm6HO1Z/0JeJMY/sJiyCAfHyt2EOHhAY8jYfbXr/aqCIGsPrwEGQAfGpsE2OPvyzRa+byZG03HRPTkQ==
   dependencies:
     "@babel/runtime" "^7.20.0"
     "@expo/code-signing-certificates" "0.0.5"
@@ -1441,7 +1441,7 @@
     "@expo/json-file" "^8.2.37"
     "@expo/metro-config" "~0.10.0"
     "@expo/osascript" "^2.0.31"
-    "@expo/package-manager" "~1.0.0"
+    "@expo/package-manager" "~1.1.0"
     "@expo/plist" "^0.0.20"
     "@expo/prebuild-config" "6.2.6"
     "@expo/rudder-sdk-node" "1.1.1"
@@ -1466,7 +1466,6 @@
     graphql-tag "^2.10.1"
     https-proxy-agent "^5.0.1"
     internal-ip "4.3.0"
-    is-root "^2.1.0"
     js-yaml "^3.13.1"
     json-schema-deref-sync "^0.13.0"
     md5-file "^3.2.3"
@@ -1649,10 +1648,10 @@
     "@expo/spawn-async" "^1.5.0"
     exec-async "^2.2.0"
 
-"@expo/package-manager@~1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@expo/package-manager/-/package-manager-1.0.2.tgz#6c5fd0ee9b3d28c5523b2484c62c6c7b0c8dbf89"
-  integrity sha512-dlUp6o8qs1mi3/+l3y7cY3oMoqQVVzvH18cUTi6+t4ob8XwTpaeP2SwOP+obwZN29dMg9YzZAv4eQz+mshAbQA==
+"@expo/package-manager@~1.1.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@expo/package-manager/-/package-manager-1.1.1.tgz#065326c5684c2acfbfdc290d93eabb7a36225507"
+  integrity sha512-NxtfIA25iEiNwMT+s8PEmdKzjyfWd2qkCLJkf6jKZGaH9c06YXyOAi2jvCyM8XuSzJz4pcEH8kz1HkJAInjB7Q==
   dependencies:
     "@expo/json-file" "^8.2.37"
     "@expo/spawn-async" "^1.5.0"
@@ -2668,14 +2667,6 @@
     "@typescript-eslint/types" "5.62.0"
     "@typescript-eslint/visitor-keys" "5.62.0"
 
-"@typescript-eslint/scope-manager@6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-6.4.1.tgz#4b073a30be2dbe603e44e9ae0cff7e1d3ed19278"
-  integrity sha512-p/OavqOQfm4/Hdrr7kvacOSFjwQ2rrDVJRPxt/o0TOWdFnjJptnjnZ+sYDR7fi4OimvIuKp+2LCkc+rt9fIW+A==
-  dependencies:
-    "@typescript-eslint/types" "6.4.1"
-    "@typescript-eslint/visitor-keys" "6.4.1"
-
 "@typescript-eslint/scope-manager@6.5.0":
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-6.5.0.tgz#f2cb20895aaad41b3ad27cc3a338ce8598f261c5"
@@ -2709,11 +2700,6 @@
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.62.0.tgz#258607e60effa309f067608931c3df6fed41fd2f"
   integrity sha512-87NVngcbVXUahrRTqIK27gD2t5Cu1yuCXxbLcFtCzZGlfyVWWh8mLHkoxzjsB6DDNnvdL+fW8MiwPEJyGJQDgQ==
 
-"@typescript-eslint/types@6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-6.4.1.tgz#b2c61159f46dda210fed9f117f5d027f65bb5c3b"
-  integrity sha512-zAAopbNuYu++ijY1GV2ylCsQsi3B8QvfPHVqhGdDcbx/NK5lkqMnCGU53amAjccSpk+LfeONxwzUhDzArSfZJg==
-
 "@typescript-eslint/types@6.5.0":
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-6.5.0.tgz#f4e55cfd99ac5346ea772770bf212a3e689a8f04"
@@ -2731,19 +2717,6 @@
     is-glob "^4.0.3"
     semver "^7.3.7"
     tsutils "^3.21.0"
-
-"@typescript-eslint/typescript-estree@6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-6.4.1.tgz#91ff88101c710adb0f70a317f2f65efa9441da45"
-  integrity sha512-xF6Y7SatVE/OyV93h1xGgfOkHr2iXuo8ip0gbfzaKeGGuKiAnzS+HtVhSPx8Www243bwlW8IF7X0/B62SzFftg==
-  dependencies:
-    "@typescript-eslint/types" "6.4.1"
-    "@typescript-eslint/visitor-keys" "6.4.1"
-    debug "^4.3.4"
-    globby "^11.1.0"
-    is-glob "^4.0.3"
-    semver "^7.5.4"
-    ts-api-utils "^1.0.1"
 
 "@typescript-eslint/typescript-estree@6.5.0":
   version "6.5.0"
@@ -2792,14 +2765,6 @@
   dependencies:
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
-
-"@typescript-eslint/visitor-keys@6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-6.4.1.tgz#e3ccf7b8d42e625946ac5094ed92a405fb4115e0"
-  integrity sha512-y/TyRJsbZPkJIZQXrHfdnxVnxyKegnpEvnRGNam7s3TRR2ykGefEWOhaef00/UUN3IZxizS7BTO3svd3lCOJRQ==
-  dependencies:
-    "@typescript-eslint/types" "6.4.1"
-    eslint-visitor-keys "^3.4.1"
 
 "@typescript-eslint/visitor-keys@6.5.0":
   version "6.5.0"
@@ -4804,12 +4769,12 @@ expo-modules-core@1.5.11:
     invariant "^2.2.4"
 
 expo@^49.0.8:
-  version "49.0.9"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-49.0.9.tgz#b66e66b411b559a720184ffd1512987cd8b18028"
-  integrity sha512-x68r9sJ3HP5AedtGFZ5ufEYLWWrbWN9LN/jKavFMe22vRRyTGDMyIhKcoLCikqRDpYHFtIEuLh1P8H85Oz800Q==
+  version "49.0.10"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-49.0.10.tgz#5b29348499abf7b22a205b1427478607ce0efa87"
+  integrity sha512-+qb2n9TEqy6wu3/vguGOWJKRk9B3vIOXrR+Wlr3Bu+/rFX1/i98z3MZUawDPMNLzyRMEbKJzUodplic8IQhMOQ==
   dependencies:
     "@babel/runtime" "^7.20.0"
-    "@expo/cli" "0.10.11"
+    "@expo/cli" "0.10.12"
     "@expo/config" "8.1.2"
     "@expo/config-plugins" "7.2.5"
     "@expo/vector-icons" "^13.0.0"
@@ -5820,11 +5785,6 @@ is-relative@^1.0.0:
   integrity sha512-Kw/ReK0iqwKeu0MITLFuj0jbPAmEiOsIwyIXvvbfa6QfmN9pkD1M+8pdk7Rl/dTKbH34/XBFMbgD4iMJhLQbGA==
   dependencies:
     is-unc-path "^1.0.0"
-
-is-root@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/is-root/-/is-root-2.1.0.tgz#809e18129cf1129644302a4f8544035d51984a9c"
-  integrity sha512-AGOriNp96vNBd3HtU+RzFEc75FfR5ymiYv8E553I71SCeXBiMsVDUtdio1OEFvrPyLIQ9tVR5RxXIFe5PUFjMg==
 
 is-set@^2.0.1:
   version "2.0.2"
