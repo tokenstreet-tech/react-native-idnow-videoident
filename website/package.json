@@ -24,7 +24,7 @@
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@docusaurus/module-type-aliases": "2.4.1",
+        "@docusaurus/module-type-aliases": "2.4.3",
         "@tsconfig/docusaurus": "^2.0.1",
         "docusaurus-plugin-typedoc": "^0.20.1",
         "typedoc": "^0.25.1",
