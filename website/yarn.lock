@@ -3469,10 +3469,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-typedoc@^0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-typedoc/-/docusaurus-plugin-typedoc-0.20.1.tgz#a845530717c532b4a030ee785bf8cef68ca7d045"
-  integrity sha512-BZw4tiqNg7xS6mVisWo44bWSu8eYU1i38fx1ci4J8k8EbtLNEPt+WugEA6xqv3A++Mv75gnBsjljEVnYsqFQPg==
+docusaurus-plugin-typedoc@^0.20.2:
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-typedoc/-/docusaurus-plugin-typedoc-0.20.2.tgz#fc355cbe436a65b1b09f1ec8943fd9d0f06bf365"
+  integrity sha512-AOEogRFMtU2Ud5Qfatxji/I9csu70CgvtUAMFGDklGJWdFJRqY2gqVFzye8iMw8/Y6/fhb39aCG31rvjcA6QFw==
 
 dom-converter@^0.2.0:
   version "0.2.0"
