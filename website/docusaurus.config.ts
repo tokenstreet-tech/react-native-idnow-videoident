@@ -1,8 +1,7 @@
 /* eslint-disable sort-keys */
 import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes } from 'prism-react-renderer';
 
 export default {
     title: 'React Native IDnow VideoIdent',
@@ -86,7 +85,7 @@ export default {
             ],
             copyright: `Copyright © ${new Date().getFullYear()} tokenstreet GmbH`,
         },
-        prism: { theme: lightCodeTheme, darkTheme: darkCodeTheme },
+        prism: { theme: themes.github, darkTheme: themes.dracula },
     } satisfies ThemeConfig,
     plugins: [
         [
