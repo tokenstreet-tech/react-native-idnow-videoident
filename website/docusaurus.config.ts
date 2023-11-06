@@ -17,9 +17,10 @@ export default {
     trailingSlash: false,
     presets: [
         [
+            'classic',
             {
                 docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
+                    sidebarPath: './sidebars.ts',
                     editUrl: 'https://github.com/tokenstreet-tech/react-native-idnow-videoident/tree/main/website/',
                 },
                 blog: {
@@ -27,7 +28,7 @@ export default {
                     editUrl:
                         'https://github.com/tokenstreet-tech/react-native-idnow-videoident/tree/main/website/blog/',
                 },
-                theme: { customCss: require.resolve('./src/css/custom.css') },
+                theme: { customCss: './src/css/custom.css' },
                 googleAnalytics: {
                     trackingID: 'UA-227265647-1',
                 },
@@ -37,7 +38,6 @@ export default {
             } satisfies Options,
         ],
     ],
-
     themeConfig: {
         navbar: {
             title: 'React Native IDnow VideoIdent',
