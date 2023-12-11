@@ -23,7 +23,7 @@ describe('processSettings', () => {
                 appearance: {
                     colors: {},
                     newBranding: true,
-                    titleBackgroundImage: {},
+                    titleBackgroundImage: undefined,
                 },
                 calledFromIDnowApp: false,
                 connectionType: ConnectionTypeEnum.WEBSOCKET,
@@ -59,7 +59,7 @@ describe('processSettings', () => {
                 appearance: {
                     colors: {},
                     newBranding: false,
-                    titleBackgroundImage: {},
+                    titleBackgroundImage: undefined,
                 },
                 calledFromIDnowApp: true,
                 connectionType: ConnectionTypeEnum.LONG_POLLING,

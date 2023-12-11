@@ -1,4 +1,9 @@
+plugins:
+    - '@prettier/plugin-ruby'
+    - '@prettier/plugin-xml'
+    - prettier-plugin-java
 printWidth: 120
 tabWidth: 4
 singleQuote: true
+htmlWhitespaceSensitivity: 'ignore'
 xmlWhitespaceSensitivity: 'ignore'
