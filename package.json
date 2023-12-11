@@ -103,7 +103,6 @@
             "optional": true
         }
     },
-    "packageManager": "^yarn@1.22.15",
     "commitlint": {
         "extends": [
             "@commitlint/config-conventional"
