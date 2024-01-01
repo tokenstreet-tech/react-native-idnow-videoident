@@ -27,7 +27,7 @@
         "@docusaurus/module-type-aliases": "3.0.1",
         "@tsconfig/docusaurus": "^2.0.2",
         "docusaurus-plugin-typedoc": "^0.21.0",
-        "typedoc": "^0.25.4",
+        "typedoc": "^0.25.5",
         "typedoc-plugin-markdown": "^3.17.1",
         "typescript": "~5.3.3"
     },
