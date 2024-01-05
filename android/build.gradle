@@ -34,7 +34,7 @@ def getExtOrIntegerDefault(name) {
 }
 
 def supportsNamespace() {
-  def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')
+  def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize(".")
   def major = parsed[0].toInteger()
   def minor = parsed[1].toInteger()
 
@@ -60,7 +60,7 @@ android {
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
     buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
-    consumerProguardFiles 'proguard-rules.pro'
+    consumerProguardFiles "proguard-rules.pro"
   }
 
   buildTypes {
@@ -107,7 +107,15 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "de.idnow.sdk:idnow-android-sdk:6.8.0"
+
+  // IDnow SDK lib
+  // https://github.com/idnow/de.idnow.android#how-to-import-the-sdk
+  implementation "de.idnow.sdk:idnow-android-sdk:7.4.1"
+
+  // BouncyCastle libs
+  // https://github.com/idnow/de.idnow.android-sample/tree/master/app/libs
+  implementation "org.bouncycastle:bcprov-jdk15to18:1.64"
+  implementation "org.bouncycastle:bctls-jdk15to18:1.64"
 }
 
 if (isNewArchitectureEnabled()) {
