@@ -127,8 +127,7 @@ object ReactNativeIdnowSDK {
         )
         IDnowSDK.setPhoneNo(settings.getString("phoneNo"))
         if (settings.hasKey("showDialogsWithIcon")) IDnowSDK.setShowDialogsWithIcon(
-            settings.getBoolean("showDialogsWithIcon"),
-            reactApplicationContext
+            settings.getBoolean("showDialogsWithIcon")
         )
         IDnowSDK.setFirebaseToken(settings.getString("firebaseToken"))
         if (settings.hasKey("showRatingDialog")) IDnowSDK.setShowRatingDialog(settings.getBoolean("showRatingDialog"))
