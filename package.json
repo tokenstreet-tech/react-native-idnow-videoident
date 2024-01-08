@@ -65,11 +65,11 @@
         "@commitlint/config-conventional": "^18.4.4",
         "@prettier/plugin-ruby": "4.0.4",
         "@prettier/plugin-xml": "3.2.2",
-        "@react-native/eslint-config": "^0.74.0",
+        "@react-native/eslint-config": "^0.73.2",
         "@types/jest": "^29.5.11",
-        "@types/react": "~18.0.38",
-        "@typescript-eslint/eslint-plugin": "^6.17.0",
-        "@typescript-eslint/parser": "^6.17.0",
+        "@types/react": "^18.2.47",
+        "@typescript-eslint/eslint-plugin": "^6.18.0",
+        "@typescript-eslint/parser": "^6.18.0",
         "commitlint": "^18.4.4",
         "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
@@ -88,10 +88,7 @@
         "react-native": "0.73.1",
         "react-native-builder-bob": "^0.23.2",
         "ts-node": "^10.9.2",
-        "typescript": "~5.3.3"
-    },
-    "resolutions": {
-        "@types/react": "~18.0.38"
+        "typescript": "^5.3.3"
     },
     "peerDependencies": {
         "expo": ">=47.0.0",
