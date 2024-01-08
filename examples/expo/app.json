@@ -38,7 +38,7 @@
                     }
                 }
             ],
-            ["expo-build-properties", { "android": { "minSdkVersion": 23 }, "ios": { "useFrameworks": "static" } }]
+            ["expo-build-properties", { "android": { "minSdkVersion": 23 } }]
         ]
     }
 }
