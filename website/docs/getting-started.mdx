@@ -41,88 +41,19 @@ import TabItem from '@theme/TabItem';
 
 #### iOS
 
-2. Make sure you use the build type `static_framework`. This can be implemented for the individual pods, or for all pods with the `use_frameworks!` directive.
-
-<Tabs>
-<TabItem value="only_necessary_pods" label="Only necessary pods" default>
-
-```ruby
-$static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]
-
-pre_install do |installer|
-    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
-    installer.pod_targets.each do |pod|
-        bt = pod.send(:build_type)
-        if $static_frameworks.include?(pod.name)
-            puts "Overriding the build_type to static_framework from static_library for #{pod.name}"
-            def pod.build_type
-                Pod::BuildType.static_framework
-            end
-        end
-    end
-end
-```
-
-</TabItem>
-<TabItem value="all_pods" label="All pods">
-
-```ruby
-use_frameworks! linkage: :static
-```
-
-:::caution
-
-It is strongly discouraged to use `use_frameworks! linkage: :static` to override the build type for all pods,
-because it makes Flipper stop working and often creates problems with other packages,
-such as [`@shopify/react-native-skia`](https://github.com/Shopify/react-native-skia/issues/652) or
-[`sentry-react-native`](https://github.com/getsentry/sentry-react-native/issues/2353).
-
-An [issue](https://github.com/idnow/de.idnow.ios/issues/119) has already been created in their repository,
-and the issue has also been passed on to the IDnow support team.
-
-:::
-
-</TabItem>
-</Tabs>
-
-3. Install the iOS dependencies:
+2. Install the iOS dependencies:
 
     ```sh
     pod install
     ```
 
-4. Add the following properties to your `Info.plist`:
+3. Add the following properties to your `Info.plist`:
 
     ```xml
     <key>NSMicrophoneUsageDescription</key>
     <string>Allow microphone access for video identification</string>
     <key>NSCameraUsageDescription</key>
     <string>Allow camera access for video identification</string>
-    ```
-
-5. If you are using an M1 Mac and building the app for a simulator, please add the following workaround to your `Podfile`:
-
-    ```diff
-    post_install do |installer|
-        react_native_post_install(
-            installer,
-            # Set `mac_catalyst_enabled` to `true` in order to apply patches
-            # necessary for Mac Catalyst builds
-            mac_catalyst_enabled: false
-        )
-        __apply_Xcode_12_5_M1_post_install_workaround(installer)
-    +
-    +   # `use_frameworks! linkage: :static` M1 Mac Simulator workaround
-    +   # https://github.com/expo/expo/issues/15800
-    +   installer.pods_project.targets.each do |pod|
-    +       pod.build_configurations.each do |config|
-    +           if config.name == 'Debug'
-    +               puts "Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}"
-    +               config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-    +           end
-    +       end
-    +   end
-    end
     ```
 
 #### Android
@@ -188,10 +119,6 @@ Please be aware that Expo support is experimental and not officially supported.
             [
                 "@tokenstreet/react-native-idnow-videoident",
                 {
-                    "ios": {
-                        "overrideBuildTypeToStaticFramework": false,
-                        "applyUseFrameworksM1SimulatorWorkaround": false
-                    },
                     "android": {
                         "excludeDuplicateClasses": false
                     }
@@ -204,11 +131,9 @@ Please be aware that Expo support is experimental and not officially supported.
 
     All configuration options are explained below:
 
-    | Name                                            | Type      | Default Value | Description                                                                                                                                                                                                                                                               |
-    | ----------------------------------------------- | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | **ios.overrideBuildTypeToStaticFramework**      | `boolean` | `false`       | This option overrides the `build_type` of the IDnowSDK pod and its dependencies from `static_library` to `static_framework`. If this is set to `true`, it is not necessary to override the `build_type` for all pods and the `expo-build-properties` line can be removed. |
-    | **ios.applyUseFrameworksM1SimulatorWorkaround** | `boolean` | `false`       | For a fix added to the podfile so the project can be built on Apple Silicon machines and run in simulators. More information here: [https://github.com/expo/expo/issues/15800](https://github.com/expo/expo/issues/15800)                                                 |
-    | **android.excludeDuplicateClasses**             | `boolean` | `false`       | The following classes appeared twice in our projects in connection with this SDK, and can be excluded with this option: `bcprov-jdk15to18`, `bcutil-jdk15to18`, `pdfium-android`, `android-pdf-viewer`.                                                                   |
+    | Name                                | Type      | Default Value | Description                                                                                                                                                                                             |
+    | ----------------------------------- | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **android.excludeDuplicateClasses** | `boolean` | `false`       | The following classes appeared twice in our projects in connection with this SDK, and can be excluded with this option: `bcprov-jdk15to18`, `bcutil-jdk15to18`, `pdfium-android`, `android-pdf-viewer`. |
 
 #### iOS
 
