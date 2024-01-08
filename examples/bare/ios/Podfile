@@ -1,8 +1,15 @@
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command(
-            'node',
-            ['-p', 'require.resolve("react-native/scripts/react_native_pods.rb", {paths: [process.argv[1]]},)', __dir__]
-        ).strip
+                    "node",
+                    [
+                        "-p",
+                        'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )',
+                        __dir__
+                    ]
+                ).strip
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
@@ -16,15 +23,15 @@ prepare_react_native_project!
 #   dependencies: {
 #     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
 # ```
-flipper_config = ENV['NO_FLIPPER'] == '1' ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+flipper_config = ENV["NO_FLIPPER"] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 
-linkage = ENV['USE_FRAMEWORKS']
+linkage = ENV["USE_FRAMEWORKS"]
 if linkage != nil
     Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
     use_frameworks! linkage: linkage.to_sym
 end
 
-target 'ReactNativeIdnowVideoidentExample' do
+target "ReactNativeIdnowVideoidentExample" do
     config = use_native_modules!
 
     use_react_native!(
@@ -38,44 +45,15 @@ target 'ReactNativeIdnowVideoidentExample' do
         app_path: "#{Pod::Config.instance.installation_root}/.."
     )
 
-    pod 'tokenstreet-react-native-idnow-videoident', path: '../../..'
+    pod "tokenstreet-react-native-idnow-videoident", path: "../../.."
 
-    target 'ReactNativeIdnowVideoidentExampleTests' do
+    target "ReactNativeIdnowVideoidentExampleTests" do
         inherit! :complete
         # Pods for testing
-    end
-
-    $static_frameworks = %w[IDnowSDK Masonry SocketRocket libPhoneNumber-iOS FLAnimatedImage AFNetworking]
-
-    pre_install do |installer|
-        Pod::Installer::Xcode::TargetValidator.send(
-            :define_method,
-            :verify_no_static_framework_transitive_dependencies
-        ) {}
-        installer.pod_targets.each do |pod|
-            bt = pod.send(:build_type)
-            if $static_frameworks.include?(pod.name)
-                puts "Overriding the build_type to static_framework from static_library for #{pod.name}"
-                def pod.build_type
-                    Pod::BuildType.static_framework
-                end
-            end
-        end
     end
 
     post_install do |installer|
         # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
         react_native_post_install(installer, config[:reactNativePath], mac_catalyst_enabled: false)
-
-        # `use_frameworks! linkage: :static` M1 Mac Simulator workaround
-        # https://github.com/expo/expo/issues/15800
-        installer.pods_project.targets.each do |pod|
-            pod.build_configurations.each do |config|
-                if config.name == 'Debug'
-                    puts "Overriding the build_settings ONLY_ACTIVE_ARCH to NO for #{pod.name}"
-                    config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-                end
-            end
-        end
     end
 end

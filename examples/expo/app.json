@@ -33,16 +33,12 @@
             [
                 "../../app.plugin.js",
                 {
-                    "ios": {
-                        "overrideBuildTypeToStaticFramework": false,
-                        "applyUseFrameworksM1SimulatorWorkaround": true
-                    },
                     "android": {
                         "excludeDuplicateClasses": false
                     }
                 }
             ],
-            ["expo-build-properties", { "android": { "minSdkVersion": 23 }, "ios": { "useFrameworks": "static" } }]
+            ["expo-build-properties", { "android": { "minSdkVersion": 23 } }]
         ]
     }
 }
