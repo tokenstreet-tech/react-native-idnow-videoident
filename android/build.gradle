@@ -115,7 +115,7 @@ dependencies {
   // BouncyCastle libs
   // https://github.com/idnow/de.idnow.android-sample/tree/master/app/libs
   implementation "org.bouncycastle:bcprov-jdk15to18:1.64"
-  implementation "org.bouncycastle:bctls-jdk15to18:1.64"
+  implementation "org.bouncycastle:bctls-jdk15to18:1.77"
 }
 
 if (isNewArchitectureEnabled()) {
