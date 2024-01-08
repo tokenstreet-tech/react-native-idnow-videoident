@@ -10,9 +10,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <IDnowSDK/IDnowSDK.h>
 #import <React/RCTBridgeModule.h>
 #import <React/RCTConvert.h>
+@import IDnowSDK;
 
 NS_ASSUME_NONNULL_BEGIN
 
