@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
 
     s.source_files = 'ios/**/*.{h,m,mm}'
 
-    s.dependency 'IDnowSDK', '6.8.0'
+    # https://github.com/idnow/de.idnow.ios/blob/master/README.md#cocoapods
+    s.dependency 'IDnowSDK', '7.4.1'
     s.dependency 'libPhoneNumber-iOS'
 
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
