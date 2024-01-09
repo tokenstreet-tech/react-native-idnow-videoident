@@ -2,6 +2,12 @@
 
 React Native IDnow VideoIdent bindings for the [iOS](https://github.com/idnow/de.idnow.ios) and [Android](https://github.com/idnow/de.idnow.android) SDK.
 
+## :warning: Deprecation Notice: `react-native-idnow-videoident` Library
+
+**Important:** Due to the discontinuation of our use of the IDnow Video Ident service, we are no longer able to test or maintain the `react-native-idnow-videoident` library. Consequently, this library is now **deprecated** and will no longer receive updates or support.
+
+Please consider migrating to alternative solutions to ensure ongoing functionality and support.
+
 [![npm version](https://badgen.net/npm/v/@tokenstreet/react-native-idnow-videoident)](https://www.npmjs.com/package/@tokenstreet/react-native-idnow-videoident)
 [![downloads](https://badgen.net/npm/dm/@tokenstreet/react-native-idnow-videoident)](https://www.npmjs.com/package/@tokenstreet/react-native-idnow-videoident)
 [![types](https://badgen.net/npm/types/@tokenstreet/react-native-idnow-videoident)](https://www.npmjs.com/package/@tokenstreet/react-native-idnow-videoident)
