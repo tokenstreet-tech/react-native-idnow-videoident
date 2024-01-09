@@ -29,7 +29,7 @@ const excludeDuplicateClassesCode =
     '        all*.exclude module: "bcprov-jdk15to18"\n' +
     '        all*.exclude module: "bcutil-jdk15to18"\n' +
     '        all*.exclude module: "pdfium-android"\n' +
-    '        all*.exclude module: "android-pdf-viewer"\n' +
+    '        all*.exclude module: "AndroidPdfViewerV1"\n' +
     '    }';
 
 /**
