@@ -1,6 +1,6 @@
 # @tokenstreet/react-native-idnow-videoident
 
-> ## :warning: Deprecation Notice: `react-native-idnow-videoident` Library
+> ### :warning: Deprecation notice
 >
 > **Important:** Due to the discontinuation of our use of the IDnow Video Ident service, we are no longer able to test or maintain the `react-native-idnow-videoident` library. Consequently, this library is now **deprecated** and will no longer receive updates or support.
 >
