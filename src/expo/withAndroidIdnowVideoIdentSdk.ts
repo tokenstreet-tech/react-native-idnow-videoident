@@ -7,14 +7,6 @@ import { getConfigPluginTag } from './util/getConfigPluginTag';
 
 const repositoriesRegex = /maven(?:\s+)?\{(?:\s+)?url(?:\s+)?'https:\/\/www.jitpack.io'(?:\s+)?\}/u;
 const repositoriesCode =
-    '        jcenter() {\n' +
-    '            // JCenter is now read-only. Therefore, no new versions are published there any more.\n' +
-    '            // We only fetch the necessary dependencies for IDnow from JCenter to avoid loading old dependencies.\n' +
-    '            content {\n' +
-    '                includeModule("me.relex", "circleindicator")\n' +
-    '                includeModule("com.github.barteksc", "android-pdf-viewer")\n' +
-    '            }\n' +
-    '        }\n' +
     '        maven() {\n' +
     '            url "https://raw.githubusercontent.com/idnow/de.idnow.android/master"\n' +
     '            content {\n' +
