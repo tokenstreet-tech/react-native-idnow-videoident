@@ -21,7 +21,7 @@ class MainApplication : Application(), ReactApplication {
                 PackageList(this).packages.apply {
                     // Packages that cannot be autolinked yet can be added manually here, for example:
                     // add(MyReactNativePackage())
-                    packages.add(ReactNativeIdnowVideoidentPackage())
+                    add(ReactNativeIdnowVideoidentPackage())
                 }
 
             override fun getJSMainModuleName(): String = "index"
